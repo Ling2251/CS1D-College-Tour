@@ -5,6 +5,7 @@
 #include<QtSql>
 #include<QtDebug>
 #include<QFileInfo>
+#include"dbmanager.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,6 +18,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
 
 private slots:
     void on_startCollegeTour_clicked();
