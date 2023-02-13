@@ -3,6 +3,7 @@
 #include "ui_mainwindow.h"
 #include "userinterface.h"
 #include "maintenance.h"
+#include"dbmanager.h"
 /**********************************************************/
 
 /**********************************************************
