@@ -6,6 +6,7 @@
 #include"dbmanager.h"
 /**********************************************************/
 
+
 /**********************************************************
 *
 * mainWindow
@@ -15,11 +16,14 @@
 *program.
 *_________________________________________________________
 ***********************************************************/
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    ui->pushButton->setText("Admin Page");
 
     QSqlDatabase m_database = QSqlDatabase::addDatabase("QSQLITE");
     m_database.setDatabaseName("../CS1D-College-Tour/collegelist.db");
@@ -32,7 +36,6 @@ MainWindow::MainWindow(QWidget *parent)
     {
         qDebug() << "Database: connection ok";
     }
-
 }
 
 MainWindow::~MainWindow()
@@ -40,6 +43,15 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::on_pushButton_clicked()
+{
+    hide();
+    adminPage = new adminpage(this);
+    adminPage->show();
+//    adminpage adminPage;
+//    adminPage.setModal(true);
+//    adminPage.exec();
 // This button when pressed will send the user to a page that will send them to the user interface
 void MainWindow::on_startCollegeTour_clicked()
 {

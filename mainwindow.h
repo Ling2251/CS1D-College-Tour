@@ -1,11 +1,13 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include<QMainWindow>
+#include <QMainWindow>
+#include "adminpage.h"
 #include<QtSql>
 #include<QtDebug>
 #include<QFileInfo>
 #include"dbmanager.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -19,7 +21,6 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-
 private slots:
     void on_startCollegeTour_clicked();
 
@@ -27,5 +28,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    adminpage *adminPage;
 };
 #endif // MAINWINDOW_H
