@@ -22,7 +22,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     QSqlDatabase m_database = QSqlDatabase::addDatabase("QSQLITE");
-    m_database.setDatabaseName("C:/Users/78418/CS1D-College-Tour/collegelist.db");
+    m_database.setDatabaseName("../CS1D-College-Tour/collegelist.db");
 
     if(!m_database.open())
     {
