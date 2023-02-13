@@ -20,6 +20,19 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    QSqlDatabase m_database = QSqlDatabase::addDatabase("QSQLITE");
+    m_database.setDatabaseName("../CS1D-College-Tour/collegelist.db");
+
+    if(!m_database.open())
+    {
+        qDebug() << "Error: DBManager connection with database failed";
+    }
+    else
+    {
+        qDebug() << "Database: connection ok";
+    }
+
 }
 
 MainWindow::~MainWindow()
@@ -42,4 +55,3 @@ void MainWindow::on_Maintenance_clicked()
     maintenance.setModal(true);
     maintenance.exec();
 }
-
