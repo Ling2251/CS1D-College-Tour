@@ -67,4 +67,3 @@ void MainWindow::on_Maintenance_clicked()
     maintenance.setModal(true);
     maintenance.exec();
 }
-
