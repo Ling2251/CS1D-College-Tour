@@ -1,7 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include<QMainWindow>
+#include <QMainWindow>
+#include "adminpage.h"
 #include<QtSql>
 #include<QtDebug>
 #include<QFileInfo>
@@ -27,5 +28,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    adminpage *adminPage;
 };
 #endif // MAINWINDOW_H
