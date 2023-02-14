@@ -22,7 +22,6 @@ SOURCES += \
     plantripwindow.cpp \
     userinterface.cpp \
     adminpage.cpp \
-    adminpage.cpp \
     loginpage.cpp \
 
 HEADERS += \
@@ -34,7 +33,6 @@ HEADERS += \
     userinterface.h \
     adminpage.h \
     loginpage.h \
-    adminpage.h \
 
 FORMS += \
     displaycollegewindow.ui \
