@@ -16,18 +16,7 @@
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="0">
     <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="0" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-      <widget class="QLabel" name="label">
-       <property name="styleSheet">
-        <string notr="true">font: 75 20pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0)</string>
-       </property>
-       <property name="text">
-        <string>What kind of trip would you like to take?</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
+     <item row="2" column="0">
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
         <widget class="QPushButton" name="startTrip">
@@ -51,6 +40,20 @@ color: rgb(0, 0, 0)</string>
         </widget>
        </item>
       </layout>
+     </item>
+     <item row="0" column="0" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">font: 75 20pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 0, 0)</string>
+       </property>
+       <property name="text">
+        <string>What kind of trip would you like to take?</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QListWidget" name="sort_listWidget"/>
      </item>
     </layout>
    </item>
