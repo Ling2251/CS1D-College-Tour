@@ -12,28 +12,26 @@ public:
     dbManager();
    ~dbManager();
 
-   QSqlDatabase m_database;
+    /** \fn checkCampusName(QString campus)
+     * Using the "select XXX from" query funtion, this function determines if the specified college is present in the database.
+     * If a database error occurs, an error warning is printed to the console.
+     * @param QString, campus
+     * @return bool
+     */
+    bool checkCampusName(QString campus);
 
+    /** \fn GetDistBtwn(QString start, QString end)
+     * Using the "select XXX from" query funtion, the distance between the 2 specified campuses.
+     * If a database error occurs, an error warning is printed to the console.
+     * @param QString, start
+     * @param QString, end
+     * @return double
+     */
+    double GetDistBtwn(QString start, QString end);
 
-   bool openconnect()
-   {
-       QSqlDatabase m_database = QSqlDatabase::addDatabase("QSQLITE");
-       m_database.setDatabaseName("C:/Users/78418/CS1D-College-Tour/collegelist.db");
-
-       if(m_database.open())
-       {
-           qDebug() << "Database: connection ok";
-           return true;
-       }
-       else
-       {
-          qDebug() << "Error: DBManager connection with database failed";
-          return false;
-       }
-
-   }
 
 private:
+   QSqlDatabase m_database;
 };
 
 #endif // DBMANAGER_H
