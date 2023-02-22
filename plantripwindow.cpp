@@ -100,7 +100,7 @@ void planTripWindow::on_startTrip_clicked()
             ui->sort_listWidget->addItem(sortedCampuses[i]);
         }
 
-        QMessageBox::information(this, "Loading...", "Star Trip has been selected. Now moving to Souvenir Screen.", QMessageBox::Ok, QMessageBox::NoButton);
+        QMessageBox::information(this, "Loading...", "Start Trip has been selected. Now moving to Souvenir Screen.", QMessageBox::Ok, QMessageBox::NoButton);
     }
 }
 
@@ -120,7 +120,6 @@ void planTripWindow::recursiveCollegeSort(QString currentCamp)
    // first check to see if there is anly college in the selectedCampuse vector
    if(selectedCampuses.isEmpty())
    {
-       QMessageBox::warning(this, "ERROR", "There is no college campuses has selected, please try agin.", QMessageBox::Ok, QMessageBox::NoButton);
        return;
    }
    else
