@@ -68,6 +68,7 @@ bool planTripWindow::checkCampusVectorNames(QVector<QString> campuses)
 // This button when pressed will send the user to a page that will allow them to vist any colleges starting at Saddleback
 void planTripWindow::on_startTrip_clicked()
 {
+    // putting all initiall college in to a vector including saddleback college
     QVector<QString> initial11{"Saddleback College",
                                "University of California, Irvine (UCI)",
                                "Arizona State University",
@@ -81,13 +82,16 @@ void planTripWindow::on_startTrip_clicked()
                                "University of the Pacific",
                                };
 
+    // check if all the college is in the database befor the recursive function
     bool allFound = checkCampusVectorNames(initial11);
 
     if(!allFound){
         QMessageBox::warning(this, "ERROR", "The 11 initial college are incomplete, please check with the administrator.", QMessageBox::Ok, QMessageBox::NoButton);
     }else{
+
         selectedCampuses.append(initial11);
 
+        // display the final college trip to the screen
         QString start = *selectedCampuses.begin();
         recursiveCollegeSort(start);
 
@@ -95,42 +99,50 @@ void planTripWindow::on_startTrip_clicked()
         {
             ui->sort_listWidget->addItem(sortedCampuses[i]);
         }
+
+        QMessageBox::information(this, "Loading...", "Star Trip has been selected. Now moving to Souvenir Screen.", QMessageBox::Ok, QMessageBox::NoButton);
     }
 }
 
 
 /*
  * recursiveCollegeSort()
- * This function creates the optimal college touring trip plan.
- * For example, from the starting campus, the next campus will be the closest to the start, then the closest after that.
+ * This function will creat the shortest way to visit different colleges.
+ * For example, from the starting campus, the next campus will be the closest to the startding college, then the closest after that.
  * Each recursive call find the closest campus to the campus passed in.
  * When the closest is found, the new campus is sorted and then used for the next call.
- * IN: QString, currentCamp
- * OUT: nothing returned
  */
 void planTripWindow::recursiveCollegeSort(QString currentCamp)
 {
-   sortedCampuses.enqueue(currentCamp);
-   selectedCampuses.removeAll(currentCamp);
+   sortedCampuses.enqueue(currentCamp);         /**< queue of sorted campuses for tour*/
+   selectedCampuses.removeAll(currentCamp);     /**< vector of selected campuses for the tour*/
 
+   // first check to see if there is anly college in the selectedCampuse vector
    if(selectedCampuses.isEmpty())
    {
+       QMessageBox::warning(this, "ERROR", "There is no college campuses has selected, please try agin.", QMessageBox::Ok, QMessageBox::NoButton);
        return;
    }
    else
    {
+       // set the frist campises to a string
         QString* otherCamp = selectedCampuses.begin();
         int currentIndex = 0;
 
+        // getting the distanct using GetDistBtwn function in dbmanger
         double leastDist = m_database.GetDistBtwn(currentCamp, *otherCamp);
         int leastIndex = 0;
 
         otherCamp++;
         currentIndex++;
 
+        // keep looping thorgh the colleges untill it has reach to the end of the vector
         while(otherCamp != selectedCampuses.end())
         {
+            // // getting the current distanct using GetDistBtwn function in dbmanger
             double currentDist = m_database.GetDistBtwn(currentCamp, *otherCamp);
+
+            // do the comparsion
             if (currentDist < leastDist)
             {
                 leastDist = currentDist;
