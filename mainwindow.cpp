@@ -24,18 +24,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     ui->pushButton->setText("Admin Page");
-
-    QSqlDatabase m_database = QSqlDatabase::addDatabase("QSQLITE");
-    m_database.setDatabaseName("../CS1D-College-Tour/collegelist.db");
-
-    if(!m_database.open())
-    {
-        qDebug() << "Error: DBManager connection with database failed";
-    }
-    else
-    {
-        qDebug() << "Database: connection ok";
-    }
 }
 
 MainWindow::~MainWindow()
