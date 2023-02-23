@@ -29,5 +29,6 @@ private slots:
 private:
     Ui::MainWindow *ui;
     adminpage *adminPage;
+    dbManager m_database;
 };
 #endif // MAINWINDOW_H
