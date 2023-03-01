@@ -62,8 +62,6 @@ public:
      */
     void updateCartQuantity(QString campus, QString souv, int quantity);
 
-
-
 private:
    QSqlDatabase m_database;
 };

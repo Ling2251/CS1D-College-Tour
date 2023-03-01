@@ -39,6 +39,7 @@ bool dbManager::checkCampusName(QString campus)
     return execute;
 }
 
+
 /*
  * GetDistBtwn(QString start, QString end)
  * Using the "select XXX from" query funtion, the distance between the 2 specified campuses.
