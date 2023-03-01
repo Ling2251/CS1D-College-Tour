@@ -1,12 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>adminpage</class>
- <widget name="adminpage" class="QDialog">
+ <widget class="QDialog" name="adminpage">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>532</width>
+    <height>379</height>
    </rect>
   </property>
   <property name="windowTitle">
