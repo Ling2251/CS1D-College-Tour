@@ -25,8 +25,6 @@ dbManager::~dbManager()
  * checkCampusName(QString campus)
  * Using the "select XXX from" query funtion, this function determines if the specified college is present in the database.
  * If a database error occurs, an error warning is printed to the console.
- * IN: QString, campus
- * OUT: bool
  */
 bool dbManager::checkCampusName(QString campus)
 {
@@ -41,14 +39,10 @@ bool dbManager::checkCampusName(QString campus)
     return execute;
 }
 
-
 /*
  * GetDistBtwn(QString start, QString end)
  * Using the "select XXX from" query funtion, the distance between the 2 specified campuses.
  * If a database error occurs, an error warning is printed to the console.
- * IN: QString, start
- * IN: QString, end
- * OUT: double
  */
 double dbManager::GetDistBtwn(QString start, QString end)
 {
@@ -65,4 +59,86 @@ double dbManager::GetDistBtwn(QString start, QString end)
     }
 
     return distBtwn;
+}
+
+/*
+ * loadCampusSouvenirs(QString campus)
+ * Using the "select XXX from" query funtion, the souvenirs for a specified campus are read in from the database into a QSqlQueryModel.
+ * If a database error occurs, an error warning is printed to the console.
+ */
+QSqlQueryModel* dbManager::loadCampusSouvenirs(QString campus)
+{
+    QSqlQueryModel* model = new QSqlQueryModel();
+
+    QString sQry = "select souvenirsName as 'Souvenirs', cost as 'Cost($)' from souvenirs where collegeName = '" +campus+ "';";
+    qDebug() << sQry;
+    QSqlQuery qry;
+    qry.prepare(sQry);
+
+    if(!qry.exec())
+    {
+        qDebug() << "\nError Loading Campuses\n";
+    }
+
+    model->setQuery(qry);
+    return model;
+}
+
+/*
+ * loadSouvCart(QString sQry)
+ * Using the "select XXX from" query funtion, the selected sovenirs are read in from the database into a QSqlQueryModel.
+ * The query is an accumulator query that contains all the souvenirs the user has selected to add to an update quey using SQL code "UNION".
+ * If a database error occurs, an error warning is printed to the console.
+ */
+QSqlQueryModel* dbManager::loadSouvCart(QString sQry)
+{
+    QSqlQueryModel* model = new QSqlQueryModel();
+    QSqlQuery qry;
+    qry.prepare(sQry);
+
+    if(!qry.exec())
+    {
+        qDebug() << "\nError Loading Souvenirs\n";
+    }
+
+    model->setQuery(qry);
+    return model;
+}
+
+/*
+ * createCart()
+ * Creates a temporary table called cart in the SQL Database, and alters the table by adding a column called quantity for the quanity purchased.
+ */
+void dbManager::createCart()
+{
+    //cartQry - temporary table
+    QSqlQuery cartQry;
+    cartQry.prepare("create table Cart as SELECT * from souvenirs;");
+
+    if(!cartQry.exec())
+    {
+        qDebug() << "\nError Creating Cart\n";
+    }
+    cartQry.prepare("ALTER table Cart add quantity real default 0;");
+    if(!cartQry.exec())
+    {
+        qDebug() << "\nError Creating Quanitity Column\n";
+    }
+}
+
+/*
+ * updateCartQuantity(QString campus, QString souv, int quantity)
+ * This function updates the changes of quantity to the cart table in the SQL Database.
+ */
+void dbManager::updateCartQuantity(QString campus, QString souv, int quant)
+{
+    //Update quantity
+    QSqlQuery updateQry;
+    QString uQry = "UPDATE Cart SET quantity = quantity+" +QString::number(quant)+ " WHERE collegeName = '" +campus+ "' and souvenirsName = '" +souv+ "';";
+    updateQry.prepare(uQry);
+
+    if(!updateQry.exec())
+    {
+        qDebug() << "\nError updating Cart\n";
+    }
 }
