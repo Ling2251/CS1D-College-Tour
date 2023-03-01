@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>College background.jpg</file>
+        <file>different colleges.png</file>
+        <file>college logo.png</file>
+        <file>College background2.jpg</file>
+    </qresource>
+</RCC>

@@ -45,7 +45,7 @@ void MainWindow::on_Maintenance_clicked()
     adminPage = new adminpage(this);
     adminPage->show();
 
-    maintenance maintenance;
-    maintenance.setModal(true);
-    maintenance.exec();
+//    maintenance maintenance;
+//    maintenance.setModal(true);
+//    maintenance.exec();
 }

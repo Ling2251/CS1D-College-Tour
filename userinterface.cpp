@@ -39,7 +39,6 @@ void userInterface::on_displayCollegeButton_clicked()
 void userInterface::on_planTripButton_clicked()
 {
     planTripWindow plantrip;
-
     plantrip.setModal(true);
     plantrip.exec();
 }
