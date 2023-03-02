@@ -244,13 +244,15 @@ void planTripWindow::on_addSouvenir_button_clicked()
     int quantity = ui-> quantity_spinBox -> cleanText().toInt();
     souv.quantity = quantity;
 
+
+
     souvenirCart.push(souv);
 
     //update Cart table
     m_database.updateCartQuantity(campus, name, quantity);
 
     //displays cart in table
-   if(sQry == " ")
+   if(sQry == "")
    {
        sQry += "select collegeName as 'College', souvenirsName as 'Souvenirs', cost as 'Cost', quantity as 'Quantity' "
                        "from Cart where collegeName = '" +campus+ "' and souvenirsName = '" +name+ "'";
@@ -263,17 +265,19 @@ void planTripWindow::on_addSouvenir_button_clicked()
 
    showSouvCartTableView(m_database.loadSouvCart(sQry));
 
+   calculateTotal();
+   showTotal(total);
   // showSouvCartTableView();
   // get the total cost here__YC:
 }
 
 //calculate function is to calculate total price from the cart table
-double planTripWindow::calculateTotal()
+void planTripWindow::calculateTotal()
 {
     double total = 0.0;
     QSqlQuery qry;
 
-    if(sQry == " ")
+    if(true)
     {
         qry.prepare("select printf(\"%.2f\",sum(cost * quantity)) from Cart;");
         qry.exec();
@@ -283,7 +287,7 @@ double planTripWindow::calculateTotal()
         }
     }
 
-    return total;
+    this->total = total;
 
 }
 
@@ -293,6 +297,3 @@ void planTripWindow::showTotal(double total)
 {
     ui->totalCart_label->setNum(total);
 }
-
-
-

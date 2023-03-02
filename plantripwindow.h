@@ -33,7 +33,7 @@ public:
     void showSelectCampusComboBox(QStringListModel *model);
     void showSouvTableView(QSqlQueryModel *model);
     void showSouvCartTableView(QSqlQueryModel *model);
-    double calculateTotal();
+    void calculateTotal();
     void showTotal(double total);
 
 

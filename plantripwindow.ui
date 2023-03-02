@@ -138,7 +138,7 @@ color: rgb(0, 0, 0)</string>
       <widget class="QLabel" name="souvCart_label">
        <property name="geometry">
         <rect>
-         <x>420</x>
+         <x>400</x>
          <y>30</y>
          <width>231</width>
          <height>51</height>
