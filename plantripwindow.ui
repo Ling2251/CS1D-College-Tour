@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>833</width>
-    <height>471</height>
+    <width>844</width>
+    <height>511</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -241,6 +241,70 @@ color: rgb(0, 0, 0)</string>
         </rect>
        </property>
       </widget>
+      <widget class="QLabel" name="total_label_2">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>410</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>111</width>
+         <height>41</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Total distance:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="totalDistance_label">
+       <property name="geometry">
+        <rect>
+         <x>560</x>
+         <y>410</y>
+         <width>231</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <zorder>addSouvenir_button</zorder>
+      <zorder>quantity_spinBox</zorder>
+      <zorder>souv_tableView</zorder>
+      <zorder>total_label</zorder>
+      <zorder>souvCart_label</zorder>
+      <zorder>souvCart_tableView</zorder>
+      <zorder>souv_label</zorder>
+      <zorder>selectCampus_comboBox</zorder>
+      <zorder>dollarSign</zorder>
+      <zorder>totalCart_label</zorder>
+      <zorder>souv_comboBox</zorder>
+      <zorder>totalDistance_label</zorder>
+      <zorder>total_label_2</zorder>
      </widget>
     </widget>
    </item>
