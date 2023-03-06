@@ -3,6 +3,7 @@
 #include "ui_mainwindow.h"
 #include "userinterface.h"
 #include "maintenance.h"
+#include "loginpage.h"
 #include"dbmanager.h"
 /**********************************************************/
 
@@ -42,10 +43,10 @@ void MainWindow::on_startCollegeTour_clicked()
 void MainWindow::on_Maintenance_clicked()
 {
     hide();
-    adminPage = new adminpage(this);
-    adminPage->show();
+//    loginpage = new adminpage(this);
+//    adminPage->show();
 
-//    maintenance maintenance;
-//    maintenance.setModal(true);
-//    maintenance.exec();
+    loginpage login;
+    login.setModal(true);
+    login.exec();
 }

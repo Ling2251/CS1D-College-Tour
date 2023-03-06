@@ -15,6 +15,9 @@ public:
     explicit loginpage(QWidget *parent = nullptr);
     ~loginpage();
 
+private slots:
+    void on_pushButton_login_clicked();
+
 private:
     Ui::loginpage *ui;
 };
