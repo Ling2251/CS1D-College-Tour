@@ -97,10 +97,10 @@ void planTripWindow::on_startTrip_clicked()
     }
 }
 
-///*
-// * displayCollegeTripList()
-// * This function will just display the list of all college that the student will visit
-// */
+/*
+ * displayCollegeTripList()
+ * This function will just display the list of all college that the student will visit
+ */
 //void planTripWindow::displayCollegeTripList(){
 //    // display the final college trip to the screen
 //    QString start = *selectedCampuses.begin();
@@ -125,6 +125,7 @@ void planTripWindow::recursiveCollegeSort(QString currentCamp)
 {
    sortedCampuses.enqueue(currentCamp);         /**< queue of sorted campuses for tour*/
    selectedCampuses.removeAll(currentCamp);     /**< vector of selected campuses for the tour*/
+   //double distance = 0.0;
 
    // first check to see if there is anly college in the selectedCampuse vector
    if(selectedCampuses.isEmpty())
@@ -149,6 +150,7 @@ void planTripWindow::recursiveCollegeSort(QString currentCamp)
         {
             // // getting the current distanct using GetDistBtwn function in dbmanger
             double currentDist = m_database.GetDistBtwn(currentCamp, *otherCamp);
+            //distance += m_database.GetDistBtwn(currentCamp, *otherCamp);
 
             // do the comparsion
             if (currentDist < leastDist)
@@ -164,6 +166,7 @@ void planTripWindow::recursiveCollegeSort(QString currentCamp)
         }
         QString nextCamp = selectedCampuses.at(leastIndex);
         recursiveCollegeSort(nextCamp);
+        this->distance = distance;
    }
 }
 
@@ -184,6 +187,7 @@ void planTripWindow::goToSouvenirShop()
     m_database.createCart();
     showSouvCartTableView(m_database.loadSouvCart(sQry));
     //showTotalCost(totalCost);
+    //showDistance(distance);
 }
 
 /*
@@ -297,3 +301,10 @@ void planTripWindow::showTotal(double total)
 {
     ui->totalCart_label->setNum(total);
 }
+//showDistance function is to display the total distance travled
+//pass the variable total from calculateTotal()function
+//void planTripWindow::showDistance(double distance)
+//{
+//    ui->totalDistance_label->setNum(distance);
+//}
+
