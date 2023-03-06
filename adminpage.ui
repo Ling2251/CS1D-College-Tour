@@ -1,17 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>adminpage</class>
- <widget name="adminpage" class="QDialog">
+ <widget class="QDialog" name="adminpage">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>858</width>
+    <height>365</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>10</y>
+     <width>241</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:700;&quot;&gt;Maintenance&lt;br/&gt;Mode&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="adminpage_AddCollegesButton">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>160</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Add Colleges</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="adminpage_EditCollegesButton">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>200</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Edit Colleges/Souvenirs</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="adminpage_ReturnButton">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>260</y>
+     <width>80</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Return</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

@@ -16,12 +16,24 @@ public:
     explicit planTripWindow(QWidget *parent = nullptr);
     ~planTripWindow();
 
+signals:
+    void firstWindow();
+    void collegeWindow();
+
 private slots:
     void on_planShortTrip_clicked();
 
     void on_planCustomTrip_clicked();
 
     void on_startTrip_clicked();
+
+    void on_plantrip_ReturnButton_clicked();
+
+    void on_plantrip_SaddlebackButton_clicked();
+
+    void on_plantrip_ArizonaStateButton_clicked();
+
+    void on_plantrip_CustomCollegeButton_clicked();
 
 private:
     Ui::planTripWindow *ui;

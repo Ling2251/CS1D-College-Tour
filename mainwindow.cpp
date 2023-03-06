@@ -36,6 +36,23 @@ MainWindow::MainWindow(QWidget *parent)
     {
         qDebug() << "Database: connection ok";
     }
+
+    Login = new loginpage();
+    connect(Login, &loginpage::firstWindow, this, &MainWindow::show);
+
+    PlanTrip = new planTripWindow();
+    connect(PlanTrip, &planTripWindow::firstWindow, this, &MainWindow::show);
+
+    Admin = new adminpage();
+    connect(Admin, &adminpage::firstWindow, this, &MainWindow::show);
+    connect(Login, &loginpage::adminWindow, Admin, &adminpage::show);
+    CollegeWin = new collegetripwindow();
+    connect(PlanTrip, &planTripWindow::collegeWindow, CollegeWin, &collegetripwindow::show);
+
+    Receipt = new receiptpage();
+    connect(Receipt, &receiptpage::firstWindow, this, &MainWindow::show);
+    connect(CollegeWin, &collegetripwindow::receiptPage, Receipt, &receiptpage::show);
+
 }
 
 MainWindow::~MainWindow()
@@ -61,3 +78,17 @@ void MainWindow::on_Maintenance_clicked()
     maintenance.setModal(true);
     maintenance.exec();
 }
+
+void MainWindow::on_mainwindow_StartTourButton_clicked()
+{
+    PlanTrip->show();
+    this->close();
+}
+
+
+void MainWindow::on_mainwindow_MaintenanceButton_clicked()
+{
+    Login->show();
+    this->close();
+}
+

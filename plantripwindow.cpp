@@ -46,3 +46,31 @@ void planTripWindow::on_startTrip_clicked()
 
 }
 
+
+void planTripWindow::on_plantrip_ReturnButton_clicked()
+{
+    this->close();
+    emit firstWindow();
+}
+
+
+void planTripWindow::on_plantrip_SaddlebackButton_clicked()
+{
+    this->close();
+    emit collegeWindow();
+}
+
+
+void planTripWindow::on_plantrip_ArizonaStateButton_clicked()
+{
+    this->close();
+    emit collegeWindow();
+}
+
+
+void planTripWindow::on_plantrip_CustomCollegeButton_clicked()
+{
+    this->close();
+    emit collegeWindow();
+}
+

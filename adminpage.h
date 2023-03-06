@@ -15,6 +15,13 @@ public:
     explicit adminpage(QWidget *parent = nullptr);
     ~adminpage();
 
+signals:
+    firstWindow();
+    adminWindow();
+
+private slots:
+    void on_adminpage_ReturnButton_clicked();
+
 private:
     Ui::adminpage *ui;
 };

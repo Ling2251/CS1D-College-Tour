@@ -12,3 +12,17 @@ loginpage::~loginpage()
 {
     delete ui;
 }
+
+void loginpage::on_pushButton_cancel_clicked()
+{
+    this->close();
+    emit firstWindow();
+}
+
+
+void loginpage::on_pushButton_login_clicked()
+{
+    this->close();
+    emit adminWindow();
+}
+

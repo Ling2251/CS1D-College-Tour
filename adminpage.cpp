@@ -12,3 +12,10 @@ adminpage::~adminpage()
 {
     delete ui;
 }
+
+void adminpage::on_adminpage_ReturnButton_clicked()
+{
+    this->close();
+    emit firstWindow();
+}
+

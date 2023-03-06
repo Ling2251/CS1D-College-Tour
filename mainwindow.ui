@@ -27,42 +27,51 @@
      <string>Maintenence Mode</string>
     </property>
    </widget>
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-       <widget class="QLabel" name="label">
-        <property name="styleSheet">
-         <string notr="true">font: 75 20pt &quot;MS Shell Dlg 2&quot;;
+   <widget class="QPushButton" name="mainwindow_StartTourButton">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>197</y>
+      <width>241</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> Start Your 
+College Tour!</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="mainwindow_MaintenanceButton">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>270</y>
+      <width>241</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Maintenance</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>0</y>
+      <width>341</width>
+      <height>159</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 20pt &quot;MS Shell Dlg 2&quot;;
 color: rgb(0, 0, 0)
 </string>
-        </property>
-        <property name="text">
-         <string>Welcome to the College Tour Application!</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <item>
-         <widget class="QPushButton" name="Maintenance">
-          <property name="text">
-           <string>Maintenance</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="startCollegeTour">
-          <property name="text">
-           <string>Start Your College Tour!</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </item>
-   </layout>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Welcome to the&lt;/p&gt;&lt;p align=&quot;center&quot;&gt; College Tour Application!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -70,7 +79,7 @@ color: rgb(0, 0, 0)
      <x>0</x>
      <y>0</y>
      <width>858</width>
-     <height>26</height>
+     <height>17</height>
     </rect>
    </property>
   </widget>
