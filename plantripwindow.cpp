@@ -244,7 +244,6 @@ void planTripWindow::on_addSouvenir_button_clicked()
     int quantity = ui-> quantity_spinBox -> cleanText().toInt();
     souv.quantity = quantity;
 
-    // calculate the price here__YC:
 
 
     souvenirCart.push(souv);
@@ -266,7 +265,35 @@ void planTripWindow::on_addSouvenir_button_clicked()
 
    showSouvCartTableView(m_database.loadSouvCart(sQry));
 
+   calculateTotal();
+   showTotal(total);
   // showSouvCartTableView();
   // get the total cost here__YC:
 }
 
+//calculate function is to calculate total price from the cart table
+void planTripWindow::calculateTotal()
+{
+    double total = 0.0;
+    QSqlQuery qry;
+
+    if(true)
+    {
+        qry.prepare("select printf(\"%.2f\",sum(cost * quantity)) from Cart;");
+        qry.exec();
+        if(qry.next())
+        {
+            total = qry.value(0).toDouble();
+        }
+    }
+
+    this->total = total;
+
+}
+
+//showTotal function is to display the total purchases in the label
+//pass the variable total from calculateTotal()function
+void planTripWindow::showTotal(double total)
+{
+    ui->totalCart_label->setNum(total);
+}

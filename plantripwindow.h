@@ -33,6 +33,9 @@ public:
     void showSelectCampusComboBox(QStringListModel *model);
     void showSouvTableView(QSqlQueryModel *model);
     void showSouvCartTableView(QSqlQueryModel *model);
+    void calculateTotal();
+    void showTotal(double total);
+
 
 private slots:
     void on_planShortTrip_clicked();
@@ -52,6 +55,7 @@ private:
     QQueue<QString> sortedCampuses;   /**< queue of sorted campuses for tour*/
     QStack<Souvenir> souvenirCart;  /**< stack of the purchased souvenirs*/
     QString sQry;
+    double total;
 };
 
 #endif // PLANTRIPWINDOW_H
