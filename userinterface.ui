@@ -70,7 +70,7 @@ color: rgb(0, 0, 0)</string>
          <item>
           <widget class="QPushButton" name="displayCollegeButton">
            <property name="text">
-            <string>Display College</string>
+            <string>Display Colleges</string>
            </property>
           </widget>
          </item>

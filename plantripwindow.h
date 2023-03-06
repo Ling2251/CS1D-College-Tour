@@ -35,6 +35,7 @@ public:
     void showSouvCartTableView(QSqlQueryModel *model);
     void calculateTotal();
     void showTotal(double total);
+    void showDistance(double total);
 
 
 private slots:
@@ -56,6 +57,7 @@ private:
     QStack<Souvenir> souvenirCart;  /**< stack of the purchased souvenirs*/
     QString sQry;
     double total;
+    double distance;
 };
 
 #endif // PLANTRIPWINDOW_H
