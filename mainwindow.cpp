@@ -42,7 +42,7 @@ void MainWindow::on_startCollegeTour_clicked()
 
 void MainWindow::on_Maintenance_clicked()
 {
-    hide();
+    //hide();
 //    loginpage = new adminpage(this);
 //    adminPage->show();
 

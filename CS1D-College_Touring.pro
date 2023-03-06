@@ -23,7 +23,7 @@ SOURCES += \
     userinterface.cpp \
     adminpage.cpp \
     loginpage.cpp \
-    inputcollge.cpp \
+    inputcollege.cpp \
 
 HEADERS += \
     dbmanager.h \
@@ -34,7 +34,7 @@ HEADERS += \
     userinterface.h \
     adminpage.h \
     loginpage.h \
-    inputcollge.h \
+    inputcollege.h \
     global.h \
     
 FORMS += \
@@ -45,6 +45,7 @@ FORMS += \
     userinterface.ui \
     adminpage.ui \
     loginpage.ui \
+    inputcollege.ui \
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

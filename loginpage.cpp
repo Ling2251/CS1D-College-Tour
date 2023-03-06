@@ -27,7 +27,7 @@ void loginpage::on_pushButton_login_clicked()
            maintenance maintenance;
            maintenance.setModal(true);
            maintenance.exec();
-           hide();
+           //hide();
        }
        else
        {
