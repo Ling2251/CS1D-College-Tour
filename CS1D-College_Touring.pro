@@ -23,6 +23,7 @@ SOURCES += \
     userinterface.cpp \
     adminpage.cpp \
     loginpage.cpp \
+    inputcollge.cpp \
 
 HEADERS += \
     dbmanager.h \
@@ -33,7 +34,9 @@ HEADERS += \
     userinterface.h \
     adminpage.h \
     loginpage.h \
-
+    inputcollge.h \
+    global.h \
+    
 FORMS += \
     displaycollegewindow.ui \
     maintenance.ui \
