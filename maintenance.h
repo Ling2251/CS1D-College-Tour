@@ -20,12 +20,12 @@ class maintenance : public QDialog
 public:
     explicit maintenance(QWidget *parent = nullptr);
     ~maintenance();
-    void readFile();    //read file function
+private slots:
+    void on_pushButton_2_clicked();
 
 private:
     Ui::maintenance *ui;
-    QPushButton *m_pButton; //IN -- Button to Ask user to input file
-    QTextEdit *m_pTextEdit; //IN/OUT -- text edit box
+
 };
 
 #endif // MAINTENANCE_H
