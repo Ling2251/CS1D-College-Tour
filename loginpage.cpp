@@ -25,9 +25,10 @@ void loginpage::on_pushButton_login_clicked()
        {
            QMessageBox::information(this, "Login", "Logged in");
            maintenance maintenance;
+           hide();
            maintenance.setModal(true);
            maintenance.exec();
-           //hide();
+           
        }
        else
        {
