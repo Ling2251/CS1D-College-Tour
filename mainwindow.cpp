@@ -36,6 +36,7 @@ void MainWindow::on_startCollegeTour_clicked()
 {
     userInterface userinterface;
     userinterface.setModal(true);
+    hide();
     userinterface.exec();
 }
 
