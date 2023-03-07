@@ -20,6 +20,8 @@ private slots:
     void on_displayCollegeButton_clicked();
 
     void on_planTripButton_clicked();
+    
+    void on_mainpage_clicked();
 
 private:
     Ui::userInterface *ui;
