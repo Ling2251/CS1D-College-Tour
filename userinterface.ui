@@ -6,82 +6,173 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>717</width>
-    <height>342</height>
+    <width>729</width>
+    <height>460</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout_3">
-   <item row="0" column="0">
-    <layout class="QGridLayout" name="gridLayout_2">
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_3">
-       <property name="styleSheet">
-        <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0)</string>
-       </property>
-       <property name="text">
-        <string>Welcome to the College Tour app! We provide users with an easy tour experience right 
-from home, allowing them to travel across the country and visit the colleges they 
-would like to attend. With each college comes a selection of traditional souvenirs, 
-which users can purchase directly from the app. Now would you like to</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="1" column="0">
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-          <widget class="QLabel" name="label">
-           <property name="styleSheet">
-            <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0)</string>
-           </property>
-           <property name="text">
-            <string>start planning your trip?</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="planTripButton">
-           <property name="text">
-            <string>Plan a Trip</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="0" column="0">
-        <layout class="QHBoxLayout" name="horizontalLayout">
-         <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-          <widget class="QLabel" name="label_2">
-           <property name="styleSheet">
-            <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0)</string>
-           </property>
-           <property name="text">
-            <string> see all the colleges we offer?</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="displayCollegeButton">
-           <property name="text">
-            <string>Display Colleges</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </item>
-    </layout>
-   </item>
-  </layout>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <widget class="QPushButton" name="mainpage">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>91</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/image/college logo.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>250</y>
+     <width>551</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 700 italic 10pt &quot;Segoe UI&quot;;
+color: rgb(0, 85, 255);</string>
+   </property>
+   <property name="text">
+    <string>If you haven't already, please click here to check out all the campuses we offer </string>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="displayCollegeButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>300</y>
+     <width>221</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 700 10pt &quot;Segoe UI&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Display Colleges</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>340</y>
+     <width>191</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 700 12pt &quot;Segoe Print&quot;;
+</string>
+   </property>
+   <property name="text">
+    <string>Ready to Plan a Trip? </string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="planTripButton">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>380</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+font: 700 12pt &quot;Segoe UI&quot;;
+background-color: rgb(0, 0, 255);
+color: rgb(255, 255, 255);
+</string>
+   </property>
+   <property name="text">
+    <string>LET'S GO!</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>10</y>
+     <width>311</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 600 18pt &quot;Segoe UI Variable Display Semib&quot;;
+color: rgb(0, 0, 255);</string>
+   </property>
+   <property name="text">
+    <string>We are Excited You Are Here! </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>711</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 700 9pt &quot;Segoe UI&quot;;</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Looking for an immersive tour experience from the comfort of your own home? Look no further than our app! We offer the best virtual tours of colleges across the country, giving you an up-close and personal look at the schools you're considering attending. But that's not all – with each virtual visit comes a chance to purchase unique, traditional souvenirs straight from the app. So whether you're shopping for college gear or exploring potential campuses, our app is the ultimate destination for any aspiring student.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>731</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/image/different colleges.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <zorder>label_5</zorder>
+  <zorder>mainpage</zorder>
+  <zorder>label</zorder>
+  <zorder>displayCollegeButton</zorder>
+  <zorder>label_2</zorder>
+  <zorder>planTripButton</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_4</zorder>
  </widget>
  <resources/>
  <connections/>
 </ui>
+
