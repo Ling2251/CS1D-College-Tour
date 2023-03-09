@@ -20,7 +20,7 @@
       <string notr="true"/>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="StudentSelect">
       <widget class="QLabel" name="label">
@@ -77,6 +77,41 @@ color: rgb(0, 0, 0)</string>
        </property>
        <property name="text">
         <string>Plan a Custom Trip</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="goback2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>41</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;Segoe UI&quot;;
+text-decoration: underline;
+border: none;
+</string>
+       </property>
+       <property name="text">
+        <string>&lt; Back</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="mainpage">
+       <property name="geometry">
+        <rect>
+         <x>730</x>
+         <y>10</y>
+         <width>91</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/image/college logo.png);</string>
+       </property>
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </widget>
@@ -292,6 +327,41 @@ color: rgb(0, 0, 0)</string>
         <bool>false</bool>
        </property>
       </widget>
+      <widget class="QToolButton" name="goback">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>41</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;Segoe UI&quot;;
+text-decoration: underline;
+border: none;
+</string>
+       </property>
+       <property name="text">
+        <string>&lt; Back</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="mainpage_2">
+       <property name="geometry">
+        <rect>
+         <x>730</x>
+         <y>10</y>
+         <width>91</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/image/college logo.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
       <zorder>addSouvenir_button</zorder>
       <zorder>quantity_spinBox</zorder>
       <zorder>souv_tableView</zorder>
@@ -305,6 +375,8 @@ color: rgb(0, 0, 0)</string>
       <zorder>souv_comboBox</zorder>
       <zorder>totalDistance_label</zorder>
       <zorder>total_label_2</zorder>
+      <zorder>goback</zorder>
+      <zorder>mainpage_2</zorder>
      </widget>
     </widget>
    </item>
