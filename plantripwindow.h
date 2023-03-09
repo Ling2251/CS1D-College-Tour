@@ -48,6 +48,14 @@ private slots:
     void on_selectCampus_comboBox_currentIndexChanged();
 
     void on_addSouvenir_button_clicked();
+    
+    void on_goback_clicked();
+
+    void on_goback2_clicked();
+
+    void on_mainpage_clicked();
+
+    void on_mainpage_2_clicked();
 
 private:
     Ui::planTripWindow *ui;
