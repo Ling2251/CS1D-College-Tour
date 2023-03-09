@@ -1,7 +1,9 @@
 /**********************************************************/
 #include "plantripwindow.h"
 #include "ui_plantripwindow.h"
+#include "userinterface.h"
 #include <QComboBox>
+#include "mainwindow.h"
 /**********************************************************/
 
 /**********************************************************
@@ -189,6 +191,65 @@ void planTripWindow::goToSouvenirShop()
     //showTotalCost(totalCost);
     //showDistance(distance);
 }
+
+
+    /*UI DESIGN*/
+/*
+ * gobackbuttonclicked()
+ * This function let the go back button work on the screen
+ */
+void planTripWindow::on_goback_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->StudentSelect);
+}
+
+void planTripWindow::on_goback2_clicked()
+{
+    userInterface user;
+    hide();
+    user.setModal(true);
+    user.exec();
+}
+
+//go home screen button
+//This button will allow the user to go back to home page
+void planTripWindow::on_mainpage_clicked()
+{
+    QList<QWidget*> topLevelWidgets = qApp->topLevelWidgets();
+        foreach(QWidget *widget, topLevelWidgets) {
+            QMainWindow *mainWindow = qobject_cast<QMainWindow*>(widget);
+            if (mainWindow) {
+                // Show the main window if it was previously hidden
+                if (!mainWindow->isVisible()) {
+                    mainWindow->show();
+                }
+                break;
+            }
+        }
+    hide();
+
+}
+
+//This button will allow the user to go back to home page
+void planTripWindow::on_mainpage_2_clicked()
+{
+    QList<QWidget*> topLevelWidgets = qApp->topLevelWidgets();
+        foreach(QWidget *widget, topLevelWidgets) {
+            QMainWindow *mainWindow = qobject_cast<QMainWindow*>(widget);
+            if (mainWindow) {
+                // Show the main window if it was previously hidden
+                if (!mainWindow->isVisible()) {
+                    mainWindow->show();
+                }
+                break;
+            }
+        }
+    hide();
+
+}
+
+
+    /*UI DESIGN ENDS HERE*/
 
 /*
  * showSelectCampusComboBox(QStringListModel *model)
