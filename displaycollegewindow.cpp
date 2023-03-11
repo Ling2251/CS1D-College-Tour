@@ -8,7 +8,8 @@
 * displayCollegeWindow
 *_________________________________________________________
 *This page will display all the colleges offered by the
-*program as well as their traditional souvenirs.
+*program and the distant form other college as well as the
+*traditional souvenirs.
 *_________________________________________________________
 ***********************************************************/
 displayCollegeWindow::displayCollegeWindow(QWidget *parent) :
@@ -16,6 +17,7 @@ displayCollegeWindow::displayCollegeWindow(QWidget *parent) :
     ui(new Ui::displayCollegeWindow)
 {
         ui->setupUi(this);
+        showCampusDBCombo(m_database.loadCampusNamesOnly());
 }
 
 //

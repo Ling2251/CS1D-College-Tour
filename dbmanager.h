@@ -12,6 +12,12 @@ public:
     dbManager();
    ~dbManager();
 
+    /** \fn loadCampusNamesOnly()
+     * Using the "select XXX from" query funtion, the name of the college campuses are read in from the database into a QSqlQueryModel.
+     * If a database error occurs, an error warning is printed to the console.
+     */
+    QSqlQueryModel *loadCampusNamesOnly();
+
     /** \fn loadOtherCampusAndDist(QString campus)
      * Using the "select XXX from" query funtion and using the name of a single campus,
      * the names of the other campuses and their distance between them and the original campus are read in from the database into a QSqlQueryModel.
