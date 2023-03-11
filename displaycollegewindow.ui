@@ -6,29 +6,85 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>738</width>
-    <height>449</height>
+    <width>823</width>
+    <height>498</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout_2">
-   <item row="1" column="0">
-    <widget class="QListWidget" name="listWidget"/>
-   </item>
-   <item row="0" column="0">
-    <widget class="QLabel" name="label">
-     <property name="styleSheet">
-      <string notr="true">font: 75 15pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0)</string>
-     </property>
-     <property name="text">
-      <string>Here are all the colleges we offer:</string>
-     </property>
-    </widget>
-   </item>
-  </layout>
+  <widget class="QPushButton" name="souv_button">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>450</y>
+     <width>141</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Souvenirs</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="other_button">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>450</y>
+     <width>141</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Other Campuses</string>
+   </property>
+  </widget>
+  <widget class="QTableView" name="tableView">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>781</width>
+     <height>371</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="database_label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>371</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Database</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="campus_combo">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>460</y>
+     <width>281</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="campus_label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>430</y>
+     <width>121</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Current Campus</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

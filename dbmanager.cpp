@@ -20,6 +20,56 @@ dbManager::~dbManager()
 
 }
 
+/*
+ * loadCampusNamesOnly()
+ * Using the "select XXX from" query funtion, the name of the college campuses are read in from the database into a QSqlQueryModel.
+ * If a database error occurs, an error warning is printed to the console.
+ * IN: no formal parameters
+ * OUT: QSqlQueryModel (pointer)
+ */
+QSqlQueryModel* dbManager::loadCampusNamesOnly()
+{
+    QSqlQueryModel* model = new QSqlQueryModel();
+
+    QString sQry = "select stardingCollege as \"Campuses\" from collegelist group by stardingCollege;";
+    QSqlQuery qry;
+    qry.prepare(sQry);
+
+    if(!qry.exec())
+    {
+        qDebug() << "\nError Loading Campuses\n";
+    }
+
+    model->setQuery(qry);
+    return model;
+}
+
+
+/*
+ * loadOtherCampusAndDist(QString campus)
+ * Using the "select XXX from" query funtion and using the name of a single campus,
+ * the names of the other campuses and their distance between them and the original campus are read in from the database into a QSqlQueryModel.
+ * If a database error occurs, an error warning is printed to the console.
+ * IN: no formal parameters
+ * OUT: QSqlQueryModel (pointer)
+ */
+QSqlQueryModel* dbManager::loadOtherCampusAndDist(QString campus)
+{
+    QSqlQueryModel* model = new QSqlQueryModel();
+
+    QString sQry = "SELECT endingCollege as 'Campuses', distance as 'Distance(mi)' FROM collegelist WHERE stardingCollege='" + campus + "';";
+    QSqlQuery qry;
+    qry.prepare(sQry);
+
+    if(!qry.exec())
+    {
+        qDebug() << "\nError Loading Campuses\n";
+    }
+
+    model->setQuery(qry);
+    return model;
+}
+
 
 /*
  * checkCampusName(QString campus)
