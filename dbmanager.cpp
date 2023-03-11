@@ -178,6 +178,22 @@ void dbManager::createCart()
 }
 
 /*
+ * deleteCart()
+ * This deletes the cart table in the SQL Database when the user has completed their shopping trip.
+ */
+void dbManager::deleteCart()
+{
+    //cartQry - temporary table
+    QSqlQuery cartQry;
+    cartQry.prepare("drop table Cart;");
+
+    if(!cartQry.exec())
+    {
+        qDebug() << "\nError dropping Cart\n";
+    }
+}
+
+/*
  * updateCartQuantity(QString campus, QString souv, int quantity)
  * This function updates the changes of quantity to the cart table in the SQL Database.
  */

@@ -55,6 +55,11 @@ public:
      */
     void createCart();
 
+    /** \fn deleteCart()
+     * This deletes the cart table in the SQL Database when the user has completed their shopping trip.
+     */
+    void deleteCart();
+
     /** \fn updateCartQuantity(QString campus, QString souv, int quantity)
      * This function updates the changes of quantity to the cart table in the SQL Database.
      */

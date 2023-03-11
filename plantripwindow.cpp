@@ -25,6 +25,9 @@ planTripWindow::planTripWindow(QWidget *parent) :
     //Shows the UI that has the different trip selections
     ui->setupUi(this);
     ui->stackedWidget->setCurrentWidget(ui->StudentSelect);
+
+    // clear the prives shoping cart item
+    m_database.deleteCart();
 }
 
 planTripWindow::~planTripWindow()
@@ -98,23 +101,6 @@ void planTripWindow::on_startTrip_clicked()
         goToSouvenirShop();
     }
 }
-
-/*
- * displayCollegeTripList()
- * This function will just display the list of all college that the student will visit
- */
-//void planTripWindow::displayCollegeTripList(){
-//    // display the final college trip to the screen
-//    QString start = *selectedCampuses.begin();
-//    recursiveCollegeSort(start);
-
-//    for(int i = 0; i < sortedCampuses.count(); i++)
-//    {
-//        ui->sort_listWidget->addItem(sortedCampuses[i]);
-//    }
-
-//}
-
 
 /*
  * recursiveCollegeSort()

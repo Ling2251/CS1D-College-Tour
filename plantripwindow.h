@@ -27,7 +27,6 @@ public:
     ~planTripWindow();
 
     bool checkCampusVectorNames(QVector<QString> campuses);
-    void displayCollegeTripList();
     void recursiveCollegeSort(QString currentCamp);
     void goToSouvenirShop();
     void showSelectCampusComboBox(QStringListModel *model);
