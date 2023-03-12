@@ -20,7 +20,7 @@
       <string notr="true"/>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="StudentSelect">
       <widget class="QLabel" name="label">
@@ -390,6 +390,119 @@ border: none;
       <zorder>total_label_2</zorder>
       <zorder>goback</zorder>
       <zorder>mainpage_2</zorder>
+     </widget>
+     <widget class="QWidget" name="customCollegeTour">
+      <widget class="QLabel" name="avali_label_2">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>30</y>
+         <width>151</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Avaliable Campuses</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="next_label">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>380</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Next Campus</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="enter_button_2">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>430</y>
+         <width>112</width>
+         <height>34</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Enter</string>
+       </property>
+      </widget>
+      <widget class="QListView" name="avali_listView">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>60</y>
+         <width>361</width>
+         <height>311</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QListView" name="select_listView">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>60</y>
+         <width>361</width>
+         <height>311</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="select_label">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>30</y>
+         <width>151</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Selected Campuses</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="done_button">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>430</y>
+         <width>112</width>
+         <height>34</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Done</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="back_button_general">
+       <property name="geometry">
+        <rect>
+         <x>670</x>
+         <y>10</y>
+         <width>112</width>
+         <height>34</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Back</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="next_combo">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>390</y>
+         <width>251</width>
+         <height>26</height>
+        </rect>
+       </property>
+      </widget>
      </widget>
     </widget>
    </item>

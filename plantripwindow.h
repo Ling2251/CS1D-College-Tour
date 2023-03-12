@@ -35,6 +35,9 @@ public:
     void calculateTotal();
     void showTotal(double total);
     void showDistance(double total);
+    void showAvaliListCombo(QSqlQueryModel *model);
+    void showSelectListView();
+    void showAvaliListView(QSqlQueryModel *model);
 
 
 private slots:
@@ -58,12 +61,18 @@ private slots:
 
     void on_startTripFormUIC_clicked();
 
+    void on_enter_button_2_clicked();
+
+    void on_done_button_clicked();
+
 private:
     Ui::planTripWindow *ui;
     dbManager m_database;
     QVector<QString> selectedCampuses; /**< vector of selected campuses for the tour*/
     QQueue<QString> sortedCampuses;   /**< queue of sorted campuses for tour*/
     QStack<Souvenir> souvenirCart;  /**< stack of the purchased souvenirs*/
+    int asuNum; /**< the maximum number of campuses allowed during the ASU tour*/
+    int selectNum; /**< the current number of campuses*/
     QString sQry;
     double total;
     double distance;

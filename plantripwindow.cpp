@@ -44,8 +44,84 @@ void planTripWindow::on_planShortTrip_clicked()
 // This button when pressed will send the user to a page that will allow them to a plan custom trip
 void planTripWindow::on_planCustomTrip_clicked()
 {
+    ui->stackedWidget->setCurrentWidget(ui->customCollegeTour);
+
+    showAvaliListView(m_database.loadCampusNamesOnly());
+    showAvaliListCombo(m_database.loadCampusNamesOnly());
+}
+
+/*
+ * showAvaliListView(QSqlQueryModel *model)
+ * The avaliable campuses list view on the general tour college selection UI will display the information held in a QSqlQueryModel pointer.
+ * @param QSqlQueryModel, model (passed as a pointer)
+ * @return nothing returned
+ */
+void planTripWindow::showAvaliListView(QSqlQueryModel *model)
+{
+    ui->avali_listView->setModel(model);
+}
+
+/*
+ * showSelectListView(QSqlQueryModel *model)
+ * The selected campuses list view on the general tour college selection UI will display the information held in a QSqlQueryModel pointer.
+ * IN: QSqlQueryModel, model (passed as a pointer)
+ * OUT: nothing returned
+ */
+void planTripWindow::showSelectListView()
+{
+    ui->select_listView->setModel(new QStringListModel(QList<QString>::fromVector(selectedCampuses)));
+}
+
+/*
+ * showAvaliListCombo(QSqlQueryModel *model)
+ * The avaliable campuses combo box on the general tour college selection UI will display the information held in a QSqlQueryModel pointer.
+ * IN: QSqlQueryModel, model (passed as a pointer)
+ * OUT: nothing returned
+ */
+void planTripWindow::showAvaliListCombo(QSqlQueryModel *model)
+{
+    ui->next_combo->setModel(model);
+}
+
+
+void planTripWindow::on_enter_button_2_clicked()
+{
+    //Students choice is saved into the vector
+    QString campus = ui->next_combo->currentText();
+    selectedCampuses.push_back(campus);
+    selectNum++;
+
+    //No campuses
+    if(campus == "")
+    {
+        QMessageBox::warning(this, "ERROR", "NO MORE CAMPUSES! PLEASE CLICK DONE!", QMessageBox::Ok, QMessageBox::NoButton);
+    }
+    //ASU tour
+    else if (selectNum == asuNum)
+    {
+        QMessageBox::warning(this, "ERROR", "YOU HAVE REACHED YOUR MAX FOR THE ASU TOUR! PLEASE CLICK DONE!", QMessageBox::Ok, QMessageBox::NoButton);
+    }
+    //Campuses remain
+    else
+    {
+        //Pushes newly selected campus to the back of the vector
+        selectedCampuses.push_back(campus);
+        selectNum++;
+        //Refreshes list views and combo box
+        showAvaliListView(m_database.loadRemainingCampusNamesOnly(selectedCampuses));
+        showSelectListView();
+        showAvaliListCombo(m_database.loadRemainingCampusNamesOnly(selectedCampuses));
+    }
+}
+
+
+void planTripWindow::on_done_button_clicked()
+{
 
 }
+
+
+
 
 /*
  * checkCampusVectorNames(QVector<QString> campuses)
@@ -389,6 +465,5 @@ void planTripWindow::showTotal(double total)
 //{
 //    ui->totalDistance_label->setNum(distance);
 //}
-
 
 
