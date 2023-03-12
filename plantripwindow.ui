@@ -20,22 +20,23 @@
       <string notr="true"/>
      </property>
      <property name="currentIndex">
-      <number>3</number>
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="StudentSelect">
       <widget class="QLabel" name="label">
        <property name="geometry">
         <rect>
-         <x>200</x>
+         <x>240</x>
          <y>30</y>
-         <width>588</width>
-         <height>40</height>
+         <width>531</width>
+         <height>51</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 20pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0)</string>
+        <string notr="true">font: 700 20pt &quot;Segoe Script&quot;;
+background-color: rgb(0, 0, 255);
+color: rgb(255, 255, 255);
+</string>
        </property>
        <property name="text">
         <string>What kind of trip would you like to take?</string>
@@ -44,8 +45,8 @@ color: rgb(0, 0, 0)</string>
       <widget class="QPushButton" name="planShortTrip">
        <property name="geometry">
         <rect>
-         <x>380</x>
-         <y>110</y>
+         <x>740</x>
+         <y>200</y>
          <width>231</width>
          <height>61</height>
         </rect>
@@ -57,8 +58,8 @@ color: rgb(0, 0, 0)</string>
       <widget class="QPushButton" name="startTrip">
        <property name="geometry">
         <rect>
-         <x>110</x>
-         <y>110</y>
+         <x>40</x>
+         <y>200</y>
          <width>231</width>
          <height>61</height>
         </rect>
@@ -70,8 +71,8 @@ color: rgb(0, 0, 0)</string>
       <widget class="QPushButton" name="planCustomTrip">
        <property name="geometry">
         <rect>
-         <x>660</x>
-         <y>110</y>
+         <x>400</x>
+         <y>380</y>
          <width>231</width>
          <height>61</height>
         </rect>
@@ -119,8 +120,8 @@ border: none;
       <widget class="QPushButton" name="startTripFormUIC">
        <property name="geometry">
         <rect>
-         <x>100</x>
-         <y>320</y>
+         <x>400</x>
+         <y>200</y>
          <width>231</width>
          <height>61</height>
         </rect>
@@ -129,6 +130,68 @@ border: none;
         <string>Start a Trip (from UCI)</string>
        </property>
       </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>130</y>
+         <width>1041</width>
+         <height>401</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/image/College background2.jpg);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>150</y>
+         <width>341</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 700 16pt &quot;Segoe UI&quot;;
+border: none;
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Try out our popular default trip: </string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>320</y>
+         <width>261</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 700 16pt &quot;Segoe UI&quot;;
+border: none;
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Or, Plan your Own Trip</string>
+       </property>
+      </widget>
+      <zorder>label_4</zorder>
+      <zorder>label</zorder>
+      <zorder>planShortTrip</zorder>
+      <zorder>startTrip</zorder>
+      <zorder>planCustomTrip</zorder>
+      <zorder>goback2</zorder>
+      <zorder>mainpage</zorder>
+      <zorder>startTripFormUIC</zorder>
+      <zorder>label_5</zorder>
+      <zorder>label_6</zorder>
      </widget>
      <widget class="QWidget" name="souvenirShop">
       <widget class="QPushButton" name="addSouvenir_button">
@@ -179,7 +242,6 @@ border: none;
        <property name="font">
         <font>
          <pointsize>12</pointsize>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -199,7 +261,6 @@ border: none;
        <property name="font">
         <font>
          <pointsize>18</pointsize>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -232,7 +293,6 @@ border: none;
        <property name="font">
         <font>
          <pointsize>9</pointsize>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -262,7 +322,6 @@ border: none;
        <property name="font">
         <font>
          <pointsize>18</pointsize>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -282,7 +341,6 @@ border: none;
        <property name="font">
         <font>
          <pointsize>18</pointsize>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -327,7 +385,6 @@ border: none;
        <property name="font">
         <font>
          <pointsize>10</pointsize>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -347,7 +404,6 @@ border: none;
        <property name="font">
         <font>
          <pointsize>18</pointsize>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -377,7 +433,6 @@ border: none;
         <font>
          <family>Segoe UI</family>
          <pointsize>10</pointsize>
-         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
          <underline>true</underline>
@@ -397,8 +452,8 @@ border: none;
       <widget class="QPushButton" name="mainpage_2">
        <property name="geometry">
         <rect>
-         <x>900</x>
-         <y>30</y>
+         <x>890</x>
+         <y>20</y>
          <width>91</width>
          <height>51</height>
         </rect>
@@ -590,7 +645,6 @@ border: none;
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>8</pointsize>
-         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -616,7 +670,6 @@ color:rgb(0, 0, 0)</string>
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>8</pointsize>
-         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -657,7 +710,6 @@ color:rgb(0, 0, 0)</string>
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>8</pointsize>
-         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -714,7 +766,6 @@ border: none;
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>8</pointsize>
-         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -755,7 +806,6 @@ color:rgb(0, 0, 0)</string>
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>8</pointsize>
-         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -806,7 +856,6 @@ border: none;
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>8</pointsize>
-         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -857,3 +906,4 @@ color: rgb(0, 0, 0)</string>
  <resources/>
  <connections/>
 </ui>
+
