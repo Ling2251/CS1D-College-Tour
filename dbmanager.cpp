@@ -136,6 +136,37 @@ QSqlQueryModel* dbManager::loadCampusSouvenirs(QString campus)
 }
 
 /*
+ * loadRemainingCampusNamesOnly(QVector<QString> campuses)
+ * Using the "select XXX from" query funtion, the name of the avaliable college campuses are read in from the database into a QSqlQueryModel.
+ * The function excludes reading in the campuses from the passed in vector.
+ * If a database error occurs, an error warning is printed to the console.
+ */
+QSqlQueryModel* dbManager::loadRemainingCampusNamesOnly(QVector<QString> campuses)
+{
+    QSqlQueryModel* model = new QSqlQueryModel();
+
+    QString* p = campuses.begin();
+    QString sQry = "select stardingCollege as \"Campuses\" from collegelist where not stardingCollege = '" +*p+ "'";
+    p++;
+    while (p != campuses.end())
+    {
+        sQry += " and not stardingCollege = '" +*p+ "'";
+        p++;
+    }
+    sQry += " group by stardingCollege;";
+    QSqlQuery qry;
+    qry.prepare(sQry);
+
+    if(!qry.exec())
+    {
+        qDebug() << "\nError Loading Campuses\n";
+    }
+
+    model->setQuery(qry);
+    return model;
+}
+
+/*
  * loadSouvCart(QString sQry)
  * Using the "select XXX from" query funtion, the selected sovenirs are read in from the database into a QSqlQueryModel.
  * The query is an accumulator query that contains all the souvenirs the user has selected to add to an update quey using SQL code "UNION".

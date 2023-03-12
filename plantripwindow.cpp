@@ -22,6 +22,10 @@ planTripWindow::planTripWindow(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::planTripWindow)
 {
+    // initial the value
+    asuNum = 0;
+    selectNum = 0;
+
     //Shows the UI that has the different trip selections
     ui->setupUi(this);
     ui->stackedWidget->setCurrentWidget(ui->StudentSelect);
@@ -44,8 +48,91 @@ void planTripWindow::on_planShortTrip_clicked()
 // This button when pressed will send the user to a page that will allow them to a plan custom trip
 void planTripWindow::on_planCustomTrip_clicked()
 {
+    ui->stackedWidget->setCurrentWidget(ui->customCollegeTour);
 
+    showAvaliListView(m_database.loadCampusNamesOnly());
+    showAvaliListCombo(m_database.loadCampusNamesOnly());
 }
+
+/*
+ * showAvaliListView(QSqlQueryModel *model)
+ * The avaliable campuses list view on the general tour college selection UI will display the information held in a QSqlQueryModel pointer.
+ * @param QSqlQueryModel, model (passed as a pointer)
+ * @return nothing returned
+ */
+void planTripWindow::showAvaliListView(QSqlQueryModel *model)
+{
+    ui->avali_listView->setModel(model);
+}
+
+/*
+ * showSelectListView(QSqlQueryModel *model)
+ * The selected campuses list view on the general tour college selection UI will display the information held in a QSqlQueryModel pointer.
+ * IN: QSqlQueryModel, model (passed as a pointer)
+ * OUT: nothing returned
+ */
+void planTripWindow::showSelectListView()
+{
+    ui->select_listView->setModel(new QStringListModel(QList<QString>::fromVector(selectedCampuses)));
+}
+
+/*
+ * showAvaliListCombo(QSqlQueryModel *model)
+ * The avaliable campuses combo box on the general tour college selection UI will display the information held in a QSqlQueryModel pointer.
+ * IN: QSqlQueryModel, model (passed as a pointer)
+ * OUT: nothing returned
+ */
+void planTripWindow::showAvaliListCombo(QSqlQueryModel *model)
+{
+    ui->next_combo->setModel(model);
+}
+
+
+void planTripWindow::on_enter_button_clicked()
+{
+    //Students choice is saved into the vector
+    QString campus = ui->next_combo->currentText();
+
+    //No campuses
+    if(campus == "")
+    {
+        QMessageBox::warning(this, "ERROR", "NO MORE CAMPUSES! PLEASE CLICK DONE!", QMessageBox::Ok, QMessageBox::NoButton);
+    }
+    else if (selectNum == asuNum && selectNum!= 0)
+    {
+        QMessageBox::warning(this, "ERROR", "YOU HAVE REACHED YOUR MAX FOR THE ASU TOUR! PLEASE CLICK DONE!", QMessageBox::Ok, QMessageBox::NoButton);
+    }
+    //Campuses remain
+    else
+    {
+        //Pushes newly selected campus to the back of the vector
+        selectedCampuses.push_back(campus);
+        selectNum++;
+        //Refreshes list views and combo box
+        showAvaliListView(m_database.loadRemainingCampusNamesOnly(selectedCampuses));
+        showSelectListView();
+        showAvaliListCombo(m_database.loadRemainingCampusNamesOnly(selectedCampuses));
+    }
+}
+
+
+void planTripWindow::on_done_button_clicked()
+{
+    if(asuNum == 0 || selectNum == asuNum)
+    {
+        //Go to souvenirShop widget
+        QMessageBox::information(this, "Loading...", "Now moving to Souvenir Shop Screen.", QMessageBox::Ok, QMessageBox::NoButton);
+        goToSouvenirShop();
+    }
+    else
+    {
+        int left = asuNum - selectNum;
+        QMessageBox::warning(this, "ERROR", "PLEASE SELECT " + QString::number(left) + " MORE CAMPUSES.", QMessageBox::Ok, QMessageBox::NoButton);
+    }
+}
+
+
+
 
 /*
  * checkCampusVectorNames(QVector<QString> campuses)
@@ -101,6 +188,41 @@ void planTripWindow::on_startTrip_clicked()
         goToSouvenirShop();
     }
 }
+
+// This button when pressed will send the user to a page that will allow them to vist any colleges starting at UCI
+void planTripWindow::on_startTripFormUIC_clicked()
+{
+    // putting all initiall college in to a vector including saddleback college
+    QVector<QString> initial13{"University of California, Irvine (UCI)",
+                               "Saddleback College",
+                               "Arizona State University",
+                               "Massachusetts Institute of Technology (MIT)",
+                               "Northwestern",
+                               "Ohio State University",
+                               "University of  Michigan",
+                               "University of California, Los Angeles (UCLA)",
+                               "University of Oregon",
+                               "University of Wisconsin",
+                               "University of the Pacific",
+                               "California State University, Fullerton",
+                               "University of Texas"
+                               };
+
+    // check if all the college is in the database befor the recursive function
+    bool allFound = checkCampusVectorNames(initial13);
+
+    if(!allFound){
+        QMessageBox::warning(this, "ERROR", "The college list are incomplete, not all 13 college are in the list please check with the administrator.", QMessageBox::Ok, QMessageBox::NoButton);
+    }else{
+
+        selectedCampuses.append(initial13);
+        //displayCollegeTripList();
+        QMessageBox::information(this, "Loading...", "Start Trip has been selected. Now moving to Souvenir Screen.", QMessageBox::Ok, QMessageBox::NoButton);
+        // hid the current UI and show the sovenirs UI
+        goToSouvenirShop();
+    }
+}
+
 
 /*
  * recursiveCollegeSort()
@@ -354,4 +476,5 @@ void planTripWindow::showTotal(double total)
 //{
 //    ui->totalDistance_label->setNum(distance);
 //}
+
 
