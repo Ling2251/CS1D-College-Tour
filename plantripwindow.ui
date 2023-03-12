@@ -20,7 +20,7 @@
       <string notr="true"/>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="StudentSelect">
       <widget class="QLabel" name="label">
@@ -501,6 +501,296 @@ border: none;
          <width>251</width>
          <height>26</height>
         </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="StartTrip_02">
+      <widget class="QListWidget" name="listWidget_StartTrip_">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>10</y>
+         <width>451</width>
+         <height>471</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="total_label_3">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>430</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>111</width>
+         <height>41</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>8</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;
+color:rgb(0, 0, 0)</string>
+       </property>
+       <property name="text">
+        <string>Total distance:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="totalDistance_StartTrip_label">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>430</y>
+         <width>71</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>8</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;
+color:rgb(0, 0, 0)</string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="total_label_5">
+       <property name="geometry">
+        <rect>
+         <x>700</x>
+         <y>430</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>111</width>
+         <height>41</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>8</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;
+color:rgb(0, 0, 0)</string>
+       </property>
+       <property name="text">
+        <string>Miles</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="StartTrip_goback">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>41</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;Segoe UI&quot;;
+text-decoration: underline;
+border: none;
+</string>
+       </property>
+       <property name="text">
+        <string>&lt; Back</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="ShortTrip_02">
+      <widget class="QListWidget" name="listWidget_ShortTrip_02">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>10</y>
+         <width>441</width>
+         <height>471</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="totalDistance_ShortTrip_label">
+       <property name="geometry">
+        <rect>
+         <x>620</x>
+         <y>360</y>
+         <width>81</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>8</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;
+color:rgb(0, 0, 0)</string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="total_label_4">
+       <property name="geometry">
+        <rect>
+         <x>490</x>
+         <y>360</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>111</width>
+         <height>41</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>8</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;
+color:rgb(0, 0, 0)</string>
+       </property>
+       <property name="text">
+        <string>Total distance:</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="ShortTrip_goback">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>41</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;Segoe UI&quot;;
+text-decoration: underline;
+border: none;
+</string>
+       </property>
+       <property name="text">
+        <string>&lt; Back</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="total_label_6">
+       <property name="geometry">
+        <rect>
+         <x>720</x>
+         <y>360</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>111</width>
+         <height>41</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>8</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;
+color:rgb(0, 0, 0)</string>
+       </property>
+       <property name="text">
+        <string>Miles</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>490</x>
+         <y>440</y>
+         <width>181</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 0, 0)</string>
+       </property>
+       <property name="text">
+        <string>Would you like to buy souvenirs?</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>670</x>
+         <y>440</y>
+         <width>155</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Yes</string>
        </property>
       </widget>
      </widget>

@@ -3,6 +3,7 @@
 #include "ui_plantripwindow.h"
 #include "userinterface.h"
 #include <QComboBox>
+#include <QInputDialog>
 #include "mainwindow.h"
 /**********************************************************/
 
@@ -42,6 +43,43 @@ planTripWindow::~planTripWindow()
 // This button when pressed will send the user to a page that will allow them to plan the shortest trip
 void planTripWindow::on_planShortTrip_clicked()
 {
+    // asking the user to input their how many collges they would like to vist
+    int selectedCampusCount = QInputDialog::getInt(this,tr("Number of Colleges you want to Visit"), "Enter the total number of colleges you want to visit:");
+    qDebug() << selectedCampusCount;
+
+    // putting all initiall college in to a vector including ASU
+    QVector<QString> initial13{"Arizona State University",
+                               "Saddleback College",
+                               "University of California, Irvine (UCI)",
+                               "Massachusetts Institute of Technology (MIT)",
+                               "Northwestern",
+                               "Ohio State University",
+                               "University of  Michigan",
+                               "University of California, Los Angeles (UCLA)",
+                               "University of Oregon",
+                               "University of Wisconsin",
+                               "University of the Pacific",
+                               "California State University, Fullerton",
+                               "University of Texas"
+                               };
+    // check if all the college is in the database befor the recursive function
+    bool allFound = checkCampusVectorNames(initial13);
+    ui->stackedWidget->setCurrentWidget(ui->ShortTrip_02);
+
+    if(!allFound){
+        QMessageBox::warning(this, "ERROR", "The 13 college are incomplete, please check with the administrator.", QMessageBox::Ok, QMessageBox::NoButton);
+    }else{
+        selectedCampuses.append(initial13);
+        QString shortTrip = *selectedCampuses.begin();
+        QString* shortTrip2 = selectedCampuses.begin();
+        recursiveCollegeSort(shortTrip);
+        double distance_1 = calculateDistance(shortTrip2, selectedCampusCount);
+         ui->totalDistance_ShortTrip_label->setNum(distance_1);
+        for(int i=0; i < selectedCampusCount; i++)
+        {
+            ui->listWidget_ShortTrip_02->addItem(sortedCampuses[i]);
+        }
+    }
 
 }
 
@@ -180,12 +218,17 @@ void planTripWindow::on_startTrip_clicked()
     if(!allFound){
         QMessageBox::warning(this, "ERROR", "The 11 initial college are incomplete, please check with the administrator.", QMessageBox::Ok, QMessageBox::NoButton);
     }else{
-
+        ui->stackedWidget->setCurrentWidget(ui->StartTrip_02);
         selectedCampuses.append(initial11);
-        //displayCollegeTripList();
-        QMessageBox::information(this, "Loading...", "Start Trip has been selected. Now moving to Souvenir Screen.", QMessageBox::Ok, QMessageBox::NoButton);
-        // hid the current UI and show the sovenirs UI
-        goToSouvenirShop();
+        QString startTrip = *selectedCampuses.begin();
+        QString* startTrip2 = selectedCampuses.begin();
+        recursiveCollegeSort(startTrip);
+        double distance_2 = calculateDistance(startTrip2, 11);
+         ui->totalDistance_StartTrip_label->setNum(distance_2);
+        for(int i=0; i < 11; i++)
+        {
+            ui->listWidget_StartTrip_->addItem(sortedCampuses[i]);
+        }
     }
 }
 
@@ -276,7 +319,6 @@ void planTripWindow::recursiveCollegeSort(QString currentCamp)
         }
         QString nextCamp = selectedCampuses.at(leastIndex);
         recursiveCollegeSort(nextCamp);
-        this->distance = distance;
    }
 }
 
@@ -317,6 +359,20 @@ void planTripWindow::on_goback2_clicked()
     hide();
     user.setModal(true);
     user.exec();
+}
+
+void planTripWindow::on_ShortTrip_goback_clicked()
+{
+    selectedCampuses.clear();
+    ui->listWidget_ShortTrip_02->clear();
+    ui->stackedWidget->setCurrentWidget(ui->StudentSelect);
+}
+
+void planTripWindow::on_StartTrip_goback_clicked()
+{
+    selectedCampuses.clear();
+    ui->listWidget_StartTrip_->clear();
+    ui->stackedWidget->setCurrentWidget(ui->StudentSelect);
 }
 
 //go home screen button
@@ -463,6 +519,23 @@ void planTripWindow::calculateTotal()
     this->total = total;
 
 }
+double planTripWindow::calculateDistance(QString* currentC, int selectedCampusCount)
+{
+    double distance = 0.0;
+    sortedCampuses.enqueue(*currentC);         /**< queue of sorted campuses for tour*/
+    selectedCampuses.removeAll(*currentC);     /**< vector of selected campuses for the tour*/
+    QString* otherC = selectedCampuses.begin();
+
+
+    for (int i = 0; i < selectedCampusCount; i++)
+    {
+       distance += m_database.GetDistBtwn(*currentC, *otherC);
+       currentC = otherC;
+       otherC++;
+    }
+    return distance;
+
+}
 
 //showTotal function is to display the total purchases in the label
 //pass the variable total from calculateTotal()function
@@ -470,11 +543,39 @@ void planTripWindow::showTotal(double total)
 {
     ui->totalCart_label->setNum(total);
 }
-//showDistance function is to display the total distance travled
-//pass the variable total from calculateTotal()function
-//void planTripWindow::showDistance(double distance)
-//{
-//    ui->totalDistance_label->setNum(distance);
-//}
+
+
+
+void planTripWindow::on_pushButton_clicked()
+{
+    // putting all initiall college in to a vector including saddleback college
+    QVector<QString> initial13{"Arizona State University",
+                               "University of California, Irvine (UCI)",
+                               "Saddleback College",
+                               "Massachusetts Institute of Technology (MIT)",
+                               "Northwestern",
+                               "Ohio State University",
+                               "University of  Michigan",
+                               "University of California, Los Angeles (UCLA)",
+                               "University of Oregon",
+                               "University of Wisconsin",
+                               "University of the Pacific",
+                                "University of Texas",
+                               "California State University, Fullerton",
+                               };
+
+    // check if all the college is in the database befor the recursive function
+    bool allFound = checkCampusVectorNames(initial13);
+
+    if(!allFound){
+        QMessageBox::warning(this, "ERROR", "The college list are incomplete, not all 13 college are in the list please check with the administrator.", QMessageBox::Ok, QMessageBox::NoButton);
+    }else{
+
+        selectedCampuses.append(initial13);
+        QMessageBox::information(this, "Loading...", "Start Trip has been selected. Now moving to Souvenir Screen.", QMessageBox::Ok, QMessageBox::NoButton);
+        // hid the current UI and show the sovenirs UI
+        goToSouvenirShop();
+    }
+}
 
 
