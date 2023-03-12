@@ -22,6 +22,10 @@ planTripWindow::planTripWindow(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::planTripWindow)
 {
+    // initial the value
+    asuNum = 0;
+    selectNum = 0;
+
     //Shows the UI that has the different trip selections
     ui->setupUi(this);
     ui->stackedWidget->setCurrentWidget(ui->StudentSelect);
@@ -84,20 +88,17 @@ void planTripWindow::showAvaliListCombo(QSqlQueryModel *model)
 }
 
 
-void planTripWindow::on_enter_button_2_clicked()
+void planTripWindow::on_enter_button_clicked()
 {
     //Students choice is saved into the vector
     QString campus = ui->next_combo->currentText();
-    selectedCampuses.push_back(campus);
-    selectNum++;
 
     //No campuses
     if(campus == "")
     {
         QMessageBox::warning(this, "ERROR", "NO MORE CAMPUSES! PLEASE CLICK DONE!", QMessageBox::Ok, QMessageBox::NoButton);
     }
-    //ASU tour
-    else if (selectNum == asuNum)
+    else if (selectNum == asuNum && selectNum!= 0)
     {
         QMessageBox::warning(this, "ERROR", "YOU HAVE REACHED YOUR MAX FOR THE ASU TOUR! PLEASE CLICK DONE!", QMessageBox::Ok, QMessageBox::NoButton);
     }
@@ -117,7 +118,17 @@ void planTripWindow::on_enter_button_2_clicked()
 
 void planTripWindow::on_done_button_clicked()
 {
-
+    if(asuNum == 0 || selectNum == asuNum)
+    {
+        //Go to souvenirShop widget
+        QMessageBox::information(this, "Loading...", "Now moving to Souvenir Shop Screen.", QMessageBox::Ok, QMessageBox::NoButton);
+        goToSouvenirShop();
+    }
+    else
+    {
+        int left = asuNum - selectNum;
+        QMessageBox::warning(this, "ERROR", "PLEASE SELECT " + QString::number(left) + " MORE CAMPUSES.", QMessageBox::Ok, QMessageBox::NoButton);
+    }
 }
 
 

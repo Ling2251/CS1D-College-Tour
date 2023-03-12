@@ -61,7 +61,7 @@ private slots:
 
     void on_startTripFormUIC_clicked();
 
-    void on_enter_button_2_clicked();
+    void on_enter_button_clicked();
 
     void on_done_button_clicked();
 

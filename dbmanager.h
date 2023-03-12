@@ -25,6 +25,13 @@ public:
      */
     QSqlQueryModel *loadOtherCampusAndDist(QString campus);
 
+    /** \fn loadRemainingCampusNamesOnly(QVector<QString> campuses)
+     * Using the "select XXX from" query funtion, the name of the avaliable college campuses are read in from the database into a QSqlQueryModel.
+     * The function excludes reading in the campuses from the passed in vector.
+     * If a database error occurs, an error warning is printed to the console.
+     */
+    QSqlQueryModel *loadRemainingCampusNamesOnly(QVector<QString> campuses);
+
     /** \fn checkCampusName(QString campus)
      * Using the "select XXX from" query funtion, this function determines if the specified college is present in the database.
      * If a database error occurs, an error warning is printed to the console.

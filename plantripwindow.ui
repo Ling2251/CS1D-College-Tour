@@ -418,7 +418,7 @@ border: none;
         <string>Next Campus</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="enter_button_2">
+      <widget class="QPushButton" name="enter_button">
        <property name="geometry">
         <rect>
          <x>140</x>
