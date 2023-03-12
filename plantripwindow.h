@@ -56,6 +56,8 @@ private slots:
 
     void on_mainpage_2_clicked();
 
+    void on_startTripFormUIC_clicked();
+
 private:
     Ui::planTripWindow *ui;
     dbManager m_database;

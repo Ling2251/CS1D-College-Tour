@@ -114,6 +114,19 @@ border: none;
         <string/>
        </property>
       </widget>
+      <widget class="QPushButton" name="startTripFormUIC">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>310</y>
+         <width>231</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Start a Trip (from UCI)</string>
+       </property>
+      </widget>
      </widget>
      <widget class="QWidget" name="souvenirShop">
       <widget class="QPushButton" name="addSouvenir_button">

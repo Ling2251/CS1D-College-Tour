@@ -102,6 +102,41 @@ void planTripWindow::on_startTrip_clicked()
     }
 }
 
+// This button when pressed will send the user to a page that will allow them to vist any colleges starting at UCI
+void planTripWindow::on_startTripFormUIC_clicked()
+{
+    // putting all initiall college in to a vector including saddleback college
+    QVector<QString> initial13{"University of California, Irvine (UCI)",
+                               "Saddleback College",
+                               "Arizona State University",
+                               "Massachusetts Institute of Technology (MIT)",
+                               "Northwestern",
+                               "Ohio State University",
+                               "University of  Michigan",
+                               "University of California, Los Angeles (UCLA)",
+                               "University of Oregon",
+                               "University of Wisconsin",
+                               "University of the Pacific",
+                               "California State University, Fullerton",
+                               "University of Texas"
+                               };
+
+    // check if all the college is in the database befor the recursive function
+    bool allFound = checkCampusVectorNames(initial13);
+
+    if(!allFound){
+        QMessageBox::warning(this, "ERROR", "The college list are incomplete, not all 13 college are in the list please check with the administrator.", QMessageBox::Ok, QMessageBox::NoButton);
+    }else{
+
+        selectedCampuses.append(initial13);
+        //displayCollegeTripList();
+        QMessageBox::information(this, "Loading...", "Start Trip has been selected. Now moving to Souvenir Screen.", QMessageBox::Ok, QMessageBox::NoButton);
+        // hid the current UI and show the sovenirs UI
+        goToSouvenirShop();
+    }
+}
+
+
 /*
  * recursiveCollegeSort()
  * This function will creat the shortest way to visit different colleges.
@@ -354,4 +389,6 @@ void planTripWindow::showTotal(double total)
 //{
 //    ui->totalDistance_label->setNum(distance);
 //}
+
+
 
