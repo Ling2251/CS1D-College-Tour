@@ -103,7 +103,28 @@ void InputCollege::pushInputData()
 
         string start = string1.toStdString();
         string end = string2.toStdString();
+        
+        
+        /*add to database*/
+        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+        db.setDatabaseName("../collegelist.db");
+        if (!db.open()) {
+            qDebug() << "Failed to connect to database.";
+            return;
+        }
 
+        QSqlQuery query;
+        query.prepare("INSERT INTO collegelist (stardingCollege,endingCollege,distance) "
+                          "VALUES (:start_dist, :end_dist, :addDist)");
+        query.bindValue(":start_dist", string1);
+        query.bindValue(":end_dist", string2);
+        query.bindValue(":addDist", distance);
+
+        if (!query.exec()) {
+            qDebug() << "Failed to insert row:" << query.lastError().text();
+        }
+        /*database code ends here*/
+        db.close();
 
         InputCollegeList college = {start,end,distance};
         CollegeList.push_back(college);
