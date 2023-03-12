@@ -118,16 +118,14 @@ void planTripWindow::on_enter_button_clicked()
 
 void planTripWindow::on_done_button_clicked()
 {
-    if(asuNum == 0 || selectNum == asuNum)
+    if((asuNum == 0 || selectNum == asuNum) && selectNum!= 0)
     {
         //Go to souvenirShop widget
-        QMessageBox::information(this, "Loading...", "Now moving to Souvenir Shop Screen.", QMessageBox::Ok, QMessageBox::NoButton);
         goToSouvenirShop();
     }
     else
     {
-        int left = asuNum - selectNum;
-        QMessageBox::warning(this, "ERROR", "PLEASE SELECT " + QString::number(left) + " MORE CAMPUSES.", QMessageBox::Ok, QMessageBox::NoButton);
+        QMessageBox::warning(this, "ERROR", "PLEASE SELECT AT LEAST ONE CAMPUSES THAT IS ON THE LIST.", QMessageBox::Ok, QMessageBox::NoButton);
     }
 }
 
@@ -181,9 +179,7 @@ void planTripWindow::on_startTrip_clicked()
         QMessageBox::warning(this, "ERROR", "The 11 initial college are incomplete, please check with the administrator.", QMessageBox::Ok, QMessageBox::NoButton);
     }else{
 
-        selectedCampuses.append(initial11);
-        //displayCollegeTripList();
-        QMessageBox::information(this, "Loading...", "Start Trip has been selected. Now moving to Souvenir Screen.", QMessageBox::Ok, QMessageBox::NoButton);
+        selectedCampuses.append(initial11);     
         // hid the current UI and show the sovenirs UI
         goToSouvenirShop();
     }
@@ -216,9 +212,6 @@ void planTripWindow::on_startTripFormUIC_clicked()
     }else{
 
         selectedCampuses.append(initial13);
-        //displayCollegeTripList();
-        QMessageBox::information(this, "Loading...", "Start Trip has been selected. Now moving to Souvenir Screen.", QMessageBox::Ok, QMessageBox::NoButton);
-        // hid the current UI and show the sovenirs UI
         goToSouvenirShop();
     }
 }
