@@ -20,7 +20,7 @@
       <string notr="true"/>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="StudentSelect">
       <widget class="QLabel" name="label">
@@ -274,7 +274,7 @@ border: none;
         <rect>
          <x>690</x>
          <y>410</y>
-         <width>231</width>
+         <width>141</width>
          <height>41</height>
         </rect>
        </property>
@@ -325,7 +325,7 @@ border: none;
        </property>
        <property name="font">
         <font>
-         <pointsize>11</pointsize>
+         <pointsize>10</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -339,7 +339,7 @@ border: none;
         <rect>
          <x>710</x>
          <y>450</y>
-         <width>231</width>
+         <width>121</width>
          <height>41</height>
         </rect>
        </property>
