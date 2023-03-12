@@ -9,6 +9,8 @@
 #include <QTextStream>
 #include <QAxObject>
 #include <iostream>
+#include <QtSql>
+#include <QQueue>
 
 using namespace std;
 namespace Ui {
