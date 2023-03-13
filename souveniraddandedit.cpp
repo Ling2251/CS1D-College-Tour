@@ -237,17 +237,18 @@ void souvenirAddandEdit::on_deleteButton_clicked()
     // opned the data base
    dbManager conn;
 
+   conn.m_database.open();
    //get the data in from the ui intput
    QSqlQuery qry;
-   QString collegeName,souvenirName,cost;
+   QString collegeName1,souvenirName1,cost1;
 
    //get the data in from the ui intput
-   collegeName   = ui->collegeLine->text();
-   souvenirName  = ui->souvenirsLine->text();
-   cost = ui->costLine->text();
+   collegeName1   = ui->collegeLine->text();
+   souvenirName1  = ui->souvenirsLine->text();
+   cost1 = ui->costLine->text();
 
    // error checking input
-   if(collegeName != "" && cost != "" && souvenirName != ""){
+   if(collegeName1 != "" && cost1 != "" && souvenirName1 != ""){
        addOrDelet = true;
    }
    else{
@@ -257,10 +258,8 @@ void souvenirAddandEdit::on_deleteButton_clicked()
    if(addOrDelet)
    {
        // delete the item
+       qry.prepare("Delete from souvenirs where collegeName=='"+collegeName1+"'and souvenirsName=='"+souvenirName1+"'and cost=='"+cost1+"'");
 
-
-       //qry.prepare("Delete from inventory where name=='"+itemName+"'");
-       qry.prepare("Delete from souvenirs where collegeName='"+collegeName+"', souvenirsName='"+souvenirName+"', cost='"+cost+"'");
        // error message if the item can't be deleted due to the data base
        if(qry.exec())
        {
