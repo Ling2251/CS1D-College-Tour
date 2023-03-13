@@ -183,3 +183,99 @@ void souvenirAddandEdit::on_tableView_activated(const QModelIndex &index)
 
 }
 
+
+void souvenirAddandEdit::on_addButton_clicked()
+{
+    // opned the data base
+    dbManager conn;
+
+    conn.m_database.open();
+
+
+    QSqlQuery qry;
+    QString collegeName,souvenirName,cost;
+
+    //get the data in from the ui intput
+    collegeName   = ui->collegeLine->text();
+    souvenirName  = ui->souvenirsLine->text();
+    cost = ui->costLine->text();
+
+
+    // error checking input
+    if(collegeName != "" && cost != "" && souvenirName != ""){
+        addOrDelet = true;
+    }
+    else{
+        addOrDelet = false;
+    }
+
+    if(addOrDelet){
+        // add the item
+        qry.prepare("insert into souvenirs (collegeName, souvenirsName, cost) values ('"+collegeName+"', '"+souvenirName+"', '"+cost+"')");
+
+        // error message if the item can't be added due to the data base
+        if(qry.exec())
+        {
+            QMessageBox::about(this, "", "The item was added, double check if error occured");
+            // close the connection to data base
+            conn.m_database.close();
+        }
+        else
+        {
+            QMessageBox::about(this, "Error", "Database not found double check path to database");
+        }
+    }
+    else{
+        QMessageBox::about(this, "Error", "Can't enter an empty input to add an item, please try agin");
+        //ClearSreen();
+    }
+}
+
+
+void souvenirAddandEdit::on_deleteButton_clicked()
+{
+    // opned the data base
+   dbManager conn;
+
+   //get the data in from the ui intput
+   QSqlQuery qry;
+   QString collegeName,souvenirName,cost;
+
+   //get the data in from the ui intput
+   collegeName   = ui->collegeLine->text();
+   souvenirName  = ui->souvenirsLine->text();
+   cost = ui->costLine->text();
+
+   // error checking input
+   if(collegeName != "" && cost != "" && souvenirName != ""){
+       addOrDelet = true;
+   }
+   else{
+       addOrDelet = false;
+   }
+
+   if(addOrDelet)
+   {
+       // delete the item
+
+
+       //qry.prepare("Delete from inventory where name=='"+itemName+"'");
+       qry.prepare("Delete from souvenirs where collegeName='"+collegeName+"', souvenirsName='"+souvenirName+"', cost='"+cost+"'");
+       // error message if the item can't be deleted due to the data base
+       if(qry.exec())
+       {
+           QMessageBox::about(this, "", "The item(s) was/were deleted, double check if error occured");
+       }
+       else
+       {
+           QMessageBox::about(this, "Error", "Database not found double check path to database");
+       }
+   }
+
+   else
+   {
+       QMessageBox::about(this, "Error", "Can't enter an empty or invaild input to delet an item , please try agin");
+   }
+
+}
+

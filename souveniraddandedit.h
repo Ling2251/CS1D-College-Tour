@@ -36,9 +36,14 @@ private slots:
 
     void on_tableView_activated(const QModelIndex &index);
 
+    void on_addButton_clicked();
+
+    void on_deleteButton_clicked();
+
 private:
     Ui::souvenirAddandEdit *ui;
 
+    bool addOrDelet;
 };
 
 #endif // SOUVENIRADDANDEDIT_H
