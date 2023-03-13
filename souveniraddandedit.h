@@ -5,6 +5,7 @@
 #include <QtSql>
 #include <QSqlQuery>
 #include <QMessageBox>
+#include <string>
 #include "dbmanager.h"
 #include "maintenance.h"
 #include <string>
@@ -24,11 +25,14 @@ public:
 
     void displayCollegeComboBox();
 
+    void displayItemComBox();
 
 private slots:
 
 
     void on_pushButton_clicked();
+
+    void on_update_clicked();
 
 private:
     Ui::souvenirAddandEdit *ui;

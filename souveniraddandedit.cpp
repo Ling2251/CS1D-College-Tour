@@ -8,6 +8,7 @@ souvenirAddandEdit::souvenirAddandEdit(QWidget *parent) :
     ui->setupUi(this);
 
     displayCollegeComboBox();
+    displayItemComBox();
 
 }
 
@@ -69,5 +70,53 @@ void souvenirAddandEdit::on_pushButton_clicked()
     {
         QMessageBox::about(this, "Error", "Database not found double check path to database");
     }
+}
+
+
+void souvenirAddandEdit::on_update_clicked()
+{
+    dbManager conn;
+
+    QSqlQueryModel * modal = new QSqlQueryModel();
+
+    QSqlQuery* qry = new QSqlQuery(conn.m_database);
+
+    QString collegeName,souvenirs,cost;
+
+    collegeName = ui->displayCollegeComboBox->currentText();
+    souvenirs = ui->displayItemComBox->currentText();
+    cost = ui->costLine->text();
+
+    conn.m_database.open();
+
+    qry->prepare("update souvenirs set cost='"+cost+"'where souvenirsName='"+souvenirs+"'");
+
+    if(qry->exec())
+    {
+        QMessageBox::critical(this,tr("Edit"),tr("Updated"));
+    }
+    else
+    {
+        QMessageBox::critical(this,tr("Error::"),qry->lastError().text());
+    }
+
+}
+
+void souvenirAddandEdit::displayItemComBox()
+{
+    dbManager conn;
+
+    QSqlQueryModel * modal = new QSqlQueryModel();
+    QSqlQuery * list = new QSqlQuery(conn.m_database);
+
+    QString college;
+    college = ui->displayCollegeComboBox->currentText();
+    // only put the name out from the souvenirs
+    list->prepare("select souvenirsName from souvenirs;");
+    list->exec();
+
+    // if exect then set it to the ui
+    modal->setQuery(*list);
+    ui->displayItemComBox->setModel(modal);
 }
 
