@@ -33,8 +33,8 @@ public:
     void showSouvTableView(QSqlQueryModel *model);
     void showSouvCartTableView(QSqlQueryModel *model);
     void calculateTotal();
+    double calculateDistance(QString* currentC, int selectedCampusCount);
     void showTotal(double total);
-    void showDistance(double total);
     void showAvaliListCombo(QSqlQueryModel *model);
     void showSelectListView();
     void showAvaliListView(QSqlQueryModel *model);
@@ -65,6 +65,12 @@ private slots:
 
     void on_done_button_clicked();
 
+    void on_pushButton_clicked();
+
+    void on_ShortTrip_goback_clicked();
+
+    void on_StartTrip_goback_clicked();
+
 private:
     Ui::planTripWindow *ui;
     dbManager m_database;
@@ -75,7 +81,6 @@ private:
     int selectNum; /**< the current number of campuses*/
     QString sQry;
     double total;
-    double distance;
 };
 
 #endif // PLANTRIPWINDOW_H
