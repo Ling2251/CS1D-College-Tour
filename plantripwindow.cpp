@@ -493,18 +493,26 @@ void planTripWindow::on_addSouvenir_button_clicked()
 
    showSouvCartTableView(m_database.loadSouvCart(sQry));
 
+
+   // call the calculate function
    calculateTotal();
+
    showTotal(total);
   // showSouvCartTableView();
   // get the total cost here__YC:
 }
 
 //calculate function is to calculate total price from the cart table
+//assign the variable into the elements in header file
 void planTripWindow::calculateTotal()
 {
+    //initial a double type total
     double total = 0.0;
+
+    // initial ary
     QSqlQuery qry;
 
+    //if the statement is true, then run the calculation method
     if(true)
     {
         qry.prepare("select printf(\"%.2f\",sum(cost * quantity)) from Cart;");
@@ -515,6 +523,7 @@ void planTripWindow::calculateTotal()
         }
     }
 
+    //assign the value to the header
     this->total = total;
 
 }
@@ -540,6 +549,7 @@ double planTripWindow::calculateDistance(QString* currentC, int selectedCampusCo
 //pass the variable total from calculateTotal()function
 void planTripWindow::showTotal(double total)
 {
+    // associate the total with the label in the uo page
     ui->totalCart_label->setNum(total);
 }
 

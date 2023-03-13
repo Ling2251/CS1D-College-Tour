@@ -2,6 +2,7 @@
 #include "maintenance.h"
 #include "ui_maintenance.h"
 #include "inputcollege.h"
+#include "souveniraddandedit.h"
 /**********************************************************/
 
 /**********************************************************
@@ -37,4 +38,10 @@ void maintenance::on_pushButton_2_clicked()
 }
 
 
+void maintenance::on_pushButton_clicked()
+{
+    souvenirAddandEdit souvenir;
+    souvenir.setModal(true);
+    souvenir.exec();
+}
 
