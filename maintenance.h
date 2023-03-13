@@ -8,6 +8,7 @@
 #include <QFileDialog>
 #include <QTextStream>
 #include <QAxObject> //need ActiveQt
+#include "souveniraddandedit.h"
 
 namespace Ui {
 class maintenance;
@@ -22,6 +23,8 @@ public:
     ~maintenance();
 private slots:
     void on_pushButton_2_clicked();
+
+    void on_pushButton_clicked();
 
 private:
     Ui::maintenance *ui;

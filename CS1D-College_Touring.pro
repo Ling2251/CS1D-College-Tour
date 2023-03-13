@@ -20,6 +20,7 @@ SOURCES += \
     maintenance.cpp \
     mainwindow.cpp \
     plantripwindow.cpp \
+    souveniraddandedit.cpp \
     userinterface.cpp \
     adminpage.cpp \
     loginpage.cpp \
@@ -31,6 +32,7 @@ HEADERS += \
     maintenance.h \
     mainwindow.h \
     plantripwindow.h \
+    souveniraddandedit.h \
     userinterface.h \
     adminpage.h \
     loginpage.h \
@@ -42,6 +44,7 @@ FORMS += \
     maintenance.ui \
     mainwindow.ui \
     plantripwindow.ui \
+    souveniraddandedit.ui \
     userinterface.ui \
     adminpage.ui \
     loginpage.ui \
