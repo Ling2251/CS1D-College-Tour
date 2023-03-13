@@ -84,7 +84,7 @@ void souvenirAddandEdit::on_update_clicked()
     QString collegeName,souvenirs,cost;
 
     collegeName = ui->displayCollegeComboBox->currentText();
-    souvenirs = ui->displayItemComBox->currentText();
+    souvenirs = ui->souvenirsLine->text();
     cost = ui->costLine->text();
 
     conn.m_database.open();
@@ -118,5 +118,33 @@ void souvenirAddandEdit::displayItemComBox()
     // if exect then set it to the ui
     modal->setQuery(*list);
     ui->displayItemComBox->setModel(modal);
+}
+
+
+void souvenirAddandEdit::on_tableView_activated(const QModelIndex &index)
+{
+    QString val = ui->tableView->model()->data(index).toString();
+
+    dbManager conn;
+    QSqlQuery qry;
+
+    qry.prepare("select * from souvenirs where souvenirsName= '"+val+"'or cost='"+val+"'");
+
+    if(qry.exec())
+    {
+        while(qry.next())
+        {
+            ui->collegeLine->setText(qry.value(0).toString());
+            ui->souvenirsLine->setText(qry.value(1).toString());
+            ui->costLine->setText(qry.value(2).toString());
+        }
+        conn.m_database.close();
+    }
+    else
+    {
+        QMessageBox::critical(this,tr("Error::"),qry.lastError().text());
+    }
+
+
 }
 

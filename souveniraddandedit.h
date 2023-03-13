@@ -34,6 +34,8 @@ private slots:
 
     void on_update_clicked();
 
+    void on_tableView_activated(const QModelIndex &index);
+
 private:
     Ui::souvenirAddandEdit *ui;
 
