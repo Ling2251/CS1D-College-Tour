@@ -7,6 +7,7 @@ souvenirAddandEdit::souvenirAddandEdit(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    //display the college comboBox and souvenirs comboBox
     displayCollegeComboBox();
     displayItemComBox();
 
@@ -17,32 +18,44 @@ souvenirAddandEdit::~souvenirAddandEdit()
     delete ui;
 }
 
+/*This function is to create the combobox of college, to let mantenence to
+ * pick the college that he want*/
 void souvenirAddandEdit::displayCollegeComboBox()
 {
+    //connect database
     dbManager conn;
 
     QSqlQueryModel * modal = new QSqlQueryModel();
     QSqlQuery * list = new QSqlQuery(conn.m_database);
 
-    // only put the name out from the souvenirs
+    // only put the college name out from the souvenirs
     list->prepare("select collegeName as \"Campuses\" from souvenirs group by collegeName;");
     list->exec();
 
     // if exect then set it to the ui
     modal->setQuery(*list);
+
+    //set college name into comboBox
     ui->displayCollegeComboBox->setModel(modal);
 }
 
+/*pushbutton to log the item who included each college
+ * only souvenirname and cost will display in tableView
+ * */
 void souvenirAddandEdit::on_pushButton_clicked()
 {
+    //connect database
     dbManager conn;
 
     QSqlQueryModel * modal = new QSqlQueryModel();
 
 
     QSqlQuery* qry = new QSqlQuery(conn.m_database);
+
+    //create a current string
     QString currentName;
 
+    //set this variabble bycomboBox
     currentName = ui->displayCollegeComboBox->currentText();
 
     //selects the list in the data base
@@ -72,25 +85,34 @@ void souvenirAddandEdit::on_pushButton_clicked()
     }
 }
 
-
+/*Update button to update the cost of each souvenir that you want
+ *This button will connect the college comboBox and souvenirs comboBox
+ *Also this button will connect with the tableView
+*/
 void souvenirAddandEdit::on_update_clicked()
 {
+    //connect database
     dbManager conn;
 
     QSqlQueryModel * modal = new QSqlQueryModel();
 
     QSqlQuery* qry = new QSqlQuery(conn.m_database);
 
+    //create three string variables
     QString collegeName,souvenirs,cost;
 
+    //assign those variables with the current text
     collegeName = ui->displayCollegeComboBox->currentText();
     souvenirs = ui->souvenirsLine->text();
     cost = ui->costLine->text();
 
+    //open the database
     conn.m_database.open();
 
+    //update function to update the cost
     qry->prepare("update souvenirs set cost='"+cost+"'where souvenirsName='"+souvenirs+"'");
 
+    //if update succesfully then will display a messageBox::Update
     if(qry->exec())
     {
         QMessageBox::critical(this,tr("Edit"),tr("Updated"));
@@ -102,15 +124,20 @@ void souvenirAddandEdit::on_update_clicked()
 
 }
 
+/*Display souvenirs comboBox function will display all the souvenir
+fron the souvenir database*/
 void souvenirAddandEdit::displayItemComBox()
 {
+    //database object
     dbManager conn;
 
     QSqlQueryModel * modal = new QSqlQueryModel();
     QSqlQuery * list = new QSqlQuery(conn.m_database);
 
+    //q string variable
     QString college;
     college = ui->displayCollegeComboBox->currentText();
+
     // only put the name out from the souvenirs
     list->prepare("select souvenirsName from souvenirs;");
     list->exec();
@@ -120,16 +147,22 @@ void souvenirAddandEdit::displayItemComBox()
     ui->displayItemComBox->setModel(modal);
 }
 
-
+/*This function will connect to the tableView
+ * It can let user click the table to display all the
+ * info of college in to the white line*/
 void souvenirAddandEdit::on_tableView_activated(const QModelIndex &index)
 {
+    //Set val to tableView model
     QString val = ui->tableView->model()->data(index).toString();
 
+    //connect database
     dbManager conn;
     QSqlQuery qry;
 
+    //select the souvenirName and cost that you want
     qry.prepare("select * from souvenirs where souvenirsName= '"+val+"'or cost='"+val+"'");
 
+    //if qry.exec, it will assign the info in to collegeLine, souvenirsLine, and costLine
     if(qry.exec())
     {
         while(qry.next())
@@ -138,10 +171,12 @@ void souvenirAddandEdit::on_tableView_activated(const QModelIndex &index)
             ui->souvenirsLine->setText(qry.value(1).toString());
             ui->costLine->setText(qry.value(2).toString());
         }
+        //close the database
         conn.m_database.close();
     }
     else
     {
+        //else it will display the error
         QMessageBox::critical(this,tr("Error::"),qry.lastError().text());
     }
 
