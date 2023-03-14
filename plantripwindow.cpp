@@ -156,6 +156,7 @@ void planTripWindow::on_done_button_clicked()
 {
     if((asuNum == 0 || selectNum == asuNum) && selectNum!= 0)
     {
+        QMessageBox::information(this, "Loading...", "An custom trip has been selected and you are done selecting all your colleges. Now moving to Souvenir Screen.", QMessageBox::Ok, QMessageBox::NoButton);
         //Go to souvenirShop widget
         goToSouvenirShop();
     }
@@ -226,7 +227,8 @@ void planTripWindow::on_startTrip_clicked()
 //            ui->listWidget_StartTrip_->addItem(sortedCampuses[i]);
 //        }
 
-        selectedCampuses.append(initial11);     
+        selectedCampuses.append(initial11);
+        QMessageBox::information(this, "Loading...", "Start Trip form Saddleback college wich it will vist 11 colleges has been selected. Now moving to Souvenir Screen.", QMessageBox::Ok, QMessageBox::NoButton);
         // hid the current UI and show the sovenirs UI
         goToSouvenirShop();
     }
@@ -259,6 +261,7 @@ void planTripWindow::on_startTripFormUIC_clicked()
     }else{
 
         selectedCampuses.append(initial13);
+        QMessageBox::information(this, "Loading...", "Start Trip form UCI whitch will vist 13 colleges has been selected. Now moving to Souvenir Screen.", QMessageBox::Ok, QMessageBox::NoButton);
         goToSouvenirShop();
     }
 }

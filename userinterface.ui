@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>729</width>
-    <height>460</height>
+    <width>965</width>
+    <height>595</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
   <widget class="QPushButton" name="mainpage">
    <property name="geometry">
     <rect>
-     <x>630</x>
-     <y>10</y>
+     <x>870</x>
+     <y>0</y>
      <width>91</width>
      <height>51</height>
     </rect>
@@ -35,8 +35,8 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>250</y>
+     <x>20</x>
+     <y>390</y>
      <width>551</width>
      <height>51</height>
     </rect>
@@ -62,9 +62,9 @@ color: rgb(0, 85, 255);</string>
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>300</y>
+     <y>450</y>
      <width>221</width>
-     <height>22</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -77,9 +77,9 @@ color: rgb(0, 85, 255);</string>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>340</y>
-     <width>191</width>
+     <x>370</x>
+     <y>460</y>
+     <width>281</width>
      <height>20</height>
     </rect>
    </property>
@@ -94,8 +94,8 @@ color: rgb(0, 85, 255);</string>
   <widget class="QPushButton" name="planTripButton">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>380</y>
+     <x>360</x>
+     <y>510</y>
      <width>241</width>
      <height>41</height>
     </rect>
@@ -114,9 +114,9 @@ color: rgb(255, 255, 255);
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>240</x>
      <y>0</y>
-     <width>311</width>
+     <width>451</width>
      <height>61</height>
     </rect>
    </property>
@@ -132,9 +132,9 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>160</y>
-     <width>711</width>
+     <x>20</x>
+     <y>280</y>
+     <width>921</width>
      <height>101</height>
     </rect>
    </property>
@@ -156,8 +156,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>731</width>
-     <height>161</height>
+     <width>961</width>
+     <height>281</height>
     </rect>
    </property>
    <property name="text">

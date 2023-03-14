@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>716</width>
-    <height>654</height>
+    <width>760</width>
+    <height>659</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -48,7 +48,7 @@
   <widget class="QPushButton" name="InputFile">
    <property name="geometry">
     <rect>
-     <x>50</x>
+     <x>70</x>
      <y>70</y>
      <width>151</width>
      <height>51</height>
@@ -64,7 +64,7 @@
   <widget class="QTableWidget" name="tableWidget">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>130</x>
      <y>160</y>
      <width>491</width>
      <height>401</height>
@@ -129,6 +129,7 @@
     <property name="font">
      <font>
       <pointsize>9</pointsize>
+      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -139,6 +140,7 @@
     </property>
     <property name="font">
      <font>
+      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -149,6 +151,7 @@
     </property>
     <property name="font">
      <font>
+      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -178,10 +181,10 @@
   <widget class="QPushButton" name="submitButton">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>600</y>
-     <width>131</width>
-     <height>31</height>
+     <x>300</x>
+     <y>610</y>
+     <width>141</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -196,7 +199,7 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>71</width>
+     <width>81</width>
      <height>31</height>
     </rect>
    </property>
@@ -204,6 +207,7 @@
     <font>
      <family>Segoe UI</family>
      <pointsize>10</pointsize>
+     <weight>50</weight>
      <italic>false</italic>
      <bold>false</bold>
      <underline>true</underline>

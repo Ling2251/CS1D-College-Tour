@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "adminpage.h"
 #include<QtSql>
 #include<QtDebug>
 #include<QFileInfo>
@@ -28,7 +27,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    adminpage *adminPage;
     dbManager m_database;
 };
 #endif // MAINWINDOW_H

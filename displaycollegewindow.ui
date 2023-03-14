@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>823</width>
-    <height>498</height>
+    <width>954</width>
+    <height>601</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QPushButton" name="souv_button">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>450</y>
+     <x>510</x>
+     <y>560</y>
      <width>141</width>
      <height>34</height>
     </rect>
@@ -29,8 +29,8 @@
   <widget class="QPushButton" name="other_button">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>450</y>
+     <x>350</x>
+     <y>560</y>
      <width>141</width>
      <height>34</height>
     </rect>
@@ -44,8 +44,8 @@
     <rect>
      <x>10</x>
      <y>50</y>
-     <width>781</width>
-     <height>371</height>
+     <width>881</width>
+     <height>471</height>
     </rect>
    </property>
   </widget>
@@ -66,7 +66,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>460</y>
+     <y>560</y>
      <width>281</width>
      <height>26</height>
     </rect>
@@ -76,7 +76,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>430</y>
+     <y>530</y>
      <width>121</width>
      <height>20</height>
     </rect>

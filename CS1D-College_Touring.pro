@@ -22,7 +22,6 @@ SOURCES += \
     plantripwindow.cpp \
     souveniraddandedit.cpp \
     userinterface.cpp \
-    adminpage.cpp \
     loginpage.cpp \
     inputcollege.cpp \
 
@@ -34,7 +33,6 @@ HEADERS += \
     plantripwindow.h \
     souveniraddandedit.h \
     userinterface.h \
-    adminpage.h \
     loginpage.h \
     inputcollege.h \
     global.h \
@@ -46,7 +44,6 @@ FORMS += \
     plantripwindow.ui \
     souveniraddandedit.ui \
     userinterface.ui \
-    adminpage.ui \
     loginpage.ui \
     inputcollege.ui \
 

@@ -20,7 +20,7 @@
       <string notr="true"/>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="StudentSelect">
       <widget class="QLabel" name="label">
@@ -242,6 +242,7 @@ color: rgb(255, 255, 255);</string>
        <property name="font">
         <font>
          <pointsize>12</pointsize>
+         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -261,6 +262,7 @@ color: rgb(255, 255, 255);</string>
        <property name="font">
         <font>
          <pointsize>18</pointsize>
+         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -293,6 +295,7 @@ color: rgb(255, 255, 255);</string>
        <property name="font">
         <font>
          <pointsize>9</pointsize>
+         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -322,6 +325,7 @@ color: rgb(255, 255, 255);</string>
        <property name="font">
         <font>
          <pointsize>18</pointsize>
+         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -341,6 +345,7 @@ color: rgb(255, 255, 255);</string>
        <property name="font">
         <font>
          <pointsize>18</pointsize>
+         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -385,6 +390,7 @@ color: rgb(255, 255, 255);</string>
        <property name="font">
         <font>
          <pointsize>10</pointsize>
+         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -404,6 +410,7 @@ color: rgb(255, 255, 255);</string>
        <property name="font">
         <font>
          <pointsize>18</pointsize>
+         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -433,6 +440,7 @@ color: rgb(255, 255, 255);</string>
         <font>
          <family>Segoe UI</family>
          <pointsize>10</pointsize>
+         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
          <underline>true</underline>
@@ -645,6 +653,7 @@ border: none;
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>8</pointsize>
+         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -670,6 +679,7 @@ color:rgb(0, 0, 0)</string>
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>8</pointsize>
+         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -710,6 +720,7 @@ color:rgb(0, 0, 0)</string>
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>8</pointsize>
+         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -766,6 +777,7 @@ border: none;
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>8</pointsize>
+         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -806,6 +818,7 @@ color:rgb(0, 0, 0)</string>
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>8</pointsize>
+         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -856,6 +869,7 @@ border: none;
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>8</pointsize>
+         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -906,4 +920,3 @@ color: rgb(0, 0, 0)</string>
  <resources/>
  <connections/>
 </ui>
-
