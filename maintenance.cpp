@@ -31,6 +31,7 @@ maintenance::~maintenance()
 void maintenance::on_pushButton_2_clicked()
 {
     InputCollege inputCollege;
+    hide();
     inputCollege.setModal(true);
     inputCollege.exec();
 
@@ -41,6 +42,7 @@ void maintenance::on_pushButton_2_clicked()
 void maintenance::on_pushButton_clicked()
 {
     souvenirAddandEdit souvenir;
+    hide();
     souvenir.setModal(true);
     souvenir.exec();
 }
