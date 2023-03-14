@@ -216,17 +216,17 @@ void planTripWindow::on_startTrip_clicked()
     if(!allFound){
         QMessageBox::warning(this, "ERROR", "The 11 initial college are incomplete, please check with the administrator.", QMessageBox::Ok, QMessageBox::NoButton);
     }else{
-        ui->stackedWidget->setCurrentWidget(ui->StartTrip_02);
+        //ui->stackedWidget->setCurrentWidget(ui->StartTrip_02);
         selectedCampuses.append(initial11);
         QString startTrip = *selectedCampuses.begin();
         QString* startTrip2 = selectedCampuses.begin();
         recursiveCollegeSort(startTrip);
         double distance_2 = calculateDistance(startTrip2, 11);
-         ui->totalDistance_StartTrip_label->setNum(distance_2);
-        for(int i=0; i < 11; i++)
-        {
-            ui->listWidget_StartTrip_->addItem(sortedCampuses[i]);
-        }
+         ui->totalDistance_label->setNum(distance_2);
+//        for(int i=0; i < 11; i++)
+//        {
+//            ui->listWidget_StartTrip_->addItem(sortedCampuses[i]);
+//        }
 
         selectedCampuses.append(initial11);     
         // hid the current UI and show the sovenirs UI
@@ -349,7 +349,10 @@ void planTripWindow::goToSouvenirShop()
  */
 void planTripWindow::on_goback_clicked()
 {
-    ui->stackedWidget->setCurrentWidget(ui->StudentSelect);
+    planTripWindow user;
+    hide();
+    user.setModal(true);
+    user.exec();
 }
 
 void planTripWindow::on_goback2_clicked()
@@ -362,16 +365,19 @@ void planTripWindow::on_goback2_clicked()
 
 void planTripWindow::on_ShortTrip_goback_clicked()
 {
-    selectedCampuses.clear();
-    ui->listWidget_ShortTrip_02->clear();
-    ui->stackedWidget->setCurrentWidget(ui->StudentSelect);
+
+    planTripWindow user;
+    hide();
+    user.setModal(true);
+    user.exec();
 }
 
 void planTripWindow::on_StartTrip_goback_clicked()
 {
-    selectedCampuses.clear();
-    ui->listWidget_StartTrip_->clear();
-    ui->stackedWidget->setCurrentWidget(ui->StudentSelect);
+    planTripWindow user;
+    hide();
+    user.setModal(true);
+    user.exec();
 }
 
 //go home screen button
@@ -586,5 +592,7 @@ void planTripWindow::on_pushButton_clicked()
         goToSouvenirShop();
     }
 }
+
+
 
 
