@@ -39,6 +39,8 @@ private slots:
     void on_addButton_clicked();
 
     void on_deleteButton_clicked();
+    
+    void on_goback_clicked();
 
 private:
     Ui::souvenirAddandEdit *ui;
