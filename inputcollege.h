@@ -27,6 +27,9 @@ public:
 
     void readFile();    //read file function
     void pushInputData();
+    
+private slots:
+    void on_goback_clicked();
 
 private:
     Ui::InputCollege *ui;
