@@ -1,6 +1,7 @@
 #include "inputcollege.h"
 #include "ui_inputcollege.h"
 #include "global.h"
+#include "maintenance.h"
 
 InputCollege::InputCollege(QWidget *parent) :
     QDialog(parent),
@@ -145,3 +146,11 @@ void InputCollege::pushInputData()
     ui->submitButton->update();
 }
 
+
+void InputCollege::on_goback_clicked()
+{
+    maintenance maint;
+    hide();
+    maint.setModal(true);
+    maint.exec();
+}
