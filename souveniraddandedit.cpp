@@ -278,3 +278,12 @@ void souvenirAddandEdit::on_deleteButton_clicked()
 
 }
 
+
+void souvenirAddandEdit::on_goback_clicked()
+{
+    maintenance maint;
+    hide();
+    maint.setModal(true);
+    maint.exec();
+}
+
