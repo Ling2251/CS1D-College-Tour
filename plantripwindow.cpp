@@ -26,6 +26,7 @@ planTripWindow::planTripWindow(QWidget *parent) :
     // initial the value
     asuNum = 0;
     selectNum = 0;
+    distance = 0.0;
 
     //Shows the UI that has the different trip selections
     ui->setupUi(this);
@@ -92,8 +93,8 @@ void planTripWindow::on_planShortTrip_clicked()
         recursiveCollegeSort(shortTrip);
 
         // calculate the distance and output it
-        double distance = calculateDistance(selectedCampusCount);
-        ui->totalDistance_label->setNum(distance);
+        distance = calculateDistance(selectedCampusCount);
+        showTotalDistent(distance);
 //        for(int i=0; i < selectedCampusCount; i++)
 //        {
 //            ui->listWidget_ShortTrip_02->addItem(sortedCampuses[i]);
@@ -185,8 +186,8 @@ void planTripWindow::on_done_button_clicked()
         QList<QString>::fromVector(selectedCampuses);
 
         // calculate the distance and output it
-        double distance = calculateDistance(selectNum);
-        ui->totalDistance_label->setNum(distance);
+        distance = calculateDistance(selectNum);
+        showTotalDistent(distance);
 
         //Go to souvenirShop widget
         goToSouvenirShop();
@@ -252,8 +253,8 @@ void planTripWindow::on_startTrip_clicked()
         recursiveCollegeSort(startTrip);
 
         // calculate the distance and output it
-        double distance = calculateDistance(11);
-         ui->totalDistance_label->setNum(distance);
+        distance = calculateDistance(11);
+        showTotalDistent(distance);
 //        for(int i=0; i < 11; i++)
 //        {
 //            ui->listWidget_StartTrip_->addItem(sortedCampuses[i]);
@@ -263,6 +264,10 @@ void planTripWindow::on_startTrip_clicked()
         selectedCampuses.append(initial11);
         goToSouvenirShop();
     }
+}
+
+void planTripWindow::showTotalDistent(double distance){
+      ui->finalDistance_Lable->setNum(distance);
 }
 
 // This button when pressed will send the user to a page that will allow them to vist any colleges starting at UCI
@@ -303,8 +308,8 @@ void planTripWindow::on_startTripFormUIC_clicked()
 
         // calculate the distance and output it
         // the distance is supposed to 6283.3 but i keep getting 6254 missing saddleback to fullerton
-        double distance = calculateDistance(13) + 29.3;
-        ui->totalDistance_label->setNum(distance);
+        distance = calculateDistance(13) + 29.3;
+        showTotalDistent(distance);
 //        for(int i=0; i < 13; i++)
 //        {
 //          ui->listWidget_ShortTrip_02->addItem(sortedCampuses[i]);
@@ -382,11 +387,8 @@ void planTripWindow::goToSouvenirShop()
     showSelectCampusComboBox(new QStringListModel(QList<QString>::fromVector(selectedCampuses)));
 
     showSouvTableView(m_database.loadCampusSouvenirs(ui->selectCampus_comboBox->currentText()));
-    //create Cart table
     m_database.createCart();
     showSouvCartTableView(m_database.loadSouvCart(sQry));
-    //showTotalCost(totalCost);
-    //showDistance(distance);
 }
 
 
@@ -438,7 +440,19 @@ void planTripWindow::on_custom_goback_clicked()
 
 void planTripWindow::on_receiptDone_clicked()
 {
-    QMessageBox::information(this, "Loading...", "You are done with this trip. Now retruning to the selection Screen to pick an other trip.", QMessageBox::Ok, QMessageBox::NoButton);
+    QMessageBox::information(this, "Loading...", "You are now done with this trip. Now retruning to the main selection Screen.", QMessageBox::Ok, QMessageBox::NoButton);
+
+    // clear the prives shoping cart item and all other things
+    m_database.deleteCart();
+    sQry.clear();
+    asuNum = 0;
+    selectNum = 0;
+    total = 0;
+
+    while(!sortedCampuses.empty())
+    {
+        sortedCampuses.pop_front();
+    }
 
     planTripWindow user;
     hide();
@@ -449,9 +463,8 @@ void planTripWindow::on_receiptDone_clicked()
 void planTripWindow::on_doneBuying_clicked()
 {
     QMessageBox::information(this, "Loading...", "You are done buying all souvenirs. Now moving to the receipt Screen.", QMessageBox::Ok, QMessageBox::NoButton);
+    displayReceiptPage();
 
-    //Go to the receipt widget
-    ui->stackedWidget->setCurrentWidget(ui->receiptPage);
 }
 
 //go home screen button
@@ -500,6 +513,7 @@ void planTripWindow::on_mainpage_2_clicked()
 void planTripWindow::showSelectCampusComboBox(QStringListModel *model)
 {
     ui ->selectCampus_comboBox->setModel(model);
+    ui->collegecomboBox->setModel(model);
 }
 
 /*
@@ -632,12 +646,25 @@ double planTripWindow::calculateDistance(int selectedCampusCount)
 void planTripWindow::showTotal(double total)
 {
     // associate the total with the label in the uo page
-    ui->totalCart_label->setNum(total);
+    ui->finalCostLabel->setNum(total);
 }
 
 
+//displayReceiptPage function is to display the list of college that
+//the student will viste in order and the souvenirs that they bought
+//at each college, as well as the total distenct and the total price.
+void planTripWindow::displayReceiptPage(){
 
-void planTripWindow::displayReceiptPage(QVector<QString> selectedCampuses){
+    //Go to the receipt widget
+    ui->stackedWidget->setCurrentWidget(ui->receiptPage);
+    // set the combo box to display all the selected college
+    showSelectCampusComboBox(new QStringListModel(QList<QString>::fromVector(selectedCampuses)));
+
+    // display the college vistting order on to the screen
+    for(int i= 0; i<selectedCampuses.count(); i++){
+         ui->collegeListView->addItem(sortedCampuses[i]);
+    }
+
 
 
 }
