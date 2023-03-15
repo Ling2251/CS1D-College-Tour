@@ -33,7 +33,7 @@ public:
     void showSouvTableView(QSqlQueryModel *model);
     void showSouvCartTableView(QSqlQueryModel *model);
     void calculateTotal();
-    double calculateDistance(QString* currentC, int selectedCampusCount);
+    double calculateDistance(int selectedCampusCount);
     void showTotal(double total);
     void showAvaliListCombo(QSqlQueryModel *model);
     void showSelectListView();
@@ -65,7 +65,6 @@ private slots:
 
     void on_done_button_clicked();
 
-    void on_pushButton_clicked();
 
     void on_ShortTrip_goback_clicked();
 
