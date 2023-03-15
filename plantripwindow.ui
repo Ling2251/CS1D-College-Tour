@@ -20,7 +20,7 @@
       <string notr="true"/>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="StudentSelect">
       <widget class="QLabel" name="label">
@@ -242,7 +242,6 @@ color: rgb(255, 255, 255);</string>
        <property name="font">
         <font>
          <pointsize>18</pointsize>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -275,7 +274,6 @@ color: rgb(255, 255, 255);</string>
        <property name="font">
         <font>
          <pointsize>9</pointsize>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -316,7 +314,6 @@ color: rgb(255, 255, 255);</string>
         <font>
          <family>Segoe UI</family>
          <pointsize>10</pointsize>
-         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
          <underline>true</underline>
@@ -395,73 +392,51 @@ border: none;
       <widget class="QLabel" name="souvenirsTitle">
        <property name="geometry">
         <rect>
-         <x>690</x>
-         <y>10</y>
+         <x>90</x>
+         <y>40</y>
          <width>331</width>
          <height>81</height>
         </rect>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:700;&quot;&gt;Souvenirs Bought&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="costTitle">
-       <property name="geometry">
-        <rect>
-         <x>560</x>
-         <y>400</y>
-         <width>451</width>
-         <height>121</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:700;&quot;&gt;Total Cost:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:700;&quot;&gt;Souvenirs Cart&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
       <widget class="QLabel" name="collegesTitle">
        <property name="geometry">
         <rect>
-         <x>20</x>
-         <y>10</y>
+         <x>70</x>
+         <y>300</y>
          <width>351</width>
          <height>71</height>
         </rect>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:696;&quot;&gt;Visited Colleges in order&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:696;&quot;&gt;Visited Colleges In Order&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
       <widget class="QPushButton" name="receiptDone">
        <property name="geometry">
         <rect>
-         <x>449</x>
-         <y>477</y>
+         <x>520</x>
+         <y>480</y>
          <width>111</width>
          <height>41</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 255);
+font: 12pt &quot;Segoe UI&quot;;</string>
        </property>
        <property name="text">
         <string>DONE</string>
        </property>
       </widget>
-      <widget class="QLabel" name="distanceTitle">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>410</y>
-         <width>371</width>
-         <height>101</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:700;&quot;&gt;Total Distance &lt;br/&gt;Traveled:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
       <widget class="QLabel" name="label_7">
        <property name="geometry">
         <rect>
-         <x>340</x>
-         <y>-20</y>
+         <x>780</x>
+         <y>-10</y>
          <width>321</width>
          <height>81</height>
         </rect>
@@ -470,24 +445,11 @@ border: none;
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:696;&quot;&gt;Receipt Page&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
-      <widget class="QLabel" name="distanceLabel_2">
-       <property name="geometry">
-        <rect>
-         <x>180</x>
-         <y>490</y>
-         <width>151</width>
-         <height>51</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:696;&quot;&gt;Miles&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
       <widget class="QLabel" name="costLabel_2">
        <property name="geometry">
         <rect>
-         <x>670</x>
-         <y>480</y>
+         <x>830</x>
+         <y>390</y>
          <width>101</width>
          <height>51</height>
         </rect>
@@ -499,8 +461,8 @@ border: none;
       <widget class="QComboBox" name="collegecomboBox">
        <property name="geometry">
         <rect>
-         <x>420</x>
-         <y>140</y>
+         <x>550</x>
+         <y>120</y>
          <width>231</width>
          <height>31</height>
         </rect>
@@ -509,8 +471,8 @@ border: none;
       <widget class="QLabel" name="finalDistance_Lable">
        <property name="geometry">
         <rect>
-         <x>80</x>
-         <y>490</y>
+         <x>920</x>
+         <y>330</y>
          <width>121</width>
          <height>41</height>
         </rect>
@@ -518,7 +480,6 @@ border: none;
        <property name="font">
         <font>
          <pointsize>18</pointsize>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -538,8 +499,8 @@ border: none;
       <widget class="QLabel" name="finalCostLabel">
        <property name="geometry">
         <rect>
-         <x>780</x>
-         <y>480</y>
+         <x>920</x>
+         <y>390</y>
          <width>121</width>
          <height>41</height>
         </rect>
@@ -547,7 +508,6 @@ border: none;
        <property name="font">
         <font>
          <pointsize>18</pointsize>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -564,17 +524,27 @@ border: none;
         <bool>false</bool>
        </property>
       </widget>
+      <widget class="QListWidget" name="collegeListView">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>360</y>
+         <width>451</width>
+         <height>131</height>
+        </rect>
+       </property>
+      </widget>
       <widget class="QLabel" name="label_9">
        <property name="geometry">
         <rect>
-         <x>360</x>
-         <y>80</y>
+         <x>560</x>
+         <y>70</y>
          <width>301</width>
          <height>51</height>
         </rect>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt; font-weight:600;&quot;&gt;To see your total price for individual colleged then &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt; font-weight:600;&quot;&gt;pick a college to see your price at this college:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700;&quot;&gt;Search for a specific college purchase&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="textFormat">
         <enum>Qt::RichText</enum>
@@ -583,18 +553,18 @@ border: none;
       <widget class="QTableView" name="souvenirsListView">
        <property name="geometry">
         <rect>
-         <x>670</x>
-         <y>80</y>
-         <width>381</width>
-         <height>351</height>
+         <x>40</x>
+         <y>110</y>
+         <width>451</width>
+         <height>181</height>
         </rect>
        </property>
       </widget>
       <widget class="QPushButton" name="SearchButton">
        <property name="geometry">
         <rect>
-         <x>560</x>
-         <y>190</y>
+         <x>620</x>
+         <y>170</y>
          <width>80</width>
          <height>25</height>
         </rect>
@@ -603,84 +573,181 @@ border: none;
         <string>Search</string>
        </property>
       </widget>
-      <widget class="QLabel" name="collegeCostLabel">
+      <widget class="QLabel" name="label_3">
        <property name="geometry">
         <rect>
-         <x>430</x>
-         <y>330</y>
-         <width>121</width>
-         <height>31</height>
+         <x>10</x>
+         <y>50</y>
+         <width>1061</width>
+         <height>20</height>
         </rect>
        </property>
-       <property name="font">
-        <font>
-         <pointsize>18</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="mouseTracking">
-        <bool>true</bool>
+       <property name="styleSheet">
+        <string notr="true">font: 700 10pt &quot;Segoe UI&quot;;
+text-decoration: line-through;
+color: rgb(0, 0, 0);</string>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:696;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-       <property name="textFormat">
-        <enum>Qt::AutoText</enum>
-       </property>
-       <property name="scaledContents">
-        <bool>false</bool>
+        <string>-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</string>
        </property>
       </widget>
-      <widget class="QLabel" name="moneyLabel">
-       <property name="geometry">
-        <rect>
-         <x>360</x>
-         <y>330</y>
-         <width>101</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:696;&quot;&gt;$&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="Title">
-       <property name="geometry">
-        <rect>
-         <x>360</x>
-         <y>290</y>
-         <width>111</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:696;&quot;&gt;Sovenirs at&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="SelectedCollegeLabel">
-       <property name="geometry">
-        <rect>
-         <x>460</x>
-         <y>290</y>
-         <width>201</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:696;&quot;&gt;Selected college&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
-      <widget class="QTableView" name="collegeListView">
+      <widget class="QLabel" name="label_8">
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>70</y>
-         <width>361</width>
-         <height>351</height>
+         <y>300</y>
+         <width>711</width>
+         <height>20</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">font: 700 10pt &quot;Segoe UI&quot;;
+text-decoration: line-through;
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>--------------------------------------------------------------------------------------------------------------------------------------------------</string>
+       </property>
       </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>0</y>
+         <width>91</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/image/college logo.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QListWidget" name="listWidget">
+       <property name="geometry">
+        <rect>
+         <x>730</x>
+         <y>280</y>
+         <width>321</width>
+         <height>201</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="baseSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;
+background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>false</bool>
+       </property>
+       <property name="isWrapping" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="gridSize">
+        <size>
+         <width>20</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="uniformItemSizes">
+        <bool>false</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>Receipt Summary</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignCenter</set>
+        </property>
+        <property name="background">
+         <brush brushstyle="Dense1Pattern">
+          <color alpha="255">
+           <red>170</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </property>
+        <property name="foreground">
+         <brush brushstyle="NoBrush">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Total Distance Traveled:</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Total Cost:</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>1000</x>
+         <y>320</y>
+         <width>71</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:700;&quot;&gt;MI&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <zorder>listWidget</zorder>
+      <zorder>souvenirsTitle</zorder>
+      <zorder>collegesTitle</zorder>
+      <zorder>receiptDone</zorder>
+      <zorder>label_7</zorder>
+      <zorder>costLabel_2</zorder>
+      <zorder>collegecomboBox</zorder>
+      <zorder>finalDistance_Lable</zorder>
+      <zorder>finalCostLabel</zorder>
+      <zorder>collegeListView</zorder>
+      <zorder>label_9</zorder>
+      <zorder>souvenirsListView</zorder>
+      <zorder>SearchButton</zorder>
+      <zorder>label_3</zorder>
+      <zorder>label_8</zorder>
+      <zorder>label_10</zorder>
+      <zorder>label_11</zorder>
      </widget>
      <widget class="QWidget" name="customCollegeTour">
       <widget class="QLabel" name="avali_label_2">
@@ -831,7 +898,6 @@ border: none;
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>8</pointsize>
-         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -857,7 +923,6 @@ color:rgb(0, 0, 0)</string>
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>8</pointsize>
-         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -898,7 +963,6 @@ color:rgb(0, 0, 0)</string>
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>8</pointsize>
-         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -955,7 +1019,6 @@ border: none;
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>8</pointsize>
-         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -996,7 +1059,6 @@ color:rgb(0, 0, 0)</string>
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>8</pointsize>
-         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -1047,7 +1109,6 @@ border: none;
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>8</pointsize>
-         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
