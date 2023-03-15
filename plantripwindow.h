@@ -73,6 +73,10 @@ private slots:
 
     void on_custom_goback_clicked();
 
+    void on_doneBuying_clicked();
+
+    void on_receiptDone_clicked();
+
 private:
     Ui::planTripWindow *ui;
     dbManager m_database;

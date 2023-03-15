@@ -197,7 +197,7 @@ color: rgb(255, 255, 255);</string>
       <widget class="QPushButton" name="addSouvenir_button">
        <property name="geometry">
         <rect>
-         <x>290</x>
+         <x>300</x>
          <y>460</y>
          <width>93</width>
          <height>28</height>
@@ -505,6 +505,19 @@ border: none;
         <string/>
        </property>
       </widget>
+      <widget class="QPushButton" name="doneBuying">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>460</y>
+         <width>81</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>DONE</string>
+       </property>
+      </widget>
       <zorder>label_2</zorder>
       <zorder>label_3</zorder>
       <zorder>addSouvenir_button</zorder>
@@ -522,6 +535,7 @@ border: none;
       <zorder>total_label_2</zorder>
       <zorder>goback</zorder>
       <zorder>mainpage_2</zorder>
+      <zorder>doneBuying</zorder>
      </widget>
      <widget class="QWidget" name="receiptPage">
       <widget class="QLabel" name="souvenirsTitle">
@@ -609,7 +623,7 @@ border: none;
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:700;&quot;&gt;Colleges Visited&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="receiptPage_ReturnButton">
+      <widget class="QPushButton" name="receiptDone">
        <property name="geometry">
         <rect>
          <x>449</x>
@@ -619,7 +633,7 @@ border: none;
         </rect>
        </property>
        <property name="text">
-        <string>Return</string>
+        <string>DONE</string>
        </property>
       </widget>
       <widget class="QLabel" name="distanceTitle">

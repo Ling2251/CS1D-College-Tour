@@ -389,6 +389,24 @@ void planTripWindow::on_custom_goback_clicked()
     user.exec();
 }
 
+void planTripWindow::on_receiptDone_clicked()
+{
+    QMessageBox::information(this, "Loading...", "You are done with this trip. Now retruning to the selection Screen to pick an other trip.", QMessageBox::Ok, QMessageBox::NoButton);
+
+    planTripWindow user;
+    hide();
+    user.setModal(true);
+    user.exec();
+}
+
+void planTripWindow::on_doneBuying_clicked()
+{
+    QMessageBox::information(this, "Loading...", "You are done buying all souvenirs. Now moving to the receipt Screen.", QMessageBox::Ok, QMessageBox::NoButton);
+
+    //Go to the receipt widget
+    ui->stackedWidget->setCurrentWidget(ui->receiptPage);
+}
+
 //go home screen button
 //This button will allow the user to go back to home page
 void planTripWindow::on_mainpage_clicked()
@@ -425,9 +443,8 @@ void planTripWindow::on_mainpage_2_clicked()
     hide();
 
 }
-
-
     /*UI DESIGN ENDS HERE*/
+
 
 /*
  * showSelectCampusComboBox(QStringListModel *model)
@@ -599,7 +616,4 @@ void planTripWindow::on_pushButton_clicked()
         goToSouvenirShop();
     }
 }
-
-
-
 
