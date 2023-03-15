@@ -543,6 +543,8 @@ void planTripWindow::on_selectCampus_comboBox_currentIndexChanged()
 void planTripWindow::showSouvCartTableView(QSqlQueryModel *model)
 {
     ui->souvCart_tableView->setModel(model);
+    ui->souvenirsListView->setModel(model);
+
 }
 
 /*
@@ -665,6 +667,22 @@ void planTripWindow::displayReceiptPage(){
          ui->collegeListView->addItem(sortedCampuses[i]);
     }
 
-
-
 }
+
+void planTripWindow::on_SearchButton_clicked()
+{
+    QString campaseName;
+    QSqlQuery qry;
+
+    campaseName = ui->collegecomboBox->currentText();
+    qry.prepare("select souvenirsName as 'Souvenirs', cost as 'Cost($)',quantity as 'Quantity' from Cart where collegeName = '" +campaseName+ "'");
+
+    if(qry.exec()){
+//        ui->souvenirsListView->
+    }
+    else{
+        //else it will display the error
+        QMessageBox::critical(this,tr("Error:: can't display the souvenirs"),qry.lastError().text());
+    }
+}
+

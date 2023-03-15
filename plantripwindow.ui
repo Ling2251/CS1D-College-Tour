@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1058</width>
+    <width>1080</width>
     <height>558</height>
    </rect>
   </property>
@@ -135,7 +135,7 @@ border: none;
         <rect>
          <x>0</x>
          <y>130</y>
-         <width>1041</width>
+         <width>1061</width>
          <height>401</height>
         </rect>
        </property>
@@ -336,7 +336,7 @@ border: none;
       <widget class="QPushButton" name="mainpage_2">
        <property name="geometry">
         <rect>
-         <x>890</x>
+         <x>920</x>
          <y>20</y>
          <width>91</width>
          <height>51</height>
@@ -354,7 +354,7 @@ border: none;
         <rect>
          <x>0</x>
          <y>80</y>
-         <width>1031</width>
+         <width>1081</width>
          <height>431</height>
         </rect>
        </property>
@@ -499,27 +499,11 @@ border: none;
       <widget class="QComboBox" name="collegecomboBox">
        <property name="geometry">
         <rect>
-         <x>440</x>
+         <x>420</x>
          <y>140</y>
          <width>231</width>
          <height>31</height>
         </rect>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_8">
-       <property name="geometry">
-        <rect>
-         <x>390</x>
-         <y>90</y>
-         <width>271</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Pick a college to see your purchase:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-       <property name="textFormat">
-        <enum>Qt::RichText</enum>
        </property>
       </widget>
       <widget class="QLabel" name="finalDistance_Lable">
@@ -583,50 +567,50 @@ border: none;
       <widget class="QListWidget" name="collegeListView">
        <property name="geometry">
         <rect>
-         <x>30</x>
+         <x>10</x>
          <y>80</y>
          <width>341</width>
          <height>341</height>
         </rect>
        </property>
       </widget>
-      <widget class="QListWidget" name="souvenirsListView">
-       <property name="geometry">
-        <rect>
-         <x>690</x>
-         <y>80</y>
-         <width>331</width>
-         <height>351</height>
-        </rect>
-       </property>
-      </widget>
       <widget class="QLabel" name="label_9">
        <property name="geometry">
         <rect>
-         <x>390</x>
-         <y>200</y>
-         <width>271</width>
-         <height>21</height>
+         <x>360</x>
+         <y>80</y>
+         <width>301</width>
+         <height>51</height>
         </rect>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Or, see all your purchase from all colleges&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;See all your purchase from all colleges,&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Or pick a college to see your purchase:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="textFormat">
         <enum>Qt::RichText</enum>
        </property>
       </widget>
-      <widget class="QPushButton" name="allPurchaseButton">
+      <widget class="QTableView" name="souvenirsListView">
        <property name="geometry">
         <rect>
-         <x>580</x>
-         <y>230</y>
-         <width>91</width>
-         <height>31</height>
+         <x>670</x>
+         <y>80</y>
+         <width>381</width>
+         <height>351</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="SearchButton">
+       <property name="geometry">
+        <rect>
+         <x>560</x>
+         <y>190</y>
+         <width>80</width>
+         <height>25</height>
         </rect>
        </property>
        <property name="text">
-        <string>All Purchase</string>
+        <string>Search</string>
        </property>
       </widget>
      </widget>

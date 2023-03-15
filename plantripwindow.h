@@ -78,6 +78,8 @@ private slots:
 
     void on_receiptDone_clicked();
 
+    void on_SearchButton_clicked();
+
 private:
     Ui::planTripWindow *ui;
     dbManager m_database;
