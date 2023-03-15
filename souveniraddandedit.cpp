@@ -278,7 +278,7 @@ void souvenirAddandEdit::on_deleteButton_clicked()
 
 }
 
-
+// this function is to go back to the last page
 void souvenirAddandEdit::on_goback_clicked()
 {
     maintenance maint;
