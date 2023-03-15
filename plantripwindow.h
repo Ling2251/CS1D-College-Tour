@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QMessageBox>
+#include <QAbstractTableModel>
 #include "dbmanager.h"
 
 // This class will give the user options on how they would like to plan their trip
@@ -38,7 +39,8 @@ public:
     void showAvaliListCombo(QSqlQueryModel *model);
     void showSelectListView();
     void showAvaliListView(QSqlQueryModel *model);
-    void displayReceiptPage(QVector<QString> selectedCampuses);
+    void showTotalDistent(double distance);
+    void displayReceiptPage();
 
 
 private slots:
@@ -86,6 +88,8 @@ private:
     int selectNum; /**< the current number of campuses*/
     QString sQry;
     double total;
+    double distance;
+
 };
 
 #endif // PLANTRIPWINDOW_H
