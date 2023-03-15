@@ -20,7 +20,7 @@
       <string notr="true"/>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="StudentSelect">
       <widget class="QLabel" name="label">
@@ -447,7 +447,7 @@ border: none;
       <widget class="QLabel" name="distanceTitle">
        <property name="geometry">
         <rect>
-         <x>30</x>
+         <x>0</x>
          <y>410</y>
          <width>371</width>
          <height>101</height>
@@ -473,7 +473,7 @@ border: none;
       <widget class="QLabel" name="distanceLabel_2">
        <property name="geometry">
         <rect>
-         <x>220</x>
+         <x>180</x>
          <y>490</y>
          <width>151</width>
          <height>51</height>
@@ -509,7 +509,7 @@ border: none;
       <widget class="QLabel" name="finalDistance_Lable">
        <property name="geometry">
         <rect>
-         <x>120</x>
+         <x>80</x>
          <y>490</y>
          <width>121</width>
          <height>41</height>
@@ -564,16 +564,6 @@ border: none;
         <bool>false</bool>
        </property>
       </widget>
-      <widget class="QListWidget" name="collegeListView">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>80</y>
-         <width>341</width>
-         <height>341</height>
-        </rect>
-       </property>
-      </widget>
       <widget class="QLabel" name="label_9">
        <property name="geometry">
         <rect>
@@ -584,7 +574,7 @@ border: none;
         </rect>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;See all your purchase from all colleges,&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Or pick a college to see your purchase:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt; font-weight:600;&quot;&gt;To see your total price for individual colleged then &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt; font-weight:600;&quot;&gt;pick a college to see your price at this college:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="textFormat">
         <enum>Qt::RichText</enum>
@@ -611,6 +601,84 @@ border: none;
        </property>
        <property name="text">
         <string>Search</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="collegeCostLabel">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>330</y>
+         <width>121</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:696;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="moneyLabel">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>330</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:696;&quot;&gt;$&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Title">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>290</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:696;&quot;&gt;Sovenirs at&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="SelectedCollegeLabel">
+       <property name="geometry">
+        <rect>
+         <x>460</x>
+         <y>290</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:696;&quot;&gt;Selected college&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QTableView" name="collegeListView">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>70</y>
+         <width>361</width>
+         <height>351</height>
+        </rect>
        </property>
       </widget>
      </widget>
