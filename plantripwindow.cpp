@@ -308,7 +308,7 @@ void planTripWindow::on_startTripFormUIC_clicked()
 
         // calculate the distance and output it
         // the distance is supposed to 6283.3 but i keep getting 6254 missing saddleback to fullerton
-        distance = calculateDistance(13) + 29.3;
+        distance = calculateDistance(13);
         showTotalDistent(distance);
 //        for(int i=0; i < 13; i++)
 //        {
@@ -554,7 +554,6 @@ void planTripWindow::showSouvCartTableView(QSqlQueryModel *model)
  */
 void planTripWindow::on_addSouvenir_button_clicked()
 {
-    Souvenir souv;
     //set the name and campus
     QString name, campus;
     name = ui->souv_comboBox->currentText();
@@ -664,25 +663,34 @@ void planTripWindow::displayReceiptPage(){
 
     // display the college vistting order on to the screen
     for(int i= 0; i<selectedCampuses.count(); i++){
-         ui->collegeListView->addItem(sortedCampuses[i]);
+        ui->collegeListView->setModel((new QStringListModel(QList<QString>::fromVector(selectedCampuses))));
+        ui->collegeListView->setColumnWidth(0, 460);
+        ui->collegeListView->setColumnWidth(1, 280);
     }
 
 }
 
 void planTripWindow::on_SearchButton_clicked()
 {
+    double collegeSouvenirsPrice = 0.0;
     QString campaseName;
     QSqlQuery qry;
+    double cost = 0.00;
 
     campaseName = ui->collegecomboBox->currentText();
-    qry.prepare("select souvenirsName as 'Souvenirs', cost as 'Cost($)',quantity as 'Quantity' from Cart where collegeName = '" +campaseName+ "'");
+    ui->SelectedCollegeLabel->setText(campaseName);
 
-    if(qry.exec()){
-//        ui->souvenirsListView->
+    //qry.prepare("select cost from Cart where collegeName='"+campaseName+"'");
+    qry.prepare("select printf(\"%.2f\",sum(cost * quantity)) from Cart where collegeName='"+campaseName+"'");
+    qry.exec();
+    if(qry.next()){
+        cost = (qry.value(0).toDouble());
+    }else{
+        QMessageBox::warning(this, "ERROR", "There is issue with the displaying", QMessageBox::Ok, QMessageBox::NoButton);
     }
-    else{
-        //else it will display the error
-        QMessageBox::critical(this,tr("Error:: can't display the souvenirs"),qry.lastError().text());
-    }
+
+    collegeSouvenirsPrice =  cost;
+    ui->collegeCostLabel->setNum(collegeSouvenirsPrice);
+
 }
 

@@ -89,6 +89,7 @@ private:
     int asuNum; /**< the maximum number of campuses allowed during the ASU tour*/
     int selectNum; /**< the current number of campuses*/
     QString sQry;
+    Souvenir souv;
     double total;
     double distance;
 
