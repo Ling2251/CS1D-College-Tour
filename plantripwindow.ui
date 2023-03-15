@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1058</width>
+    <width>1080</width>
     <height>558</height>
    </rect>
   </property>
@@ -20,7 +20,7 @@
       <string notr="true"/>
      </property>
      <property name="currentIndex">
-      <number>5</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="StudentSelect">
       <widget class="QLabel" name="label">
@@ -135,7 +135,7 @@ border: none;
         <rect>
          <x>0</x>
          <y>130</y>
-         <width>1041</width>
+         <width>1061</width>
          <height>401</height>
         </rect>
        </property>
@@ -151,7 +151,7 @@ border: none;
         <rect>
          <x>50</x>
          <y>150</y>
-         <width>341</width>
+         <width>501</width>
          <height>31</height>
         </rect>
        </property>
@@ -167,9 +167,9 @@ color: rgb(255, 255, 255);</string>
       <widget class="QLabel" name="label_6">
        <property name="geometry">
         <rect>
-         <x>420</x>
-         <y>320</y>
-         <width>261</width>
+         <x>340</x>
+         <y>330</y>
+         <width>391</width>
          <height>41</height>
         </rect>
        </property>
@@ -197,7 +197,7 @@ color: rgb(255, 255, 255);</string>
       <widget class="QPushButton" name="addSouvenir_button">
        <property name="geometry">
         <rect>
-         <x>290</x>
+         <x>300</x>
          <y>460</y>
          <width>93</width>
          <height>28</height>
@@ -228,26 +228,6 @@ color: rgb(255, 255, 255);</string>
          <width>271</width>
          <height>251</height>
         </rect>
-       </property>
-      </widget>
-      <widget class="QLabel" name="total_label">
-       <property name="geometry">
-        <rect>
-         <x>560</x>
-         <y>410</y>
-         <width>56</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Total:</string>
        </property>
       </widget>
       <widget class="QLabel" name="souvCart_label">
@@ -313,55 +293,6 @@ color: rgb(255, 255, 255);</string>
         </rect>
        </property>
       </widget>
-      <widget class="QLabel" name="dollarSign">
-       <property name="geometry">
-        <rect>
-         <x>640</x>
-         <y>400</y>
-         <width>31</width>
-         <height>61</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>18</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>$</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="totalCart_label">
-       <property name="geometry">
-        <rect>
-         <x>690</x>
-         <y>410</y>
-         <width>141</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>18</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="mouseTracking">
-        <bool>false</bool>
-       </property>
-       <property name="text">
-        <string>0.00</string>
-       </property>
-       <property name="textFormat">
-        <enum>Qt::AutoText</enum>
-       </property>
-       <property name="scaledContents">
-        <bool>false</bool>
-       </property>
-      </widget>
       <widget class="QComboBox" name="souv_comboBox">
        <property name="geometry">
         <rect>
@@ -370,61 +301,6 @@ color: rgb(255, 255, 255);</string>
          <width>171</width>
          <height>22</height>
         </rect>
-       </property>
-      </widget>
-      <widget class="QLabel" name="total_label_2">
-       <property name="geometry">
-        <rect>
-         <x>560</x>
-         <y>450</y>
-         <width>111</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>111</width>
-         <height>41</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Total distance:</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="totalDistance_label">
-       <property name="geometry">
-        <rect>
-         <x>710</x>
-         <y>450</y>
-         <width>121</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>18</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="mouseTracking">
-        <bool>false</bool>
-       </property>
-       <property name="text">
-        <string>0</string>
-       </property>
-       <property name="textFormat">
-        <enum>Qt::AutoText</enum>
-       </property>
-       <property name="scaledContents">
-        <bool>false</bool>
        </property>
       </widget>
       <widget class="QToolButton" name="goback">
@@ -460,7 +336,7 @@ border: none;
       <widget class="QPushButton" name="mainpage_2">
        <property name="geometry">
         <rect>
-         <x>890</x>
+         <x>920</x>
          <y>20</y>
          <width>91</width>
          <height>51</height>
@@ -478,7 +354,7 @@ border: none;
         <rect>
          <x>0</x>
          <y>80</y>
-         <width>1031</width>
+         <width>1081</width>
          <height>431</height>
         </rect>
        </property>
@@ -489,85 +365,44 @@ border: none;
         <string/>
        </property>
       </widget>
-      <widget class="QLabel" name="label_3">
+      <widget class="QPushButton" name="doneBuying">
        <property name="geometry">
         <rect>
-         <x>540</x>
-         <y>410</y>
-         <width>301</width>
-         <height>81</height>
+         <x>420</x>
+         <y>460</y>
+         <width>81</width>
+         <height>31</height>
         </rect>
        </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);</string>
-       </property>
        <property name="text">
-        <string/>
+        <string>DONE</string>
        </property>
       </widget>
       <zorder>label_2</zorder>
-      <zorder>label_3</zorder>
       <zorder>addSouvenir_button</zorder>
       <zorder>quantity_spinBox</zorder>
       <zorder>souv_tableView</zorder>
-      <zorder>total_label</zorder>
       <zorder>souvCart_label</zorder>
       <zorder>souvCart_tableView</zorder>
       <zorder>souv_label</zorder>
       <zorder>selectCampus_comboBox</zorder>
-      <zorder>dollarSign</zorder>
-      <zorder>totalCart_label</zorder>
       <zorder>souv_comboBox</zorder>
-      <zorder>totalDistance_label</zorder>
-      <zorder>total_label_2</zorder>
       <zorder>goback</zorder>
       <zorder>mainpage_2</zorder>
+      <zorder>doneBuying</zorder>
      </widget>
      <widget class="QWidget" name="receiptPage">
       <widget class="QLabel" name="souvenirsTitle">
        <property name="geometry">
         <rect>
-         <x>560</x>
-         <y>20</y>
-         <width>451</width>
-         <height>121</height>
+         <x>690</x>
+         <y>10</y>
+         <width>331</width>
+         <height>81</height>
         </rect>
        </property>
        <property name="text">
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:700;&quot;&gt;Souvenirs Bought&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
-      <widget class="QTableView" name="tableView_2">
-       <property name="geometry">
-        <rect>
-         <x>560</x>
-         <y>120</y>
-         <width>451</width>
-         <height>301</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QTableView" name="collegesTable">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>120</y>
-         <width>441</width>
-         <height>301</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QScrollBar" name="verticalScrollBar">
-       <property name="geometry">
-        <rect>
-         <x>544</x>
-         <y>120</y>
-         <width>16</width>
-         <height>301</height>
-        </rect>
-       </property>
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
        </property>
       </widget>
       <widget class="QLabel" name="costTitle">
@@ -583,33 +418,20 @@ border: none;
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:700;&quot;&gt;Total Cost:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
-      <widget class="QScrollBar" name="collegesScrollBar">
-       <property name="geometry">
-        <rect>
-         <x>451</x>
-         <y>120</y>
-         <width>16</width>
-         <height>301</height>
-        </rect>
-       </property>
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-      </widget>
       <widget class="QLabel" name="collegesTitle">
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>30</y>
-         <width>441</width>
-         <height>101</height>
+         <x>20</x>
+         <y>10</y>
+         <width>351</width>
+         <height>71</height>
         </rect>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:700;&quot;&gt;Colleges Visited&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:696;&quot;&gt;Visited Colleges in order&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="receiptPage_ReturnButton">
+      <widget class="QPushButton" name="receiptDone">
        <property name="geometry">
         <rect>
          <x>449</x>
@@ -619,59 +441,176 @@ border: none;
         </rect>
        </property>
        <property name="text">
-        <string>Return</string>
+        <string>DONE</string>
        </property>
       </widget>
       <widget class="QLabel" name="distanceTitle">
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>400</y>
-         <width>441</width>
-         <height>121</height>
+         <x>30</x>
+         <y>410</y>
+         <width>371</width>
+         <height>101</height>
         </rect>
        </property>
        <property name="text">
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:700;&quot;&gt;Total Distance &lt;br/&gt;Traveled:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
-      <widget class="QLabel" name="costLabel">
-       <property name="geometry">
-        <rect>
-         <x>560</x>
-         <y>476</y>
-         <width>451</width>
-         <height>51</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:700;&quot;&gt;$0.00&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="distanceLabel">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>476</y>
-         <width>441</width>
-         <height>71</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:700;&quot;&gt;0 miles&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
       <widget class="QLabel" name="label_7">
        <property name="geometry">
         <rect>
-         <x>350</x>
-         <y>30</y>
+         <x>340</x>
+         <y>-20</y>
          <width>321</width>
          <height>81</height>
         </rect>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:700;&quot;&gt;Your Receipt&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:696;&quot;&gt;Receipt Page&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="distanceLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>490</y>
+         <width>151</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:696;&quot;&gt;Miles&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="costLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>670</x>
+         <y>480</y>
+         <width>101</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:696;&quot;&gt;$&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="collegecomboBox">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>140</y>
+         <width>231</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="finalDistance_Lable">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>490</y>
+         <width>121</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="finalCostLabel">
+       <property name="geometry">
+        <rect>
+         <x>780</x>
+         <y>480</y>
+         <width>121</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QListWidget" name="collegeListView">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>341</width>
+         <height>341</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>80</y>
+         <width>301</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;See all your purchase from all colleges,&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Or pick a college to see your purchase:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::RichText</enum>
+       </property>
+      </widget>
+      <widget class="QTableView" name="souvenirsListView">
+       <property name="geometry">
+        <rect>
+         <x>670</x>
+         <y>80</y>
+         <width>381</width>
+         <height>351</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="SearchButton">
+       <property name="geometry">
+        <rect>
+         <x>560</x>
+         <y>190</y>
+         <width>80</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Search</string>
        </property>
       </widget>
      </widget>
