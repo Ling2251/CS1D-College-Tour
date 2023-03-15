@@ -499,12 +499,9 @@ void planTripWindow::on_addSouvenir_button_clicked()
     campus = ui->selectCampus_comboBox->currentText();
     souv.campus = campus;
 
-
     //get the quantity and item cost
     int quantity = ui-> quantity_spinBox -> cleanText().toInt();
     souv.quantity = quantity;
-
-
 
     souvenirCart.push(souv);
 
@@ -585,8 +582,6 @@ void planTripWindow::showTotal(double total)
     ui->totalCart_label->setNum(total);
 }
 
-
-
 void planTripWindow::on_pushButton_clicked()
 {
     // putting all initiall college in to a vector including saddleback college
@@ -617,3 +612,6 @@ void planTripWindow::on_pushButton_clicked()
     }
 }
 
+void planTripWindow::displayReceiptPage(QVector<QString> selectedCampuses){
+
+}

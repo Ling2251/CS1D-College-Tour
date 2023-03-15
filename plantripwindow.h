@@ -38,6 +38,7 @@ public:
     void showAvaliListCombo(QSqlQueryModel *model);
     void showSelectListView();
     void showAvaliListView(QSqlQueryModel *model);
+    void displayReceiptPage(QVector<QString> selectedCampuses);
 
 
 private slots:
