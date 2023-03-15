@@ -1,5 +1,9 @@
 #include "dbmanager.h"
 
+/*constructer function:
+ * create a object to associate with the database
+ * connected the database with the qt creator
+ */
 dbManager::dbManager()
 {
     QSqlDatabase m_database = QSqlDatabase::addDatabase("QSQLITE");
