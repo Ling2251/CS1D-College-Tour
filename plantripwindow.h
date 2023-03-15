@@ -66,7 +66,6 @@ private slots:
 
     void on_done_button_clicked();
 
-
     void on_ShortTrip_goback_clicked();
 
     void on_StartTrip_goback_clicked();
