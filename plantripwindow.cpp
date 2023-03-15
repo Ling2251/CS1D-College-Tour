@@ -381,6 +381,14 @@ void planTripWindow::on_StartTrip_goback_clicked()
     user.exec();
 }
 
+void planTripWindow::on_custom_goback_clicked()
+{
+    planTripWindow user;
+    hide();
+    user.setModal(true);
+    user.exec();
+}
+
 //go home screen button
 //This button will allow the user to go back to home page
 void planTripWindow::on_mainpage_clicked()

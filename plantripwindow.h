@@ -71,6 +71,8 @@ private slots:
 
     void on_StartTrip_goback_clicked();
 
+    void on_custom_goback_clicked();
+
 private:
     Ui::planTripWindow *ui;
     dbManager m_database;
