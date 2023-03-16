@@ -242,6 +242,7 @@ color: rgb(255, 255, 255);</string>
        <property name="font">
         <font>
          <pointsize>18</pointsize>
+         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -274,6 +275,7 @@ color: rgb(255, 255, 255);</string>
        <property name="font">
         <font>
          <pointsize>9</pointsize>
+         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -314,6 +316,7 @@ color: rgb(255, 255, 255);</string>
         <font>
          <family>Segoe UI</family>
          <pointsize>10</pointsize>
+         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
          <underline>true</underline>
@@ -418,7 +421,7 @@ border: none;
       <widget class="QPushButton" name="receiptDone">
        <property name="geometry">
         <rect>
-         <x>520</x>
+         <x>530</x>
          <y>480</y>
          <width>111</width>
          <height>41</height>
@@ -448,7 +451,7 @@ font: 12pt &quot;Segoe UI&quot;;</string>
       <widget class="QLabel" name="costLabel_2">
        <property name="geometry">
         <rect>
-         <x>830</x>
+         <x>780</x>
          <y>400</y>
          <width>101</width>
          <height>51</height>
@@ -471,15 +474,16 @@ font: 12pt &quot;Segoe UI&quot;;</string>
       <widget class="QLabel" name="finalDistance_Lable">
        <property name="geometry">
         <rect>
-         <x>920</x>
+         <x>880</x>
          <y>340</y>
-         <width>121</width>
+         <width>131</width>
          <height>41</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <pointsize>18</pointsize>
+         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -499,15 +503,16 @@ font: 12pt &quot;Segoe UI&quot;;</string>
       <widget class="QLabel" name="finalCostLabel">
        <property name="geometry">
         <rect>
-         <x>920</x>
+         <x>870</x>
          <y>400</y>
          <width>121</width>
-         <height>41</height>
+         <height>51</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <pointsize>18</pointsize>
+         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -530,7 +535,7 @@ font: 12pt &quot;Segoe UI&quot;;</string>
          <x>40</x>
          <y>360</y>
          <width>441</width>
-         <height>131</height>
+         <height>151</height>
         </rect>
        </property>
       </widget>
@@ -556,7 +561,7 @@ font: 12pt &quot;Segoe UI&quot;;</string>
          <x>40</x>
          <y>100</y>
          <width>441</width>
-         <height>191</height>
+         <height>201</height>
         </rect>
        </property>
       </widget>
@@ -596,7 +601,7 @@ color: rgb(0, 0, 0);</string>
         <rect>
          <x>0</x>
          <y>300</y>
-         <width>711</width>
+         <width>661</width>
          <height>20</height>
         </rect>
        </property>
@@ -628,9 +633,9 @@ color: rgb(0, 0, 0);</string>
       <widget class="QListWidget" name="listWidget">
        <property name="geometry">
         <rect>
-         <x>730</x>
+         <x>660</x>
          <y>290</y>
-         <width>321</width>
+         <width>391</width>
          <height>201</height>
         </rect>
        </property>
@@ -672,6 +677,7 @@ background-color: rgb(255, 255, 255);</string>
         <property name="font">
          <font>
           <pointsize>15</pointsize>
+          <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
@@ -721,10 +727,10 @@ background-color: rgb(255, 255, 255);</string>
       <widget class="QLabel" name="label_11">
        <property name="geometry">
         <rect>
-         <x>1000</x>
-         <y>330</y>
-         <width>71</width>
-         <height>61</height>
+         <x>1010</x>
+         <y>340</y>
+         <width>41</width>
+         <height>41</height>
         </rect>
        </property>
        <property name="text">
@@ -756,6 +762,7 @@ background-color: rgb(255, 255, 255);</string>
        <property name="font">
         <font>
          <pointsize>18</pointsize>
+         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -969,6 +976,7 @@ border: none;
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>8</pointsize>
+         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -994,6 +1002,7 @@ color:rgb(0, 0, 0)</string>
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>8</pointsize>
+         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -1034,6 +1043,7 @@ color:rgb(0, 0, 0)</string>
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>8</pointsize>
+         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -1090,6 +1100,7 @@ border: none;
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>8</pointsize>
+         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -1130,6 +1141,7 @@ color:rgb(0, 0, 0)</string>
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>8</pointsize>
+         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -1180,6 +1192,7 @@ border: none;
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>8</pointsize>
+         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
