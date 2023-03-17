@@ -1,6 +1,16 @@
-# Contributor Covenant Code of Conduct
+# CS1D College Tour Application 
 
-## Our Pledge
+## Scope Of the Program
+
+This program is a software that reads data and stores it in a data structure. 
+The program must have the ability to hold the names of at least 20 college campuses 
+(the initial data contains 11 campuses)	and their corresponding	traditional 
+souvenirs (up to seven per campus). Also the program will be used to allow perspective
+college students to plan their college experience. Last the program will provide the
+ability to modify information related to the traditional souvenirs (such as adding
+new souvenirs, changing a price of a souvenir, or deleting a souvenir).
+
+## Our Ruls
 
 We as members, contributors, and leaders pledge to make participation in our
 community a harassment-free experience for everyone, regardless of age, body
@@ -43,33 +53,11 @@ acceptable behavior and will take appropriate and fair corrective action in
 response to any behavior that they deem inappropriate, threatening, offensive,
 or harmful.
 
-Community leaders have the right and responsibility to remove, edit, or reject
-comments, commits, code, wiki edits, issues, and other contributions that are
-not aligned to this Code of Conduct, and will communicate reasons for moderation
-decisions when appropriate.
+The Scrum Master and the Project owner of this project have the right and responsibility
+to remove, edit, or reject comments, commits, code, wiki edits, issues, and other 
+contributions that are not aligned to this Code of Conduct, and will communicate reasons 
+for moderation decisions when appropriate.
 
-## Scope
-
-This Code of Conduct applies within all community spaces, and also applies when
-an individual is officially representing the community in public spaces.
-Examples of representing our community include using an official e-mail address,
-posting via an official social media account, or acting as an appointed
-representative at an online or offline event.
-
-## Enforcement
-
-Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community leaders responsible for enforcement at
-The Scrum master and the project ower.
-All complaints will be reviewed and investigated promptly and fairly.
-
-All community leaders are obligated to respect the privacy and security of the
-reporter of any incident.
-
-## Enforcement Guidelines
-
-Community leaders will follow these Community Impact Guidelines in determining
-the consequences for any action they deem in violation of this Code of Conduct:
 
 ## Our Code Standers
 Variable naming conventions (Camel case)
@@ -80,17 +68,10 @@ Portability
 Reusability and scalability
 Testing your own code befor pushing to main branch.
 
-## Attribution
+## Scrum Team:
 
-This Code of Conduct is adapted from the [Contributor Covenant][homepage],
-version 2.0, available at
-https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.
-
-Community Impact Guidelines were inspired by [Mozilla's code of conduct
-enforcement ladder](https://github.com/mozilla/diversity).
-
-[homepage]: https://www.contributor-covenant.org
-
-For answers to common questions about this code of conduct, see the FAQ at
-https://www.contributor-covenant.org/faq. Translations are available at
-https://www.contributor-covenant.org/translations.
+  Scrum Master: Peijun Zhao.
+  
+  Project Owners: Yaqub Hasan
+  
+  Project Members: Peijun Zhao, Yaqub Hasan, Yuan Cao, Mark Qiu, Nico Julian
