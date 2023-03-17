@@ -42,27 +42,27 @@ private slots:
      */
     void on_pushButton_clicked();
 
-    /** \fn displayItemComBox()
+    /** \fn on_update_clicked()
      * This function is to update the database.
      */
     void on_update_clicked();
 
-    /** \fn displayItemComBox()
+    /** \fn on_tableView_activated()
      * This function is to make tableview active so it can be associate with the QString line.
      */
     void on_tableView_activated(const QModelIndex &index);
 
-    /** \fn displayItemComBox()
+    /** \fn on_addButton_clicked()
      * This function is to add a new souvenir in to the selected college.
      */
     void on_addButton_clicked();
 
-    /** \fn displayItemComBox()
+    /** \fn on_deleteButton_clicked()
      * This function is to delete the souvenir and its price from the college selected.
      */
     void on_deleteButton_clicked();
     
-    /** \fn displayItemComBox()
+    /** \fn on_goback_clicked()
      * This function is the goback function, it will display the last page after click it.
      */
     void on_goback_clicked();

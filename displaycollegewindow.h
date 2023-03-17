@@ -5,7 +5,12 @@
 #include <QMessageBox>
 #include "dbmanager.h"
 
-// This class will display colleges from a file
+/**
+ * @file displayCollegeWindow.h
+ * @class displayCollegeWindow
+ * @brief Most functionality of the displayCollegeWindow class is show the initial college
+ * list in the from of a sql database.
+ */
 namespace Ui {
 class displayCollegeWindow;
 }
