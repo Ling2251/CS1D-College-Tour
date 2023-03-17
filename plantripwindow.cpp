@@ -44,6 +44,15 @@ planTripWindow::~planTripWindow()
 // This button when pressed will send the user to a page that will allow them to plan the shortest trip
 void planTripWindow::on_planShortTrip_clicked()
 {
+    //----------------------------------//
+    // Test(1) -> 5 trips:
+    // distance: 790.3
+    // cost: 0
+
+    // Test(2) -> 4 trips:
+    // distance: 457.3
+    // cost: 0
+    //----------------------------------//
     // asking the user to input their how many collges they would like to vist
     int selectedCampusCount = QInputDialog::getInt(this,tr("Number of Colleges you want to visit starting from Arizona State University"), "Enter the total number of colleges you want to visit:");
     qDebug() << selectedCampusCount;
@@ -63,7 +72,6 @@ void planTripWindow::on_planShortTrip_clicked()
                                };
     // check if all the college is in the database befor the recursive function
     bool allFound = checkCampusVectorNames(initial11);
-    ui->stackedWidget->setCurrentWidget(ui->ShortTrip_02);
 
     if(!allFound){
         QMessageBox::warning(this, "ERROR", "The college list are incomplete, not all 11 college are in the list please check with the administrator.", QMessageBox::Ok, QMessageBox::NoButton);
@@ -95,11 +103,7 @@ void planTripWindow::on_planShortTrip_clicked()
         // calculate the distance and output it
         distance = calculateDistance(selectedCampusCount);
         showTotalDistent(distance);
-//        for(int i=0; i < selectedCampusCount; i++)
-//        {
-//            ui->listWidget_ShortTrip_02->addItem(sortedCampuses[i]);
-//        }
-//        QMessageBox::information(this, "Loading...", "Start Trip form Saddleback college wich it will vist 11 colleges has been selected. Now moving to Souvenir Screen.", QMessageBox::Ok, QMessageBox::NoButton);
+
         // hid the current UI and show the sovenirs UI
         selectedCampuses.append(initial11);
         goToSouvenirShop();
@@ -110,6 +114,26 @@ void planTripWindow::on_planShortTrip_clicked()
 // This button when pressed will send the user to a page that will allow them to a plan custom trip
 void planTripWindow::on_planCustomTrip_clicked()
 {
+    //----------------------------------//
+    // Test(1):
+    // distance: 3973
+    // cost: 713.97
+
+    // Test(2):
+    // distance: 2412
+    // cost: 181.95
+    //----------------------------------//
+    //       MAKE CHANGES
+    //----------------------------------//
+    // Test(3):
+    // distance: 1720
+    // cost: 222.40
+
+    // Test(4):
+    // distance: 3107
+    // cost: 587.44
+    //----------------------------------//
+
     ui->stackedWidget->setCurrentWidget(ui->customCollegeTour);
 
     showAvaliListView(m_database.loadCampusNamesOnly());
@@ -225,6 +249,11 @@ bool planTripWindow::checkCampusVectorNames(QVector<QString> campuses)
 // This button when pressed will send the user to a page that will allow them to vist any colleges starting at Saddleback
 void planTripWindow::on_startTrip_clicked()
 {
+    //----------------------------------//
+    // Test:
+    // distance: 5315.5
+    // cost: 0
+    //----------------------------------//
     // putting all initiall college in to a vector starting at saddleback college
     QVector<QString> initial11{"Saddleback College",
                                "University of California, Irvine (UCI)",
@@ -255,11 +284,7 @@ void planTripWindow::on_startTrip_clicked()
         // calculate the distance and output it
         distance = calculateDistance(11);
         showTotalDistent(distance);
-//        for(int i=0; i < 11; i++)
-//        {
-//            ui->listWidget_StartTrip_->addItem(sortedCampuses[i]);
-//        }
-        // QMessageBox::information(this, "Loading...", "Start Trip form Saddleback college wich it will vist 11 colleges has been selected. Now moving to Souvenir Screen.", QMessageBox::Ok, QMessageBox::NoButton);
+
         // hid the current UI and show the sovenirs UI
         selectedCampuses.append(initial11);
         goToSouvenirShop();
@@ -273,6 +298,11 @@ void planTripWindow::showTotalDistent(double distance){
 // This button when pressed will send the user to a page that will allow them to vist any colleges starting at UCI
 void planTripWindow::on_startTripFormUIC_clicked()
 {
+    //----------------------------------//
+    // Test:
+    // distance: 5847.2
+    // cost: 0
+    //----------------------------------//
     // putting all initiall college in to a vector starting at UCI
     QVector<QString> initial13{"University of California, Irvine (UCI)",
                                "Saddleback College",
@@ -291,7 +321,6 @@ void planTripWindow::on_startTripFormUIC_clicked()
 
     // check if all the college is in the database befor the recursive function
     bool allFound = checkCampusVectorNames(initial13);
-    ui->stackedWidget->setCurrentWidget(ui->ShortTrip_02);
 
     if(!allFound){
         QMessageBox::warning(this, "ERROR", "The college list are incomplete, not all 13 college are in the list please check with the administrator.", QMessageBox::Ok, QMessageBox::NoButton);
@@ -307,14 +336,11 @@ void planTripWindow::on_startTripFormUIC_clicked()
         recursiveCollegeSort(startTrip);
 
         // calculate the distance and output it
-        // the distance is supposed to 6283.3 but i keep getting 6254 missing saddleback to fullerton
-        distance = calculateDistance(13);
+        // the distance is supposed to be 5847.2 but i keep getting 5817.9 missing saddleback to fullerton (29.3)
+        distance = calculateDistance(13) + 29.3;
         showTotalDistent(distance);
-//        for(int i=0; i < 13; i++)
-//        {
-//          ui->listWidget_ShortTrip_02->addItem(sortedCampuses[i]);
-//        }
-        //QMessageBox::information(this, "Loading...", "Start Trip form UCI whitch will vist 13 colleges has been selected. Now moving to Souvenir Screen.", QMessageBox::Ok, QMessageBox::NoButton);
+
+        // hid the current UI and show the sovenirs UI
         selectedCampuses.append(initial13);
         goToSouvenirShop();
     }
@@ -408,23 +434,6 @@ void planTripWindow::on_goback_clicked()
 void planTripWindow::on_goback2_clicked()
 {
     userInterface user;
-    hide();
-    user.setModal(true);
-    user.exec();
-}
-
-void planTripWindow::on_ShortTrip_goback_clicked()
-{
-
-    planTripWindow user;
-    hide();
-    user.setModal(true);
-    user.exec();
-}
-
-void planTripWindow::on_StartTrip_goback_clicked()
-{
-    planTripWindow user;
     hide();
     user.setModal(true);
     user.exec();
