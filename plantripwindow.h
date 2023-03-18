@@ -69,36 +69,85 @@ public:
     void goToSouvenirShop();
 
 
+    /** \fn showSelectCampusComboBox()
+     * This function will used the tax that is in the campus combo box for the
+     * souvenir shop UI and display the information held in a QStringListModel pointer.
+     * @param pointer model, the list of college name in the form of database accesed it
+     * by QStringListModel pointer
+     * @return nothing returned, it just display souvenirs of the selected campus name in the combo box
+     */
     void showSelectCampusComboBox(QStringListModel *model);
 
-
+    /** \fn showSouvTableView()
+     * The souvenir table view for the souvenir shop UI will display the information about the souvenirs of a selected
+     *  campus held in a QStringListModel pointer.
+     * @param pointer model, the list of souvenirs in the form of database accesed it
+     * by QStringListModel pointer
+     * @return nothing returned, it just display souvenirs of the selected campus name in the table view
+     */
     void showSouvTableView(QSqlQueryModel *model);
 
-
+    /** \fn showSouvCartTableView()
+     * The souvenir cart table view for the souvenir shop UI will display the information about the souvenirs selected
+     * held in a QStringListModel pointer.
+     * @param pointer model, the list of souvenirs in the form of database accesed it
+     * by QStringListModel pointer
+     * @return nothing returned, it just display souvenirs of the selected campus name in the table view
+     */
     void showSouvCartTableView(QSqlQueryModel *model);
 
-
+    /** \fn calculateTotal()
+     * This function calcuate the price total of what the student has purches from all campues.
+     * @param no parameters
+     * @return nothing returned
+     */
     void calculateTotal();
 
-
+    /** \fn calculateDistance()
+     * This function calcuate the distance of the campues the student has selected from the trip.
+     * @param int selectedCampusCount, the number of selected campus
+     * @return double distance, the total distance
+     */
     double calculateDistance(int selectedCampusCount);
 
-
+    /** \fn showTotal()
+     * This function show the total price of all souvenirs and initializes the widgets on the UI.
+     * @param double total, the total price
+     * @return nothing returned, it just set the total price to the UI
+     */
     void showTotal(double total);
 
-
+    /** \fn showAvaliListCombo()
+     * The avaliable campuses combo box on the general tour college selection UI will display the information held in a QSqlQueryModel pointer.
+     * @param QSqlQueryModel, model (passed as a pointer)
+     * @return nothing returned
+     */
     void showAvaliListCombo(QSqlQueryModel *model);
 
-
+    /** \fn showSelectListView()
+     * The selected campuses list view on the general tour college selection UI will display the information held in a QSqlQueryModel pointer.
+     * @param QSqlQueryModel, model (passed as a pointer)
+     * @return nothing returned
+     */
     void showSelectListView();
 
-
+    /** \fn showAvaliListView()
+     * The avaliable campuses list view on the general tour college selection UI will display the information held in a QSqlQueryModel pointer.
+     * @param QSqlQueryModel, model (passed as a pointer)
+     * @return nothing returned
+     */
     void showAvaliListView(QSqlQueryModel *model);
 
-
+    /** \fn showTotalDistent()
+     * This function show the total distent of each trip and initializes the widgets on the UI.
+     * @param no parameters
+     * @return nothing returned
+     */
     void showTotalDistent(double distance);
 
-
+    /** \fn displayReceiptPage()
+     * This function switches the current UI to the final receipt page UI and initializes the widgets on the UI.
+     */
     void displayReceiptPage();
 
 

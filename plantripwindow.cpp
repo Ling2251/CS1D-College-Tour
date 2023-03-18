@@ -44,7 +44,7 @@ planTripWindow::~planTripWindow()
 // This button when pressed will send the user to a page that will allow them to plan the shortest trip
 void planTripWindow::on_planShortTrip_clicked()
 {
-    //----------------------------------//
+    /**----------------------------------
     // Test(1) -> 5 trips:
     // distance: 790.3
     // cost: 0
@@ -52,7 +52,9 @@ void planTripWindow::on_planShortTrip_clicked()
     // Test(2) -> 4 trips:
     // distance: 457.3
     // cost: 0
-    //----------------------------------//
+
+    */
+
     // asking the user to input their how many collges they would like to vist
     int selectedCampusCount = QInputDialog::getInt(this,tr("Number of Colleges you want to visit starting from Arizona State University"), "Enter the total number of colleges you want to visit:");
     qDebug() << selectedCampusCount;
@@ -114,7 +116,7 @@ void planTripWindow::on_planShortTrip_clicked()
 // This button when pressed will send the user to a page that will allow them to a plan custom trip
 void planTripWindow::on_planCustomTrip_clicked()
 {
-    //----------------------------------//
+    /**-----------------------------
     // Test(1):
     // distance: 3973
     // cost: 713.97
@@ -122,9 +124,11 @@ void planTripWindow::on_planCustomTrip_clicked()
     // Test(2):
     // distance: 2412
     // cost: 181.95
-    //----------------------------------//
+
+    //-----------------------------------------
     //       MAKE CHANGES
-    //----------------------------------//
+
+    //-----------------------------------------
     // Test(3):
     // distance: 1720
     // cost: 222.40
@@ -132,7 +136,8 @@ void planTripWindow::on_planCustomTrip_clicked()
     // Test(4):
     // distance: 3107
     // cost: 587.44
-    //----------------------------------//
+
+    */
 
     ui->stackedWidget->setCurrentWidget(ui->customCollegeTour);
 
@@ -249,11 +254,13 @@ bool planTripWindow::checkCampusVectorNames(QVector<QString> campuses)
 // This button when pressed will send the user to a page that will allow them to vist any colleges starting at Saddleback
 void planTripWindow::on_startTrip_clicked()
 {
-    //----------------------------------//
+    /**----------------------------------
     // Test:
     // distance: 5315.5
     // cost: 0
-    //----------------------------------//
+
+    */
+
     // putting all initiall college in to a vector starting at saddleback college
     QVector<QString> initial11{"Saddleback College",
                                "University of California, Irvine (UCI)",
@@ -298,13 +305,13 @@ void planTripWindow::showTotalDistent(double distance){
 // This button when pressed will send the user to a page that will allow them to vist any colleges starting at UCI
 void planTripWindow::on_startTripFormUIC_clicked()
 {
-    /** /test
-    //----------------------------------//
+    /**----------------------------------
     // Test:
     // distance should be: 5847.2
     // cost: 0
-    //----------------------------------//
+
     */
+
     // putting all initiall college in to a vector starting at UCI
     QVector<QString> initial13{"University of California, Irvine (UCI)",
                                "Saddleback College",
