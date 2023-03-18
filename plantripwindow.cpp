@@ -298,11 +298,13 @@ void planTripWindow::showTotalDistent(double distance){
 // This button when pressed will send the user to a page that will allow them to vist any colleges starting at UCI
 void planTripWindow::on_startTripFormUIC_clicked()
 {
+    /** /test
     //----------------------------------//
     // Test:
-    // distance: 5847.2
+    // distance should be: 5847.2
     // cost: 0
     //----------------------------------//
+    */
     // putting all initiall college in to a vector starting at UCI
     QVector<QString> initial13{"University of California, Irvine (UCI)",
                                "Saddleback College",
