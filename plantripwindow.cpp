@@ -344,9 +344,8 @@ void planTripWindow::on_startTripFormUIC_clicked()
         // recursively sort through the list
         recursiveCollegeSort(startTrip);
 
-        // calculate the distance and output it
-        // the distance is supposed to be 5847.2 but i keep getting 5817.9 missing saddleback to fullerton (29.3)
-        distance = calculateDistance(13) + 29.3;
+        // calculate the distance and output i
+        distance = calculateDistance(13);
         showTotalDistent(distance);
 
         // hid the current UI and show the sovenirs UI
@@ -650,7 +649,7 @@ double planTripWindow::calculateDistance(int selectedCampusCount)
     // loop through for each campus that was selected
     for (int i = 0; i < selectedCampusCount; i++)
     {
-       distance += m_database.GetDistBtwn(*currentCampus, *otherCampus);
+       distance += m_database.GetDistBtwn(*otherCampus,*currentCampus);
        currentCampus = otherCampus;
        otherCampus++;
     }
