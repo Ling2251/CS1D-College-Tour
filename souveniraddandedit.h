@@ -11,6 +11,12 @@
 #include <string>
 using namespace std;
 
+/**
+ * @file souvenirAddandEdit.h
+ * @class souvenirAddandEdit
+ * @brief Most functionality of the souvenirAddandEdit class is to add or deleted
+ *  a souvenirs and also edit the price of an exist souvenir
+ */
 namespace Ui {
 class souvenirAddandEdit;
 }
@@ -20,7 +26,17 @@ class souvenirAddandEdit : public QDialog
     Q_OBJECT
 
 public:
+
+    /** \fn souvenirAddandEdit()
+     * constructer function that create a window that display to the the souvenirs table
+     * page to the administrator for adding or deleying or editting the price of spuvenirs to the prgram
+     * @return nothing, it just display a window to the administrator
+     */
     explicit souvenirAddandEdit(QWidget *parent = nullptr);
+
+    /** \fn ~souvenirAddandEdit()
+     *  A destructor function
+     * */
     ~souvenirAddandEdit();
 
 
@@ -68,7 +84,7 @@ private slots:
     void on_goback_clicked();
 
 private:
-    Ui::souvenirAddandEdit *ui;
+    Ui::souvenirAddandEdit *ui; /**< souvenirAddandEdit UI variable*/
 
     bool addOrDelet; /**< the boolean variable to store the logic*/
 };
