@@ -1,0 +1,25 @@
+var files_dup =
+[
+    [ "dbmanager.cpp", "dbmanager_8cpp.html", null ],
+    [ "dbmanager.h", "dbmanager_8h.html", "dbmanager_8h" ],
+    [ "displaycollegewindow.cpp", "displaycollegewindow_8cpp.html", null ],
+    [ "displaycollegewindow.h", "displaycollegewindow_8h.html", "displaycollegewindow_8h" ],
+    [ "global.h", "global_8h.html", "global_8h" ],
+    [ "inputcollege.cpp", "inputcollege_8cpp.html", null ],
+    [ "inputcollege.h", "inputcollege_8h.html", "inputcollege_8h" ],
+    [ "loginpage.cpp", "loginpage_8cpp.html", null ],
+    [ "loginpage.h", "loginpage_8h.html", "loginpage_8h" ],
+    [ "main.cpp", "main_8cpp.html", "main_8cpp" ],
+    [ "maintenance.cpp", "maintenance_8cpp.html", null ],
+    [ "maintenance.h", "maintenance_8h.html", "maintenance_8h" ],
+    [ "mainwindow.cpp", "mainwindow_8cpp.html", null ],
+    [ "mainwindow.h", "mainwindow_8h.html", "mainwindow_8h" ],
+    [ "plantripwindow.cpp", "plantripwindow_8cpp.html", null ],
+    [ "plantripwindow.h", "plantripwindow_8h.html", "plantripwindow_8h" ],
+    [ "souveniraddandedit.cpp", "souveniraddandedit_8cpp.html", null ],
+    [ "souveniraddandedit.h", "souveniraddandedit_8h.html", "souveniraddandedit_8h" ],
+    [ "userinterface.cpp", "userinterface_8cpp.html", null ],
+    [ "userinterface.h", "userinterface_8h.html", "userinterface_8h" ],
+    [ "userwindow.cpp", "userwindow_8cpp.html", null ],
+    [ "userwindow.h", "userwindow_8h.html", "userwindow_8h" ]
+];

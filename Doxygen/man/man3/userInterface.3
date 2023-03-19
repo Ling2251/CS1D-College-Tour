@@ -1,0 +1,89 @@
+.TH "userInterface" 3 "Sat Mar 18 2023" "CS1D-College-Tour" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+userInterface \- Most functionality of the \fBuserInterface\fP class is the main page and will offer the user the choice of either planning a trip or to see the colleges that this program offers\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <userinterface\&.h>\fP
+.PP
+Inherits \fBQDialog\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBuserInterface\fP (\fBQWidget\fP *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~userInterface\fP ()"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_displayCollegeButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_planTripButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_mainpage_clicked\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::userInterface * \fBui\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Most functionality of the \fBuserInterface\fP class is the main page and will offer the user the choice of either planning a trip or to see the colleges that this program offers\&. 
+.PP
+Definition at line \fB17\fP of file \fBuserinterface\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "userInterface::userInterface (\fBQWidget\fP * parent = \fCnullptr\fP)\fC [explicit]\fP"
+constructer function that create a window that display to the the main page and will offer the user the choice of either planning a trip or to see the colleges that this program offers 
+.PP
+\fBReturns\fP
+.RS 4
+nothing, it just display a window to the student 
+.RE
+.PP
+
+.PP
+Definition at line \fB18\fP of file \fBuserinterface\&.cpp\fP\&.
+.SS "userInterface::~userInterface ()"
+A destructor function 
+.PP
+Definition at line \fB26\fP of file \fBuserinterface\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "userInterface::on_displayCollegeButton_clicked ()\fC [private]\fP, \fC [slot]\fP"
+This function is the go to display college page function, it will display the differnt colleges and their souvenirs of student's choioc after click it\&. 
+.PP
+Definition at line \fB32\fP of file \fBuserinterface\&.cpp\fP\&.
+.SS "userInterface::on_mainpage_clicked ()\fC [private]\fP, \fC [slot]\fP"
+This function is the go to main page function, it will display the main page after click it\&. 
+.PP
+Definition at line \fB49\fP of file \fBuserinterface\&.cpp\fP\&.
+.SS "userInterface::on_planTripButton_clicked ()\fC [private]\fP, \fC [slot]\fP"
+This function is the go to plan trips page function, it will display the differnt trip page after click it\&. 
+.PP
+Definition at line \fB40\fP of file \fBuserinterface\&.cpp\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "Ui::userInterface* userInterface::ui\fC [private]\fP"
+\fBuserInterface\fP UI variable 
+.PP
+Definition at line \fB53\fP of file \fBuserinterface\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CS1D-College-Tour from the source code\&.

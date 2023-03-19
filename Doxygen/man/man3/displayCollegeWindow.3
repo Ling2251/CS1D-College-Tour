@@ -1,0 +1,127 @@
+.TH "displayCollegeWindow" 3 "Sat Mar 18 2023" "CS1D-College-Tour" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+displayCollegeWindow \- Most functionality of the \fBdisplayCollegeWindow\fP class is show the initial college list in the from of a sql database\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <displaycollegewindow\&.h>\fP
+.PP
+Inherits \fBQDialog\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBdisplayCollegeWindow\fP (\fBQWidget\fP *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~displayCollegeWindow\fP ()"
+.br
+.ti -1c
+.RI "void \fBshowDBView\fP (QSqlQueryModel *model)"
+.br
+.ti -1c
+.RI "void \fBshowCampusDBCombo\fP (QSqlQueryModel *model)"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_other_button_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_souv_button_clicked\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::displayCollegeWindow * \fBui\fP"
+.br
+.ti -1c
+.RI "\fBdbManager\fP \fBm_database\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Most functionality of the \fBdisplayCollegeWindow\fP class is show the initial college list in the from of a sql database\&. 
+.PP
+Definition at line \fB18\fP of file \fBdisplaycollegewindow\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "displayCollegeWindow::displayCollegeWindow (\fBQWidget\fP * parent = \fCnullptr\fP)\fC [explicit]\fP"
+constructer function that create a display window\&. 
+.PP
+\fBReturns\fP
+.RS 4
+nothing, it just display the tabel view to the students 
+.RE
+.PP
+
+.PP
+Definition at line \fB15\fP of file \fBdisplaycollegewindow\&.cpp\fP\&.
+.SS "displayCollegeWindow::~displayCollegeWindow ()"
+A destructor function 
+.PP
+Definition at line \fB24\fP of file \fBdisplaycollegewindow\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "displayCollegeWindow::on_other_button_clicked ()\fC [private]\fP, \fC [slot]\fP"
+When the other campuses button is clicked on the database display UI, the Distance database is displayed on the table view\&. 
+.PP
+Definition at line \fB57\fP of file \fBdisplaycollegewindow\&.cpp\fP\&.
+.SS "displayCollegeWindow::on_souv_button_clicked ()\fC [private]\fP, \fC [slot]\fP"
+When the souvenir button is clicked on the database display UI, the souvenir database for a specificed campus is displayed on the table view\&. 
+.PP
+Definition at line \fB71\fP of file \fBdisplaycollegewindow\&.cpp\fP\&.
+.SS "displayCollegeWindow::showCampusDBCombo (QSqlQueryModel * model)"
+The campus combo box for the campus database display UI will display the information held in a QSqlQueryModel pointer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIQSqlQueryModel,model\fP (passed as a pointer) for displaying the database list in the combo box 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+nothing returned 
+.RE
+.PP
+
+.PP
+Definition at line \fB46\fP of file \fBdisplaycollegewindow\&.cpp\fP\&.
+.SS "displayCollegeWindow::showDBView (QSqlQueryModel * model)"
+The table view for the campus database display UI will display the information held in a QSqlQueryModel pointer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIQSqlQueryModel,model\fP (passed as a pointer) for displaying the database list in a table view 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+nothing returned 
+.RE
+.PP
+
+.PP
+Definition at line \fB35\fP of file \fBdisplaycollegewindow\&.cpp\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBdbManager\fP displayCollegeWindow::m_database\fC [private]\fP"
+database manager variable 
+.PP
+Definition at line \fB61\fP of file \fBdisplaycollegewindow\&.h\fP\&.
+.SS "Ui::displayCollegeWindow* displayCollegeWindow::ui\fC [private]\fP"
+\fBdisplayCollegeWindow\fP UI variable 
+.PP
+Definition at line \fB60\fP of file \fBdisplaycollegewindow\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CS1D-College-Tour from the source code\&.

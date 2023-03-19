@@ -1,0 +1,46 @@
+\hypertarget{dbmanager_8h_source}{}\doxysection{dbmanager.\+h}
+\mbox{\hyperlink{dbmanager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ DBMANAGER\_H}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ DBMANAGER\_H}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <QtSql>}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <QVector>}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <QQueue>}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00016}\mbox{\hyperlink{classdb_manager}{00016}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdb_manager}{dbManager}}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00017}00017\ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00018}00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00024}00024\ \ \ \ \ \mbox{\hyperlink{classdb_manager_a0a4c9dc595841e6b115c500d14e88e22}{dbManager}}();}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00029}00029\ \ \ \ \mbox{\hyperlink{classdb_manager_a7cf3a4a255b81a6f53efd92e5d82d41a}{\string~dbManager}}();}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00036}00036\ \ \ \ \ QSqlQueryModel\ *\mbox{\hyperlink{classdb_manager_a7726e111973dd8df996b0835da65c493}{loadCampusNamesOnly}}();}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00045}00045\ \ \ \ \ QSqlQueryModel\ *\mbox{\hyperlink{classdb_manager_a1f86f5f809441395499a9229733ff24e}{loadOtherCampusAndDist}}(QString\ campus);}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00054}00054\ \ \ \ \ QSqlQueryModel\ *\mbox{\hyperlink{classdb_manager_af67c0634fd2182a78d643f2746c3fffa}{loadRemainingCampusNamesOnly}}(QVector<QString>\ campuses);}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00062}00062\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classdb_manager_a83cac4edd98c0ff51ec1730db5af2e5a}{checkCampusName}}(QString\ campus);}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00070}00070\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classdb_manager_aa797049558e234dd8b8b7cf542c388d4}{GetDistBtwn}}(QString\ start,\ QString\ end);}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00078}00078\ \ \ \ \ QSqlQueryModel\ *\mbox{\hyperlink{classdb_manager_aff0e59fb325dba293707ad93a2d99d35}{loadCampusSouvenirs}}(QString\ campus);}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00087}00087\ \ \ \ \ QSqlQueryModel*\ \mbox{\hyperlink{classdb_manager_ac617c650c039bb7b45e60563f572031d}{loadSouvCart}}(QString\ sQry);}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00092}00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdb_manager_a092fd94dfc8761dc238a20bc20855fdc}{createCart}}();}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00097}00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdb_manager_a0a8828c717828246ea83f975024fb75f}{deleteCart}}();}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00104}00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdb_manager_a1d7cf5b8b1eacb01059e9b7f026a0ebb}{updateCartQuantity}}(QString\ campus,\ QString\ souv,\ \textcolor{keywordtype}{int}\ quantity);}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00110}\mbox{\hyperlink{classdb_manager_a1359fd9fa4e33c530a51a1470bfd2cc1}{00110}}\ \ \ \ \ QSqlDatabase\ \mbox{\hyperlink{classdb_manager_a1359fd9fa4e33c530a51a1470bfd2cc1}{m\_database}};}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00112}00112\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00113}00113\ \};}
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8h_source_l00115}00115\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DBMANAGER\_H}}
+
+\end{DoxyCode}

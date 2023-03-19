@@ -1,0 +1,344 @@
+\hypertarget{classdb_manager}{}\doxysection{db\+Manager Class Reference}
+\label{classdb_manager}\index{dbManager@{dbManager}}
+
+
+Most functionality of the \mbox{\hyperlink{classdb_manager}{db\+Manager}} class is to load the campus names and the the distance between the selected campus and loading souvenirs name and price and lastly the ability to create a data table for the shopping cart.  
+
+
+
+
+{\ttfamily \#include $<$dbmanager.\+h$>$}
+
+
+
+Collaboration diagram for db\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classdb_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdb_manager_a0a4c9dc595841e6b115c500d14e88e22}{db\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classdb_manager}{db\+Manager}} constructer function that create a object to associate with the database connected the database with the qt creator \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdb_manager_a7cf3a4a255b81a6f53efd92e5d82d41a}{$\sim$db\+Manager}} ()
+\item 
+QSql\+Query\+Model $\ast$ \mbox{\hyperlink{classdb_manager_a7726e111973dd8df996b0835da65c493}{load\+Campus\+Names\+Only}} ()
+\item 
+QSql\+Query\+Model $\ast$ \mbox{\hyperlink{classdb_manager_a1f86f5f809441395499a9229733ff24e}{load\+Other\+Campus\+And\+Dist}} (QString campus)
+\item 
+QSql\+Query\+Model $\ast$ \mbox{\hyperlink{classdb_manager_af67c0634fd2182a78d643f2746c3fffa}{load\+Remaining\+Campus\+Names\+Only}} (QVector$<$ QString $>$ campuses)
+\item 
+bool \mbox{\hyperlink{classdb_manager_a83cac4edd98c0ff51ec1730db5af2e5a}{check\+Campus\+Name}} (QString campus)
+\item 
+double \mbox{\hyperlink{classdb_manager_aa797049558e234dd8b8b7cf542c388d4}{Get\+Dist\+Btwn}} (QString start, QString end)
+\item 
+QSql\+Query\+Model $\ast$ \mbox{\hyperlink{classdb_manager_aff0e59fb325dba293707ad93a2d99d35}{load\+Campus\+Souvenirs}} (QString campus)
+\item 
+QSql\+Query\+Model $\ast$ \mbox{\hyperlink{classdb_manager_ac617c650c039bb7b45e60563f572031d}{load\+Souv\+Cart}} (QString s\+Qry)
+\item 
+void \mbox{\hyperlink{classdb_manager_a092fd94dfc8761dc238a20bc20855fdc}{create\+Cart}} ()
+\item 
+void \mbox{\hyperlink{classdb_manager_a0a8828c717828246ea83f975024fb75f}{delete\+Cart}} ()
+\item 
+void \mbox{\hyperlink{classdb_manager_a1d7cf5b8b1eacb01059e9b7f026a0ebb}{update\+Cart\+Quantity}} (QString campus, QString souv, int quantity)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QSql\+Database \mbox{\hyperlink{classdb_manager_a1359fd9fa4e33c530a51a1470bfd2cc1}{m\+\_\+database}}
+\begin{DoxyCompactList}\small\item\em m\+\_\+database A public database variable for access all the dbmanager functions \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Most functionality of the \mbox{\hyperlink{classdb_manager}{db\+Manager}} class is to load the campus names and the the distance between the selected campus and loading souvenirs name and price and lastly the ability to create a data table for the shopping cart. 
+
+Definition at line \mbox{\hyperlink{dbmanager_8h_source_l00016}{16}} of file \mbox{\hyperlink{dbmanager_8h_source}{dbmanager.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdb_manager_a0a4c9dc595841e6b115c500d14e88e22}\label{classdb_manager_a0a4c9dc595841e6b115c500d14e88e22}} 
+\index{dbManager@{dbManager}!dbManager@{dbManager}}
+\index{dbManager@{dbManager}!dbManager@{dbManager}}
+\doxysubsubsection{\texorpdfstring{dbManager()}{dbManager()}}
+{\footnotesize\ttfamily db\+Manager\+::db\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classdb_manager}{db\+Manager}} constructer function that create a object to associate with the database connected the database with the qt creator 
+
+constructer function that create a object to associate with the database connected the database with the qt creator \begin{DoxyReturn}{Returns}
+nothing, it just link this program to the SQL database 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{dbmanager_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{dbmanager_8cpp_source}{dbmanager.\+cpp}}.
+
+\mbox{\Hypertarget{classdb_manager_a7cf3a4a255b81a6f53efd92e5d82d41a}\label{classdb_manager_a7cf3a4a255b81a6f53efd92e5d82d41a}} 
+\index{dbManager@{dbManager}!````~dbManager@{$\sim$dbManager}}
+\index{````~dbManager@{$\sim$dbManager}!dbManager@{dbManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$dbManager()}{~dbManager()}}
+{\footnotesize\ttfamily db\+Manager\+::$\sim$db\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A destructor function 
+
+Definition at line \mbox{\hyperlink{dbmanager_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{dbmanager_8cpp_source}{dbmanager.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdb_manager_a83cac4edd98c0ff51ec1730db5af2e5a}\label{classdb_manager_a83cac4edd98c0ff51ec1730db5af2e5a}} 
+\index{dbManager@{dbManager}!checkCampusName@{checkCampusName}}
+\index{checkCampusName@{checkCampusName}!dbManager@{dbManager}}
+\doxysubsubsection{\texorpdfstring{checkCampusName()}{checkCampusName()}}
+{\footnotesize\ttfamily db\+Manager\+::check\+Campus\+Name (\begin{DoxyParamCaption}\item[{QString}]{campus }\end{DoxyParamCaption})}
+
+Using the SQL query funtion, this function determines if the specified college is present in the database. If a database error occurs, an error warning is printed to the console. 
+\begin{DoxyParams}{Parameters}
+{\em string} & campus, the selected campus name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or falst, to see if the name is in the list. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{dbmanager_8cpp_source_l00085}{85}} of file \mbox{\hyperlink{dbmanager_8cpp_source}{dbmanager.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdb_manager_a83cac4edd98c0ff51ec1730db5af2e5a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdb_manager_a092fd94dfc8761dc238a20bc20855fdc}\label{classdb_manager_a092fd94dfc8761dc238a20bc20855fdc}} 
+\index{dbManager@{dbManager}!createCart@{createCart}}
+\index{createCart@{createCart}!dbManager@{dbManager}}
+\doxysubsubsection{\texorpdfstring{createCart()}{createCart()}}
+{\footnotesize\ttfamily db\+Manager\+::create\+Cart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a temporary table called cart in the SQL Database, and alters the table by adding a column called quantity for the quanity purchased. 
+
+Definition at line \mbox{\hyperlink{dbmanager_8cpp_source_l00200}{200}} of file \mbox{\hyperlink{dbmanager_8cpp_source}{dbmanager.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdb_manager_a092fd94dfc8761dc238a20bc20855fdc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdb_manager_a0a8828c717828246ea83f975024fb75f}\label{classdb_manager_a0a8828c717828246ea83f975024fb75f}} 
+\index{dbManager@{dbManager}!deleteCart@{deleteCart}}
+\index{deleteCart@{deleteCart}!dbManager@{dbManager}}
+\doxysubsubsection{\texorpdfstring{deleteCart()}{deleteCart()}}
+{\footnotesize\ttfamily db\+Manager\+::delete\+Cart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This deletes the cart table in the SQL Database when the user has completed their shopping trip. 
+
+Definition at line \mbox{\hyperlink{dbmanager_8cpp_source_l00221}{221}} of file \mbox{\hyperlink{dbmanager_8cpp_source}{dbmanager.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdb_manager_a0a8828c717828246ea83f975024fb75f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdb_manager_aa797049558e234dd8b8b7cf542c388d4}\label{classdb_manager_aa797049558e234dd8b8b7cf542c388d4}} 
+\index{dbManager@{dbManager}!GetDistBtwn@{GetDistBtwn}}
+\index{GetDistBtwn@{GetDistBtwn}!dbManager@{dbManager}}
+\doxysubsubsection{\texorpdfstring{GetDistBtwn()}{GetDistBtwn()}}
+{\footnotesize\ttfamily db\+Manager\+::\+Get\+Dist\+Btwn (\begin{DoxyParamCaption}\item[{QString}]{start,  }\item[{QString}]{end }\end{DoxyParamCaption})}
+
+Using the SQL query funtion, the distance between the 2 specified campuses. If a database error occurs, an error warning is printed to the console. 
+\begin{DoxyParams}{Parameters}
+{\em string} & start, string end, the distenct between the start campuses and end campuses \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double distenct, the distenct between 2 campuses 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{dbmanager_8cpp_source_l00104}{104}} of file \mbox{\hyperlink{dbmanager_8cpp_source}{dbmanager.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdb_manager_aa797049558e234dd8b8b7cf542c388d4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdb_manager_a7726e111973dd8df996b0835da65c493}\label{classdb_manager_a7726e111973dd8df996b0835da65c493}} 
+\index{dbManager@{dbManager}!loadCampusNamesOnly@{loadCampusNamesOnly}}
+\index{loadCampusNamesOnly@{loadCampusNamesOnly}!dbManager@{dbManager}}
+\doxysubsubsection{\texorpdfstring{loadCampusNamesOnly()}{loadCampusNamesOnly()}}
+{\footnotesize\ttfamily db\+Manager\+::load\+Campus\+Names\+Only (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Using the SQl query funtion, only the name of the college campuses are read in from the database into a QSql\+Query\+Model. If a database error occurs, an error warning is printed to the console. \begin{DoxyReturn}{Returns}
+pointer model, the name of the campus in the from of sql database 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{dbmanager_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{dbmanager_8cpp_source}{dbmanager.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdb_manager_a7726e111973dd8df996b0835da65c493_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdb_manager_aff0e59fb325dba293707ad93a2d99d35}\label{classdb_manager_aff0e59fb325dba293707ad93a2d99d35}} 
+\index{dbManager@{dbManager}!loadCampusSouvenirs@{loadCampusSouvenirs}}
+\index{loadCampusSouvenirs@{loadCampusSouvenirs}!dbManager@{dbManager}}
+\doxysubsubsection{\texorpdfstring{loadCampusSouvenirs()}{loadCampusSouvenirs()}}
+{\footnotesize\ttfamily db\+Manager\+::load\+Campus\+Souvenirs (\begin{DoxyParamCaption}\item[{QString}]{campus }\end{DoxyParamCaption})}
+
+Using the SQL query funtion, the souvenirs for a specified campus are read in from the database into a QSql\+Query\+Model. If a database error occurs, an error warning is printed to the console. 
+\begin{DoxyParams}{Parameters}
+{\em string} & campus, the selected campus name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer model, the souvenirs of the selected campus 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{dbmanager_8cpp_source_l00126}{126}} of file \mbox{\hyperlink{dbmanager_8cpp_source}{dbmanager.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdb_manager_aff0e59fb325dba293707ad93a2d99d35_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdb_manager_a1f86f5f809441395499a9229733ff24e}\label{classdb_manager_a1f86f5f809441395499a9229733ff24e}} 
+\index{dbManager@{dbManager}!loadOtherCampusAndDist@{loadOtherCampusAndDist}}
+\index{loadOtherCampusAndDist@{loadOtherCampusAndDist}!dbManager@{dbManager}}
+\doxysubsubsection{\texorpdfstring{loadOtherCampusAndDist()}{loadOtherCampusAndDist()}}
+{\footnotesize\ttfamily db\+Manager\+::load\+Other\+Campus\+And\+Dist (\begin{DoxyParamCaption}\item[{QString}]{campus }\end{DoxyParamCaption})}
+
+Using the SQL query funtion and using the name of a single campus, the names of the other campuses and their distance between them and the starding campus are read in from the database into a QSql\+Query\+Model. If a database error occurs, an error warning is printed to the console. 
+\begin{DoxyParams}{Parameters}
+{\em string} & campus, the selected campus name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer model, the list of other campus name with the distenct to the selected campus in the from of sql database 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{dbmanager_8cpp_source_l00062}{62}} of file \mbox{\hyperlink{dbmanager_8cpp_source}{dbmanager.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdb_manager_a1f86f5f809441395499a9229733ff24e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdb_manager_af67c0634fd2182a78d643f2746c3fffa}\label{classdb_manager_af67c0634fd2182a78d643f2746c3fffa}} 
+\index{dbManager@{dbManager}!loadRemainingCampusNamesOnly@{loadRemainingCampusNamesOnly}}
+\index{loadRemainingCampusNamesOnly@{loadRemainingCampusNamesOnly}!dbManager@{dbManager}}
+\doxysubsubsection{\texorpdfstring{loadRemainingCampusNamesOnly()}{loadRemainingCampusNamesOnly()}}
+{\footnotesize\ttfamily db\+Manager\+::load\+Remaining\+Campus\+Names\+Only (\begin{DoxyParamCaption}\item[{QVector$<$ QString $>$}]{campuses }\end{DoxyParamCaption})}
+
+Using the SQL query funtion, the name of the avaliable college campuses are read in from the database into a QSql\+Query\+Model. The function excludes reading in the campuses from the passed in vector. If a database error occurs, an error warning is printed to the console. 
+\begin{DoxyParams}{Parameters}
+{\em vetctor} & campus, the selected campus name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer model, the list of other campus name to the selected campus in the from of sql database 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{dbmanager_8cpp_source_l00150}{150}} of file \mbox{\hyperlink{dbmanager_8cpp_source}{dbmanager.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdb_manager_af67c0634fd2182a78d643f2746c3fffa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdb_manager_ac617c650c039bb7b45e60563f572031d}\label{classdb_manager_ac617c650c039bb7b45e60563f572031d}} 
+\index{dbManager@{dbManager}!loadSouvCart@{loadSouvCart}}
+\index{loadSouvCart@{loadSouvCart}!dbManager@{dbManager}}
+\doxysubsubsection{\texorpdfstring{loadSouvCart()}{loadSouvCart()}}
+{\footnotesize\ttfamily db\+Manager\+::load\+Souv\+Cart (\begin{DoxyParamCaption}\item[{QString}]{s\+Qry }\end{DoxyParamCaption})}
+
+Using the SQL query funtion, the selected sovenirs are read in from the database into a QSql\+Query\+Model. The query is an accumulator query that contains all the souvenirs the user has selected to add to an update quey using SQL code \char`\"{}\+UNION\char`\"{}. If a database error occurs, an error warning is printed to the console. 
+\begin{DoxyParams}{Parameters}
+{\em string} & sqry, accumulator query that contains all the souvenirs the user has selected \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer model, the souvenirs the user has selected add 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{dbmanager_8cpp_source_l00181}{181}} of file \mbox{\hyperlink{dbmanager_8cpp_source}{dbmanager.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdb_manager_ac617c650c039bb7b45e60563f572031d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdb_manager_a1d7cf5b8b1eacb01059e9b7f026a0ebb}\label{classdb_manager_a1d7cf5b8b1eacb01059e9b7f026a0ebb}} 
+\index{dbManager@{dbManager}!updateCartQuantity@{updateCartQuantity}}
+\index{updateCartQuantity@{updateCartQuantity}!dbManager@{dbManager}}
+\doxysubsubsection{\texorpdfstring{updateCartQuantity()}{updateCartQuantity()}}
+{\footnotesize\ttfamily db\+Manager\+::update\+Cart\+Quantity (\begin{DoxyParamCaption}\item[{QString}]{campus,  }\item[{QString}]{souv,  }\item[{int}]{quantity }\end{DoxyParamCaption})}
+
+This function updates the changes of quantity to the cart table in the SQL Database. 
+\begin{DoxyParams}{Parameters}
+{\em string} & campus, string souv, int quantity, The name of the campus with the souvenirs name and the quantity the student has added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing, it just updated the quantity of the souvenirs item the student has add 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{dbmanager_8cpp_source_l00237}{237}} of file \mbox{\hyperlink{dbmanager_8cpp_source}{dbmanager.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdb_manager_a1d7cf5b8b1eacb01059e9b7f026a0ebb_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdb_manager_a1359fd9fa4e33c530a51a1470bfd2cc1}\label{classdb_manager_a1359fd9fa4e33c530a51a1470bfd2cc1}} 
+\index{dbManager@{dbManager}!m\_database@{m\_database}}
+\index{m\_database@{m\_database}!dbManager@{dbManager}}
+\doxysubsubsection{\texorpdfstring{m\_database}{m\_database}}
+{\footnotesize\ttfamily QSql\+Database db\+Manager\+::m\+\_\+database}
+
+
+
+m\+\_\+database A public database variable for access all the dbmanager functions 
+
+
+
+Definition at line \mbox{\hyperlink{dbmanager_8h_source_l00110}{110}} of file \mbox{\hyperlink{dbmanager_8h_source}{dbmanager.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{dbmanager_8h}{dbmanager.\+h}}\item 
+\mbox{\hyperlink{dbmanager_8cpp}{dbmanager.\+cpp}}\end{DoxyCompactItemize}

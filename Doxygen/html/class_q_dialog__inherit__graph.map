@@ -1,0 +1,10 @@
+<map id="QDialog" name="QDialog">
+<area shape="rect" id="node1" title=" " alt="" coords="648,5,716,83"/>
+<area shape="rect" id="node2" href="$class_input_college.html" title="Most functionality of the InputCollege class is to reading in the new college data as a excel file." alt="" coords="5,439,180,589"/>
+<area shape="rect" id="node3" href="$classdisplay_college_window.html" title="Most functionality of the displayCollegeWindow class is show the initial college list in the from of ..." alt="" coords="204,395,408,633"/>
+<area shape="rect" id="node4" href="$classloginpage.html" title="Most functionality of the loginpage class is to created a login page for the administrator to gain ac..." alt="" coords="433,446,577,582"/>
+<area shape="rect" id="node5" href="$classmaintenance.html" title=" " alt="" coords="601,431,763,597"/>
+<area shape="rect" id="node6" href="$classplan_trip_window.html" title="Most functionality of the planTripWindow class is to give the student options on how they would like ..." alt="" coords="788,131,1016,897"/>
+<area shape="rect" id="node7" href="$classsouvenir_addand_edit.html" title="Most functionality of the souvenirAddandEdit class is to add or deleted a souvenirs and also edit the..." alt="" coords="1041,365,1233,663"/>
+<area shape="rect" id="node8" href="$classuser_interface.html" title="Most functionality of the userInterface class is the main page and will offer the user the choice of ..." alt="" coords="1257,424,1456,604"/>
+</map>

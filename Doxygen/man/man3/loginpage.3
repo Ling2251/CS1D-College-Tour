@@ -1,0 +1,82 @@
+.TH "loginpage" 3 "Sat Mar 18 2023" "CS1D-College-Tour" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+loginpage \- Most functionality of the loginpage class is to created a login page for the administrator to gain access to the maintenace\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <loginpage\&.h>\fP
+.PP
+Inherits \fBQDialog\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBloginpage\fP (\fBQWidget\fP *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~loginpage\fP ()"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_pushButton_login_clicked\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::loginpage * \fBui\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Most functionality of the loginpage class is to created a login page for the administrator to gain access to the maintenace\&. 
+.PP
+Definition at line \fB16\fP of file \fBloginpage\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "loginpage::loginpage (\fBQWidget\fP * parent = \fCnullptr\fP)\fC [explicit]\fP"
+constructer function that create a window that display the login page to the administrator for access to the maintenace page 
+.PP
+\fBReturns\fP
+.RS 4
+nothing, it just display a window to the administrator 
+.RE
+.PP
+
+.PP
+Definition at line \fB7\fP of file \fBloginpage\&.cpp\fP\&.
+.SS "loginpage::~loginpage ()"
+A destructor function 
+.PP
+Definition at line \fB14\fP of file \fBloginpage\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "loginpage::on_pushButton_login_clicked ()\fC [private]\fP, \fC [slot]\fP"
+This function will check if the administrator has put in the right userID and password 
+.PP
+\fBReturns\fP
+.RS 4
+nothing, it just allow the administrator login 
+.RE
+.PP
+
+.PP
+Definition at line \fB19\fP of file \fBloginpage\&.cpp\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "Ui::loginpage* loginpage::ui\fC [private]\fP"
+loginpage UI variable 
+.PP
+Definition at line \fB41\fP of file \fBloginpage\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CS1D-College-Tour from the source code\&.

@@ -1,0 +1,294 @@
+\hypertarget{souveniraddandedit_8cpp_source}{}\doxysection{souveniraddandedit.\+cpp}
+\mbox{\hyperlink{souveniraddandedit_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{souveniraddandedit_8h}{souveniraddandedit.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}ui\_souveniraddandedit.h"{}}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00004}\mbox{\hyperlink{classsouvenir_addand_edit_a11ebae881c2650a6822d35cefb67b771}{00004}}\ \mbox{\hyperlink{classsouvenir_addand_edit_a11ebae881c2650a6822d35cefb67b771}{souvenirAddandEdit::souvenirAddandEdit}}(\mbox{\hyperlink{class_q_widget}{QWidget}}\ *parent)\ :}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00005}00005\ \ \ \ \ \mbox{\hyperlink{class_q_dialog}{QDialog}}(parent),}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00006}00006\ \ \ \ \ ui(new\ \mbox{\hyperlink{namespace_ui}{Ui}}::\mbox{\hyperlink{classsouvenir_addand_edit}{souvenirAddandEdit}})}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00008}00008\ \ \ \ \ \mbox{\hyperlink{classsouvenir_addand_edit_afaf97d8a7012bd2ebb51e144073fc5e6}{ui}}-\/>setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00010}00010\ \ \ \ \ \textcolor{comment}{//display\ the\ college\ comboBox\ and\ souvenirs\ comboBox}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00011}00011\ \ \ \ \ \mbox{\hyperlink{classsouvenir_addand_edit_ae1ed9e8490ec5e3e29b3534f97c3ed88}{displayCollegeComboBox}}();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00012}00012\ \ \ \ \ \mbox{\hyperlink{classsouvenir_addand_edit_aa81a3c1a49817d93ad5b0d7dde9a5e4b}{displayItemComBox}}();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00014}00014\ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00016}\mbox{\hyperlink{classsouvenir_addand_edit_a37886a7f51e51945afa1bb541c09d957}{00016}}\ \mbox{\hyperlink{classsouvenir_addand_edit_a37886a7f51e51945afa1bb541c09d957}{souvenirAddandEdit::\string~souvenirAddandEdit}}()}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00017}00017\ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classsouvenir_addand_edit_afaf97d8a7012bd2ebb51e144073fc5e6}{ui}};}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00019}00019\ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00021}00021\ \textcolor{comment}{/*This\ function\ is\ to\ create\ the\ combobox\ of\ college,\ to\ let\ mantenence\ to}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00022}00022\ \textcolor{comment}{\ *\ pick\ the\ college\ that\ he\ want*/}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00023}\mbox{\hyperlink{classsouvenir_addand_edit_ae1ed9e8490ec5e3e29b3534f97c3ed88}{00023}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsouvenir_addand_edit_ae1ed9e8490ec5e3e29b3534f97c3ed88}{souvenirAddandEdit::displayCollegeComboBox}}()}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00024}00024\ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{comment}{//connect\ database}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{classdb_manager}{dbManager}}\ conn;}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00028}00028\ \ \ \ \ QSqlQueryModel\ *\ modal\ =\ \textcolor{keyword}{new}\ QSqlQueryModel();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00029}00029\ \ \ \ \ QSqlQuery\ *\ list\ =\ \textcolor{keyword}{new}\ QSqlQuery(conn.\mbox{\hyperlink{classdb_manager_a1359fd9fa4e33c530a51a1470bfd2cc1}{m\_database}});}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{comment}{//\ only\ put\ the\ college\ name\ out\ from\ the\ souvenirs}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00032}00032\ \ \ \ \ list-\/>prepare(\textcolor{stringliteral}{"{}select\ collegeName\ as\ \(\backslash\)"{}Campuses\(\backslash\)"{}\ from\ souvenirs\ group\ by\ collegeName;"{}});}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00033}00033\ \ \ \ \ list-\/>exec();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{comment}{//\ if\ exect\ then\ set\ it\ to\ the\ ui}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00036}00036\ \ \ \ \ modal-\/>setQuery(*list);}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{comment}{//set\ college\ name\ into\ comboBox}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{classsouvenir_addand_edit_afaf97d8a7012bd2ebb51e144073fc5e6}{ui}}-\/>displayCollegeComboBox-\/>setModel(modal);}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00040}00040\ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00042}00042\ \textcolor{comment}{/*pushbutton\ to\ log\ the\ item\ who\ included\ each\ college}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00043}00043\ \textcolor{comment}{\ *\ only\ souvenirname\ and\ cost\ will\ display\ in\ tableView}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00044}00044\ \textcolor{comment}{\ *\ */}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00045}\mbox{\hyperlink{classsouvenir_addand_edit_adcb222cb8c8603a155c5c32f6839510f}{00045}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsouvenir_addand_edit_adcb222cb8c8603a155c5c32f6839510f}{souvenirAddandEdit::on\_pushButton\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00046}00046\ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00047}00047\ \ \ \ \ \textcolor{comment}{//connect\ database}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00048}00048\ \ \ \ \ \mbox{\hyperlink{classdb_manager}{dbManager}}\ conn;}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00050}00050\ \ \ \ \ QSqlQueryModel\ *\ modal\ =\ \textcolor{keyword}{new}\ QSqlQueryModel();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00053}00053\ \ \ \ \ QSqlQuery*\ qry\ =\ \textcolor{keyword}{new}\ QSqlQuery(conn.\mbox{\hyperlink{classdb_manager_a1359fd9fa4e33c530a51a1470bfd2cc1}{m\_database}});}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{comment}{//create\ a\ current\ string}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00056}00056\ \ \ \ \ QString\ currentName;}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00058}00058\ \ \ \ \ \textcolor{comment}{//set\ this\ variabble\ bycomboBox}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00059}00059\ \ \ \ \ currentName\ =\ \mbox{\hyperlink{classsouvenir_addand_edit_afaf97d8a7012bd2ebb51e144073fc5e6}{ui}}-\/>displayCollegeComboBox-\/>currentText();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00061}00061\ \ \ \ \ \textcolor{comment}{//selects\ the\ list\ in\ the\ data\ base}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00062}00062\ \ \ \ \ qry-\/>prepare(\textcolor{stringliteral}{"{}select\ *\ from\ souvenirs\ where\ collegeName=\ ?"{}});}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00063}00063\ \ \ \ \ qry-\/>addBindValue(currentName);}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00065}00065\ \ \ \ \ \textcolor{comment}{//\ error\ message\ if\ the\ item\ can't\ be\ added\ due\ to\ the\ data\ base}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00066}00066\ \ \ \ \ \textcolor{keywordflow}{if}(qry-\/>exec())}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00067}00067\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(qry-\/>next())\{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ QMessageBox::about(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{stringliteral}{"{}The\ souvenir\ report\ is\ printed,\ double\ check\ if\ error\ occured"{}});}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Tranfers\ data\ from\ Querry\ to\ model}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ modal-\/>setQuery(*qry);}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//data\ base\ customers\ get\ viewed\ on\ the\ ui\ table\ view}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsouvenir_addand_edit_afaf97d8a7012bd2ebb51e144073fc5e6}{ui}}-\/>tableView-\/>setModel(modal);}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//closes\ connention\ to\ data\ base}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//counts\ rows\ from\ the\ model}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ qDebug()\ <<(modal-\/>rowCount());}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00081}00081\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00082}00082\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00083}00083\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ QMessageBox::about(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}Error"{}},\ \textcolor{stringliteral}{"{}Database\ not\ found\ double\ check\ path\ to\ database"{}});}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00085}00085\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00086}00086\ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00088}00088\ \textcolor{comment}{/*Update\ button\ to\ update\ the\ cost\ of\ each\ souvenir\ that\ you\ want}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00089}00089\ \textcolor{comment}{\ *This\ button\ will\ connect\ the\ college\ comboBox\ and\ souvenirs\ comboBox}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00090}00090\ \textcolor{comment}{\ *Also\ this\ button\ will\ connect\ with\ the\ tableView}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00091}00091\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00092}\mbox{\hyperlink{classsouvenir_addand_edit_aeb8937d88161be37e9964e410ebf91a2}{00092}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsouvenir_addand_edit_aeb8937d88161be37e9964e410ebf91a2}{souvenirAddandEdit::on\_update\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00093}00093\ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00094}00094\ \ \ \ \ \textcolor{comment}{//connect\ database}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00095}00095\ \ \ \ \ \mbox{\hyperlink{classdb_manager}{dbManager}}\ conn;}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00097}00097\ \ \ \ \ QSqlQueryModel\ *\ modal\ =\ \textcolor{keyword}{new}\ QSqlQueryModel();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00099}00099\ \ \ \ \ QSqlQuery*\ qry\ =\ \textcolor{keyword}{new}\ QSqlQuery(conn.\mbox{\hyperlink{classdb_manager_a1359fd9fa4e33c530a51a1470bfd2cc1}{m\_database}});}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00101}00101\ \ \ \ \ \textcolor{comment}{//create\ three\ string\ variables}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00102}00102\ \ \ \ \ QString\ collegeName,souvenirs,cost;}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00104}00104\ \ \ \ \ \textcolor{comment}{//assign\ those\ variables\ with\ the\ current\ text}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00105}00105\ \ \ \ \ collegeName\ =\ \mbox{\hyperlink{classsouvenir_addand_edit_afaf97d8a7012bd2ebb51e144073fc5e6}{ui}}-\/>displayCollegeComboBox-\/>currentText();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00106}00106\ \ \ \ \ souvenirs\ =\ \mbox{\hyperlink{classsouvenir_addand_edit_afaf97d8a7012bd2ebb51e144073fc5e6}{ui}}-\/>souvenirsLine-\/>text();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00107}00107\ \ \ \ \ cost\ =\ \mbox{\hyperlink{classsouvenir_addand_edit_afaf97d8a7012bd2ebb51e144073fc5e6}{ui}}-\/>costLine-\/>text();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00109}00109\ \ \ \ \ \textcolor{comment}{//open\ the\ database}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00110}00110\ \ \ \ \ conn.\mbox{\hyperlink{classdb_manager_a1359fd9fa4e33c530a51a1470bfd2cc1}{m\_database}}.open();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00112}00112\ \ \ \ \ \textcolor{comment}{//update\ function\ to\ update\ the\ cost}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00113}00113\ \ \ \ \ qry-\/>prepare(\textcolor{stringliteral}{"{}update\ souvenirs\ set\ cost='"{}}+cost+\textcolor{stringliteral}{"{}'where\ souvenirsName='"{}}+souvenirs+\textcolor{stringliteral}{"{}'"{}});}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00115}00115\ \ \ \ \ \textcolor{comment}{//if\ update\ succesfully\ then\ will\ display\ a\ messageBox::Update}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00116}00116\ \ \ \ \ \textcolor{keywordflow}{if}(qry-\/>exec())}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00117}00117\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ QMessageBox::critical(\textcolor{keyword}{this},tr(\textcolor{stringliteral}{"{}Edit"{}}),tr(\textcolor{stringliteral}{"{}Updated"{}}));}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00119}00119\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00120}00120\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00121}00121\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00122}00122\ \ \ \ \ \ \ \ \ QMessageBox::critical(\textcolor{keyword}{this},tr(\textcolor{stringliteral}{"{}Error::"{}}),qry-\/>lastError().text());}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00123}00123\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00125}00125\ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00127}00127\ \textcolor{comment}{/*Display\ souvenirs\ comboBox\ function\ will\ display\ all\ the\ souvenir}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00128}00128\ \textcolor{comment}{fron\ the\ souvenir\ database*/}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00129}\mbox{\hyperlink{classsouvenir_addand_edit_aa81a3c1a49817d93ad5b0d7dde9a5e4b}{00129}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsouvenir_addand_edit_aa81a3c1a49817d93ad5b0d7dde9a5e4b}{souvenirAddandEdit::displayItemComBox}}()}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00130}00130\ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00131}00131\ \ \ \ \ \textcolor{comment}{//database\ object}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00132}00132\ \ \ \ \ \mbox{\hyperlink{classdb_manager}{dbManager}}\ conn;}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00134}00134\ \ \ \ \ QSqlQueryModel\ *\ modal\ =\ \textcolor{keyword}{new}\ QSqlQueryModel();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00135}00135\ \ \ \ \ QSqlQuery\ *\ list\ =\ \textcolor{keyword}{new}\ QSqlQuery(conn.\mbox{\hyperlink{classdb_manager_a1359fd9fa4e33c530a51a1470bfd2cc1}{m\_database}});}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00137}00137\ \ \ \ \ \textcolor{comment}{//q\ string\ variable}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00138}00138\ \ \ \ \ QString\ college;}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00139}00139\ \ \ \ \ college\ =\ \mbox{\hyperlink{classsouvenir_addand_edit_afaf97d8a7012bd2ebb51e144073fc5e6}{ui}}-\/>displayCollegeComboBox-\/>currentText();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00140}00140\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00141}00141\ \ \ \ \ \textcolor{comment}{//\ only\ put\ the\ name\ out\ from\ the\ souvenirs}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00142}00142\ \ \ \ \ list-\/>prepare(\textcolor{stringliteral}{"{}select\ souvenirsName\ from\ souvenirs;"{}});}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00143}00143\ \ \ \ \ list-\/>exec();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00145}00145\ \ \ \ \ \textcolor{comment}{//\ if\ exect\ then\ set\ it\ to\ the\ ui}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00146}00146\ \ \ \ \ modal-\/>setQuery(*list);}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00147}00147\ \ \ \ \ \mbox{\hyperlink{classsouvenir_addand_edit_afaf97d8a7012bd2ebb51e144073fc5e6}{ui}}-\/>displayItemComBox-\/>setModel(modal);}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00148}00148\ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00150}00150\ \textcolor{comment}{/*This\ function\ will\ connect\ to\ the\ tableView}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00151}00151\ \textcolor{comment}{\ *\ It\ can\ let\ user\ click\ the\ table\ to\ display\ all\ the}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00152}00152\ \textcolor{comment}{\ *\ info\ of\ college\ in\ to\ the\ white\ line*/}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00153}\mbox{\hyperlink{classsouvenir_addand_edit_a994dfde05583389fe6dfa5708c84fcc6}{00153}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsouvenir_addand_edit_a994dfde05583389fe6dfa5708c84fcc6}{souvenirAddandEdit::on\_tableView\_activated}}(\textcolor{keyword}{const}\ QModelIndex\ \&index)}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00154}00154\ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00155}00155\ \ \ \ \ \textcolor{comment}{//Set\ val\ to\ tableView\ model}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00156}00156\ \ \ \ \ QString\ val\ =\ \mbox{\hyperlink{classsouvenir_addand_edit_afaf97d8a7012bd2ebb51e144073fc5e6}{ui}}-\/>tableView-\/>model()-\/>data(index).toString();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00157}00157\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00158}00158\ \ \ \ \ \textcolor{comment}{//connect\ database}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00159}00159\ \ \ \ \ \mbox{\hyperlink{classdb_manager}{dbManager}}\ conn;}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00160}00160\ \ \ \ \ QSqlQuery\ qry;}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00162}00162\ \ \ \ \ \textcolor{comment}{//select\ the\ souvenirName\ and\ cost\ that\ you\ want}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00163}00163\ \ \ \ \ qry.prepare(\textcolor{stringliteral}{"{}select\ *\ from\ souvenirs\ where\ souvenirsName=\ '"{}}+val+\textcolor{stringliteral}{"{}'or\ cost='"{}}+val+\textcolor{stringliteral}{"{}'"{}});}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00165}00165\ \ \ \ \ \textcolor{comment}{//if\ qry.exec,\ it\ will\ assign\ the\ info\ in\ to\ collegeLine,\ souvenirsLine,\ and\ costLine}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00166}00166\ \ \ \ \ \textcolor{keywordflow}{if}(qry.exec())}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00167}00167\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00168}00168\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(qry.next())}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00169}00169\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsouvenir_addand_edit_afaf97d8a7012bd2ebb51e144073fc5e6}{ui}}-\/>collegeLine-\/>setText(qry.value(0).toString());}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsouvenir_addand_edit_afaf97d8a7012bd2ebb51e144073fc5e6}{ui}}-\/>souvenirsLine-\/>setText(qry.value(1).toString());}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsouvenir_addand_edit_afaf97d8a7012bd2ebb51e144073fc5e6}{ui}}-\/>costLine-\/>setText(qry.value(2).toString());}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00173}00173\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00174}00174\ \ \ \ \ \ \ \ \ \textcolor{comment}{//close\ the\ database}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00175}00175\ \ \ \ \ \ \ \ \ conn.\mbox{\hyperlink{classdb_manager_a1359fd9fa4e33c530a51a1470bfd2cc1}{m\_database}}.close();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00176}00176\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00177}00177\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00178}00178\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00179}00179\ \ \ \ \ \ \ \ \ \textcolor{comment}{//else\ it\ will\ display\ the\ error}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00180}00180\ \ \ \ \ \ \ \ \ QMessageBox::critical(\textcolor{keyword}{this},tr(\textcolor{stringliteral}{"{}Error::"{}}),qry.lastError().text());}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00181}00181\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00182}00182\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00183}00183\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00184}00184\ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00185}00185\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00186}00186\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00187}\mbox{\hyperlink{classsouvenir_addand_edit_a430c880136b073c1665825b7f75f381e}{00187}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsouvenir_addand_edit_a430c880136b073c1665825b7f75f381e}{souvenirAddandEdit::on\_addButton\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00188}00188\ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00189}00189\ \ \ \ \ \textcolor{comment}{//\ opned\ the\ data\ base}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00190}00190\ \ \ \ \ \mbox{\hyperlink{classdb_manager}{dbManager}}\ conn;}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00191}00191\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00192}00192\ \ \ \ \ conn.\mbox{\hyperlink{classdb_manager_a1359fd9fa4e33c530a51a1470bfd2cc1}{m\_database}}.open();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00193}00193\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00194}00194\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00195}00195\ \ \ \ \ QSqlQuery\ qry;}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00196}00196\ \ \ \ \ QString\ collegeName,souvenirName,cost;}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00197}00197\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00198}00198\ \ \ \ \ \textcolor{comment}{//get\ the\ data\ in\ from\ the\ ui\ intput}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00199}00199\ \ \ \ \ collegeName\ \ \ =\ \mbox{\hyperlink{classsouvenir_addand_edit_afaf97d8a7012bd2ebb51e144073fc5e6}{ui}}-\/>collegeLine-\/>text();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00200}00200\ \ \ \ \ souvenirName\ \ =\ \mbox{\hyperlink{classsouvenir_addand_edit_afaf97d8a7012bd2ebb51e144073fc5e6}{ui}}-\/>souvenirsLine-\/>text();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00201}00201\ \ \ \ \ cost\ =\ \mbox{\hyperlink{classsouvenir_addand_edit_afaf97d8a7012bd2ebb51e144073fc5e6}{ui}}-\/>costLine-\/>text();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00202}00202\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00203}00203\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00204}00204\ \ \ \ \ \textcolor{comment}{//\ error\ checking\ input}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00205}00205\ \ \ \ \ \textcolor{keywordflow}{if}(collegeName\ !=\ \textcolor{stringliteral}{"{}"{}}\ \&\&\ cost\ !=\ \textcolor{stringliteral}{"{}"{}}\ \&\&\ souvenirName\ !=\ \textcolor{stringliteral}{"{}"{}})\{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00206}00206\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsouvenir_addand_edit_ac1779c9c9c242d11a200cea15afbeb26}{addOrDelet}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00207}00207\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00208}00208\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00209}00209\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsouvenir_addand_edit_ac1779c9c9c242d11a200cea15afbeb26}{addOrDelet}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00210}00210\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00211}00211\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00212}00212\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classsouvenir_addand_edit_ac1779c9c9c242d11a200cea15afbeb26}{addOrDelet}})\{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00213}00213\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ add\ the\ item}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00214}00214\ \ \ \ \ \ \ \ \ qry.prepare(\textcolor{stringliteral}{"{}insert\ into\ souvenirs\ (collegeName,\ souvenirsName,\ cost)\ values\ ('"{}}+collegeName+\textcolor{stringliteral}{"{}',\ '"{}}+souvenirName+\textcolor{stringliteral}{"{}',\ '"{}}+cost+\textcolor{stringliteral}{"{}')"{}});}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00215}00215\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00216}00216\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ error\ message\ if\ the\ item\ can't\ be\ added\ due\ to\ the\ data\ base}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00217}00217\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(qry.exec())}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00218}00218\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ QMessageBox::about(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{stringliteral}{"{}The\ item\ was\ added,\ double\ check\ if\ error\ occured"{}});}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ close\ the\ connection\ to\ data\ base}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ conn.\mbox{\hyperlink{classdb_manager_a1359fd9fa4e33c530a51a1470bfd2cc1}{m\_database}}.close();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00222}00222\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00223}00223\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00224}00224\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ QMessageBox::about(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}Error"{}},\ \textcolor{stringliteral}{"{}Database\ not\ found\ double\ check\ path\ to\ database"{}});}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00226}00226\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00227}00227\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00228}00228\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00229}00229\ \ \ \ \ \ \ \ \ QMessageBox::about(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}Error"{}},\ \textcolor{stringliteral}{"{}Can't\ enter\ an\ empty\ input\ to\ add\ an\ item,\ please\ try\ agin"{}});}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00230}00230\ \ \ \ \ \ \ \ \ \textcolor{comment}{//ClearSreen();}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00231}00231\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00232}00232\ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00233}00233\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00234}00234\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00235}\mbox{\hyperlink{classsouvenir_addand_edit_a3e3f0f6ed9852b425d198e393e68aff3}{00235}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsouvenir_addand_edit_a3e3f0f6ed9852b425d198e393e68aff3}{souvenirAddandEdit::on\_deleteButton\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00236}00236\ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00237}00237\ \ \ \ \ \textcolor{comment}{//\ opned\ the\ data\ base}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00238}00238\ \ \ \ \mbox{\hyperlink{classdb_manager}{dbManager}}\ conn;}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00239}00239\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00240}00240\ \ \ \ conn.\mbox{\hyperlink{classdb_manager_a1359fd9fa4e33c530a51a1470bfd2cc1}{m\_database}}.open();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00241}00241\ \ \ \ \textcolor{comment}{//get\ the\ data\ in\ from\ the\ ui\ intput}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00242}00242\ \ \ \ QSqlQuery\ qry;}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00243}00243\ \ \ \ QString\ collegeName1,souvenirName1,cost1;}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00244}00244\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00245}00245\ \ \ \ \textcolor{comment}{//get\ the\ data\ in\ from\ the\ ui\ intput}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00246}00246\ \ \ \ collegeName1\ \ \ =\ \mbox{\hyperlink{classsouvenir_addand_edit_afaf97d8a7012bd2ebb51e144073fc5e6}{ui}}-\/>collegeLine-\/>text();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00247}00247\ \ \ \ souvenirName1\ \ =\ \mbox{\hyperlink{classsouvenir_addand_edit_afaf97d8a7012bd2ebb51e144073fc5e6}{ui}}-\/>souvenirsLine-\/>text();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00248}00248\ \ \ \ cost1\ =\ \mbox{\hyperlink{classsouvenir_addand_edit_afaf97d8a7012bd2ebb51e144073fc5e6}{ui}}-\/>costLine-\/>text();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00249}00249\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00250}00250\ \ \ \ \textcolor{comment}{//\ error\ checking\ input}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00251}00251\ \ \ \ \textcolor{keywordflow}{if}(collegeName1\ !=\ \textcolor{stringliteral}{"{}"{}}\ \&\&\ cost1\ !=\ \textcolor{stringliteral}{"{}"{}}\ \&\&\ souvenirName1\ !=\ \textcolor{stringliteral}{"{}"{}})\{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00252}00252\ \ \ \ \ \ \ \ \mbox{\hyperlink{classsouvenir_addand_edit_ac1779c9c9c242d11a200cea15afbeb26}{addOrDelet}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00253}00253\ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00254}00254\ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00255}00255\ \ \ \ \ \ \ \ \mbox{\hyperlink{classsouvenir_addand_edit_ac1779c9c9c242d11a200cea15afbeb26}{addOrDelet}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00256}00256\ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00257}00257\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00258}00258\ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classsouvenir_addand_edit_ac1779c9c9c242d11a200cea15afbeb26}{addOrDelet}})}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00259}00259\ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00260}00260\ \ \ \ \ \ \ \ \textcolor{comment}{//\ delete\ the\ item}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00261}00261\ \ \ \ \ \ \ \ qry.prepare(\textcolor{stringliteral}{"{}Delete\ from\ souvenirs\ where\ collegeName=='"{}}+collegeName1+\textcolor{stringliteral}{"{}'and\ souvenirsName=='"{}}+souvenirName1+\textcolor{stringliteral}{"{}'and\ cost=='"{}}+cost1+\textcolor{stringliteral}{"{}'"{}});}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00262}00262\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00263}00263\ \ \ \ \ \ \ \ \textcolor{comment}{//\ error\ message\ if\ the\ item\ can't\ be\ deleted\ due\ to\ the\ data\ base}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00264}00264\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(qry.exec())}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00265}00265\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00266}00266\ \ \ \ \ \ \ \ \ \ \ \ QMessageBox::about(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{stringliteral}{"{}The\ item(s)\ was/were\ deleted,\ double\ check\ if\ error\ occured"{}});}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00267}00267\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00268}00268\ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00269}00269\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00270}00270\ \ \ \ \ \ \ \ \ \ \ \ QMessageBox::about(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}Error"{}},\ \textcolor{stringliteral}{"{}Database\ not\ found\ double\ check\ path\ to\ database"{}});}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00271}00271\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00272}00272\ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00273}00273\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00274}00274\ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00275}00275\ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00276}00276\ \ \ \ \ \ \ \ QMessageBox::about(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}Error"{}},\ \textcolor{stringliteral}{"{}Can't\ enter\ an\ empty\ or\ invaild\ input\ to\ delet\ an\ item\ ,\ please\ try\ agin"{}});}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00277}00277\ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00278}00278\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00279}00279\ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00280}00280\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00281}00281\ \textcolor{comment}{//\ this\ function\ is\ to\ go\ back\ to\ the\ last\ page}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00282}\mbox{\hyperlink{classsouvenir_addand_edit_aa3e67536d7962a76c63ae3e49dfed0e2}{00282}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsouvenir_addand_edit_aa3e67536d7962a76c63ae3e49dfed0e2}{souvenirAddandEdit::on\_goback\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00283}00283\ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00284}00284\ \ \ \ \ \mbox{\hyperlink{classmaintenance}{maintenance}}\ maint;}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00285}00285\ \ \ \ \ hide();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00286}00286\ \ \ \ \ maint.setModal(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00287}00287\ \ \ \ \ maint.exec();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00288}00288\ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8cpp_source_l00289}00289\ }
+
+\end{DoxyCode}

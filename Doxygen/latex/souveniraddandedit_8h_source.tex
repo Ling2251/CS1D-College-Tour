@@ -1,0 +1,58 @@
+\hypertarget{souveniraddandedit_8h_source}{}\doxysection{souveniraddandedit.\+h}
+\mbox{\hyperlink{souveniraddandedit_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ SOUVENIRADDANDEDIT\_H}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ SOUVENIRADDANDEDIT\_H}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <QtSql>}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <QSqlQuery>}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <QMessageBox>}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dbmanager_8h}{dbmanager.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{maintenance_8h}{maintenance.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00012}00012\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00020}00020\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00021}00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsouvenir_addand_edit}{souvenirAddandEdit}};}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00022}00022\ \}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00024}\mbox{\hyperlink{classsouvenir_addand_edit}{00024}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsouvenir_addand_edit}{souvenirAddandEdit}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_q_dialog}{QDialog}}}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00025}00025\ \{}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00026}00026\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00028}00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00035}00035\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsouvenir_addand_edit}{souvenirAddandEdit}}(\mbox{\hyperlink{class_q_widget}{QWidget}}\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00040}00040\ \ \ \ \ \mbox{\hyperlink{classsouvenir_addand_edit_a37886a7f51e51945afa1bb541c09d957}{\string~souvenirAddandEdit}}();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00046}00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsouvenir_addand_edit_ae1ed9e8490ec5e3e29b3534f97c3ed88}{displayCollegeComboBox}}();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00052}00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsouvenir_addand_edit_aa81a3c1a49817d93ad5b0d7dde9a5e4b}{displayItemComBox}}();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00054}00054\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00059}00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsouvenir_addand_edit_adcb222cb8c8603a155c5c32f6839510f}{on\_pushButton\_clicked}}();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00064}00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsouvenir_addand_edit_aeb8937d88161be37e9964e410ebf91a2}{on\_update\_clicked}}();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00069}00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsouvenir_addand_edit_a994dfde05583389fe6dfa5708c84fcc6}{on\_tableView\_activated}}(\textcolor{keyword}{const}\ QModelIndex\ \&index);}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00074}00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsouvenir_addand_edit_a430c880136b073c1665825b7f75f381e}{on\_addButton\_clicked}}();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00079}00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsouvenir_addand_edit_a3e3f0f6ed9852b425d198e393e68aff3}{on\_deleteButton\_clicked}}();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00080}00080\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00084}00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsouvenir_addand_edit_aa3e67536d7962a76c63ae3e49dfed0e2}{on\_goback\_clicked}}();}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00086}00086\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00087}\mbox{\hyperlink{classsouvenir_addand_edit_afaf97d8a7012bd2ebb51e144073fc5e6}{00087}}\ \ \ \ \ Ui::souvenirAddandEdit\ *\mbox{\hyperlink{classsouvenir_addand_edit_afaf97d8a7012bd2ebb51e144073fc5e6}{ui}};\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00089}\mbox{\hyperlink{classsouvenir_addand_edit_ac1779c9c9c242d11a200cea15afbeb26}{00089}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classsouvenir_addand_edit_ac1779c9c9c242d11a200cea15afbeb26}{addOrDelet}};\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00090}00090\ \};}
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{souveniraddandedit_8h_source_l00092}00092\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SOUVENIRADDANDEDIT\_H}}
+
+\end{DoxyCode}

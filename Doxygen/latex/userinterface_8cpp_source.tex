@@ -1,0 +1,71 @@
+\hypertarget{userinterface_8cpp_source}{}\doxysection{userinterface.\+cpp}
+\mbox{\hyperlink{userinterface_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00001}00001\ \textcolor{comment}{/**********************************************************/}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{userinterface_8h}{userinterface.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}ui\_userinterface.h"{}}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{plantripwindow_8h}{plantripwindow.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{displaycollegewindow_8h}{displaycollegewindow.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{mainwindow_8h}{mainwindow.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00007}00007\ \textcolor{comment}{/**********************************************************/}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00009}00009\ \textcolor{comment}{/**********************************************************}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00010}00010\ \textcolor{comment}{*}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00011}00011\ \textcolor{comment}{*\ userInterface}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00012}00012\ \textcolor{comment}{*\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00013}00013\ \textcolor{comment}{*This\ page\ will\ allow\ users\ to\ choose\ between\ displaying}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00014}00014\ \textcolor{comment}{*all\ the\ colleges\ available\ and\ their\ souvenirs,\ or\ they}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00015}00015\ \textcolor{comment}{*can\ start\ planning\ their\ own\ trip.}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00016}00016\ \textcolor{comment}{*\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00017}00017\ \textcolor{comment}{***********************************************************/}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00018}\mbox{\hyperlink{classuser_interface_ac3c80de75bba33f57ec8508862bb6698}{00018}}\ \mbox{\hyperlink{classuser_interface_ac3c80de75bba33f57ec8508862bb6698}{userInterface::userInterface}}(\mbox{\hyperlink{class_q_widget}{QWidget}}\ *parent)\ :}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{class_q_dialog}{QDialog}}(parent),}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00020}00020\ \ \ \ \ ui(new\ \mbox{\hyperlink{namespace_ui}{Ui}}::\mbox{\hyperlink{classuser_interface}{userInterface}})}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{comment}{//this-\/>setWindowState(Qt::WindowMaximized);}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{classuser_interface_a545d3af5c3bca7d26a88d3a8d506d3e9}{ui}}-\/>setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00026}\mbox{\hyperlink{classuser_interface_a4cf360067a3ec0a3a09c95762a24d2f8}{00026}}\ \mbox{\hyperlink{classuser_interface_a4cf360067a3ec0a3a09c95762a24d2f8}{userInterface::\string~userInterface}}()}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00027}00027\ \{}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classuser_interface_a545d3af5c3bca7d26a88d3a8d506d3e9}{ui}};}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00031}00031\ \textcolor{comment}{//\ This\ button\ when\ pressed\ will\ send\ the\ user\ to\ a\ page\ that\ will\ provide\ them\ the\ option\ to\ display\ all\ the\ colleges}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00032}\mbox{\hyperlink{classuser_interface_ae3159fdcb4ce8553d7e410c78f0237fe}{00032}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classuser_interface_ae3159fdcb4ce8553d7e410c78f0237fe}{userInterface::on\_displayCollegeButton\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00033}00033\ \{}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00034}00034\ \ \ \ \ \mbox{\hyperlink{classdisplay_college_window}{displayCollegeWindow}}\ displaycollege;}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00035}00035\ \ \ \ \ displaycollege.setModal(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00036}00036\ \ \ \ \ displaycollege.exec();}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00037}00037\ \}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00039}00039\ \textcolor{comment}{//\ This\ button\ when\ pressed\ will\ send\ the\ user\ to\ a\ page\ that\ will\ allow\ them\ to\ plan\ a\ trip\ of\ their\ choice}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00040}\mbox{\hyperlink{classuser_interface_ae28e037a3e642d0ded358ea4c7a032ad}{00040}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classuser_interface_ae28e037a3e642d0ded358ea4c7a032ad}{userInterface::on\_planTripButton\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00041}00041\ \{}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00042}00042\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window}{planTripWindow}}\ plantrip;}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00043}00043\ \ \ \ \ hide();}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00044}00044\ \ \ \ \ plantrip.setModal(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00045}00045\ \ \ \ \ plantrip.exec();}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00046}00046\ \}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00048}00048\ \textcolor{comment}{//This\ button\ will\ allow\ the\ user\ to\ go\ back\ to\ home\ page}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00049}\mbox{\hyperlink{classuser_interface_a21a61b439aa1bc6766aded95f063f608}{00049}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classuser_interface_a21a61b439aa1bc6766aded95f063f608}{userInterface::on\_mainpage\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00050}00050\ \{}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00051}00051\ \ \ \ \ QList<QWidget*>\ topLevelWidgets\ =\ qApp-\/>topLevelWidgets();}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}(\mbox{\hyperlink{class_q_widget}{QWidget}}\ *widget,\ topLevelWidgets)\ \{}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_q_main_window}{QMainWindow}}\ *mainWindow\ =\ qobject\_cast<QMainWindow*>(widget);}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mainWindow)\ \{}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Show\ the\ main\ window\ if\ it\ was\ previously\ hidden}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!mainWindow-\/>isVisible())\ \{}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mainWindow-\/>show();}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00062}00062\ \ \ \ \ hide();}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00064}00064\ \}}
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{userinterface_8cpp_source_l00066}00066\ }
+
+\end{DoxyCode}

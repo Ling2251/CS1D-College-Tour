@@ -1,0 +1,131 @@
+.TH "souvenirAddandEdit" 3 "Sat Mar 18 2023" "CS1D-College-Tour" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+souvenirAddandEdit \- Most functionality of the \fBsouvenirAddandEdit\fP class is to add or deleted a souvenirs and also edit the price of an exist souvenir\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <souveniraddandedit\&.h>\fP
+.PP
+Inherits \fBQDialog\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBsouvenirAddandEdit\fP (\fBQWidget\fP *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~souvenirAddandEdit\fP ()"
+.br
+.ti -1c
+.RI "void \fBdisplayCollegeComboBox\fP ()"
+.br
+.ti -1c
+.RI "void \fBdisplayItemComBox\fP ()"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_pushButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_update_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_tableView_activated\fP (const QModelIndex &index)"
+.br
+.ti -1c
+.RI "void \fBon_addButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_deleteButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_goback_clicked\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::souvenirAddandEdit * \fBui\fP"
+.br
+.ti -1c
+.RI "bool \fBaddOrDelet\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Most functionality of the \fBsouvenirAddandEdit\fP class is to add or deleted a souvenirs and also edit the price of an exist souvenir\&. 
+.PP
+Definition at line \fB24\fP of file \fBsouveniraddandedit\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "souvenirAddandEdit::souvenirAddandEdit (\fBQWidget\fP * parent = \fCnullptr\fP)\fC [explicit]\fP"
+constructer function that create a window that display to the the souvenirs table page to the administrator for adding or deleying or editting the price of spuvenirs to the prgram 
+.PP
+\fBReturns\fP
+.RS 4
+nothing, it just display a window to the administrator 
+.RE
+.PP
+
+.PP
+Definition at line \fB4\fP of file \fBsouveniraddandedit\&.cpp\fP\&.
+.SS "souvenirAddandEdit::~souvenirAddandEdit ()"
+A destructor function 
+.PP
+Definition at line \fB16\fP of file \fBsouveniraddandedit\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "souvenirAddandEdit::displayCollegeComboBox ()"
+This function is to display all the college in a list by once a time\&. 
+.PP
+Definition at line \fB23\fP of file \fBsouveniraddandedit\&.cpp\fP\&.
+.SS "souvenirAddandEdit::displayItemComBox ()"
+This function is to display all the souvenirs of all colleges in a list\&. 
+.PP
+Definition at line \fB129\fP of file \fBsouveniraddandedit\&.cpp\fP\&.
+.SS "souvenirAddandEdit::on_addButton_clicked ()\fC [private]\fP, \fC [slot]\fP"
+This function is to add a new souvenir in to the selected college\&. 
+.PP
+Definition at line \fB187\fP of file \fBsouveniraddandedit\&.cpp\fP\&.
+.SS "souvenirAddandEdit::on_deleteButton_clicked ()\fC [private]\fP, \fC [slot]\fP"
+This function is to delete the souvenir and its price from the college selected\&. 
+.PP
+Definition at line \fB235\fP of file \fBsouveniraddandedit\&.cpp\fP\&.
+.SS "souvenirAddandEdit::on_goback_clicked ()\fC [private]\fP, \fC [slot]\fP"
+This function is the goback function, it will display the last page after click it\&. 
+.PP
+Definition at line \fB282\fP of file \fBsouveniraddandedit\&.cpp\fP\&.
+.SS "souvenirAddandEdit::on_pushButton_clicked ()\fC [private]\fP, \fC [slot]\fP"
+This function is the pushbutton to load the database into the tableview\&. 
+.PP
+Definition at line \fB45\fP of file \fBsouveniraddandedit\&.cpp\fP\&.
+.SS "souvenirAddandEdit::on_tableView_activated (const QModelIndex & index)\fC [private]\fP, \fC [slot]\fP"
+This function is to make tableview active so it can be associate with the QString line\&. 
+.PP
+Definition at line \fB153\fP of file \fBsouveniraddandedit\&.cpp\fP\&.
+.SS "souvenirAddandEdit::on_update_clicked ()\fC [private]\fP, \fC [slot]\fP"
+This function is to update the database\&. 
+.PP
+Definition at line \fB92\fP of file \fBsouveniraddandedit\&.cpp\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "bool souvenirAddandEdit::addOrDelet\fC [private]\fP"
+the boolean variable to store the logic 
+.PP
+Definition at line \fB89\fP of file \fBsouveniraddandedit\&.h\fP\&.
+.SS "Ui::souvenirAddandEdit* souvenirAddandEdit::ui\fC [private]\fP"
+\fBsouvenirAddandEdit\fP UI variable 
+.PP
+Definition at line \fB87\fP of file \fBsouveniraddandedit\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CS1D-College-Tour from the source code\&.

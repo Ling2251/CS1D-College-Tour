@@ -11,6 +11,14 @@
 #include <vector>
 using namespace std;
 
+
+/**
+ * @file global.h
+ * @class global
+ * @brief Most functionality of the global file is to created a global struct for
+ * storing the new input data of college information.
+
+
 /** \struct InputCollegeList
  * Struct for the information about a new college data.
  */

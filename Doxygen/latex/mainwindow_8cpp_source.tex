@@ -1,0 +1,56 @@
+\hypertarget{mainwindow_8cpp_source}{}\doxysection{mainwindow.\+cpp}
+\mbox{\hyperlink{mainwindow_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00001}00001\ \textcolor{comment}{/**********************************************************/}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{mainwindow_8h}{mainwindow.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}ui\_mainwindow.h"{}}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{userinterface_8h}{userinterface.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{maintenance_8h}{maintenance.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{loginpage_8h}{loginpage.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include"{}\mbox{\hyperlink{dbmanager_8h}{dbmanager.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00008}00008\ \textcolor{comment}{/**********************************************************/}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00011}00011\ \textcolor{comment}{/**********************************************************}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00012}00012\ \textcolor{comment}{*}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00013}00013\ \textcolor{comment}{*\ mainWindow}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00014}00014\ \textcolor{comment}{*\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00015}00015\ \textcolor{comment}{*This\ page\ will\ be\ the\ welcome\ page\ and\ will\ offer\ users}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00016}00016\ \textcolor{comment}{*the\ choice\ between\ accessing\ maintenance\ or\ starting\ the}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00017}00017\ \textcolor{comment}{*program.}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00018}00018\ \textcolor{comment}{*\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00019}00019\ \textcolor{comment}{***********************************************************/}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00021}\mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{00021}}\ \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow::MainWindow}}(\mbox{\hyperlink{class_q_widget}{QWidget}}\ *parent)}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00022}00022\ \ \ \ \ :\ \mbox{\hyperlink{class_q_main_window}{QMainWindow}}(parent)}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00023}00023\ \ \ \ \ ,\ ui(new\ \mbox{\hyperlink{namespace_ui}{Ui}}::\mbox{\hyperlink{class_main_window}{MainWindow}})}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00024}00024\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00026}00026\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00028}\mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{00028}}\ \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{MainWindow::\string~MainWindow}}()}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00029}00029\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00031}00031\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00033}\mbox{\hyperlink{class_main_window_a9cc6c600a2bdef338197cda64bbb8228}{00033}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a9cc6c600a2bdef338197cda64bbb8228}{MainWindow::on\_startCollegeTour\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00034}00034\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00035}00035\ \ \ \ \ \mbox{\hyperlink{classuser_interface}{userInterface}}\ userinterface;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00036}00036\ \ \ \ \ userinterface.setModal(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00037}00037\ \ \ \ \ hide();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00038}00038\ \ \ \ \ userinterface.exec();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00039}00039\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00042}\mbox{\hyperlink{class_main_window_aa64005b765afe8a98b6ed59f478b4043}{00042}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aa64005b765afe8a98b6ed59f478b4043}{MainWindow::on\_Maintenance\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00043}00043\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{comment}{//hide();}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00045}00045\ \textcolor{comment}{//\ \ \ \ loginpage\ =\ new\ adminpage(this);}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00046}00046\ \textcolor{comment}{//\ \ \ \ adminPage-\/>show();}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00048}00048\ \ \ \ \ \mbox{\hyperlink{classloginpage}{loginpage}}\ login;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00049}00049\ \ \ \ \ login.setModal(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00050}00050\ \ \ \ \ login.exec();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00051}00051\ \}}
+
+\end{DoxyCode}

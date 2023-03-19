@@ -1,0 +1,530 @@
+.TH "planTripWindow" 3 "Sat Mar 18 2023" "CS1D-College-Tour" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+planTripWindow \- Most functionality of the \fBplanTripWindow\fP class is to give the student options on how they would like to plan their trip and buying multiple souvenits at differnt colleges\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <plantripwindow\&.h>\fP
+.PP
+Inherits \fBQDialog\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSouvenir\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBplanTripWindow\fP (\fBQWidget\fP *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~planTripWindow\fP ()"
+.br
+.ti -1c
+.RI "bool \fBcheckCampusVectorNames\fP (QVector< QString > campuses)"
+.br
+.ti -1c
+.RI "void \fBrecursiveCollegeSort\fP (QString currentCamp)"
+.br
+.ti -1c
+.RI "void \fBgoToSouvenirShop\fP ()"
+.br
+.ti -1c
+.RI "void \fBshowSelectCampusComboBox\fP (QStringListModel *model)"
+.br
+.ti -1c
+.RI "void \fBshowSouvTableView\fP (QSqlQueryModel *model)"
+.br
+.ti -1c
+.RI "void \fBshowSouvCartTableView\fP (QSqlQueryModel *model)"
+.br
+.ti -1c
+.RI "void \fBcalculateTotal\fP ()"
+.br
+.ti -1c
+.RI "double \fBcalculateDistance\fP (int selectedCampusCount)"
+.br
+.ti -1c
+.RI "void \fBshowTotal\fP (double \fBtotal\fP)"
+.br
+.ti -1c
+.RI "void \fBshowAvaliListCombo\fP (QSqlQueryModel *model)"
+.br
+.ti -1c
+.RI "void \fBshowSelectListView\fP ()"
+.br
+.ti -1c
+.RI "void \fBshowAvaliListView\fP (QSqlQueryModel *model)"
+.br
+.ti -1c
+.RI "void \fBshowTotalDistent\fP (double \fBdistance\fP)"
+.br
+.ti -1c
+.RI "void \fBdisplayReceiptPage\fP ()"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_planShortTrip_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_planCustomTrip_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_startTrip_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_selectCampus_comboBox_currentIndexChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_addSouvenir_button_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_goback_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_goback2_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_mainpage_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_mainpage_2_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_startTripFormUIC_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_enter_button_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_done_button_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_custom_goback_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_doneBuying_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_receiptDone_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_SearchButton_clicked\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::planTripWindow * \fBui\fP"
+.br
+.ti -1c
+.RI "\fBdbManager\fP \fBm_database\fP"
+.br
+.ti -1c
+.RI "QVector< QString > \fBselectedCampuses\fP"
+.br
+.ti -1c
+.RI "QQueue< QString > \fBsortedCampuses\fP"
+.br
+.ti -1c
+.RI "QStack< \fBSouvenir\fP > \fBsouvenirCart\fP"
+.br
+.ti -1c
+.RI "int \fBasuNum\fP"
+.br
+.ti -1c
+.RI "int \fBselectNum\fP"
+.br
+.ti -1c
+.RI "QString \fBsQry\fP"
+.br
+.ti -1c
+.RI "\fBSouvenir\fP \fBsouv\fP"
+.br
+.ti -1c
+.RI "double \fBtotal\fP"
+.br
+.ti -1c
+.RI "double \fBdistance\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Most functionality of the \fBplanTripWindow\fP class is to give the student options on how they would like to plan their trip and buying multiple souvenits at differnt colleges\&. 
+.PP
+Definition at line \fB20\fP of file \fBplantripwindow\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "planTripWindow::planTripWindow (\fBQWidget\fP * parent = \fCnullptr\fP)\fC [explicit]\fP"
+constructer function that create a window that display to the students for differnt oppsions 
+.PP
+\fBReturns\fP
+.RS 4
+nothing, it just display a window to the students 
+.RE
+.PP
+
+.PP
+Definition at line \fB22\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::~planTripWindow ()"
+A destructor function 
+.PP
+Definition at line \fB39\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "planTripWindow::calculateDistance (int selectedCampusCount)"
+This function calcuate the distance of the campues the student has selected from the trip\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIint\fP selectedCampusCount, the number of selected campus 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+double distance, the total distance 
+.RE
+.PP
+
+.PP
+Definition at line \fB641\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::calculateTotal ()"
+This function calcuate the price total of what the student has purches from all campues\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIno\fP parameters 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+nothing returned 
+.RE
+.PP
+
+.PP
+Definition at line \fB616\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::checkCampusVectorNames (QVector< QString > campuses)"
+This function will check to if all the campuses from the vector are present in the database\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIQVector<QString>,the\fP campuses name 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true or falst, if the name is in the database 
+.RE
+.PP
+
+.PP
+Definition at line \fB235\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::displayReceiptPage ()"
+This function switches the current UI to the final receipt page UI and initializes the widgets on the UI\&. 
+.PP
+Definition at line \fB675\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::goToSouvenirShop ()"
+This function switches the current UI to the \fBSouvenir\fP shop UI and initializes the widgets on the UI\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIno\fP parameters 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+nothing returned 
+.RE
+.PP
+
+.PP
+Definition at line \fB417\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::on_addSouvenir_button_clicked ()\fC [private]\fP, \fC [slot]\fP"
+This function is the adding souvenirs function, it will display the souvenirs the student has pick on to the cart table after click it\&. 
+.PP
+Definition at line \fB573\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::on_custom_goback_clicked ()\fC [private]\fP, \fC [slot]\fP"
+This function is the goback function, it will display the last page after click it\&. 
+.PP
+Definition at line \fB451\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::on_done_button_clicked ()\fC [private]\fP, \fC [slot]\fP"
+This function is the done function, it will display the souvenirs shop page after click it\&. 
+.PP
+Definition at line \fB210\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::on_doneBuying_clicked ()\fC [private]\fP, \fC [slot]\fP"
+This function is the done function, it will display the receipt page after click it\&. 
+.PP
+Definition at line \fB481\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::on_enter_button_clicked ()\fC [private]\fP, \fC [slot]\fP"
+This function is the enter function, it will move the selected college name the student has pick to the selectedCollege list after click it\&. 
+.PP
+Definition at line \fB182\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::on_goback2_clicked ()\fC [private]\fP, \fC [slot]\fP"
+This function is the goback function, it will display the last page after click it\&. 
+.PP
+Definition at line \fB443\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::on_goback_clicked ()\fC [private]\fP, \fC [slot]\fP"
+This function is the goback function, it will display the last page after click it\&. 
+.PP
+Definition at line \fB435\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::on_mainpage_2_clicked ()\fC [private]\fP, \fC [slot]\fP"
+This function is the go to main page function, it will display the main page after click it\&. 
+.PP
+Definition at line \fB508\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::on_mainpage_clicked ()\fC [private]\fP, \fC [slot]\fP"
+This function is the go to main page function, it will display the main page after click it\&. 
+.PP
+Definition at line \fB490\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::on_planCustomTrip_clicked ()\fC [private]\fP, \fC [slot]\fP"
+This function is the plan the custom trip, it will plan the college tour trip starding at where the student wants and vist the all other college base on what student has pick after click it\&. 
+.PP
+ Test(1): distance: 3973 cost: 713\&.97
+.PP
+Test(2): distance: 2412 cost: 181\&.95
+.PP
+.PP
+ MAKE CHANGES
+.PP
+.PP
+ Test(3): distance: 1720 cost: 222\&.40
+.PP
+Test(4): distance: 3107 cost: 587\&.44
+.PP
+Definition at line \fB117\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::on_planShortTrip_clicked ()\fC [private]\fP, \fC [slot]\fP"
+This function is the plan the shortes trip form ASU, it will plan the college tour trip starding at ASU and vist the 11 college after click it\&. 
+.PP
+ Test(1) -> 5 trips: distance: 790\&.3 cost: 0
+.PP
+Test(2) -> 4 trips: distance: 457\&.3 cost: 0
+.PP
+Definition at line \fB45\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::on_receiptDone_clicked ()\fC [private]\fP, \fC [slot]\fP"
+This function is the done function, it will display the main page after click it\&.
+.PP
+This function is the search function, it will search the college name that is currenly display on the combo box after click it\&. 
+.PP
+Definition at line \fB459\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "void planTripWindow::on_SearchButton_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line \fB691\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::on_selectCampus_comboBox_currentIndexChanged ()\fC [private]\fP, \fC [slot]\fP"
+This function changes the souviner table base on what campus the student has selected in the combo box\&. 
+.PP
+Definition at line \fB551\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::on_startTrip_clicked ()\fC [private]\fP, \fC [slot]\fP"
+This function is the plan a trip form saddleback college, it will plan the college tour trip starding at saddleback college and vist the 11 college after click it\&. 
+.PP
+ Test: distance: 5315\&.5 cost: 0
+.PP
+Definition at line \fB255\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::on_startTripFormUIC_clicked ()\fC [private]\fP, \fC [slot]\fP"
+This function is the plan the a trip form UIC, it will plan the college tour trip starding at UCI and vist the 13 college after click it\&. 
+.PP
+ Test: distance should be: 5847\&.2 cost: 0
+.PP
+Definition at line \fB306\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::recursiveCollegeSort (QString currentCamp)"
+This function sort the college touring trip list in order\&. For example, from the starting campus, the next campus will be the closest to the start, then the closest after that\&. Each recursive call find the closest campus to the campus passed in\&. When the closest is found, the new campus is sorted and then used for the next call\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIString\fP currentCamp, the name of the current campues 
+.RE
+.PP
+< queue of sorted campuses for tour
+.PP
+< vector of selected campuses for the tour
+.PP
+Definition at line \fB366\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::showAvaliListCombo (QSqlQueryModel * model)"
+The avaliable campuses combo box on the general tour college selection UI will display the information held in a QSqlQueryModel pointer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIQSqlQueryModel,model\fP (passed as a pointer) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+nothing returned 
+.RE
+.PP
+
+.PP
+Definition at line \fB176\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::showAvaliListView (QSqlQueryModel * model)"
+The avaliable campuses list view on the general tour college selection UI will display the information held in a QSqlQueryModel pointer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIQSqlQueryModel,model\fP (passed as a pointer) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+nothing returned 
+.RE
+.PP
+
+.PP
+Definition at line \fB154\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::showSelectCampusComboBox (QStringListModel * model)"
+This function will used the tax that is in the campus combo box for the souvenir shop UI and display the information held in a QStringListModel pointer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpointer\fP model, the list of college name in the form of database accesed it by QStringListModel pointer 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+nothing returned, it just display souvenirs of the selected campus name in the combo box 
+.RE
+.PP
+
+.PP
+Definition at line \fB531\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::showSelectListView ()"
+The selected campuses list view on the general tour college selection UI will display the information held in a QSqlQueryModel pointer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIQSqlQueryModel,model\fP (passed as a pointer) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+nothing returned 
+.RE
+.PP
+
+.PP
+Definition at line \fB165\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::showSouvCartTableView (QSqlQueryModel * model)"
+The souvenir cart table view for the souvenir shop UI will display the information about the souvenirs selected held in a QStringListModel pointer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpointer\fP model, the list of souvenirs in the form of database accesed it by QStringListModel pointer 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+nothing returned, it just display souvenirs of the selected campus name in the table view 
+.RE
+.PP
+
+.PP
+Definition at line \fB561\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::showSouvTableView (QSqlQueryModel * model)"
+The souvenir table view for the souvenir shop UI will display the information about the souvenirs of a selected campus held in a QStringListModel pointer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpointer\fP model, the list of souvenirs in the form of database accesed it by QStringListModel pointer 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+nothing returned, it just display souvenirs of the selected campus name in the table view 
+.RE
+.PP
+
+.PP
+Definition at line \fB541\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::showTotal (double total)"
+This function show the total price of all souvenirs and initializes the widgets on the UI\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdouble\fP total, the total price 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+nothing returned, it just set the total price to the UI 
+.RE
+.PP
+
+.PP
+Definition at line \fB665\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SS "planTripWindow::showTotalDistent (double distance)"
+This function show the total distent of each trip and initializes the widgets on the UI\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIno\fP parameters 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+nothing returned 
+.RE
+.PP
+
+.PP
+Definition at line \fB301\fP of file \fBplantripwindow\&.cpp\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int planTripWindow::asuNum\fC [private]\fP"
+the maximum number of campuses allowed during the ASU tour 
+.PP
+Definition at line \fB250\fP of file \fBplantripwindow\&.h\fP\&.
+.SS "double planTripWindow::distance\fC [private]\fP"
+double of the total distance form the tours 
+.PP
+Definition at line \fB255\fP of file \fBplantripwindow\&.h\fP\&.
+.SS "\fBdbManager\fP planTripWindow::m_database\fC [private]\fP"
+database manager variable 
+.PP
+Definition at line \fB246\fP of file \fBplantripwindow\&.h\fP\&.
+.SS "QVector<QString> planTripWindow::selectedCampuses\fC [private]\fP"
+vector of selected campuses for the tour 
+.PP
+Definition at line \fB247\fP of file \fBplantripwindow\&.h\fP\&.
+.SS "int planTripWindow::selectNum\fC [private]\fP"
+the current number of campuses 
+.PP
+Definition at line \fB251\fP of file \fBplantripwindow\&.h\fP\&.
+.SS "QQueue<QString> planTripWindow::sortedCampuses\fC [private]\fP"
+queue of sorted campuses for tour 
+.PP
+Definition at line \fB248\fP of file \fBplantripwindow\&.h\fP\&.
+.SS "\fBSouvenir\fP planTripWindow::souv\fC [private]\fP"
+struct of the purchased souvenirs 
+.PP
+Definition at line \fB253\fP of file \fBplantripwindow\&.h\fP\&.
+.SS "QStack<\fBSouvenir\fP> planTripWindow::souvenirCart\fC [private]\fP"
+stack of the purchased souvenirs 
+.PP
+Definition at line \fB249\fP of file \fBplantripwindow\&.h\fP\&.
+.SS "QString planTripWindow::sQry\fC [private]\fP"
+souvenir query - ACCUMULATOR 
+.PP
+Definition at line \fB252\fP of file \fBplantripwindow\&.h\fP\&.
+.SS "double planTripWindow::total\fC [private]\fP"
+double of the total price form the purchased souvenirs 
+.PP
+Definition at line \fB254\fP of file \fBplantripwindow\&.h\fP\&.
+.SS "Ui::planTripWindow* planTripWindow::ui\fC [private]\fP"
+\fBplanTripWindow\fP UI variable 
+.PP
+Definition at line \fB245\fP of file \fBplantripwindow\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CS1D-College-Tour from the source code\&.

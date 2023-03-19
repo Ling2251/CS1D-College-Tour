@@ -1,0 +1,7 @@
+<map id="planTripWindow::on_enter_button_clicked" name="planTripWindow::on_enter_button_clicked">
+<area shape="rect" id="node1" title=" " alt="" coords="5,101,155,141"/>
+<area shape="rect" id="node2" href="$classdb_manager.html#af67c0634fd2182a78d643f2746c3fffa" title=" " alt="" coords="207,5,386,45"/>
+<area shape="rect" id="node3" href="$classplan_trip_window.html#af0265e054d4debcef2e42c06813da973" title=" " alt="" coords="207,69,386,109"/>
+<area shape="rect" id="node4" href="$classplan_trip_window.html#aeb30c8a217c402014f3ad7c5a073d0d9" title=" " alt="" coords="207,133,386,173"/>
+<area shape="rect" id="node5" href="$classplan_trip_window.html#a9213bb2293f2edae7c0f195ab1772c55" title=" " alt="" coords="203,197,391,237"/>
+</map>

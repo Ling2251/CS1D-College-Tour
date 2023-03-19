@@ -1,0 +1,54 @@
+\hypertarget{maintenance_8cpp_source}{}\doxysection{maintenance.\+cpp}
+\mbox{\hyperlink{maintenance_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00001}00001\ \textcolor{comment}{/**********************************************************/}}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{maintenance_8h}{maintenance.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}ui\_maintenance.h"{}}}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{inputcollege_8h}{inputcollege.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{souveniraddandedit_8h}{souveniraddandedit.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00006}00006\ \textcolor{comment}{/**********************************************************/}}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00008}00008\ \textcolor{comment}{/**********************************************************}}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00009}00009\ \textcolor{comment}{*}}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00010}00010\ \textcolor{comment}{*\ maintenance}}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00011}00011\ \textcolor{comment}{*\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00012}00012\ \textcolor{comment}{*This\ page\ will\ require\ a\ login\ to\ be\ used.\ However,\ it\ will}}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00013}00013\ \textcolor{comment}{*allow\ the\ user\ to\ edit\ the\ colleges\ as\ well\ as\ the\ ability}}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00014}00014\ \textcolor{comment}{*to\ edit\ the\ souvenirs\ for\ each\ college.}}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00015}00015\ \textcolor{comment}{*\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00016}00016\ \textcolor{comment}{***********************************************************/}}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00018}\mbox{\hyperlink{classmaintenance_a681f60e0d70cee3355ae1ff525d29dea}{00018}}\ \mbox{\hyperlink{classmaintenance_a681f60e0d70cee3355ae1ff525d29dea}{maintenance::maintenance}}(\mbox{\hyperlink{class_q_widget}{QWidget}}\ *parent)\ :}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{class_q_dialog}{QDialog}}(parent),}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00020}00020\ \ \ \ \ ui(new\ \mbox{\hyperlink{namespace_ui}{Ui}}::\mbox{\hyperlink{classmaintenance}{maintenance}})}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{classmaintenance_a453bcbd71d94a2db237f916df2520edb}{ui}}-\/>setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00026}\mbox{\hyperlink{classmaintenance_a7d52b97e64d46d02e3365014d93e3148}{00026}}\ \mbox{\hyperlink{classmaintenance_a7d52b97e64d46d02e3365014d93e3148}{maintenance::\string~maintenance}}()}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00027}00027\ \{}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classmaintenance_a453bcbd71d94a2db237f916df2520edb}{ui}};}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00031}\mbox{\hyperlink{classmaintenance_abf805e7d39df421528fbb3dd981db12a}{00031}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmaintenance_abf805e7d39df421528fbb3dd981db12a}{maintenance::on\_pushButton\_2\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00032}00032\ \{}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{class_input_college}{InputCollege}}\ inputCollege;}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00034}00034\ \ \ \ \ hide();}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00035}00035\ \ \ \ \ inputCollege.setModal(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00036}00036\ \ \ \ \ inputCollege.exec();}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00039}00039\ \}}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00042}\mbox{\hyperlink{classmaintenance_abaa25f87db40abdf8b44fcf34635a7cc}{00042}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmaintenance_abaa25f87db40abdf8b44fcf34635a7cc}{maintenance::on\_pushButton\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00043}00043\ \{}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00044}00044\ \ \ \ \ \mbox{\hyperlink{classsouvenir_addand_edit}{souvenirAddandEdit}}\ souvenir;}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00045}00045\ \ \ \ \ hide();}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00046}00046\ \ \ \ \ souvenir.setModal(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00047}00047\ \ \ \ \ souvenir.exec();}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00048}00048\ \}}
+\DoxyCodeLine{\Hypertarget{maintenance_8cpp_source_l00049}00049\ }
+
+\end{DoxyCode}

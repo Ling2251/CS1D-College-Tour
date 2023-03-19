@@ -1,0 +1,84 @@
+\hypertarget{displaycollegewindow_8cpp_source}{}\doxysection{displaycollegewindow.\+cpp}
+\mbox{\hyperlink{displaycollegewindow_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00001}00001\ \textcolor{comment}{/**********************************************************/}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{displaycollegewindow_8h}{displaycollegewindow.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}ui\_displaycollegewindow.h"{}}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00004}00004\ \textcolor{comment}{/**********************************************************/}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00006}00006\ \textcolor{comment}{/**********************************************************}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00007}00007\ \textcolor{comment}{*}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00008}00008\ \textcolor{comment}{*\ displayCollegeWindow}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00009}00009\ \textcolor{comment}{*\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00010}00010\ \textcolor{comment}{*This\ page\ will\ display\ all\ the\ colleges\ offered\ by\ the}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00011}00011\ \textcolor{comment}{*program\ and\ the\ distant\ form\ other\ college\ as\ well\ as\ the}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00012}00012\ \textcolor{comment}{*traditional\ souvenirs.}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00013}00013\ \textcolor{comment}{*\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00014}00014\ \textcolor{comment}{***********************************************************/}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00015}\mbox{\hyperlink{classdisplay_college_window_aeeb81b7d1df8ed15c9ff24979d2b7679}{00015}}\ \mbox{\hyperlink{classdisplay_college_window_aeeb81b7d1df8ed15c9ff24979d2b7679}{displayCollegeWindow::displayCollegeWindow}}(\mbox{\hyperlink{class_q_widget}{QWidget}}\ *parent)\ :}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00016}00016\ \ \ \ \ \mbox{\hyperlink{class_q_dialog}{QDialog}}(parent),}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00017}00017\ \ \ \ \ ui(new\ \mbox{\hyperlink{namespace_ui}{Ui}}::\mbox{\hyperlink{classdisplay_college_window}{displayCollegeWindow}})}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00018}00018\ \{}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classdisplay_college_window_a33e7b012634cd7307cc6867365d60f01}{ui}}-\/>setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classdisplay_college_window_ac58413729efffab4d25b728a881d9ba1}{showCampusDBCombo}}(\mbox{\hyperlink{classdisplay_college_window_a24aa98d83cfb8ff1692cd3c5f04c58a6}{m\_database}}.\mbox{\hyperlink{classdb_manager_a7726e111973dd8df996b0835da65c493}{loadCampusNamesOnly}}());}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00021}00021\ \}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00023}00023\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00024}\mbox{\hyperlink{classdisplay_college_window_ada237c801088e05acaaa4db28a18eff4}{00024}}\ \mbox{\hyperlink{classdisplay_college_window_ada237c801088e05acaaa4db28a18eff4}{displayCollegeWindow::\string~displayCollegeWindow}}()}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00025}00025\ \{}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classdisplay_college_window_a33e7b012634cd7307cc6867365d60f01}{ui}};}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00029}00029\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00030}00030\ \textcolor{comment}{\ *\ showDBView(QSqlQueryModel\ *model)}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00031}00031\ \textcolor{comment}{\ *\ The\ table\ view\ for\ the\ campus\ database\ display\ UI\ will\ display\ the\ information\ held\ in\ a\ QSqlQueryModel\ pointer.}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00032}00032\ \textcolor{comment}{\ *\ IN:\ QSqlQueryModel,\ model\ (passed\ as\ a\ pointer)}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00033}00033\ \textcolor{comment}{\ *\ OUT:\ nothing\ returned}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00034}00034\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00035}\mbox{\hyperlink{classdisplay_college_window_a1dff1106dc681d8de24dfbb8661e532f}{00035}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdisplay_college_window_a1dff1106dc681d8de24dfbb8661e532f}{displayCollegeWindow::showDBView}}(QSqlQueryModel\ *model)}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00036}00036\ \{}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{classdisplay_college_window_a33e7b012634cd7307cc6867365d60f01}{ui}}-\/>tableView-\/>setModel(model);}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00038}00038\ \}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00040}00040\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00041}00041\ \textcolor{comment}{\ *\ showCampusDBCombo(QSqlQueryModel\ *model)}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00042}00042\ \textcolor{comment}{\ *\ The\ campus\ combo\ box\ for\ the\ campus\ database\ display\ UI\ will\ display\ the\ information\ held\ in\ a\ QSqlQueryModel\ pointer.}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00043}00043\ \textcolor{comment}{\ *\ IN:\ QSqlQueryModel,\ model\ (passed\ as\ a\ pointer)}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00044}00044\ \textcolor{comment}{\ *\ OUT:\ nothing\ returned}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00045}00045\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00046}\mbox{\hyperlink{classdisplay_college_window_ac58413729efffab4d25b728a881d9ba1}{00046}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdisplay_college_window_ac58413729efffab4d25b728a881d9ba1}{displayCollegeWindow::showCampusDBCombo}}(QSqlQueryModel\ *model)}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00047}00047\ \{}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00048}00048\ \ \ \ \ \mbox{\hyperlink{classdisplay_college_window_a33e7b012634cd7307cc6867365d60f01}{ui}}-\/>campus\_combo-\/>setModel(model);}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00049}00049\ \}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00051}00051\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00052}00052\ \textcolor{comment}{\ *\ on\_other\_button\_clicked}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00053}00053\ \textcolor{comment}{\ *\ When\ the\ other\ campuses\ button\ is\ clicked\ on\ the\ database\ display\ UI,\ the\ Distance\ database\ is\ displayed\ on\ the\ table\ view.}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00054}00054\ \textcolor{comment}{\ *\ IN:\ no\ formal\ parameters}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00055}00055\ \textcolor{comment}{\ *\ OUT:\ nothing\ returned}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00056}00056\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00057}\mbox{\hyperlink{classdisplay_college_window_a672c84410d64b80d7b9079c3542d8da7}{00057}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdisplay_college_window_a672c84410d64b80d7b9079c3542d8da7}{displayCollegeWindow::on\_other\_button\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00058}00058\ \{}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00059}00059\ \ \ \ \ \mbox{\hyperlink{classdisplay_college_window_a33e7b012634cd7307cc6867365d60f01}{ui}}-\/>database\_label-\/>setText(\mbox{\hyperlink{classdisplay_college_window_a33e7b012634cd7307cc6867365d60f01}{ui}}-\/>campus\_combo-\/>currentText());}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00060}00060\ \ \ \ \ \mbox{\hyperlink{classdisplay_college_window_a1dff1106dc681d8de24dfbb8661e532f}{showDBView}}(\mbox{\hyperlink{classdisplay_college_window_a24aa98d83cfb8ff1692cd3c5f04c58a6}{m\_database}}.\mbox{\hyperlink{classdb_manager_a1f86f5f809441395499a9229733ff24e}{loadOtherCampusAndDist}}(\mbox{\hyperlink{classdisplay_college_window_a33e7b012634cd7307cc6867365d60f01}{ui}}-\/>campus\_combo-\/>currentText()));}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00061}00061\ \ \ \ \ \mbox{\hyperlink{classdisplay_college_window_a33e7b012634cd7307cc6867365d60f01}{ui}}-\/>tableView-\/>setColumnWidth(0,\ 450);}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00062}00062\ \ \ \ \ \mbox{\hyperlink{classdisplay_college_window_a33e7b012634cd7307cc6867365d60f01}{ui}}-\/>tableView-\/>setColumnWidth(1,\ 280);}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00063}00063\ \}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00065}00065\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00066}00066\ \textcolor{comment}{\ *\ on\_souv\_button\_clicked}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00067}00067\ \textcolor{comment}{\ *\ When\ the\ souvenir\ button\ is\ clicked\ on\ the\ database\ display\ UI,\ the\ souvenir\ database\ for\ a\ specificed\ campus\ is\ displayed\ on\ the\ table\ view.}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00068}00068\ \textcolor{comment}{\ *\ IN:\ no\ formal\ parameters}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00069}00069\ \textcolor{comment}{\ *\ OUT:\ nothing\ returned}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00070}00070\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00071}\mbox{\hyperlink{classdisplay_college_window_ab5157d61c6f50fad25ffbe65000f82e2}{00071}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdisplay_college_window_ab5157d61c6f50fad25ffbe65000f82e2}{displayCollegeWindow::on\_souv\_button\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00072}00072\ \{}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00073}00073\ \ \ \ \ \mbox{\hyperlink{classdisplay_college_window_a33e7b012634cd7307cc6867365d60f01}{ui}}-\/>database\_label-\/>setText(\mbox{\hyperlink{classdisplay_college_window_a33e7b012634cd7307cc6867365d60f01}{ui}}-\/>campus\_combo-\/>currentText());}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00074}00074\ \ \ \ \ \mbox{\hyperlink{classdisplay_college_window_a1dff1106dc681d8de24dfbb8661e532f}{showDBView}}(\mbox{\hyperlink{classdisplay_college_window_a24aa98d83cfb8ff1692cd3c5f04c58a6}{m\_database}}.\mbox{\hyperlink{classdb_manager_aff0e59fb325dba293707ad93a2d99d35}{loadCampusSouvenirs}}(\mbox{\hyperlink{classdisplay_college_window_a33e7b012634cd7307cc6867365d60f01}{ui}}-\/>campus\_combo-\/>currentText()));}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00075}00075\ \ \ \ \ \mbox{\hyperlink{classdisplay_college_window_a33e7b012634cd7307cc6867365d60f01}{ui}}-\/>tableView-\/>setColumnWidth(0,\ 460);}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00076}00076\ \ \ \ \ \mbox{\hyperlink{classdisplay_college_window_a33e7b012634cd7307cc6867365d60f01}{ui}}-\/>tableView-\/>setColumnWidth(1,\ 280);}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00077}00077\ \}}
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{displaycollegewindow_8cpp_source_l00079}00079\ }
+
+\end{DoxyCode}

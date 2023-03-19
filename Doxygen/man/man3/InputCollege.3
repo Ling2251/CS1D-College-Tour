@@ -1,0 +1,89 @@
+.TH "InputCollege" 3 "Sat Mar 18 2023" "CS1D-College-Tour" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+InputCollege \- Most functionality of the \fBInputCollege\fP class is to reading in the new college data as a excel file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <inputcollege\&.h>\fP
+.PP
+Inherits \fBQDialog\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBInputCollege\fP (\fBQWidget\fP *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~InputCollege\fP ()"
+.br
+.ti -1c
+.RI "void \fBreadFile\fP ()"
+.br
+.ti -1c
+.RI "void \fBpushInputData\fP ()"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_goback_clicked\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::InputCollege * \fBui\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Most functionality of the \fBInputCollege\fP class is to reading in the new college data as a excel file\&. 
+.PP
+Definition at line \fB27\fP of file \fBinputcollege\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "InputCollege::InputCollege (\fBQWidget\fP * parent = \fCnullptr\fP)\fC [explicit]\fP"
+constructer function that create a window that display to the the input data page to the administrator for adding new colleges and spuvenirs to the prgram 
+.PP
+\fBReturns\fP
+.RS 4
+nothing, it just display a window to the administrator 
+.RE
+.PP
+
+.PP
+Definition at line \fB6\fP of file \fBinputcollege\&.cpp\fP\&.
+.SS "InputCollege::~InputCollege ()"
+A destructor function 
+.PP
+Definition at line \fB15\fP of file \fBinputcollege\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "InputCollege::on_goback_clicked ()\fC [private]\fP, \fC [slot]\fP"
+This function is the goback function, it will display the last page after click it\&. 
+.PP
+Definition at line \fB150\fP of file \fBinputcollege\&.cpp\fP\&.
+.SS "InputCollege::pushInputData ()"
+Once this function is called the data that was readed into the prgram will be storded on to a vetor and a database\&. 
+.PP
+Definition at line \fB90\fP of file \fBinputcollege\&.cpp\fP\&.
+.SS "InputCollege::readFile ()"
+This function will take in a excel file as an input file and read all the data off that file into the program 
+.PP
+Definition at line \fB40\fP of file \fBinputcollege\&.cpp\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "Ui::InputCollege* InputCollege::ui\fC [private]\fP"
+\fBInputCollege\fP UI variable 
+.PP
+Definition at line \fB63\fP of file \fBinputcollege\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CS1D-College-Tour from the source code\&.

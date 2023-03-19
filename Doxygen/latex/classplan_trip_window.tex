@@ -1,0 +1,915 @@
+\hypertarget{classplan_trip_window}{}\doxysection{plan\+Trip\+Window Class Reference}
+\label{classplan_trip_window}\index{planTripWindow@{planTripWindow}}
+
+
+Most functionality of the \mbox{\hyperlink{classplan_trip_window}{plan\+Trip\+Window}} class is to give the student options on how they would like to plan their trip and buying multiple souvenits at differnt colleges.  
+
+
+
+
+{\ttfamily \#include $<$plantripwindow.\+h$>$}
+
+
+
+Inheritance diagram for plan\+Trip\+Window\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classplan_trip_window__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for plan\+Trip\+Window\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structplan_trip_window_1_1_souvenir}{Souvenir}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classplan_trip_window_afb4d9b4f63dab301fe2d11568dc8b91c}{plan\+Trip\+Window}} (\mbox{\hyperlink{class_q_widget}{QWidget}} $\ast$parent=nullptr)
+\item 
+\mbox{\hyperlink{classplan_trip_window_a0860a88101dbc6b5b4a99730aa08388c}{$\sim$plan\+Trip\+Window}} ()
+\item 
+bool \mbox{\hyperlink{classplan_trip_window_ac86371ade6112c1ccb90329d95d1fb17}{check\+Campus\+Vector\+Names}} (QVector$<$ QString $>$ campuses)
+\item 
+void \mbox{\hyperlink{classplan_trip_window_aeb900b032acce3f075be92c86674c1ee}{recursive\+College\+Sort}} (QString current\+Camp)
+\item 
+void \mbox{\hyperlink{classplan_trip_window_af2cb7dffda707e3be62a9e7422797d25}{go\+To\+Souvenir\+Shop}} ()
+\item 
+void \mbox{\hyperlink{classplan_trip_window_a4edeaca08683f49ef9873bde41e79ebe}{show\+Select\+Campus\+Combo\+Box}} (QString\+List\+Model $\ast$model)
+\item 
+void \mbox{\hyperlink{classplan_trip_window_aa2c126c1df2c9bfd82407af4dc39213b}{show\+Souv\+Table\+View}} (QSql\+Query\+Model $\ast$model)
+\item 
+void \mbox{\hyperlink{classplan_trip_window_a06e0599e743a304150c9defb6a3c9045}{show\+Souv\+Cart\+Table\+View}} (QSql\+Query\+Model $\ast$model)
+\item 
+void \mbox{\hyperlink{classplan_trip_window_ad1baf2a897f6922c5c11fecf31ee6482}{calculate\+Total}} ()
+\item 
+double \mbox{\hyperlink{classplan_trip_window_a065e55944714eab5c0eeeda961aee8e4}{calculate\+Distance}} (int selected\+Campus\+Count)
+\item 
+void \mbox{\hyperlink{classplan_trip_window_ada0109671578216d8f41134096f987f2}{show\+Total}} (double \mbox{\hyperlink{classplan_trip_window_aa62e3a466d00b1051efb1dd2aa9b5a85}{total}})
+\item 
+void \mbox{\hyperlink{classplan_trip_window_af0265e054d4debcef2e42c06813da973}{show\+Avali\+List\+Combo}} (QSql\+Query\+Model $\ast$model)
+\item 
+void \mbox{\hyperlink{classplan_trip_window_a9213bb2293f2edae7c0f195ab1772c55}{show\+Select\+List\+View}} ()
+\item 
+void \mbox{\hyperlink{classplan_trip_window_aeb30c8a217c402014f3ad7c5a073d0d9}{show\+Avali\+List\+View}} (QSql\+Query\+Model $\ast$model)
+\item 
+void \mbox{\hyperlink{classplan_trip_window_ac72dc1377366cf380e9aa6e2a7d9bad6}{show\+Total\+Distent}} (double \mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}})
+\item 
+void \mbox{\hyperlink{classplan_trip_window_aa5ef228faea826879b25f963d8e07ebd}{display\+Receipt\+Page}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classplan_trip_window_a7cc96a4b49474fdcc143876c1c1d5f97}{on\+\_\+plan\+Short\+Trip\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{classplan_trip_window_a334343b83897876bc71af18f1da1393d}{on\+\_\+plan\+Custom\+Trip\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{classplan_trip_window_a6e874783a5521ab0a539f841a5af74c7}{on\+\_\+start\+Trip\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{classplan_trip_window_a488ed48e3c8987d544c09de1be0563e2}{on\+\_\+select\+Campus\+\_\+combo\+Box\+\_\+current\+Index\+Changed}} ()
+\item 
+void \mbox{\hyperlink{classplan_trip_window_aba130edd506fb7331ec01b7ec94dc695}{on\+\_\+add\+Souvenir\+\_\+button\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{classplan_trip_window_aa263a2f4cfed1c428554ec6a412d8f40}{on\+\_\+goback\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{classplan_trip_window_a367aac3d497c25c08fe3ed3b9f5f6401}{on\+\_\+goback2\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{classplan_trip_window_a1f7a7872fb92b112268a61a3eb6ae45f}{on\+\_\+mainpage\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{classplan_trip_window_abacdac0e3506710fa2487364c8ec05e4}{on\+\_\+mainpage\+\_\+2\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{classplan_trip_window_a6d125665c0a5d5b4290393a6125b6f55}{on\+\_\+start\+Trip\+Form\+UIC\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{classplan_trip_window_acf9ff4ff97944ba9658513e69ee7ad65}{on\+\_\+enter\+\_\+button\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{classplan_trip_window_a2d4c5940592dc33ad9c8783718cd03bb}{on\+\_\+done\+\_\+button\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{classplan_trip_window_adcb700475ffdb65963796741522de5ad}{on\+\_\+custom\+\_\+goback\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{classplan_trip_window_a84c0cd7da643e8824a28ce2ca33517e7}{on\+\_\+done\+Buying\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{classplan_trip_window_a98d7b921e6d90cdb571b03fa65723727}{on\+\_\+receipt\+Done\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{classplan_trip_window_ae34303389cfd778dbddf011c1062b0d9}{on\+\_\+\+Search\+Button\+\_\+clicked}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::plan\+Trip\+Window $\ast$ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}
+\item 
+\mbox{\hyperlink{classdb_manager}{db\+Manager}} \mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\+\_\+database}}
+\item 
+QVector$<$ QString $>$ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selected\+Campuses}}
+\item 
+QQueue$<$ QString $>$ \mbox{\hyperlink{classplan_trip_window_a66925bada7135d92869d291f90c43f5f}{sorted\+Campuses}}
+\item 
+QStack$<$ \mbox{\hyperlink{structplan_trip_window_1_1_souvenir}{Souvenir}} $>$ \mbox{\hyperlink{classplan_trip_window_a51ec8b80adbc2e56c55b3ff387740b41}{souvenir\+Cart}}
+\item 
+int \mbox{\hyperlink{classplan_trip_window_aee3a1f37aa19755d93d6c4ce7c595888}{asu\+Num}}
+\item 
+int \mbox{\hyperlink{classplan_trip_window_a9b7184ea541d0dd225be9f8f0204b3f8}{select\+Num}}
+\item 
+QString \mbox{\hyperlink{classplan_trip_window_a194cd478020a3a79d89cf1685eec96e9}{s\+Qry}}
+\item 
+\mbox{\hyperlink{structplan_trip_window_1_1_souvenir}{Souvenir}} \mbox{\hyperlink{classplan_trip_window_a31ef66e8ef0176e9b849ac3273ad6d8b}{souv}}
+\item 
+double \mbox{\hyperlink{classplan_trip_window_aa62e3a466d00b1051efb1dd2aa9b5a85}{total}}
+\item 
+double \mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Most functionality of the \mbox{\hyperlink{classplan_trip_window}{plan\+Trip\+Window}} class is to give the student options on how they would like to plan their trip and buying multiple souvenits at differnt colleges. 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8h_source_l00020}{20}} of file \mbox{\hyperlink{plantripwindow_8h_source}{plantripwindow.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classplan_trip_window_afb4d9b4f63dab301fe2d11568dc8b91c}\label{classplan_trip_window_afb4d9b4f63dab301fe2d11568dc8b91c}} 
+\index{planTripWindow@{planTripWindow}!planTripWindow@{planTripWindow}}
+\index{planTripWindow@{planTripWindow}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{planTripWindow()}{planTripWindow()}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::plan\+Trip\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_widget}{QWidget}} $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+constructer function that create a window that display to the students for differnt oppsions \begin{DoxyReturn}{Returns}
+nothing, it just display a window to the students 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_afb4d9b4f63dab301fe2d11568dc8b91c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplan_trip_window_a0860a88101dbc6b5b4a99730aa08388c}\label{classplan_trip_window_a0860a88101dbc6b5b4a99730aa08388c}} 
+\index{planTripWindow@{planTripWindow}!````~planTripWindow@{$\sim$planTripWindow}}
+\index{````~planTripWindow@{$\sim$planTripWindow}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{$\sim$planTripWindow()}{~planTripWindow()}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::$\sim$plan\+Trip\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A destructor function 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classplan_trip_window_a065e55944714eab5c0eeeda961aee8e4}\label{classplan_trip_window_a065e55944714eab5c0eeeda961aee8e4}} 
+\index{planTripWindow@{planTripWindow}!calculateDistance@{calculateDistance}}
+\index{calculateDistance@{calculateDistance}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{calculateDistance()}{calculateDistance()}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::calculate\+Distance (\begin{DoxyParamCaption}\item[{int}]{selected\+Campus\+Count }\end{DoxyParamCaption})}
+
+This function calcuate the distance of the campues the student has selected from the trip. 
+\begin{DoxyParams}{Parameters}
+{\em int} & selected\+Campus\+Count, the number of selected campus \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double distance, the total distance 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00641}{641}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_a065e55944714eab5c0eeeda961aee8e4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_a065e55944714eab5c0eeeda961aee8e4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplan_trip_window_ad1baf2a897f6922c5c11fecf31ee6482}\label{classplan_trip_window_ad1baf2a897f6922c5c11fecf31ee6482}} 
+\index{planTripWindow@{planTripWindow}!calculateTotal@{calculateTotal}}
+\index{calculateTotal@{calculateTotal}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{calculateTotal()}{calculateTotal()}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::calculate\+Total (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function calcuate the price total of what the student has purches from all campues. 
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing returned 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00616}{616}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_ad1baf2a897f6922c5c11fecf31ee6482_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplan_trip_window_ac86371ade6112c1ccb90329d95d1fb17}\label{classplan_trip_window_ac86371ade6112c1ccb90329d95d1fb17}} 
+\index{planTripWindow@{planTripWindow}!checkCampusVectorNames@{checkCampusVectorNames}}
+\index{checkCampusVectorNames@{checkCampusVectorNames}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{checkCampusVectorNames()}{checkCampusVectorNames()}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::check\+Campus\+Vector\+Names (\begin{DoxyParamCaption}\item[{QVector$<$ QString $>$}]{campuses }\end{DoxyParamCaption})}
+
+This function will check to if all the campuses from the vector are present in the database. 
+\begin{DoxyParams}{Parameters}
+{\em QVector$<$\+QString$>$,the} & campuses name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or falst, if the name is in the database 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00235}{235}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_ac86371ade6112c1ccb90329d95d1fb17_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_ac86371ade6112c1ccb90329d95d1fb17_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplan_trip_window_aa5ef228faea826879b25f963d8e07ebd}\label{classplan_trip_window_aa5ef228faea826879b25f963d8e07ebd}} 
+\index{planTripWindow@{planTripWindow}!displayReceiptPage@{displayReceiptPage}}
+\index{displayReceiptPage@{displayReceiptPage}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{displayReceiptPage()}{displayReceiptPage()}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::display\+Receipt\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function switches the current UI to the final receipt page UI and initializes the widgets on the UI. 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00675}{675}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_aa5ef228faea826879b25f963d8e07ebd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_aa5ef228faea826879b25f963d8e07ebd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplan_trip_window_af2cb7dffda707e3be62a9e7422797d25}\label{classplan_trip_window_af2cb7dffda707e3be62a9e7422797d25}} 
+\index{planTripWindow@{planTripWindow}!goToSouvenirShop@{goToSouvenirShop}}
+\index{goToSouvenirShop@{goToSouvenirShop}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{goToSouvenirShop()}{goToSouvenirShop()}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::go\+To\+Souvenir\+Shop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function switches the current UI to the \mbox{\hyperlink{structplan_trip_window_1_1_souvenir}{Souvenir}} shop UI and initializes the widgets on the UI. 
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing returned 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00417}{417}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_af2cb7dffda707e3be62a9e7422797d25_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_af2cb7dffda707e3be62a9e7422797d25_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplan_trip_window_aba130edd506fb7331ec01b7ec94dc695}\label{classplan_trip_window_aba130edd506fb7331ec01b7ec94dc695}} 
+\index{planTripWindow@{planTripWindow}!on\_addSouvenir\_button\_clicked@{on\_addSouvenir\_button\_clicked}}
+\index{on\_addSouvenir\_button\_clicked@{on\_addSouvenir\_button\_clicked}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{on\_addSouvenir\_button\_clicked}{on\_addSouvenir\_button\_clicked}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::on\+\_\+add\+Souvenir\+\_\+button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+This function is the adding souvenirs function, it will display the souvenirs the student has pick on to the cart table after click it. 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00573}{573}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_aba130edd506fb7331ec01b7ec94dc695_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplan_trip_window_adcb700475ffdb65963796741522de5ad}\label{classplan_trip_window_adcb700475ffdb65963796741522de5ad}} 
+\index{planTripWindow@{planTripWindow}!on\_custom\_goback\_clicked@{on\_custom\_goback\_clicked}}
+\index{on\_custom\_goback\_clicked@{on\_custom\_goback\_clicked}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{on\_custom\_goback\_clicked}{on\_custom\_goback\_clicked}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::on\+\_\+custom\+\_\+goback\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+This function is the goback function, it will display the last page after click it. 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00451}{451}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+\mbox{\Hypertarget{classplan_trip_window_a2d4c5940592dc33ad9c8783718cd03bb}\label{classplan_trip_window_a2d4c5940592dc33ad9c8783718cd03bb}} 
+\index{planTripWindow@{planTripWindow}!on\_done\_button\_clicked@{on\_done\_button\_clicked}}
+\index{on\_done\_button\_clicked@{on\_done\_button\_clicked}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{on\_done\_button\_clicked}{on\_done\_button\_clicked}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::on\+\_\+done\+\_\+button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+This function is the done function, it will display the souvenirs shop page after click it. 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00210}{210}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_a2d4c5940592dc33ad9c8783718cd03bb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplan_trip_window_a84c0cd7da643e8824a28ce2ca33517e7}\label{classplan_trip_window_a84c0cd7da643e8824a28ce2ca33517e7}} 
+\index{planTripWindow@{planTripWindow}!on\_doneBuying\_clicked@{on\_doneBuying\_clicked}}
+\index{on\_doneBuying\_clicked@{on\_doneBuying\_clicked}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{on\_doneBuying\_clicked}{on\_doneBuying\_clicked}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::on\+\_\+done\+Buying\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+This function is the done function, it will display the receipt page after click it. 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00481}{481}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_a84c0cd7da643e8824a28ce2ca33517e7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplan_trip_window_acf9ff4ff97944ba9658513e69ee7ad65}\label{classplan_trip_window_acf9ff4ff97944ba9658513e69ee7ad65}} 
+\index{planTripWindow@{planTripWindow}!on\_enter\_button\_clicked@{on\_enter\_button\_clicked}}
+\index{on\_enter\_button\_clicked@{on\_enter\_button\_clicked}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{on\_enter\_button\_clicked}{on\_enter\_button\_clicked}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::on\+\_\+enter\+\_\+button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+This function is the enter function, it will move the selected college name the student has pick to the selected\+College list after click it. 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00182}{182}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_acf9ff4ff97944ba9658513e69ee7ad65_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplan_trip_window_a367aac3d497c25c08fe3ed3b9f5f6401}\label{classplan_trip_window_a367aac3d497c25c08fe3ed3b9f5f6401}} 
+\index{planTripWindow@{planTripWindow}!on\_goback2\_clicked@{on\_goback2\_clicked}}
+\index{on\_goback2\_clicked@{on\_goback2\_clicked}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{on\_goback2\_clicked}{on\_goback2\_clicked}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::on\+\_\+goback2\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+This function is the goback function, it will display the last page after click it. 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00443}{443}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+\mbox{\Hypertarget{classplan_trip_window_aa263a2f4cfed1c428554ec6a412d8f40}\label{classplan_trip_window_aa263a2f4cfed1c428554ec6a412d8f40}} 
+\index{planTripWindow@{planTripWindow}!on\_goback\_clicked@{on\_goback\_clicked}}
+\index{on\_goback\_clicked@{on\_goback\_clicked}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{on\_goback\_clicked}{on\_goback\_clicked}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::on\+\_\+goback\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+This function is the goback function, it will display the last page after click it. 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00435}{435}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+\mbox{\Hypertarget{classplan_trip_window_abacdac0e3506710fa2487364c8ec05e4}\label{classplan_trip_window_abacdac0e3506710fa2487364c8ec05e4}} 
+\index{planTripWindow@{planTripWindow}!on\_mainpage\_2\_clicked@{on\_mainpage\_2\_clicked}}
+\index{on\_mainpage\_2\_clicked@{on\_mainpage\_2\_clicked}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{on\_mainpage\_2\_clicked}{on\_mainpage\_2\_clicked}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::on\+\_\+mainpage\+\_\+2\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+This function is the go to main page function, it will display the main page after click it. 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00508}{508}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+\mbox{\Hypertarget{classplan_trip_window_a1f7a7872fb92b112268a61a3eb6ae45f}\label{classplan_trip_window_a1f7a7872fb92b112268a61a3eb6ae45f}} 
+\index{planTripWindow@{planTripWindow}!on\_mainpage\_clicked@{on\_mainpage\_clicked}}
+\index{on\_mainpage\_clicked@{on\_mainpage\_clicked}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{on\_mainpage\_clicked}{on\_mainpage\_clicked}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::on\+\_\+mainpage\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+This function is the go to main page function, it will display the main page after click it. 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00490}{490}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+\mbox{\Hypertarget{classplan_trip_window_a334343b83897876bc71af18f1da1393d}\label{classplan_trip_window_a334343b83897876bc71af18f1da1393d}} 
+\index{planTripWindow@{planTripWindow}!on\_planCustomTrip\_clicked@{on\_planCustomTrip\_clicked}}
+\index{on\_planCustomTrip\_clicked@{on\_planCustomTrip\_clicked}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{on\_planCustomTrip\_clicked}{on\_planCustomTrip\_clicked}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::on\+\_\+plan\+Custom\+Trip\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+This function is the plan the custom trip, it will plan the college tour trip starding at where the student wants and vist the all other college base on what student has pick after click it. \DoxyHorRuler{0}
+ Test(1)\+: distance\+: 3973 cost\+: 713.\+97
+
+Test(2)\+: distance\+: 2412 cost\+: 181.\+95
+
+\DoxyHorRuler{0}
+ MAKE CHANGES
+
+\DoxyHorRuler{0}
+ Test(3)\+: distance\+: 1720 cost\+: 222.\+40
+
+Test(4)\+: distance\+: 3107 cost\+: 587.\+44
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00117}{117}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_a334343b83897876bc71af18f1da1393d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplan_trip_window_a7cc96a4b49474fdcc143876c1c1d5f97}\label{classplan_trip_window_a7cc96a4b49474fdcc143876c1c1d5f97}} 
+\index{planTripWindow@{planTripWindow}!on\_planShortTrip\_clicked@{on\_planShortTrip\_clicked}}
+\index{on\_planShortTrip\_clicked@{on\_planShortTrip\_clicked}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{on\_planShortTrip\_clicked}{on\_planShortTrip\_clicked}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::on\+\_\+plan\+Short\+Trip\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+This function is the plan the shortes trip form ASU, it will plan the college tour trip starding at ASU and vist the 11 college after click it. \DoxyHorRuler{0}
+ Test(1) -\/\texorpdfstring{$>$}{>} 5 trips\+: distance\+: 790.\+3 cost\+: 0
+
+Test(2) -\/\texorpdfstring{$>$}{>} 4 trips\+: distance\+: 457.\+3 cost\+: 0
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_a7cc96a4b49474fdcc143876c1c1d5f97_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplan_trip_window_a98d7b921e6d90cdb571b03fa65723727}\label{classplan_trip_window_a98d7b921e6d90cdb571b03fa65723727}} 
+\index{planTripWindow@{planTripWindow}!on\_receiptDone\_clicked@{on\_receiptDone\_clicked}}
+\index{on\_receiptDone\_clicked@{on\_receiptDone\_clicked}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{on\_receiptDone\_clicked}{on\_receiptDone\_clicked}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::on\+\_\+receipt\+Done\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+This function is the done function, it will display the main page after click it.
+
+This function is the search function, it will search the college name that is currenly display on the combo box after click it. 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00459}{459}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classplan_trip_window_a98d7b921e6d90cdb571b03fa65723727_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplan_trip_window_ae34303389cfd778dbddf011c1062b0d9}\label{classplan_trip_window_ae34303389cfd778dbddf011c1062b0d9}} 
+\index{planTripWindow@{planTripWindow}!on\_SearchButton\_clicked@{on\_SearchButton\_clicked}}
+\index{on\_SearchButton\_clicked@{on\_SearchButton\_clicked}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{on\_SearchButton\_clicked}{on\_SearchButton\_clicked}}
+{\footnotesize\ttfamily void plan\+Trip\+Window\+::on\+\_\+\+Search\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00691}{691}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+\mbox{\Hypertarget{classplan_trip_window_a488ed48e3c8987d544c09de1be0563e2}\label{classplan_trip_window_a488ed48e3c8987d544c09de1be0563e2}} 
+\index{planTripWindow@{planTripWindow}!on\_selectCampus\_comboBox\_currentIndexChanged@{on\_selectCampus\_comboBox\_currentIndexChanged}}
+\index{on\_selectCampus\_comboBox\_currentIndexChanged@{on\_selectCampus\_comboBox\_currentIndexChanged}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{on\_selectCampus\_comboBox\_currentIndexChanged}{on\_selectCampus\_comboBox\_currentIndexChanged}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::on\+\_\+select\+Campus\+\_\+combo\+Box\+\_\+current\+Index\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+This function changes the souviner table base on what campus the student has selected in the combo box. 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00551}{551}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_a488ed48e3c8987d544c09de1be0563e2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplan_trip_window_a6e874783a5521ab0a539f841a5af74c7}\label{classplan_trip_window_a6e874783a5521ab0a539f841a5af74c7}} 
+\index{planTripWindow@{planTripWindow}!on\_startTrip\_clicked@{on\_startTrip\_clicked}}
+\index{on\_startTrip\_clicked@{on\_startTrip\_clicked}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{on\_startTrip\_clicked}{on\_startTrip\_clicked}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::on\+\_\+start\+Trip\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+This function is the plan a trip form saddleback college, it will plan the college tour trip starding at saddleback college and vist the 11 college after click it. \DoxyHorRuler{0}
+ Test\+: distance\+: 5315.\+5 cost\+: 0
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00255}{255}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_a6e874783a5521ab0a539f841a5af74c7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplan_trip_window_a6d125665c0a5d5b4290393a6125b6f55}\label{classplan_trip_window_a6d125665c0a5d5b4290393a6125b6f55}} 
+\index{planTripWindow@{planTripWindow}!on\_startTripFormUIC\_clicked@{on\_startTripFormUIC\_clicked}}
+\index{on\_startTripFormUIC\_clicked@{on\_startTripFormUIC\_clicked}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{on\_startTripFormUIC\_clicked}{on\_startTripFormUIC\_clicked}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::on\+\_\+start\+Trip\+Form\+UIC\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+This function is the plan the a trip form UIC, it will plan the college tour trip starding at UCI and vist the 13 college after click it. \DoxyHorRuler{0}
+ Test\+: distance should be\+: 5847.\+2 cost\+: 0
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00306}{306}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_a6d125665c0a5d5b4290393a6125b6f55_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplan_trip_window_aeb900b032acce3f075be92c86674c1ee}\label{classplan_trip_window_aeb900b032acce3f075be92c86674c1ee}} 
+\index{planTripWindow@{planTripWindow}!recursiveCollegeSort@{recursiveCollegeSort}}
+\index{recursiveCollegeSort@{recursiveCollegeSort}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{recursiveCollegeSort()}{recursiveCollegeSort()}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::recursive\+College\+Sort (\begin{DoxyParamCaption}\item[{QString}]{current\+Camp }\end{DoxyParamCaption})}
+
+This function sort the college touring trip list in order. For example, from the starting campus, the next campus will be the closest to the start, then the closest after that. Each recursive call find the closest campus to the campus passed in. When the closest is found, the new campus is sorted and then used for the next call. 
+\begin{DoxyParams}{Parameters}
+{\em String} & current\+Camp, the name of the current campues \\
+\hline
+\end{DoxyParams}
+\texorpdfstring{$<$}{<} queue of sorted campuses for tour
+
+\texorpdfstring{$<$}{<} vector of selected campuses for the tour
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00366}{366}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_aeb900b032acce3f075be92c86674c1ee_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_aeb900b032acce3f075be92c86674c1ee_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplan_trip_window_af0265e054d4debcef2e42c06813da973}\label{classplan_trip_window_af0265e054d4debcef2e42c06813da973}} 
+\index{planTripWindow@{planTripWindow}!showAvaliListCombo@{showAvaliListCombo}}
+\index{showAvaliListCombo@{showAvaliListCombo}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{showAvaliListCombo()}{showAvaliListCombo()}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::show\+Avali\+List\+Combo (\begin{DoxyParamCaption}\item[{QSql\+Query\+Model $\ast$}]{model }\end{DoxyParamCaption})}
+
+The avaliable campuses combo box on the general tour college selection UI will display the information held in a QSql\+Query\+Model pointer. 
+\begin{DoxyParams}{Parameters}
+{\em QSql\+Query\+Model,model} & (passed as a pointer) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing returned 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00176}{176}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_af0265e054d4debcef2e42c06813da973_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplan_trip_window_aeb30c8a217c402014f3ad7c5a073d0d9}\label{classplan_trip_window_aeb30c8a217c402014f3ad7c5a073d0d9}} 
+\index{planTripWindow@{planTripWindow}!showAvaliListView@{showAvaliListView}}
+\index{showAvaliListView@{showAvaliListView}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{showAvaliListView()}{showAvaliListView()}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::show\+Avali\+List\+View (\begin{DoxyParamCaption}\item[{QSql\+Query\+Model $\ast$}]{model }\end{DoxyParamCaption})}
+
+The avaliable campuses list view on the general tour college selection UI will display the information held in a QSql\+Query\+Model pointer. 
+\begin{DoxyParams}{Parameters}
+{\em QSql\+Query\+Model,model} & (passed as a pointer) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing returned 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00154}{154}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_aeb30c8a217c402014f3ad7c5a073d0d9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplan_trip_window_a4edeaca08683f49ef9873bde41e79ebe}\label{classplan_trip_window_a4edeaca08683f49ef9873bde41e79ebe}} 
+\index{planTripWindow@{planTripWindow}!showSelectCampusComboBox@{showSelectCampusComboBox}}
+\index{showSelectCampusComboBox@{showSelectCampusComboBox}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{showSelectCampusComboBox()}{showSelectCampusComboBox()}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::show\+Select\+Campus\+Combo\+Box (\begin{DoxyParamCaption}\item[{QString\+List\+Model $\ast$}]{model }\end{DoxyParamCaption})}
+
+This function will used the tax that is in the campus combo box for the souvenir shop UI and display the information held in a QString\+List\+Model pointer. 
+\begin{DoxyParams}{Parameters}
+{\em pointer} & model, the list of college name in the form of database accesed it by QString\+List\+Model pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing returned, it just display souvenirs of the selected campus name in the combo box 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00531}{531}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_a4edeaca08683f49ef9873bde41e79ebe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplan_trip_window_a9213bb2293f2edae7c0f195ab1772c55}\label{classplan_trip_window_a9213bb2293f2edae7c0f195ab1772c55}} 
+\index{planTripWindow@{planTripWindow}!showSelectListView@{showSelectListView}}
+\index{showSelectListView@{showSelectListView}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{showSelectListView()}{showSelectListView()}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::show\+Select\+List\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The selected campuses list view on the general tour college selection UI will display the information held in a QSql\+Query\+Model pointer. 
+\begin{DoxyParams}{Parameters}
+{\em QSql\+Query\+Model,model} & (passed as a pointer) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing returned 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00165}{165}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_a9213bb2293f2edae7c0f195ab1772c55_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplan_trip_window_a06e0599e743a304150c9defb6a3c9045}\label{classplan_trip_window_a06e0599e743a304150c9defb6a3c9045}} 
+\index{planTripWindow@{planTripWindow}!showSouvCartTableView@{showSouvCartTableView}}
+\index{showSouvCartTableView@{showSouvCartTableView}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{showSouvCartTableView()}{showSouvCartTableView()}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::show\+Souv\+Cart\+Table\+View (\begin{DoxyParamCaption}\item[{QSql\+Query\+Model $\ast$}]{model }\end{DoxyParamCaption})}
+
+The souvenir cart table view for the souvenir shop UI will display the information about the souvenirs selected held in a QString\+List\+Model pointer. 
+\begin{DoxyParams}{Parameters}
+{\em pointer} & model, the list of souvenirs in the form of database accesed it by QString\+List\+Model pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing returned, it just display souvenirs of the selected campus name in the table view 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00561}{561}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_a06e0599e743a304150c9defb6a3c9045_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplan_trip_window_aa2c126c1df2c9bfd82407af4dc39213b}\label{classplan_trip_window_aa2c126c1df2c9bfd82407af4dc39213b}} 
+\index{planTripWindow@{planTripWindow}!showSouvTableView@{showSouvTableView}}
+\index{showSouvTableView@{showSouvTableView}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{showSouvTableView()}{showSouvTableView()}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::show\+Souv\+Table\+View (\begin{DoxyParamCaption}\item[{QSql\+Query\+Model $\ast$}]{model }\end{DoxyParamCaption})}
+
+The souvenir table view for the souvenir shop UI will display the information about the souvenirs of a selected campus held in a QString\+List\+Model pointer. 
+\begin{DoxyParams}{Parameters}
+{\em pointer} & model, the list of souvenirs in the form of database accesed it by QString\+List\+Model pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing returned, it just display souvenirs of the selected campus name in the table view 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00541}{541}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_aa2c126c1df2c9bfd82407af4dc39213b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplan_trip_window_ada0109671578216d8f41134096f987f2}\label{classplan_trip_window_ada0109671578216d8f41134096f987f2}} 
+\index{planTripWindow@{planTripWindow}!showTotal@{showTotal}}
+\index{showTotal@{showTotal}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{showTotal()}{showTotal()}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::show\+Total (\begin{DoxyParamCaption}\item[{double}]{total }\end{DoxyParamCaption})}
+
+This function show the total price of all souvenirs and initializes the widgets on the UI. 
+\begin{DoxyParams}{Parameters}
+{\em double} & total, the total price \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing returned, it just set the total price to the UI 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00665}{665}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_ada0109671578216d8f41134096f987f2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplan_trip_window_ac72dc1377366cf380e9aa6e2a7d9bad6}\label{classplan_trip_window_ac72dc1377366cf380e9aa6e2a7d9bad6}} 
+\index{planTripWindow@{planTripWindow}!showTotalDistent@{showTotalDistent}}
+\index{showTotalDistent@{showTotalDistent}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{showTotalDistent()}{showTotalDistent()}}
+{\footnotesize\ttfamily plan\+Trip\+Window\+::show\+Total\+Distent (\begin{DoxyParamCaption}\item[{double}]{distance }\end{DoxyParamCaption})}
+
+This function show the total distent of each trip and initializes the widgets on the UI. 
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing returned 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{plantripwindow_8cpp_source_l00301}{301}} of file \mbox{\hyperlink{plantripwindow_8cpp_source}{plantripwindow.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplan_trip_window_ac72dc1377366cf380e9aa6e2a7d9bad6_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classplan_trip_window_aee3a1f37aa19755d93d6c4ce7c595888}\label{classplan_trip_window_aee3a1f37aa19755d93d6c4ce7c595888}} 
+\index{planTripWindow@{planTripWindow}!asuNum@{asuNum}}
+\index{asuNum@{asuNum}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{asuNum}{asuNum}}
+{\footnotesize\ttfamily int plan\+Trip\+Window\+::asu\+Num\hspace{0.3cm}{\ttfamily [private]}}
+
+the maximum number of campuses allowed during the ASU tour 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8h_source_l00250}{250}} of file \mbox{\hyperlink{plantripwindow_8h_source}{plantripwindow.\+h}}.
+
+\mbox{\Hypertarget{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}\label{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}} 
+\index{planTripWindow@{planTripWindow}!distance@{distance}}
+\index{distance@{distance}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{distance}{distance}}
+{\footnotesize\ttfamily double plan\+Trip\+Window\+::distance\hspace{0.3cm}{\ttfamily [private]}}
+
+double of the total distance form the tours 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8h_source_l00255}{255}} of file \mbox{\hyperlink{plantripwindow_8h_source}{plantripwindow.\+h}}.
+
+\mbox{\Hypertarget{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}\label{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}} 
+\index{planTripWindow@{planTripWindow}!m\_database@{m\_database}}
+\index{m\_database@{m\_database}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{m\_database}{m\_database}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdb_manager}{db\+Manager}} plan\+Trip\+Window\+::m\+\_\+database\hspace{0.3cm}{\ttfamily [private]}}
+
+database manager variable 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8h_source_l00246}{246}} of file \mbox{\hyperlink{plantripwindow_8h_source}{plantripwindow.\+h}}.
+
+\mbox{\Hypertarget{classplan_trip_window_aff85fc174318970256fdf02820298259}\label{classplan_trip_window_aff85fc174318970256fdf02820298259}} 
+\index{planTripWindow@{planTripWindow}!selectedCampuses@{selectedCampuses}}
+\index{selectedCampuses@{selectedCampuses}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{selectedCampuses}{selectedCampuses}}
+{\footnotesize\ttfamily QVector$<$QString$>$ plan\+Trip\+Window\+::selected\+Campuses\hspace{0.3cm}{\ttfamily [private]}}
+
+vector of selected campuses for the tour 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8h_source_l00247}{247}} of file \mbox{\hyperlink{plantripwindow_8h_source}{plantripwindow.\+h}}.
+
+\mbox{\Hypertarget{classplan_trip_window_a9b7184ea541d0dd225be9f8f0204b3f8}\label{classplan_trip_window_a9b7184ea541d0dd225be9f8f0204b3f8}} 
+\index{planTripWindow@{planTripWindow}!selectNum@{selectNum}}
+\index{selectNum@{selectNum}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{selectNum}{selectNum}}
+{\footnotesize\ttfamily int plan\+Trip\+Window\+::select\+Num\hspace{0.3cm}{\ttfamily [private]}}
+
+the current number of campuses 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8h_source_l00251}{251}} of file \mbox{\hyperlink{plantripwindow_8h_source}{plantripwindow.\+h}}.
+
+\mbox{\Hypertarget{classplan_trip_window_a66925bada7135d92869d291f90c43f5f}\label{classplan_trip_window_a66925bada7135d92869d291f90c43f5f}} 
+\index{planTripWindow@{planTripWindow}!sortedCampuses@{sortedCampuses}}
+\index{sortedCampuses@{sortedCampuses}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{sortedCampuses}{sortedCampuses}}
+{\footnotesize\ttfamily QQueue$<$QString$>$ plan\+Trip\+Window\+::sorted\+Campuses\hspace{0.3cm}{\ttfamily [private]}}
+
+queue of sorted campuses for tour 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8h_source_l00248}{248}} of file \mbox{\hyperlink{plantripwindow_8h_source}{plantripwindow.\+h}}.
+
+\mbox{\Hypertarget{classplan_trip_window_a31ef66e8ef0176e9b849ac3273ad6d8b}\label{classplan_trip_window_a31ef66e8ef0176e9b849ac3273ad6d8b}} 
+\index{planTripWindow@{planTripWindow}!souv@{souv}}
+\index{souv@{souv}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{souv}{souv}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structplan_trip_window_1_1_souvenir}{Souvenir}} plan\+Trip\+Window\+::souv\hspace{0.3cm}{\ttfamily [private]}}
+
+struct of the purchased souvenirs 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8h_source_l00253}{253}} of file \mbox{\hyperlink{plantripwindow_8h_source}{plantripwindow.\+h}}.
+
+\mbox{\Hypertarget{classplan_trip_window_a51ec8b80adbc2e56c55b3ff387740b41}\label{classplan_trip_window_a51ec8b80adbc2e56c55b3ff387740b41}} 
+\index{planTripWindow@{planTripWindow}!souvenirCart@{souvenirCart}}
+\index{souvenirCart@{souvenirCart}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{souvenirCart}{souvenirCart}}
+{\footnotesize\ttfamily QStack$<$\mbox{\hyperlink{structplan_trip_window_1_1_souvenir}{Souvenir}}$>$ plan\+Trip\+Window\+::souvenir\+Cart\hspace{0.3cm}{\ttfamily [private]}}
+
+stack of the purchased souvenirs 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8h_source_l00249}{249}} of file \mbox{\hyperlink{plantripwindow_8h_source}{plantripwindow.\+h}}.
+
+\mbox{\Hypertarget{classplan_trip_window_a194cd478020a3a79d89cf1685eec96e9}\label{classplan_trip_window_a194cd478020a3a79d89cf1685eec96e9}} 
+\index{planTripWindow@{planTripWindow}!sQry@{sQry}}
+\index{sQry@{sQry}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{sQry}{sQry}}
+{\footnotesize\ttfamily QString plan\+Trip\+Window\+::s\+Qry\hspace{0.3cm}{\ttfamily [private]}}
+
+souvenir query -\/ ACCUMULATOR 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8h_source_l00252}{252}} of file \mbox{\hyperlink{plantripwindow_8h_source}{plantripwindow.\+h}}.
+
+\mbox{\Hypertarget{classplan_trip_window_aa62e3a466d00b1051efb1dd2aa9b5a85}\label{classplan_trip_window_aa62e3a466d00b1051efb1dd2aa9b5a85}} 
+\index{planTripWindow@{planTripWindow}!total@{total}}
+\index{total@{total}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{total}{total}}
+{\footnotesize\ttfamily double plan\+Trip\+Window\+::total\hspace{0.3cm}{\ttfamily [private]}}
+
+double of the total price form the purchased souvenirs 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8h_source_l00254}{254}} of file \mbox{\hyperlink{plantripwindow_8h_source}{plantripwindow.\+h}}.
+
+\mbox{\Hypertarget{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}\label{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}} 
+\index{planTripWindow@{planTripWindow}!ui@{ui}}
+\index{ui@{ui}!planTripWindow@{planTripWindow}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::plan\+Trip\+Window$\ast$ plan\+Trip\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\hyperlink{classplan_trip_window}{plan\+Trip\+Window}} UI variable 
+
+Definition at line \mbox{\hyperlink{plantripwindow_8h_source_l00245}{245}} of file \mbox{\hyperlink{plantripwindow_8h_source}{plantripwindow.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{plantripwindow_8h}{plantripwindow.\+h}}\item 
+\mbox{\hyperlink{plantripwindow_8cpp}{plantripwindow.\+cpp}}\end{DoxyCompactItemize}

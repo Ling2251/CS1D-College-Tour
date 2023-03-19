@@ -1,0 +1,248 @@
+\hypertarget{dbmanager_8cpp_source}{}\doxysection{dbmanager.\+cpp}
+\mbox{\hyperlink{dbmanager_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dbmanager_8h}{dbmanager.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00009}\mbox{\hyperlink{classdb_manager_a0a4c9dc595841e6b115c500d14e88e22}{00009}}\ \mbox{\hyperlink{classdb_manager_a0a4c9dc595841e6b115c500d14e88e22}{dbManager::dbManager}}()}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00011}00011\ \ \ \ \ QSqlDatabase\ \mbox{\hyperlink{classdb_manager_a1359fd9fa4e33c530a51a1470bfd2cc1}{m\_database}}\ =\ QSqlDatabase::addDatabase(\textcolor{stringliteral}{"{}QSQLITE"{}});}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00012}00012\ \ \ \ \ \mbox{\hyperlink{classdb_manager_a1359fd9fa4e33c530a51a1470bfd2cc1}{m\_database}}.setDatabaseName(\textcolor{stringliteral}{"{}../collegelist.db"{}});}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classdb_manager_a1359fd9fa4e33c530a51a1470bfd2cc1}{m\_database}}.open())}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00015}00015\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}Database:\ connection\ ok"{}};}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00017}00017\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00018}00018\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00019}00019\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}Error:\ DBManager\ connection\ with\ database\ failed"{}};}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00021}00021\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00022}00022\ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00024}\mbox{\hyperlink{classdb_manager_a7cf3a4a255b81a6f53efd92e5d82d41a}{00024}}\ \mbox{\hyperlink{classdb_manager_a7cf3a4a255b81a6f53efd92e5d82d41a}{dbManager::\string~dbManager}}()}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00025}00025\ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00029}00029\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00030}00030\ \textcolor{comment}{\ *\ loadCampusNamesOnly()}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00031}00031\ \textcolor{comment}{\ *\ Using\ the\ "{}select\ XXX\ from"{}\ query\ funtion,\ the\ name\ of\ the\ college\ campuses\ are\ read\ in\ from\ the\ database\ into\ a\ QSqlQueryModel.}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00032}00032\ \textcolor{comment}{\ *\ If\ a\ database\ error\ occurs,\ an\ error\ warning\ is\ printed\ to\ the\ console.}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00033}00033\ \textcolor{comment}{\ *\ IN:\ no\ formal\ parameters}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00034}00034\ \textcolor{comment}{\ *\ OUT:\ QSqlQueryModel\ (pointer)}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00035}00035\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00036}\mbox{\hyperlink{classdb_manager_a7726e111973dd8df996b0835da65c493}{00036}}\ QSqlQueryModel*\ \mbox{\hyperlink{classdb_manager_a7726e111973dd8df996b0835da65c493}{dbManager::loadCampusNamesOnly}}()}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00037}00037\ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00038}00038\ \ \ \ \ QSqlQueryModel*\ model\ =\ \textcolor{keyword}{new}\ QSqlQueryModel();}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00040}00040\ \ \ \ \ QString\ sQry\ =\ \textcolor{stringliteral}{"{}select\ stardingCollege\ as\ \(\backslash\)"{}Campuses\(\backslash\)"{}\ from\ collegelist\ group\ by\ stardingCollege;"{}};}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00041}00041\ \ \ \ \ QSqlQuery\ qry;}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00042}00042\ \ \ \ \ qry.prepare(sQry);}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{if}(!qry.exec())}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00045}00045\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nError\ Loading\ Campuses\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00049}00049\ \ \ \ \ model-\/>setQuery(qry);}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{keywordflow}{return}\ model;}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00051}00051\ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00054}00054\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00055}00055\ \textcolor{comment}{\ *\ loadOtherCampusAndDist(QString\ campus)}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00056}00056\ \textcolor{comment}{\ *\ Using\ the\ "{}select\ XXX\ from"{}\ query\ funtion\ and\ using\ the\ name\ of\ a\ single\ campus,}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00057}00057\ \textcolor{comment}{\ *\ the\ names\ of\ the\ other\ campuses\ and\ their\ distance\ between\ them\ and\ the\ original\ campus\ are\ read\ in\ from\ the\ database\ into\ a\ QSqlQueryModel.}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00058}00058\ \textcolor{comment}{\ *\ If\ a\ database\ error\ occurs,\ an\ error\ warning\ is\ printed\ to\ the\ console.}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00059}00059\ \textcolor{comment}{\ *\ IN:\ no\ formal\ parameters}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00060}00060\ \textcolor{comment}{\ *\ OUT:\ QSqlQueryModel\ (pointer)}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00061}00061\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00062}\mbox{\hyperlink{classdb_manager_a1f86f5f809441395499a9229733ff24e}{00062}}\ QSqlQueryModel*\ \mbox{\hyperlink{classdb_manager_a1f86f5f809441395499a9229733ff24e}{dbManager::loadOtherCampusAndDist}}(QString\ campus)}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00063}00063\ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00064}00064\ \ \ \ \ QSqlQueryModel*\ model\ =\ \textcolor{keyword}{new}\ QSqlQueryModel();}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00066}00066\ \ \ \ \ QString\ sQry\ =\ \textcolor{stringliteral}{"{}SELECT\ endingCollege\ as\ 'Campuses',\ distance\ as\ 'Distance(mi)'\ FROM\ collegelist\ WHERE\ stardingCollege='"{}}\ +\ campus\ +\ \textcolor{stringliteral}{"{}';"{}};}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00067}00067\ \ \ \ \ QSqlQuery\ qry;}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00068}00068\ \ \ \ \ qry.prepare(sQry);}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00070}00070\ \ \ \ \ \textcolor{keywordflow}{if}(!qry.exec())}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00071}00071\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nError\ Loading\ Campuses\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00075}00075\ \ \ \ \ model-\/>setQuery(qry);}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00076}00076\ \ \ \ \ \textcolor{keywordflow}{return}\ model;}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00077}00077\ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00080}00080\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00081}00081\ \textcolor{comment}{\ *\ checkCampusName(QString\ campus)}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00082}00082\ \textcolor{comment}{\ *\ Using\ the\ "{}select\ XXX\ from"{}\ query\ funtion,\ this\ function\ determines\ if\ the\ specified\ college\ is\ present\ in\ the\ database.}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00083}00083\ \textcolor{comment}{\ *\ If\ a\ database\ error\ occurs,\ an\ error\ warning\ is\ printed\ to\ the\ console.}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00084}00084\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00085}\mbox{\hyperlink{classdb_manager_a83cac4edd98c0ff51ec1730db5af2e5a}{00085}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classdb_manager_a83cac4edd98c0ff51ec1730db5af2e5a}{dbManager::checkCampusName}}(QString\ campus)}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00086}00086\ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00087}00087\ \ \ \ \ \textcolor{keywordtype}{bool}\ execute\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00088}00088\ \ \ \ \ QSqlQuery\ qry;}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00089}00089\ \ \ \ \ qry.prepare(\textcolor{stringliteral}{"{}SELECT\ *\ from\ collegeList\ where\ stardingCollege\ =\ '"{}}\ +campus+\ \textcolor{stringliteral}{"{}'"{}});}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00091}00091\ \ \ \ \ \textcolor{keywordflow}{if}(qry.exec())}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00092}00092\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ execute\ =\ qry.next();}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00094}00094\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00095}00095\ \ \ \ \ \textcolor{keywordflow}{return}\ execute;}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00096}00096\ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00099}00099\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00100}00100\ \textcolor{comment}{\ *\ GetDistBtwn(QString\ start,\ QString\ end)}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00101}00101\ \textcolor{comment}{\ *\ Using\ the\ "{}select\ XXX\ from"{}\ query\ funtion,\ the\ distance\ between\ the\ 2\ specified\ campuses.}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00102}00102\ \textcolor{comment}{\ *\ If\ a\ database\ error\ occurs,\ an\ error\ warning\ is\ printed\ to\ the\ console.}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00103}00103\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00104}\mbox{\hyperlink{classdb_manager_aa797049558e234dd8b8b7cf542c388d4}{00104}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classdb_manager_aa797049558e234dd8b8b7cf542c388d4}{dbManager::GetDistBtwn}}(QString\ start,\ QString\ end)}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00105}00105\ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00106}00106\ \ \ \ \ \textcolor{keywordtype}{double}\ distBtwn\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00107}00107\ \ \ \ \ QString\ sQry\ =\ \textcolor{stringliteral}{"{}select\ distance\ from\ collegeList\ where\ stardingCollege\ =\ '"{}}\ +start+\ \textcolor{stringliteral}{"{}'\ and\ endingCollege\ =\ '"{}}\ +end+\ \textcolor{stringliteral}{"{}';"{}};}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00109}00109\ \ \ \ \ QSqlQuery\ qry;}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00110}00110\ \ \ \ \ qry.prepare(sQry);}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00111}00111\ \ \ \ \ qry.exec();}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00113}00113\ \ \ \ \ \textcolor{keywordflow}{if}(qry.next())}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00114}00114\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00115}00115\ \ \ \ \ \ \ \ \ distBtwn\ =\ qry.value(0).toDouble();}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00116}00116\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00118}00118\ \ \ \ \ \textcolor{keywordflow}{return}\ distBtwn;}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00119}00119\ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00121}00121\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00122}00122\ \textcolor{comment}{\ *\ loadCampusSouvenirs(QString\ campus)}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00123}00123\ \textcolor{comment}{\ *\ Using\ the\ "{}select\ XXX\ from"{}\ query\ funtion,\ the\ souvenirs\ for\ a\ specified\ campus\ are\ read\ in\ from\ the\ database\ into\ a\ QSqlQueryModel.}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00124}00124\ \textcolor{comment}{\ *\ If\ a\ database\ error\ occurs,\ an\ error\ warning\ is\ printed\ to\ the\ console.}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00125}00125\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00126}\mbox{\hyperlink{classdb_manager_aff0e59fb325dba293707ad93a2d99d35}{00126}}\ QSqlQueryModel*\ \mbox{\hyperlink{classdb_manager_aff0e59fb325dba293707ad93a2d99d35}{dbManager::loadCampusSouvenirs}}(QString\ campus)}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00127}00127\ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00128}00128\ \ \ \ \ QSqlQueryModel*\ model\ =\ \textcolor{keyword}{new}\ QSqlQueryModel();}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00130}00130\ \ \ \ \ QString\ sQry\ =\ \textcolor{stringliteral}{"{}select\ souvenirsName\ as\ 'Souvenirs',\ cost\ as\ 'Cost(\$)'\ from\ souvenirs\ where\ collegeName\ =\ '"{}}\ +campus+\ \textcolor{stringliteral}{"{}';"{}};}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00131}00131\ \ \ \ \ qDebug()\ <<\ sQry;}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00132}00132\ \ \ \ \ QSqlQuery\ qry;}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00133}00133\ \ \ \ \ qry.prepare(sQry);}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00135}00135\ \ \ \ \ \textcolor{keywordflow}{if}(!qry.exec())}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00136}00136\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00137}00137\ \ \ \ \ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nError\ Loading\ Campuses\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00138}00138\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00140}00140\ \ \ \ \ model-\/>setQuery(qry);}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00141}00141\ \ \ \ \ \textcolor{keywordflow}{return}\ model;}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00142}00142\ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00143}00143\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00144}00144\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00145}00145\ \textcolor{comment}{\ *\ loadRemainingCampusNamesOnly(QVector<QString>\ campuses)}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00146}00146\ \textcolor{comment}{\ *\ Using\ the\ "{}select\ XXX\ from"{}\ query\ funtion,\ the\ name\ of\ the\ avaliable\ college\ campuses\ are\ read\ in\ from\ the\ database\ into\ a\ QSqlQueryModel.}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00147}00147\ \textcolor{comment}{\ *\ The\ function\ excludes\ reading\ in\ the\ campuses\ from\ the\ passed\ in\ vector.}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00148}00148\ \textcolor{comment}{\ *\ If\ a\ database\ error\ occurs,\ an\ error\ warning\ is\ printed\ to\ the\ console.}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00149}00149\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00150}\mbox{\hyperlink{classdb_manager_af67c0634fd2182a78d643f2746c3fffa}{00150}}\ QSqlQueryModel*\ \mbox{\hyperlink{classdb_manager_af67c0634fd2182a78d643f2746c3fffa}{dbManager::loadRemainingCampusNamesOnly}}(QVector<QString>\ campuses)}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00151}00151\ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00152}00152\ \ \ \ \ QSqlQueryModel*\ model\ =\ \textcolor{keyword}{new}\ QSqlQueryModel();}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00154}00154\ \ \ \ \ QString*\ p\ =\ campuses.begin();}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00155}00155\ \ \ \ \ QString\ sQry\ =\ \textcolor{stringliteral}{"{}select\ stardingCollege\ as\ \(\backslash\)"{}Campuses\(\backslash\)"{}\ from\ collegelist\ where\ not\ stardingCollege\ =\ '"{}}\ +*p+\ \textcolor{stringliteral}{"{}'"{}};}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00156}00156\ \ \ \ \ p++;}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00157}00157\ \ \ \ \ \textcolor{keywordflow}{while}\ (p\ !=\ campuses.end())}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00158}00158\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00159}00159\ \ \ \ \ \ \ \ \ sQry\ +=\ \textcolor{stringliteral}{"{}\ and\ not\ stardingCollege\ =\ '"{}}\ +*p+\ \textcolor{stringliteral}{"{}'"{}};}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00160}00160\ \ \ \ \ \ \ \ \ p++;}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00161}00161\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00162}00162\ \ \ \ \ sQry\ +=\ \textcolor{stringliteral}{"{}\ group\ by\ stardingCollege;"{}};}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00163}00163\ \ \ \ \ QSqlQuery\ qry;}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00164}00164\ \ \ \ \ qry.prepare(sQry);}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00165}00165\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00166}00166\ \ \ \ \ \textcolor{keywordflow}{if}(!qry.exec())}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00167}00167\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00168}00168\ \ \ \ \ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nError\ Loading\ Campuses\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00169}00169\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00170}00170\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00171}00171\ \ \ \ \ model-\/>setQuery(qry);}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00172}00172\ \ \ \ \ \textcolor{keywordflow}{return}\ model;}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00173}00173\ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00174}00174\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00175}00175\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00176}00176\ \textcolor{comment}{\ *\ loadSouvCart(QString\ sQry)}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00177}00177\ \textcolor{comment}{\ *\ Using\ the\ "{}select\ XXX\ from"{}\ query\ funtion,\ the\ selected\ sovenirs\ are\ read\ in\ from\ the\ database\ into\ a\ QSqlQueryModel.}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00178}00178\ \textcolor{comment}{\ *\ The\ query\ is\ an\ accumulator\ query\ that\ contains\ all\ the\ souvenirs\ the\ user\ has\ selected\ to\ add\ to\ an\ update\ quey\ using\ SQL\ code\ "{}UNION"{}.}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00179}00179\ \textcolor{comment}{\ *\ If\ a\ database\ error\ occurs,\ an\ error\ warning\ is\ printed\ to\ the\ console.}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00180}00180\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00181}\mbox{\hyperlink{classdb_manager_ac617c650c039bb7b45e60563f572031d}{00181}}\ QSqlQueryModel*\ \mbox{\hyperlink{classdb_manager_ac617c650c039bb7b45e60563f572031d}{dbManager::loadSouvCart}}(QString\ sQry)}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00182}00182\ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00183}00183\ \ \ \ \ QSqlQueryModel*\ model\ =\ \textcolor{keyword}{new}\ QSqlQueryModel();}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00184}00184\ \ \ \ \ QSqlQuery\ qry;}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00185}00185\ \ \ \ \ qry.prepare(sQry);}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00186}00186\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00187}00187\ \ \ \ \ \textcolor{keywordflow}{if}(!qry.exec())}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00188}00188\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00189}00189\ \ \ \ \ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nError\ Loading\ Souvenirs\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00190}00190\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00191}00191\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00192}00192\ \ \ \ \ model-\/>setQuery(qry);}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00193}00193\ \ \ \ \ \textcolor{keywordflow}{return}\ model;}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00194}00194\ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00195}00195\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00196}00196\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00197}00197\ \textcolor{comment}{\ *\ createCart()}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00198}00198\ \textcolor{comment}{\ *\ Creates\ a\ temporary\ table\ called\ cart\ in\ the\ SQL\ Database,\ and\ alters\ the\ table\ by\ adding\ a\ column\ called\ quantity\ for\ the\ quanity\ purchased.}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00199}00199\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00200}\mbox{\hyperlink{classdb_manager_a092fd94dfc8761dc238a20bc20855fdc}{00200}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdb_manager_a092fd94dfc8761dc238a20bc20855fdc}{dbManager::createCart}}()}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00201}00201\ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00202}00202\ \ \ \ \ \textcolor{comment}{//cartQry\ -\/\ temporary\ table}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00203}00203\ \ \ \ \ QSqlQuery\ cartQry;}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00204}00204\ \ \ \ \ cartQry.prepare(\textcolor{stringliteral}{"{}create\ table\ Cart\ as\ SELECT\ *\ from\ souvenirs;"{}});}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00205}00205\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00206}00206\ \ \ \ \ \textcolor{keywordflow}{if}(!cartQry.exec())}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00207}00207\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00208}00208\ \ \ \ \ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nError\ Creating\ Cart\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00209}00209\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00210}00210\ \ \ \ \ cartQry.prepare(\textcolor{stringliteral}{"{}ALTER\ table\ Cart\ add\ quantity\ real\ default\ 0;"{}});}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00211}00211\ \ \ \ \ \textcolor{keywordflow}{if}(!cartQry.exec())}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00212}00212\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00213}00213\ \ \ \ \ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nError\ Creating\ Quanitity\ Column\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00214}00214\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00215}00215\ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00216}00216\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00217}00217\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00218}00218\ \textcolor{comment}{\ *\ deleteCart()}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00219}00219\ \textcolor{comment}{\ *\ This\ deletes\ the\ cart\ table\ in\ the\ SQL\ Database\ when\ the\ user\ has\ completed\ their\ shopping\ trip.}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00220}00220\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00221}\mbox{\hyperlink{classdb_manager_a0a8828c717828246ea83f975024fb75f}{00221}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdb_manager_a0a8828c717828246ea83f975024fb75f}{dbManager::deleteCart}}()}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00222}00222\ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00223}00223\ \ \ \ \ \textcolor{comment}{//cartQry\ -\/\ temporary\ table}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00224}00224\ \ \ \ \ QSqlQuery\ cartQry;}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00225}00225\ \ \ \ \ cartQry.prepare(\textcolor{stringliteral}{"{}drop\ table\ Cart;"{}});}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00226}00226\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00227}00227\ \ \ \ \ \textcolor{keywordflow}{if}(!cartQry.exec())}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00228}00228\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00229}00229\ \ \ \ \ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nError\ dropping\ Cart\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00230}00230\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00231}00231\ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00232}00232\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00233}00233\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00234}00234\ \textcolor{comment}{\ *\ updateCartQuantity(QString\ campus,\ QString\ souv,\ int\ quantity)}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00235}00235\ \textcolor{comment}{\ *\ This\ function\ updates\ the\ changes\ of\ quantity\ to\ the\ cart\ table\ in\ the\ SQL\ Database.}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00236}00236\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00237}\mbox{\hyperlink{classdb_manager_a1d7cf5b8b1eacb01059e9b7f026a0ebb}{00237}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdb_manager_a1d7cf5b8b1eacb01059e9b7f026a0ebb}{dbManager::updateCartQuantity}}(QString\ campus,\ QString\ souv,\ \textcolor{keywordtype}{int}\ quant)}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00238}00238\ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00239}00239\ \ \ \ \ \textcolor{comment}{//Update\ quantity}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00240}00240\ \ \ \ \ QSqlQuery\ updateQry;}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00241}00241\ \ \ \ \ QString\ uQry\ =\ \textcolor{stringliteral}{"{}UPDATE\ Cart\ SET\ quantity\ =\ quantity+"{}}\ +QString::number(quant)+\ \textcolor{stringliteral}{"{}\ WHERE\ collegeName\ =\ '"{}}\ +campus+\ \textcolor{stringliteral}{"{}'\ and\ souvenirsName\ =\ '"{}}\ +souv+\ \textcolor{stringliteral}{"{}';"{}};}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00242}00242\ \ \ \ \ updateQry.prepare(uQry);}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00243}00243\ }
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00244}00244\ \ \ \ \ \textcolor{keywordflow}{if}(!updateQry.exec())}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00245}00245\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00246}00246\ \ \ \ \ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nError\ updating\ Cart\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00247}00247\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dbmanager_8cpp_source_l00248}00248\ \}}
+
+\end{DoxyCode}
