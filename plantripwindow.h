@@ -5,6 +5,7 @@
 #include <QMessageBox>
 #include <QAbstractTableModel>
 #include "dbmanager.h"
+using namespace std;
 
 /**
  * @file planTripWindow.h
@@ -245,6 +246,7 @@ private:
     Ui::planTripWindow *ui; /**< planTripWindow UI variable*/
     dbManager m_database;   /**< database manager variable*/
     QVector<QString> selectedCampuses; /**< vector of selected campuses for the tour*/
+    QVector<QString> campuseList;   /**< vector of selected campuses for the tour*/
     QQueue<QString> sortedCampuses;   /**< queue of sorted campuses for tour*/
     QStack<Souvenir> souvenirCart;  /**< stack of the purchased souvenirs*/
     int asuNum;     /**< the maximum number of campuses allowed during the ASU tour*/

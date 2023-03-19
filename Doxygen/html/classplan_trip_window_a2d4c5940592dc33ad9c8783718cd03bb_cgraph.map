@@ -1,13 +1,14 @@
 <map id="planTripWindow::on_done_button_clicked" name="planTripWindow::on_done_button_clicked">
-<area shape="rect" id="node1" title=" " alt="" coords="5,146,153,186"/>
-<area shape="rect" id="node2" href="$classplan_trip_window.html#a065e55944714eab5c0eeeda961aee8e4" title=" " alt="" coords="229,43,402,83"/>
-<area shape="rect" id="node4" href="$classplan_trip_window.html#af2cb7dffda707e3be62a9e7422797d25" title=" " alt="" coords="201,153,429,179"/>
-<area shape="rect" id="node11" href="$classplan_trip_window.html#ac72dc1377366cf380e9aa6e2a7d9bad6" title=" " alt="" coords="226,203,405,243"/>
-<area shape="rect" id="node3" href="$classdb_manager.html#aa797049558e234dd8b8b7cf542c388d4" title=" " alt="" coords="505,5,672,31"/>
-<area shape="rect" id="node5" href="$classdb_manager.html#a092fd94dfc8761dc238a20bc20855fdc" title=" " alt="" coords="511,55,666,80"/>
-<area shape="rect" id="node6" href="$classdb_manager.html#aff0e59fb325dba293707ad93a2d99d35" title=" " alt="" coords="477,104,700,129"/>
-<area shape="rect" id="node7" href="$classdb_manager.html#ac617c650c039bb7b45e60563f572031d" title=" " alt="" coords="503,153,674,179"/>
-<area shape="rect" id="node8" href="$classplan_trip_window.html#a4edeaca08683f49ef9873bde41e79ebe" title=" " alt="" coords="495,203,683,243"/>
-<area shape="rect" id="node9" href="$classplan_trip_window.html#a06e0599e743a304150c9defb6a3c9045" title=" " alt="" coords="499,267,678,307"/>
-<area shape="rect" id="node10" href="$classplan_trip_window.html#aa2c126c1df2c9bfd82407af4dc39213b" title=" " alt="" coords="499,331,678,371"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,124,153,164"/>
+<area shape="rect" id="node2" href="$classplan_trip_window.html#a065e55944714eab5c0eeeda961aee8e4" title=" " alt="" coords="229,5,402,45"/>
+<area shape="rect" id="node4" href="$classplan_trip_window.html#af2cb7dffda707e3be62a9e7422797d25" title=" " alt="" coords="201,159,429,185"/>
+<area shape="rect" id="node11" href="$classplan_trip_window.html#aeb900b032acce3f075be92c86674c1ee" title=" " alt="" coords="229,93,401,133"/>
+<area shape="rect" id="node12" href="$classplan_trip_window.html#ac72dc1377366cf380e9aa6e2a7d9bad6" title=" " alt="" coords="226,209,405,249"/>
+<area shape="rect" id="node3" href="$classdb_manager.html#aa797049558e234dd8b8b7cf542c388d4" title=" " alt="" coords="505,11,672,37"/>
+<area shape="rect" id="node5" href="$classdb_manager.html#a092fd94dfc8761dc238a20bc20855fdc" title=" " alt="" coords="511,61,666,86"/>
+<area shape="rect" id="node6" href="$classdb_manager.html#aff0e59fb325dba293707ad93a2d99d35" title=" " alt="" coords="477,110,700,135"/>
+<area shape="rect" id="node7" href="$classdb_manager.html#ac617c650c039bb7b45e60563f572031d" title=" " alt="" coords="503,159,674,185"/>
+<area shape="rect" id="node8" href="$classplan_trip_window.html#a4edeaca08683f49ef9873bde41e79ebe" title=" " alt="" coords="495,209,683,249"/>
+<area shape="rect" id="node9" href="$classplan_trip_window.html#a06e0599e743a304150c9defb6a3c9045" title=" " alt="" coords="499,273,678,313"/>
+<area shape="rect" id="node10" href="$classplan_trip_window.html#aa2c126c1df2c9bfd82407af4dc39213b" title=" " alt="" coords="499,337,678,377"/>
 </map>

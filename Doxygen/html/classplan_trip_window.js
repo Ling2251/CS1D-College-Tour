@@ -34,6 +34,7 @@ var classplan_trip_window =
     [ "showTotal", "classplan_trip_window.html#ada0109671578216d8f41134096f987f2", null ],
     [ "showTotalDistent", "classplan_trip_window.html#ac72dc1377366cf380e9aa6e2a7d9bad6", null ],
     [ "asuNum", "classplan_trip_window.html#aee3a1f37aa19755d93d6c4ce7c595888", null ],
+    [ "campuseList", "classplan_trip_window.html#ae1b6e09d500625402751ea17655b6444", null ],
     [ "distance", "classplan_trip_window.html#aa7c92c3a7ea607623e449bc4e2e766d6", null ],
     [ "m_database", "classplan_trip_window.html#aac8230af2b7b1328abc1fcb174f03bb4", null ],
     [ "selectedCampuses", "classplan_trip_window.html#aff85fc174318970256fdf02820298259", null ],

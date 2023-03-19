@@ -150,521 +150,528 @@
 \DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00181}00181\ }
 \DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00182}\mbox{\hyperlink{classplan_trip_window_acf9ff4ff97944ba9658513e69ee7ad65}{00182}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_acf9ff4ff97944ba9658513e69ee7ad65}{planTripWindow::on\_enter\_button\_clicked}}()}
 \DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00183}00183\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00184}00184\ \ \ \ \ \textcolor{comment}{//Students\ choice\ is\ saved\ into\ the\ vector}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00185}00185\ \ \ \ \ QString\ campus\ =\ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>next\_combo-\/>currentText();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00186}00186\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00187}00187\ \ \ \ \ \textcolor{comment}{//No\ campuses}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00188}00188\ \ \ \ \ \textcolor{keywordflow}{if}(campus\ ==\ \textcolor{stringliteral}{"{}"{}})}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00189}00189\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00190}00190\ \ \ \ \ \ \ \ \ QMessageBox::warning(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}ERROR"{}},\ \textcolor{stringliteral}{"{}NO\ MORE\ CAMPUSES!\ PLEASE\ CLICK\ DONE!"{}},\ QMessageBox::Ok,\ QMessageBox::NoButton);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00191}00191\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00192}00192\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classplan_trip_window_a9b7184ea541d0dd225be9f8f0204b3f8}{selectNum}}\ ==\ \mbox{\hyperlink{classplan_trip_window_aee3a1f37aa19755d93d6c4ce7c595888}{asuNum}}\ \&\&\ \mbox{\hyperlink{classplan_trip_window_a9b7184ea541d0dd225be9f8f0204b3f8}{selectNum}}!=\ 0)}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00193}00193\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00194}00194\ \ \ \ \ \ \ \ \ QMessageBox::warning(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}ERROR"{}},\ \textcolor{stringliteral}{"{}YOU\ HAVE\ REACHED\ YOUR\ MAX\ FOR\ THE\ ASU\ TOUR!\ PLEASE\ CLICK\ DONE!"{}},\ QMessageBox::Ok,\ QMessageBox::NoButton);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00195}00195\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00196}00196\ \ \ \ \ \textcolor{comment}{//Campuses\ remain}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00197}00197\ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00198}00198\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00199}00199\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Pushes\ newly\ selected\ campus\ to\ the\ back\ of\ the\ vector}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00200}00200\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.push\_back(campus);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00201}00201\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a9b7184ea541d0dd225be9f8f0204b3f8}{selectNum}}++;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00202}00202\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Refreshes\ list\ views\ and\ combo\ box}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00203}00203\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aeb30c8a217c402014f3ad7c5a073d0d9}{showAvaliListView}}(\mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_af67c0634fd2182a78d643f2746c3fffa}{loadRemainingCampusNamesOnly}}(\mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}));}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00204}00204\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a9213bb2293f2edae7c0f195ab1772c55}{showSelectListView}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00205}00205\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_af0265e054d4debcef2e42c06813da973}{showAvaliListCombo}}(\mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_af67c0634fd2182a78d643f2746c3fffa}{loadRemainingCampusNamesOnly}}(\mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}));}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00206}00206\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00207}00207\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00208}00208\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00185}00185\ \ \ \ \ \textcolor{comment}{//Students\ choice\ is\ saved\ into\ the\ vector}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00186}00186\ \ \ \ \ QString\ campus\ =\ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>next\_combo-\/>currentText();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00187}00187\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00188}00188\ \ \ \ \ \textcolor{comment}{//No\ campuses}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00189}00189\ \ \ \ \ \textcolor{keywordflow}{if}(campus\ ==\ \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00190}00190\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00191}00191\ \ \ \ \ \ \ \ \ QMessageBox::warning(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}ERROR"{}},\ \textcolor{stringliteral}{"{}NO\ MORE\ CAMPUSES!\ PLEASE\ CLICK\ DONE!"{}},\ QMessageBox::Ok,\ QMessageBox::NoButton);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00192}00192\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00193}00193\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classplan_trip_window_a9b7184ea541d0dd225be9f8f0204b3f8}{selectNum}}\ ==\ \mbox{\hyperlink{classplan_trip_window_aee3a1f37aa19755d93d6c4ce7c595888}{asuNum}}\ \&\&\ \mbox{\hyperlink{classplan_trip_window_a9b7184ea541d0dd225be9f8f0204b3f8}{selectNum}}!=\ 0)}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00194}00194\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00195}00195\ \ \ \ \ \ \ \ \ QMessageBox::warning(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}ERROR"{}},\ \textcolor{stringliteral}{"{}YOU\ HAVE\ REACHED\ YOUR\ MAX\ FOR\ THE\ ASU\ TOUR!\ PLEASE\ CLICK\ DONE!"{}},\ QMessageBox::Ok,\ QMessageBox::NoButton);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00196}00196\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00197}00197\ \ \ \ \ \textcolor{comment}{//Campuses\ remain}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00198}00198\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00199}00199\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00200}00200\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Pushes\ newly\ selected\ campus\ to\ the\ back\ of\ the\ vector}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00201}00201\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.push\_back(campus);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00202}00202\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a9b7184ea541d0dd225be9f8f0204b3f8}{selectNum}}++;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00203}00203\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Refreshes\ list\ views\ and\ combo\ box}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00204}00204\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aeb30c8a217c402014f3ad7c5a073d0d9}{showAvaliListView}}(\mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_af67c0634fd2182a78d643f2746c3fffa}{loadRemainingCampusNamesOnly}}(\mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}));}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00205}00205\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a9213bb2293f2edae7c0f195ab1772c55}{showSelectListView}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00206}00206\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_af0265e054d4debcef2e42c06813da973}{showAvaliListCombo}}(\mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_af67c0634fd2182a78d643f2746c3fffa}{loadRemainingCampusNamesOnly}}(\mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}));}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00207}00207\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00208}00208\ \}}
 \DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00209}00209\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00210}\mbox{\hyperlink{classplan_trip_window_a2d4c5940592dc33ad9c8783718cd03bb}{00210}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a2d4c5940592dc33ad9c8783718cd03bb}{planTripWindow::on\_done\_button\_clicked}}()}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00211}00211\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00212}00212\ \ \ \ \ \textcolor{keywordflow}{if}((\mbox{\hyperlink{classplan_trip_window_aee3a1f37aa19755d93d6c4ce7c595888}{asuNum}}\ ==\ 0\ ||\ \mbox{\hyperlink{classplan_trip_window_a9b7184ea541d0dd225be9f8f0204b3f8}{selectNum}}\ ==\ \mbox{\hyperlink{classplan_trip_window_aee3a1f37aa19755d93d6c4ce7c595888}{asuNum}})\ \&\&\ \mbox{\hyperlink{classplan_trip_window_a9b7184ea541d0dd225be9f8f0204b3f8}{selectNum}}!=\ 0)}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00213}00213\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00214}00214\ \ \ \ \ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}Loading..."{}},\ \textcolor{stringliteral}{"{}An\ custom\ trip\ has\ been\ selected\ and\ you\ are\ done\ selecting\ all\ your\ colleges.\ Now\ moving\ to\ Souvenir\ Screen."{}},\ QMessageBox::Ok,\ QMessageBox::NoButton);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00215}00215\ \ \ \ \ \ \ \ \ QList<QString>::fromVector(\mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}});}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00216}00216\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00217}00217\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ calculate\ the\ distance\ and\ output\ it}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00218}00218\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}}\ =\ \mbox{\hyperlink{classplan_trip_window_a065e55944714eab5c0eeeda961aee8e4}{calculateDistance}}(\mbox{\hyperlink{classplan_trip_window_a9b7184ea541d0dd225be9f8f0204b3f8}{selectNum}});}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00219}00219\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ac72dc1377366cf380e9aa6e2a7d9bad6}{showTotalDistent}}(\mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}});}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00220}00220\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00221}00221\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Go\ to\ souvenirShop\ widget}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00222}00222\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_af2cb7dffda707e3be62a9e7422797d25}{goToSouvenirShop}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00223}00223\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00224}00224\ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00225}00225\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00226}00226\ \ \ \ \ \ \ \ \ QMessageBox::warning(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}ERROR"{}},\ \textcolor{stringliteral}{"{}PLEASE\ SELECT\ AT\ LEAST\ ONE\ CAMPUSES\ THAT\ IS\ ON\ THE\ LIST."{}},\ QMessageBox::Ok,\ QMessageBox::NoButton);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00227}00227\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00228}00228\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00229}00229\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00230}00230\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00231}00231\ \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00232}00232\ \textcolor{comment}{\ *\ checkCampusVectorNames(QVector<QString>\ campuses)}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00233}00233\ \textcolor{comment}{\ *\ This\ function\ will\ check\ to\ if\ all\ the\ campuses\ from\ the\ vector\ are\ present\ in\ the\ database.}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00234}00234\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00235}\mbox{\hyperlink{classplan_trip_window_ac86371ade6112c1ccb90329d95d1fb17}{00235}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classplan_trip_window_ac86371ade6112c1ccb90329d95d1fb17}{planTripWindow::checkCampusVectorNames}}(QVector<QString>\ campuses)}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00236}00236\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00237}00237\ \ \ \ \ \textcolor{keywordtype}{bool}\ found\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00238}00238\ \ \ \ \ QString\ *p\ =\ campuses.begin();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00239}00239\ \ \ \ \ \textcolor{keywordflow}{while}\ (p\ !=\ campuses.end()\ \&\&\ found\ ==\ \textcolor{keyword}{true})}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00240}00240\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00241}00241\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_a83cac4edd98c0ff51ec1730db5af2e5a}{checkCampusName}}(*p))}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00242}00242\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00243}00243\ \ \ \ \ \ \ \ \ \ \ \ \ found\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00244}00244\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00245}00245\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00246}00246\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00247}00247\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00248}00248\ \ \ \ \ \ \ \ \ \ \ \ \ p++;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00249}00249\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00250}00250\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00251}00251\ \ \ \ \ \textcolor{keywordflow}{return}\ found;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00252}00252\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00253}00253\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00254}00254\ \textcolor{comment}{//\ This\ button\ when\ pressed\ will\ send\ the\ user\ to\ a\ page\ that\ will\ allow\ them\ to\ vist\ any\ colleges\ starting\ at\ Saddleback}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00255}\mbox{\hyperlink{classplan_trip_window_a6e874783a5521ab0a539f841a5af74c7}{00255}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a6e874783a5521ab0a539f841a5af74c7}{planTripWindow::on\_startTrip\_clicked}}()}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00256}00256\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00264}00264\ \ \ \ \ \textcolor{comment}{//\ putting\ all\ initiall\ college\ in\ to\ a\ vector\ starting\ at\ saddleback\ college}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00265}00265\ \ \ \ \ QVector<QString>\ initial11\{\textcolor{stringliteral}{"{}Saddleback\ College"{}},}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00266}00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}University\ of\ California,\ Irvine\ (UCI)"{}},}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00267}00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Arizona\ State\ University"{}},}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00268}00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Massachusetts\ Institute\ of\ Technology\ (MIT)"{}},}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00269}00269\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Northwestern"{}},}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00270}00270\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Ohio\ State\ University"{}},}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00271}00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}University\ of\ \ Michigan"{}},}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00272}00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}University\ of\ California,\ Los\ Angeles\ (UCLA)"{}},}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00273}00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}University\ of\ Oregon"{}},}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00274}00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}University\ of\ Wisconsin"{}},}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00275}00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}University\ of\ the\ Pacific"{}},}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00277}00277\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00278}00278\ \ \ \ \ \textcolor{comment}{//\ check\ if\ all\ the\ college\ is\ in\ the\ database\ befor\ the\ recursive\ function}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00279}00279\ \ \ \ \ \textcolor{keywordtype}{bool}\ allFound\ =\ \mbox{\hyperlink{classplan_trip_window_ac86371ade6112c1ccb90329d95d1fb17}{checkCampusVectorNames}}(initial11);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00280}00280\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00281}00281\ \ \ \ \ \textcolor{keywordflow}{if}(!allFound)\{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00282}00282\ \ \ \ \ \ \ \ \ QMessageBox::warning(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}ERROR"{}},\ \textcolor{stringliteral}{"{}The\ 11\ initial\ college\ are\ incomplete,\ please\ check\ with\ the\ administrator."{}},\ QMessageBox::Ok,\ QMessageBox::NoButton);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00283}00283\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00284}00284\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ append\ the\ selected\ campus\ list}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00285}00285\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.append(initial11);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00286}00286\ \ \ \ \ \ \ \ \ QString\ startTrip\ =\ *\mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.begin();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00287}00287\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00288}00288\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ recursively\ sort\ through\ the\ list}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00289}00289\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aeb900b032acce3f075be92c86674c1ee}{recursiveCollegeSort}}(startTrip);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00290}00290\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00291}00291\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ calculate\ the\ distance\ and\ output\ it}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00292}00292\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}}\ =\ \mbox{\hyperlink{classplan_trip_window_a065e55944714eab5c0eeeda961aee8e4}{calculateDistance}}(11);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00293}00293\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ac72dc1377366cf380e9aa6e2a7d9bad6}{showTotalDistent}}(\mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}});}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00294}00294\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00295}00295\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ hid\ the\ current\ UI\ and\ show\ the\ sovenirs\ UI}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00296}00296\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.append(initial11);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00297}00297\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_af2cb7dffda707e3be62a9e7422797d25}{goToSouvenirShop}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00298}00298\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00299}00299\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00300}00300\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00301}\mbox{\hyperlink{classplan_trip_window_ac72dc1377366cf380e9aa6e2a7d9bad6}{00301}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_ac72dc1377366cf380e9aa6e2a7d9bad6}{planTripWindow::showTotalDistent}}(\textcolor{keywordtype}{double}\ distance)\{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00302}00302\ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>finalDistance\_Lable-\/>setNum(\mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}});}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00303}00303\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00304}00304\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00305}00305\ \textcolor{comment}{//\ This\ button\ when\ pressed\ will\ send\ the\ user\ to\ a\ page\ that\ will\ allow\ them\ to\ vist\ any\ colleges\ starting\ at\ UCI}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00306}\mbox{\hyperlink{classplan_trip_window_a6d125665c0a5d5b4290393a6125b6f55}{00306}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a6d125665c0a5d5b4290393a6125b6f55}{planTripWindow::on\_startTripFormUIC\_clicked}}()}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00307}00307\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00315}00315\ \ \ \ \ \textcolor{comment}{//\ putting\ all\ initiall\ college\ in\ to\ a\ vector\ starting\ at\ UCI}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00316}00316\ \ \ \ \ QVector<QString>\ initial13\{\textcolor{stringliteral}{"{}University\ of\ California,\ Irvine\ (UCI)"{}},}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00317}00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Saddleback\ College"{}},}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00318}00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Arizona\ State\ University"{}},}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00319}00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Massachusetts\ Institute\ of\ Technology\ (MIT)"{}},}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00320}00320\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Northwestern"{}},}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00321}00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Ohio\ State\ University"{}},}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00322}00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}University\ of\ \ Michigan"{}},}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00323}00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}University\ of\ California,\ Los\ Angeles\ (UCLA)"{}},}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00324}00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}University\ of\ Oregon"{}},}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00325}00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}University\ of\ Wisconsin"{}},}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00326}00326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}University\ of\ the\ Pacific"{}},}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00327}00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}California\ State\ University,\ Fullerton"{}},}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00328}00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}University\ of\ Texas"{}}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00329}00329\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00330}00330\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00331}00331\ \ \ \ \ \textcolor{comment}{//\ check\ if\ all\ the\ college\ is\ in\ the\ database\ befor\ the\ recursive\ function}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00332}00332\ \ \ \ \ \textcolor{keywordtype}{bool}\ allFound\ =\ \mbox{\hyperlink{classplan_trip_window_ac86371ade6112c1ccb90329d95d1fb17}{checkCampusVectorNames}}(initial13);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00333}00333\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00334}00334\ \ \ \ \ \textcolor{keywordflow}{if}(!allFound)\{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00335}00335\ \ \ \ \ \ \ \ \ QMessageBox::warning(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}ERROR"{}},\ \textcolor{stringliteral}{"{}The\ college\ list\ are\ incomplete,\ not\ all\ 13\ college\ are\ in\ the\ list\ please\ check\ with\ the\ administrator."{}},\ QMessageBox::Ok,\ QMessageBox::NoButton);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00336}00336\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00337}00337\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00338}00338\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ append\ the\ selected\ campus\ list}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00339}00339\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.append(initial13);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00340}00340\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00341}00341\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ append\ the\ selected\ campus\ list}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00342}00342\ \ \ \ \ \ \ \ \ QString\ startTrip\ =\ *\mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.begin();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00343}00343\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00344}00344\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ recursively\ sort\ through\ the\ list}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00345}00345\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aeb900b032acce3f075be92c86674c1ee}{recursiveCollegeSort}}(startTrip);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00346}00346\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00347}00347\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ calculate\ the\ distance\ and\ output\ it}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00348}00348\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ distance\ is\ supposed\ to\ be\ 5847.2\ but\ i\ keep\ getting\ 5817.9\ missing\ saddleback\ to\ fullerton\ (29.3)}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00349}00349\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}}\ =\ \mbox{\hyperlink{classplan_trip_window_a065e55944714eab5c0eeeda961aee8e4}{calculateDistance}}(13)\ +\ 29.3;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00350}00350\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ac72dc1377366cf380e9aa6e2a7d9bad6}{showTotalDistent}}(\mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}});}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00211}\mbox{\hyperlink{classplan_trip_window_a2d4c5940592dc33ad9c8783718cd03bb}{00211}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a2d4c5940592dc33ad9c8783718cd03bb}{planTripWindow::on\_done\_button\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00212}00212\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00213}00213\ \ \ \ \ \textcolor{keywordflow}{if}((\mbox{\hyperlink{classplan_trip_window_aee3a1f37aa19755d93d6c4ce7c595888}{asuNum}}\ ==\ 0\ ||\ \mbox{\hyperlink{classplan_trip_window_a9b7184ea541d0dd225be9f8f0204b3f8}{selectNum}}\ ==\ \mbox{\hyperlink{classplan_trip_window_aee3a1f37aa19755d93d6c4ce7c595888}{asuNum}})\ \&\&\ \mbox{\hyperlink{classplan_trip_window_a9b7184ea541d0dd225be9f8f0204b3f8}{selectNum}}!=\ 0)}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00214}00214\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00215}00215\ \ \ \ \ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}Loading..."{}},\ \textcolor{stringliteral}{"{}An\ custom\ trip\ has\ been\ selected\ and\ you\ are\ done\ selecting\ all\ your\ colleges.\ Now\ moving\ to\ Souvenir\ Screen."{}},\ QMessageBox::Ok,\ QMessageBox::NoButton);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00216}00216\ \ \ \ \ \ \ \ \ copy(\mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.begin(),\ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.end(),\ back\_inserter(\mbox{\hyperlink{classplan_trip_window_ae1b6e09d500625402751ea17655b6444}{campuseList}}));}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00217}00217\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00218}00218\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ recursively\ sort\ through\ the\ list}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00219}00219\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ start\ of\ the\ list}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00220}00220\ \ \ \ \ \ \ \ \ QString\ shortTrip\ =\ *\mbox{\hyperlink{classplan_trip_window_ae1b6e09d500625402751ea17655b6444}{campuseList}}.begin();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00221}00221\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00222}00222\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aeb900b032acce3f075be92c86674c1ee}{recursiveCollegeSort}}(shortTrip);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00223}00223\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00224}00224\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ calculate\ the\ distance\ and\ output\ it}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00225}00225\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}}\ =\ \mbox{\hyperlink{classplan_trip_window_a065e55944714eab5c0eeeda961aee8e4}{calculateDistance}}(\mbox{\hyperlink{classplan_trip_window_a9b7184ea541d0dd225be9f8f0204b3f8}{selectNum}});}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00226}00226\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ac72dc1377366cf380e9aa6e2a7d9bad6}{showTotalDistent}}(\mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}});}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00227}00227\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00228}00228\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Go\ to\ souvenirShop\ widget}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00229}00229\ \ \ \ \ \ \ \ \ copy(\mbox{\hyperlink{classplan_trip_window_ae1b6e09d500625402751ea17655b6444}{campuseList}}.begin(),\ \mbox{\hyperlink{classplan_trip_window_ae1b6e09d500625402751ea17655b6444}{campuseList}}.end(),\ back\_inserter(\mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}));}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00230}00230\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_af2cb7dffda707e3be62a9e7422797d25}{goToSouvenirShop}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00231}00231\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00232}00232\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00233}00233\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00234}00234\ \ \ \ \ \ \ \ \ QMessageBox::warning(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}ERROR"{}},\ \textcolor{stringliteral}{"{}PLEASE\ SELECT\ AT\ LEAST\ ONE\ CAMPUSES\ THAT\ IS\ ON\ THE\ LIST."{}},\ QMessageBox::Ok,\ QMessageBox::NoButton);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00235}00235\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00236}00236\ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00237}00237\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00238}00238\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00239}00239\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00240}00240\ \textcolor{comment}{\ *\ checkCampusVectorNames(QVector<QString>\ campuses)}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00241}00241\ \textcolor{comment}{\ *\ This\ function\ will\ check\ to\ if\ all\ the\ campuses\ from\ the\ vector\ are\ present\ in\ the\ database.}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00242}00242\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00243}\mbox{\hyperlink{classplan_trip_window_ac86371ade6112c1ccb90329d95d1fb17}{00243}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classplan_trip_window_ac86371ade6112c1ccb90329d95d1fb17}{planTripWindow::checkCampusVectorNames}}(QVector<QString>\ campuses)}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00244}00244\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00245}00245\ \ \ \ \ \textcolor{keywordtype}{bool}\ found\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00246}00246\ \ \ \ \ QString\ *p\ =\ campuses.begin();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00247}00247\ \ \ \ \ \textcolor{keywordflow}{while}\ (p\ !=\ campuses.end()\ \&\&\ found\ ==\ \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00248}00248\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00249}00249\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_a83cac4edd98c0ff51ec1730db5af2e5a}{checkCampusName}}(*p))}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00250}00250\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ found\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00252}00252\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00253}00253\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00254}00254\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00255}00255\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00256}00256\ \ \ \ \ \ \ \ \ \ \ \ \ p++;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00257}00257\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00258}00258\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00259}00259\ \ \ \ \ \textcolor{keywordflow}{return}\ found;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00260}00260\ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00261}00261\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00262}00262\ \textcolor{comment}{//\ This\ button\ when\ pressed\ will\ send\ the\ user\ to\ a\ page\ that\ will\ allow\ them\ to\ vist\ any\ colleges\ starting\ at\ Saddleback}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00263}\mbox{\hyperlink{classplan_trip_window_a6e874783a5521ab0a539f841a5af74c7}{00263}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a6e874783a5521ab0a539f841a5af74c7}{planTripWindow::on\_startTrip\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00264}00264\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00272}00272\ \ \ \ \ \textcolor{comment}{//\ putting\ all\ initiall\ college\ in\ to\ a\ vector\ starting\ at\ saddleback\ college}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00273}00273\ \ \ \ \ QVector<QString>\ initial11\{\textcolor{stringliteral}{"{}Saddleback\ College"{}},}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00274}00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}University\ of\ California,\ Irvine\ (UCI)"{}},}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00275}00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Arizona\ State\ University"{}},}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Massachusetts\ Institute\ of\ Technology\ (MIT)"{}},}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00277}00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Northwestern"{}},}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00278}00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Ohio\ State\ University"{}},}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00279}00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}University\ of\ \ Michigan"{}},}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00280}00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}University\ of\ California,\ Los\ Angeles\ (UCLA)"{}},}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00281}00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}University\ of\ Oregon"{}},}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00282}00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}University\ of\ Wisconsin"{}},}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00283}00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}University\ of\ the\ Pacific"{}},}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00284}00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00285}00285\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00286}00286\ \ \ \ \ \textcolor{comment}{//\ check\ if\ all\ the\ college\ is\ in\ the\ database\ befor\ the\ recursive\ function}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00287}00287\ \ \ \ \ \textcolor{keywordtype}{bool}\ allFound\ =\ \mbox{\hyperlink{classplan_trip_window_ac86371ade6112c1ccb90329d95d1fb17}{checkCampusVectorNames}}(initial11);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00288}00288\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00289}00289\ \ \ \ \ \textcolor{keywordflow}{if}(!allFound)\{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00290}00290\ \ \ \ \ \ \ \ \ QMessageBox::warning(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}ERROR"{}},\ \textcolor{stringliteral}{"{}The\ 11\ initial\ college\ are\ incomplete,\ please\ check\ with\ the\ administrator."{}},\ QMessageBox::Ok,\ QMessageBox::NoButton);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00291}00291\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00292}00292\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ append\ the\ selected\ campus\ list}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00293}00293\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.append(initial11);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00294}00294\ \ \ \ \ \ \ \ \ QString\ startTrip\ =\ *\mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.begin();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00295}00295\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00296}00296\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ recursively\ sort\ through\ the\ list}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00297}00297\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aeb900b032acce3f075be92c86674c1ee}{recursiveCollegeSort}}(startTrip);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00298}00298\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00299}00299\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ calculate\ the\ distance\ and\ output\ it}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00300}00300\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}}\ =\ \mbox{\hyperlink{classplan_trip_window_a065e55944714eab5c0eeeda961aee8e4}{calculateDistance}}(11);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00301}00301\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ac72dc1377366cf380e9aa6e2a7d9bad6}{showTotalDistent}}(\mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}});}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00302}00302\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00303}00303\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ hid\ the\ current\ UI\ and\ show\ the\ sovenirs\ UI}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00304}00304\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.append(initial11);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00305}00305\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_af2cb7dffda707e3be62a9e7422797d25}{goToSouvenirShop}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00306}00306\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00307}00307\ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00308}00308\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00309}\mbox{\hyperlink{classplan_trip_window_ac72dc1377366cf380e9aa6e2a7d9bad6}{00309}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_ac72dc1377366cf380e9aa6e2a7d9bad6}{planTripWindow::showTotalDistent}}(\textcolor{keywordtype}{double}\ distance)\{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00310}00310\ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>finalDistance\_Lable-\/>setNum(\mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}});}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00311}00311\ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00312}00312\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00313}00313\ \textcolor{comment}{//\ This\ button\ when\ pressed\ will\ send\ the\ user\ to\ a\ page\ that\ will\ allow\ them\ to\ vist\ any\ colleges\ starting\ at\ UCI}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00314}\mbox{\hyperlink{classplan_trip_window_a6d125665c0a5d5b4290393a6125b6f55}{00314}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a6d125665c0a5d5b4290393a6125b6f55}{planTripWindow::on\_startTripFormUIC\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00315}00315\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00323}00323\ \ \ \ \ \textcolor{comment}{//\ putting\ all\ initiall\ college\ in\ to\ a\ vector\ starting\ at\ UCI}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00324}00324\ \ \ \ \ QVector<QString>\ initial13\{\textcolor{stringliteral}{"{}University\ of\ California,\ Irvine\ (UCI)"{}},}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00325}00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Saddleback\ College"{}},}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00326}00326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Arizona\ State\ University"{}},}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00327}00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Massachusetts\ Institute\ of\ Technology\ (MIT)"{}},}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00328}00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Northwestern"{}},}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00329}00329\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Ohio\ State\ University"{}},}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00330}00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}University\ of\ \ Michigan"{}},}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00331}00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}University\ of\ California,\ Los\ Angeles\ (UCLA)"{}},}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00332}00332\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}University\ of\ Oregon"{}},}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00333}00333\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}University\ of\ Wisconsin"{}},}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00334}00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}University\ of\ the\ Pacific"{}},}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00335}00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}California\ State\ University,\ Fullerton"{}},}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00336}00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}University\ of\ Texas"{}}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00337}00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00338}00338\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00339}00339\ \ \ \ \ \textcolor{comment}{//\ check\ if\ all\ the\ college\ is\ in\ the\ database\ befor\ the\ recursive\ function}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00340}00340\ \ \ \ \ \textcolor{keywordtype}{bool}\ allFound\ =\ \mbox{\hyperlink{classplan_trip_window_ac86371ade6112c1ccb90329d95d1fb17}{checkCampusVectorNames}}(initial13);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00341}00341\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00342}00342\ \ \ \ \ \textcolor{keywordflow}{if}(!allFound)\{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00343}00343\ \ \ \ \ \ \ \ \ QMessageBox::warning(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}ERROR"{}},\ \textcolor{stringliteral}{"{}The\ college\ list\ are\ incomplete,\ not\ all\ 13\ college\ are\ in\ the\ list\ please\ check\ with\ the\ administrator."{}},\ QMessageBox::Ok,\ QMessageBox::NoButton);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00344}00344\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00345}00345\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00346}00346\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ append\ the\ selected\ campus\ list}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00347}00347\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.append(initial13);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00348}00348\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00349}00349\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ append\ the\ selected\ campus\ list}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00350}00350\ \ \ \ \ \ \ \ \ QString\ startTrip\ =\ *\mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.begin();}
 \DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00351}00351\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00352}00352\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ hid\ the\ current\ UI\ and\ show\ the\ sovenirs\ UI}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00353}00353\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.append(initial13);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00354}00354\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_af2cb7dffda707e3be62a9e7422797d25}{goToSouvenirShop}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00355}00355\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00356}00356\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00357}00357\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00352}00352\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ recursively\ sort\ through\ the\ list}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00353}00353\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aeb900b032acce3f075be92c86674c1ee}{recursiveCollegeSort}}(startTrip);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00354}00354\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00355}00355\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ calculate\ the\ distance\ and\ output\ i}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00356}00356\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}}\ =\ \mbox{\hyperlink{classplan_trip_window_a065e55944714eab5c0eeeda961aee8e4}{calculateDistance}}(13);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00357}00357\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ac72dc1377366cf380e9aa6e2a7d9bad6}{showTotalDistent}}(\mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}});}
 \DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00358}00358\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00359}00359\ \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00360}00360\ \textcolor{comment}{\ *\ recursiveCollegeSort()}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00361}00361\ \textcolor{comment}{\ *\ This\ function\ will\ creat\ the\ shortest\ way\ to\ visit\ different\ colleges.}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00362}00362\ \textcolor{comment}{\ *\ For\ example,\ from\ the\ starting\ campus,\ the\ next\ campus\ will\ be\ the\ closest\ to\ the\ startding\ college,\ then\ the\ closest\ after\ that.}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00363}00363\ \textcolor{comment}{\ *\ Each\ recursive\ call\ find\ the\ closest\ campus\ to\ the\ campus\ passed\ in.}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00364}00364\ \textcolor{comment}{\ *\ When\ the\ closest\ is\ found,\ the\ new\ campus\ is\ sorted\ and\ then\ used\ for\ the\ next\ call.}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00365}00365\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00366}\mbox{\hyperlink{classplan_trip_window_aeb900b032acce3f075be92c86674c1ee}{00366}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_aeb900b032acce3f075be92c86674c1ee}{planTripWindow::recursiveCollegeSort}}(QString\ currentCamp)}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00367}00367\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00368}00368\ \ \ \ \mbox{\hyperlink{classplan_trip_window_a66925bada7135d92869d291f90c43f5f}{sortedCampuses}}.enqueue(currentCamp);\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00369}00369\ \ \ \ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.removeAll(currentCamp);\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00371}00371\ \ \ \ \textcolor{comment}{//\ first\ check\ to\ see\ if\ there\ is\ anly\ college\ in\ the\ selectedCampuse\ vector}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00372}00372\ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.isEmpty())}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00373}00373\ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00374}00374\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00375}00375\ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00376}00376\ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00377}00377\ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00378}00378\ \ \ \ \ \ \ \ \textcolor{comment}{//\ set\ the\ frist\ campises\ to\ a\ string}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00379}00379\ \ \ \ \ \ \ \ \ QString*\ otherCamp\ =\ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.begin();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00380}00380\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ currentIndex\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00381}00381\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00382}00382\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ getting\ the\ distanct\ using\ GetDistBtwn\ function\ in\ dbmanger}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00383}00383\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ leastDist\ =\ \mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_aa797049558e234dd8b8b7cf542c388d4}{GetDistBtwn}}(currentCamp,\ *otherCamp);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00384}00384\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ leastIndex\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00385}00385\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00386}00386\ \ \ \ \ \ \ \ \ otherCamp++;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00387}00387\ \ \ \ \ \ \ \ \ currentIndex++;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00359}00359\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ hid\ the\ current\ UI\ and\ show\ the\ sovenirs\ UI}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00360}00360\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.append(initial13);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00361}00361\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_af2cb7dffda707e3be62a9e7422797d25}{goToSouvenirShop}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00362}00362\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00363}00363\ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00364}00364\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00365}00365\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00366}00366\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00367}00367\ \textcolor{comment}{\ *\ recursiveCollegeSort()}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00368}00368\ \textcolor{comment}{\ *\ This\ function\ will\ creat\ the\ shortest\ way\ to\ visit\ different\ colleges.}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00369}00369\ \textcolor{comment}{\ *\ For\ example,\ from\ the\ starting\ campus,\ the\ next\ campus\ will\ be\ the\ closest\ to\ the\ startding\ college,\ then\ the\ closest\ after\ that.}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00370}00370\ \textcolor{comment}{\ *\ Each\ recursive\ call\ find\ the\ closest\ campus\ to\ the\ campus\ passed\ in.}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00371}00371\ \textcolor{comment}{\ *\ When\ the\ closest\ is\ found,\ the\ new\ campus\ is\ sorted\ and\ then\ used\ for\ the\ next\ call.}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00372}00372\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00373}\mbox{\hyperlink{classplan_trip_window_aeb900b032acce3f075be92c86674c1ee}{00373}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_aeb900b032acce3f075be92c86674c1ee}{planTripWindow::recursiveCollegeSort}}(QString\ currentCamp)}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00374}00374\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00375}00375\ \ \ \ \mbox{\hyperlink{classplan_trip_window_a66925bada7135d92869d291f90c43f5f}{sortedCampuses}}.enqueue(currentCamp);\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00376}00376\ \ \ \ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.removeAll(currentCamp);\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00378}00378\ \ \ \ \textcolor{comment}{//\ first\ check\ to\ see\ if\ there\ is\ anly\ college\ in\ the\ selectedCampuse\ vector}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00379}00379\ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.isEmpty())}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00380}00380\ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00381}00381\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00382}00382\ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00383}00383\ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00384}00384\ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00385}00385\ \ \ \ \ \ \ \ \textcolor{comment}{//\ set\ the\ frist\ campises\ to\ a\ string}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00386}00386\ \ \ \ \ \ \ \ \ QString*\ otherCamp\ =\ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.begin();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00387}00387\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ currentIndex\ =\ 0;}
 \DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00388}00388\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00389}00389\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ keep\ looping\ thorgh\ the\ colleges\ untill\ it\ has\ reach\ to\ the\ end\ of\ the\ vector}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00390}00390\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(otherCamp\ !=\ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.end())}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00391}00391\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00392}00392\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ //\ getting\ the\ current\ distanct\ using\ GetDistBtwn\ function\ in\ dbmanger}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00393}00393\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ currentDist\ =\ \mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_aa797049558e234dd8b8b7cf542c388d4}{GetDistBtwn}}(currentCamp,\ *otherCamp);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00394}00394\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00395}00395\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ do\ the\ comparsion}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00396}00396\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentDist\ <\ leastDist)}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00397}00397\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00398}00398\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ leastDist\ =\ currentDist;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00399}00399\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ leastIndex\ =\ currentIndex;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00400}00400\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00401}00401\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00402}00402\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00403}00403\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ otherCamp++;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00404}00404\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentIndex++;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00405}00405\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00406}00406\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00407}00407\ \ \ \ \ \ \ \ \ QString\ nextCamp\ =\ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.at(leastIndex);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00408}00408\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aeb900b032acce3f075be92c86674c1ee}{recursiveCollegeSort}}(nextCamp);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00409}00409\ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00410}00410\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00411}00411\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00412}00412\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00413}00413\ \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00414}00414\ \textcolor{comment}{\ *\ goToSouvenirShop()}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00415}00415\ \textcolor{comment}{\ *\ This\ function\ switches\ the\ current\ UI\ to\ the\ Souvenir\ shop\ UI\ and\ initializes\ the\ widgets\ on\ the\ UI.}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00416}00416\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00417}\mbox{\hyperlink{classplan_trip_window_af2cb7dffda707e3be62a9e7422797d25}{00417}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_af2cb7dffda707e3be62a9e7422797d25}{planTripWindow::goToSouvenirShop}}()}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00418}00418\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00419}00419\ \ \ \ \ \textcolor{comment}{//Go\ to\ souvenirShop\ widget}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00420}00420\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>stackedWidget-\/>setCurrentWidget(\mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>souvenirShop);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00421}00421\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aa2c126c1df2c9bfd82407af4dc39213b}{showSouvTableView}}(\mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_aff0e59fb325dba293707ad93a2d99d35}{loadCampusSouvenirs}}(\textcolor{stringliteral}{"{}"{}}));}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00422}00422\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a4edeaca08683f49ef9873bde41e79ebe}{showSelectCampusComboBox}}(\textcolor{keyword}{new}\ QStringListModel(QList<QString>::fromVector(\mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}})));}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00423}00423\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00424}00424\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aa2c126c1df2c9bfd82407af4dc39213b}{showSouvTableView}}(\mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_aff0e59fb325dba293707ad93a2d99d35}{loadCampusSouvenirs}}(\mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>selectCampus\_comboBox-\/>currentText()));}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00425}00425\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_a092fd94dfc8761dc238a20bc20855fdc}{createCart}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00426}00426\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a06e0599e743a304150c9defb6a3c9045}{showSouvCartTableView}}(\mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_ac617c650c039bb7b45e60563f572031d}{loadSouvCart}}(\mbox{\hyperlink{classplan_trip_window_a194cd478020a3a79d89cf1685eec96e9}{sQry}}));}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00427}00427\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00428}00428\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00429}00429\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00430}00430\ \ \ \ \ \textcolor{comment}{/*UI\ DESIGN*/}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00431}00431\ \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00432}00432\ \textcolor{comment}{\ *\ gobackbuttonclicked()}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00433}00433\ \textcolor{comment}{\ *\ This\ function\ let\ the\ go\ back\ button\ work\ on\ the\ screen}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00434}00434\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00435}\mbox{\hyperlink{classplan_trip_window_aa263a2f4cfed1c428554ec6a412d8f40}{00435}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_aa263a2f4cfed1c428554ec6a412d8f40}{planTripWindow::on\_goback\_clicked}}()}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00436}00436\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00437}00437\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window}{planTripWindow}}\ user;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00438}00438\ \ \ \ \ hide();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00439}00439\ \ \ \ \ user.setModal(\textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00440}00440\ \ \ \ \ user.exec();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00441}00441\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00442}00442\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00443}\mbox{\hyperlink{classplan_trip_window_a367aac3d497c25c08fe3ed3b9f5f6401}{00443}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a367aac3d497c25c08fe3ed3b9f5f6401}{planTripWindow::on\_goback2\_clicked}}()}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00444}00444\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00445}00445\ \ \ \ \ \mbox{\hyperlink{classuser_interface}{userInterface}}\ user;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00446}00446\ \ \ \ \ hide();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00447}00447\ \ \ \ \ user.setModal(\textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00448}00448\ \ \ \ \ user.exec();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00449}00449\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00450}00450\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00451}\mbox{\hyperlink{classplan_trip_window_adcb700475ffdb65963796741522de5ad}{00451}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_adcb700475ffdb65963796741522de5ad}{planTripWindow::on\_custom\_goback\_clicked}}()}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00452}00452\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00453}00453\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window}{planTripWindow}}\ user;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00454}00454\ \ \ \ \ hide();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00455}00455\ \ \ \ \ user.setModal(\textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00456}00456\ \ \ \ \ user.exec();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00457}00457\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00458}00458\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00459}\mbox{\hyperlink{classplan_trip_window_a98d7b921e6d90cdb571b03fa65723727}{00459}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a98d7b921e6d90cdb571b03fa65723727}{planTripWindow::on\_receiptDone\_clicked}}()}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00460}00460\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00461}00461\ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}Loading..."{}},\ \textcolor{stringliteral}{"{}You\ are\ now\ done\ with\ this\ trip.\ Now\ retruning\ to\ the\ main\ selection\ Screen."{}},\ QMessageBox::Ok,\ QMessageBox::NoButton);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00462}00462\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00463}00463\ \ \ \ \ \textcolor{comment}{//\ clear\ the\ prives\ shoping\ cart\ item\ and\ all\ other\ things}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00464}00464\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_a0a8828c717828246ea83f975024fb75f}{deleteCart}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00465}00465\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a194cd478020a3a79d89cf1685eec96e9}{sQry}}.clear();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00466}00466\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aee3a1f37aa19755d93d6c4ce7c595888}{asuNum}}\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00467}00467\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a9b7184ea541d0dd225be9f8f0204b3f8}{selectNum}}\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00468}00468\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aa62e3a466d00b1051efb1dd2aa9b5a85}{total}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00389}00389\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ getting\ the\ distanct\ using\ GetDistBtwn\ function\ in\ dbmanger}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00390}00390\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ leastDist\ =\ \mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_aa797049558e234dd8b8b7cf542c388d4}{GetDistBtwn}}(currentCamp,\ *otherCamp);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00391}00391\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ leastIndex\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00392}00392\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00393}00393\ \ \ \ \ \ \ \ \ otherCamp++;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00394}00394\ \ \ \ \ \ \ \ \ currentIndex++;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00395}00395\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00396}00396\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ keep\ looping\ thorgh\ the\ colleges\ untill\ it\ has\ reach\ to\ the\ end\ of\ the\ vector}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00397}00397\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(otherCamp\ !=\ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.end())}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00398}00398\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00399}00399\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ //\ getting\ the\ current\ distanct\ using\ GetDistBtwn\ function\ in\ dbmanger}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00400}00400\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ currentDist\ =\ \mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_aa797049558e234dd8b8b7cf542c388d4}{GetDistBtwn}}(currentCamp,\ *otherCamp);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00401}00401\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00402}00402\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ do\ the\ comparsion}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00403}00403\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentDist\ <\ leastDist)}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00404}00404\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00405}00405\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ leastDist\ =\ currentDist;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00406}00406\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ leastIndex\ =\ currentIndex;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00407}00407\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00408}00408\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00409}00409\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00410}00410\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ otherCamp++;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00411}00411\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentIndex++;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00412}00412\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00413}00413\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00414}00414\ \ \ \ \ \ \ \ \ QString\ nextCamp\ =\ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.at(leastIndex);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00415}00415\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aeb900b032acce3f075be92c86674c1ee}{recursiveCollegeSort}}(nextCamp);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00416}00416\ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00417}00417\ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00418}00418\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00419}00419\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00420}00420\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00421}00421\ \textcolor{comment}{\ *\ goToSouvenirShop()}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00422}00422\ \textcolor{comment}{\ *\ This\ function\ switches\ the\ current\ UI\ to\ the\ Souvenir\ shop\ UI\ and\ initializes\ the\ widgets\ on\ the\ UI.}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00423}00423\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00424}\mbox{\hyperlink{classplan_trip_window_af2cb7dffda707e3be62a9e7422797d25}{00424}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_af2cb7dffda707e3be62a9e7422797d25}{planTripWindow::goToSouvenirShop}}()}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00425}00425\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00426}00426\ \ \ \ \ \textcolor{comment}{//Go\ to\ souvenirShop\ widget}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00427}00427\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>stackedWidget-\/>setCurrentWidget(\mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>souvenirShop);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00428}00428\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aa2c126c1df2c9bfd82407af4dc39213b}{showSouvTableView}}(\mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_aff0e59fb325dba293707ad93a2d99d35}{loadCampusSouvenirs}}(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00429}00429\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a4edeaca08683f49ef9873bde41e79ebe}{showSelectCampusComboBox}}(\textcolor{keyword}{new}\ QStringListModel(QList<QString>::fromVector(\mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}})));}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00430}00430\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00431}00431\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aa2c126c1df2c9bfd82407af4dc39213b}{showSouvTableView}}(\mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_aff0e59fb325dba293707ad93a2d99d35}{loadCampusSouvenirs}}(\mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>selectCampus\_comboBox-\/>currentText()));}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00432}00432\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_a092fd94dfc8761dc238a20bc20855fdc}{createCart}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00433}00433\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a06e0599e743a304150c9defb6a3c9045}{showSouvCartTableView}}(\mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_ac617c650c039bb7b45e60563f572031d}{loadSouvCart}}(\mbox{\hyperlink{classplan_trip_window_a194cd478020a3a79d89cf1685eec96e9}{sQry}}));}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00434}00434\ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00435}00435\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00436}00436\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00437}00437\ \ \ \ \ \textcolor{comment}{/*UI\ DESIGN*/}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00438}00438\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00439}00439\ \textcolor{comment}{\ *\ gobackbuttonclicked()}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00440}00440\ \textcolor{comment}{\ *\ This\ function\ let\ the\ go\ back\ button\ work\ on\ the\ screen}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00441}00441\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00442}\mbox{\hyperlink{classplan_trip_window_aa263a2f4cfed1c428554ec6a412d8f40}{00442}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_aa263a2f4cfed1c428554ec6a412d8f40}{planTripWindow::on\_goback\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00443}00443\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00444}00444\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window}{planTripWindow}}\ user;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00445}00445\ \ \ \ \ hide();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00446}00446\ \ \ \ \ user.setModal(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00447}00447\ \ \ \ \ user.exec();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00448}00448\ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00449}00449\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00450}\mbox{\hyperlink{classplan_trip_window_a367aac3d497c25c08fe3ed3b9f5f6401}{00450}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a367aac3d497c25c08fe3ed3b9f5f6401}{planTripWindow::on\_goback2\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00451}00451\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00452}00452\ \ \ \ \ \mbox{\hyperlink{classuser_interface}{userInterface}}\ user;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00453}00453\ \ \ \ \ hide();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00454}00454\ \ \ \ \ user.setModal(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00455}00455\ \ \ \ \ user.exec();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00456}00456\ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00457}00457\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00458}\mbox{\hyperlink{classplan_trip_window_adcb700475ffdb65963796741522de5ad}{00458}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_adcb700475ffdb65963796741522de5ad}{planTripWindow::on\_custom\_goback\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00459}00459\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00460}00460\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window}{planTripWindow}}\ user;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00461}00461\ \ \ \ \ hide();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00462}00462\ \ \ \ \ user.setModal(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00463}00463\ \ \ \ \ user.exec();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00464}00464\ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00465}00465\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00466}\mbox{\hyperlink{classplan_trip_window_a98d7b921e6d90cdb571b03fa65723727}{00466}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a98d7b921e6d90cdb571b03fa65723727}{planTripWindow::on\_receiptDone\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00467}00467\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00468}00468\ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}Loading..."{}},\ \textcolor{stringliteral}{"{}You\ are\ now\ done\ with\ this\ trip.\ Now\ retruning\ to\ the\ main\ selection\ Screen."{}},\ QMessageBox::Ok,\ QMessageBox::NoButton);}
 \DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00469}00469\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00470}00470\ \ \ \ \ \textcolor{keywordflow}{while}(!\mbox{\hyperlink{classplan_trip_window_a66925bada7135d92869d291f90c43f5f}{sortedCampuses}}.empty())}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00471}00471\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00472}00472\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a66925bada7135d92869d291f90c43f5f}{sortedCampuses}}.pop\_front();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00473}00473\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00474}00474\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00475}00475\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window}{planTripWindow}}\ user;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00476}00476\ \ \ \ \ hide();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00477}00477\ \ \ \ \ user.setModal(\textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00478}00478\ \ \ \ \ user.exec();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00479}00479\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00480}00480\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00481}\mbox{\hyperlink{classplan_trip_window_a84c0cd7da643e8824a28ce2ca33517e7}{00481}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a84c0cd7da643e8824a28ce2ca33517e7}{planTripWindow::on\_doneBuying\_clicked}}()}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00482}00482\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00483}00483\ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}Loading..."{}},\ \textcolor{stringliteral}{"{}You\ are\ done\ buying\ all\ souvenirs.\ Now\ moving\ to\ the\ receipt\ Screen."{}},\ QMessageBox::Ok,\ QMessageBox::NoButton);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00484}00484\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aa5ef228faea826879b25f963d8e07ebd}{displayReceiptPage}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00485}00485\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00470}00470\ \ \ \ \ \textcolor{comment}{//\ clear\ the\ prives\ shoping\ cart\ item\ and\ all\ other\ things}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00471}00471\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_a0a8828c717828246ea83f975024fb75f}{deleteCart}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00472}00472\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a194cd478020a3a79d89cf1685eec96e9}{sQry}}.clear();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00473}00473\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aee3a1f37aa19755d93d6c4ce7c595888}{asuNum}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00474}00474\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a9b7184ea541d0dd225be9f8f0204b3f8}{selectNum}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00475}00475\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aa62e3a466d00b1051efb1dd2aa9b5a85}{total}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00476}00476\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00477}00477\ \ \ \ \ \textcolor{keywordflow}{while}(!\mbox{\hyperlink{classplan_trip_window_a66925bada7135d92869d291f90c43f5f}{sortedCampuses}}.empty())}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00478}00478\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00479}00479\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a66925bada7135d92869d291f90c43f5f}{sortedCampuses}}.pop\_front();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00480}00480\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00481}00481\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00482}00482\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window}{planTripWindow}}\ user;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00483}00483\ \ \ \ \ hide();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00484}00484\ \ \ \ \ user.setModal(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00485}00485\ \ \ \ \ user.exec();}
 \DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00486}00486\ \}}
 \DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00487}00487\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00488}00488\ \textcolor{comment}{//go\ home\ screen\ button}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00489}00489\ \textcolor{comment}{//This\ button\ will\ allow\ the\ user\ to\ go\ back\ to\ home\ page}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00490}\mbox{\hyperlink{classplan_trip_window_a1f7a7872fb92b112268a61a3eb6ae45f}{00490}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a1f7a7872fb92b112268a61a3eb6ae45f}{planTripWindow::on\_mainpage\_clicked}}()}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00491}00491\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00492}00492\ \ \ \ \ QList<QWidget*>\ topLevelWidgets\ =\ qApp-\/>topLevelWidgets();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00493}00493\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}(\mbox{\hyperlink{class_q_widget}{QWidget}}\ *widget,\ topLevelWidgets)\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00494}00494\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_q_main_window}{QMainWindow}}\ *mainWindow\ =\ qobject\_cast<QMainWindow*>(widget);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00495}00495\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mainWindow)\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00496}00496\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Show\ the\ main\ window\ if\ it\ was\ previously\ hidden}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00497}00497\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!mainWindow-\/>isVisible())\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00498}00498\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mainWindow-\/>show();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00499}00499\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00500}00500\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00501}00501\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00502}00502\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00503}00503\ \ \ \ \ hide();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00504}00504\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00505}00505\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00506}00506\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00507}00507\ \textcolor{comment}{//This\ button\ will\ allow\ the\ user\ to\ go\ back\ to\ home\ page}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00508}\mbox{\hyperlink{classplan_trip_window_abacdac0e3506710fa2487364c8ec05e4}{00508}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_abacdac0e3506710fa2487364c8ec05e4}{planTripWindow::on\_mainpage\_2\_clicked}}()}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00509}00509\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00510}00510\ \ \ \ \ QList<QWidget*>\ topLevelWidgets\ =\ qApp-\/>topLevelWidgets();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00511}00511\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}(\mbox{\hyperlink{class_q_widget}{QWidget}}\ *widget,\ topLevelWidgets)\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00512}00512\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_q_main_window}{QMainWindow}}\ *mainWindow\ =\ qobject\_cast<QMainWindow*>(widget);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00513}00513\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mainWindow)\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00514}00514\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Show\ the\ main\ window\ if\ it\ was\ previously\ hidden}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00515}00515\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!mainWindow-\/>isVisible())\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00516}00516\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mainWindow-\/>show();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00517}00517\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00518}00518\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00519}00519\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00520}00520\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00521}00521\ \ \ \ \ hide();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00522}00522\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00523}00523\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00524}00524\ \ \ \ \ \textcolor{comment}{/*UI\ DESIGN\ ENDS\ HERE*/}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00525}00525\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00526}00526\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00527}00527\ \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00528}00528\ \textcolor{comment}{\ *\ showSelectCampusComboBox(QStringListModel\ *model)}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00529}00529\ \textcolor{comment}{\ *\ The\ campus\ combo\ box\ for\ the\ souvenir\ shop\ UI\ will\ display\ the\ information\ held\ in\ a\ QStringListModel\ pointer.}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00530}00530\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00531}\mbox{\hyperlink{classplan_trip_window_a4edeaca08683f49ef9873bde41e79ebe}{00531}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a4edeaca08683f49ef9873bde41e79ebe}{planTripWindow::showSelectCampusComboBox}}(QStringListModel\ *model)}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00532}00532\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00533}00533\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}\ -\/>selectCampus\_comboBox-\/>setModel(model);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00534}00534\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>collegecomboBox-\/>setModel(model);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00535}00535\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00536}00536\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00537}00537\ \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00538}00538\ \textcolor{comment}{\ *\ showSouvTableView(QSqlQueryModel\ *model)}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00539}00539\ \textcolor{comment}{\ *\ The\ souvenir\ table\ view\ for\ the\ souvenir\ shop\ UI\ will\ display\ the\ information\ about\ the\ souvenirs\ of\ a\ specified\ campus\ held\ in\ a\ QStringListModel\ pointer.}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00540}00540\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00541}\mbox{\hyperlink{classplan_trip_window_aa2c126c1df2c9bfd82407af4dc39213b}{00541}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_aa2c126c1df2c9bfd82407af4dc39213b}{planTripWindow::showSouvTableView}}(QSqlQueryModel\ *model)}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00542}00542\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00543}00543\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>souv\_tableView-\/>setModel(model);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00544}00544\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>souv\_comboBox-\/>setModel(model);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00545}00545\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00546}00546\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00547}00547\ \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00548}00548\ \textcolor{comment}{\ *\ on\_selectCampus\_comboBox\_currentIndexChanged()}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00549}00549\ \textcolor{comment}{\ *\ This\ function\ changes\ the\ souviner\ table\ depening\ on\ what\ campus\ the\ users\ has\ selected\ in\ the\ combo\ box.}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00550}00550\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00551}\mbox{\hyperlink{classplan_trip_window_a488ed48e3c8987d544c09de1be0563e2}{00551}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a488ed48e3c8987d544c09de1be0563e2}{planTripWindow::on\_selectCampus\_comboBox\_currentIndexChanged}}()}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00552}00552\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00553}00553\ \ \ \ \ QString\ campus\ =\ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>selectCampus\_comboBox-\/>currentText();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00554}00554\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aa2c126c1df2c9bfd82407af4dc39213b}{showSouvTableView}}(\mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_aff0e59fb325dba293707ad93a2d99d35}{loadCampusSouvenirs}}(campus));}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00555}00555\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00556}00556\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00557}00557\ \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00558}00558\ \textcolor{comment}{\ *\ showSouvCartTableView(QSqlQueryModel\ *model)}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00559}00559\ \textcolor{comment}{\ *\ The\ souvenir\ cart\ table\ view\ for\ the\ souvenir\ shop\ UI\ will\ display\ the\ information\ about\ the\ souvenirs\ selected\ held\ in\ a\ QStringListModel\ pointer.}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00560}00560\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00561}\mbox{\hyperlink{classplan_trip_window_a06e0599e743a304150c9defb6a3c9045}{00561}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a06e0599e743a304150c9defb6a3c9045}{planTripWindow::showSouvCartTableView}}(QSqlQueryModel\ *model)}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00562}00562\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00563}00563\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>souvCart\_tableView-\/>setModel(model);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00564}00564\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>souvenirsListView-\/>setModel(model);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00565}00565\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00566}00566\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00567}00567\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00568}00568\ \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00569}00569\ \textcolor{comment}{\ *\ on\_addSouvenir\_button\_clicked()}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00570}00570\ \textcolor{comment}{\ *\ The\ function\ adds\ souvenirs\ to\ the\ souvenir\ cart\ using\ an\ accumulator\ string\ to\ use\ as\ the\ query\ for\ the\ database.}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00571}00571\ \textcolor{comment}{\ *\ It\ also\ adds\ the\ total\ of\ the\ item\ costs\ in\ an\ accumulator\ total.}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00572}00572\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00573}\mbox{\hyperlink{classplan_trip_window_aba130edd506fb7331ec01b7ec94dc695}{00573}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_aba130edd506fb7331ec01b7ec94dc695}{planTripWindow::on\_addSouvenir\_button\_clicked}}()}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00574}00574\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00575}00575\ \ \ \ \ \textcolor{comment}{//set\ the\ name\ and\ campus}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00576}00576\ \ \ \ \ QString\ name,\ campus;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00577}00577\ \ \ \ \ name\ =\ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>souv\_comboBox-\/>currentText();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00578}00578\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a31ef66e8ef0176e9b849ac3273ad6d8b}{souv}}.\mbox{\hyperlink{structplan_trip_window_1_1_souvenir_adb295bd20d32f374371273cc637c3d64}{souvName}}\ =\ name;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00579}00579\ \ \ \ \ campus\ =\ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>selectCampus\_comboBox-\/>currentText();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00580}00580\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a31ef66e8ef0176e9b849ac3273ad6d8b}{souv}}.\mbox{\hyperlink{structplan_trip_window_1_1_souvenir_a70079aed78d173285d7db572d8474280}{campus}}\ =\ campus;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00581}00581\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00582}00582\ \ \ \ \ \textcolor{comment}{//get\ the\ quantity\ and\ item\ cost}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00583}00583\ \ \ \ \ \textcolor{keywordtype}{int}\ quantity\ =\ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>\ quantity\_spinBox\ -\/>\ cleanText().toInt();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00584}00584\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a31ef66e8ef0176e9b849ac3273ad6d8b}{souv}}.\mbox{\hyperlink{structplan_trip_window_1_1_souvenir_a61809ebf1ba7bfc1bd2f74439e955a16}{quantity}}\ =\ quantity;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00585}00585\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00586}00586\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a51ec8b80adbc2e56c55b3ff387740b41}{souvenirCart}}.push(\mbox{\hyperlink{classplan_trip_window_a31ef66e8ef0176e9b849ac3273ad6d8b}{souv}});}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00587}00587\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00588}00588\ \ \ \ \ \textcolor{comment}{//update\ Cart\ table}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00589}00589\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_a1d7cf5b8b1eacb01059e9b7f026a0ebb}{updateCartQuantity}}(campus,\ name,\ quantity);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00590}00590\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00591}00591\ \ \ \ \ \textcolor{comment}{//displays\ cart\ in\ table}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00592}00592\ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classplan_trip_window_a194cd478020a3a79d89cf1685eec96e9}{sQry}}\ ==\ \textcolor{stringliteral}{"{}"{}})}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00593}00593\ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00594}00594\ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a194cd478020a3a79d89cf1685eec96e9}{sQry}}\ +=\ \textcolor{stringliteral}{"{}select\ collegeName\ as\ 'College',\ souvenirsName\ as\ 'Souvenirs',\ cost\ as\ 'Cost',\ quantity\ as\ 'Quantity'\ "{}}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00595}00595\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}from\ Cart\ where\ collegeName\ =\ '"{}}\ +campus+\ \textcolor{stringliteral}{"{}'\ and\ souvenirsName\ =\ '"{}}\ +name+\ \textcolor{stringliteral}{"{}'"{}};}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00596}00596\ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00597}00597\ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00598}00598\ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00599}00599\ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a194cd478020a3a79d89cf1685eec96e9}{sQry}}\ +=\ \textcolor{stringliteral}{"{}\ union\ select\ collegeName\ as\ 'College',\ souvenirsName\ as\ 'Souvenirs',\ cost\ as\ 'Cost',\ quantity\ as\ 'Quantity'"{}}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00600}00600\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}from\ Cart\ where\ collegeName\ =\ '"{}}\ +campus+\ \textcolor{stringliteral}{"{}'\ and\ souvenirsName\ =\ '"{}}\ +name+\ \textcolor{stringliteral}{"{}'"{}};}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00601}00601\ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00602}00602\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00603}00603\ \ \ \ \mbox{\hyperlink{classplan_trip_window_a06e0599e743a304150c9defb6a3c9045}{showSouvCartTableView}}(\mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_ac617c650c039bb7b45e60563f572031d}{loadSouvCart}}(\mbox{\hyperlink{classplan_trip_window_a194cd478020a3a79d89cf1685eec96e9}{sQry}}));}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00604}00604\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00605}00605\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00606}00606\ \ \ \ \textcolor{comment}{//\ call\ the\ calculate\ function}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00607}00607\ \ \ \ \mbox{\hyperlink{classplan_trip_window_ad1baf2a897f6922c5c11fecf31ee6482}{calculateTotal}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00608}00608\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00609}00609\ \ \ \ \mbox{\hyperlink{classplan_trip_window_ada0109671578216d8f41134096f987f2}{showTotal}}(\mbox{\hyperlink{classplan_trip_window_aa62e3a466d00b1051efb1dd2aa9b5a85}{total}});}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00610}00610\ \ \ \textcolor{comment}{//\ showSouvCartTableView();}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00611}00611\ \ \ \textcolor{comment}{//\ get\ the\ total\ cost\ here\_\_YC:}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00612}00612\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00613}00613\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00614}00614\ \textcolor{comment}{//calculate\ function\ is\ to\ calculate\ total\ price\ from\ the\ cart\ table}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00615}00615\ \textcolor{comment}{//assign\ the\ variable\ into\ the\ elements\ in\ header\ file}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00616}\mbox{\hyperlink{classplan_trip_window_ad1baf2a897f6922c5c11fecf31ee6482}{00616}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_ad1baf2a897f6922c5c11fecf31ee6482}{planTripWindow::calculateTotal}}()}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00617}00617\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00618}00618\ \ \ \ \ \textcolor{comment}{//initial\ a\ double\ type\ total}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00619}00619\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classplan_trip_window_aa62e3a466d00b1051efb1dd2aa9b5a85}{total}}\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00488}\mbox{\hyperlink{classplan_trip_window_a84c0cd7da643e8824a28ce2ca33517e7}{00488}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a84c0cd7da643e8824a28ce2ca33517e7}{planTripWindow::on\_doneBuying\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00489}00489\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00490}00490\ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}Loading..."{}},\ \textcolor{stringliteral}{"{}You\ are\ done\ buying\ all\ souvenirs.\ Now\ moving\ to\ the\ receipt\ Screen."{}},\ QMessageBox::Ok,\ QMessageBox::NoButton);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00491}00491\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aa5ef228faea826879b25f963d8e07ebd}{displayReceiptPage}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00492}00492\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00493}00493\ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00494}00494\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00495}00495\ \textcolor{comment}{//go\ home\ screen\ button}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00496}00496\ \textcolor{comment}{//This\ button\ will\ allow\ the\ user\ to\ go\ back\ to\ home\ page}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00497}\mbox{\hyperlink{classplan_trip_window_a1f7a7872fb92b112268a61a3eb6ae45f}{00497}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a1f7a7872fb92b112268a61a3eb6ae45f}{planTripWindow::on\_mainpage\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00498}00498\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00499}00499\ \ \ \ \ QList<QWidget*>\ topLevelWidgets\ =\ qApp-\/>topLevelWidgets();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00500}00500\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}(\mbox{\hyperlink{class_q_widget}{QWidget}}\ *widget,\ topLevelWidgets)\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00501}00501\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_q_main_window}{QMainWindow}}\ *mainWindow\ =\ qobject\_cast<QMainWindow*>(widget);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00502}00502\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mainWindow)\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00503}00503\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Show\ the\ main\ window\ if\ it\ was\ previously\ hidden}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00504}00504\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!mainWindow-\/>isVisible())\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00505}00505\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mainWindow-\/>show();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00506}00506\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00507}00507\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00508}00508\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00509}00509\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00510}00510\ \ \ \ \ hide();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00511}00511\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00512}00512\ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00513}00513\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00514}00514\ \textcolor{comment}{//This\ button\ will\ allow\ the\ user\ to\ go\ back\ to\ home\ page}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00515}\mbox{\hyperlink{classplan_trip_window_abacdac0e3506710fa2487364c8ec05e4}{00515}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_abacdac0e3506710fa2487364c8ec05e4}{planTripWindow::on\_mainpage\_2\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00516}00516\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00517}00517\ \ \ \ \ QList<QWidget*>\ topLevelWidgets\ =\ qApp-\/>topLevelWidgets();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00518}00518\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}(\mbox{\hyperlink{class_q_widget}{QWidget}}\ *widget,\ topLevelWidgets)\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00519}00519\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_q_main_window}{QMainWindow}}\ *mainWindow\ =\ qobject\_cast<QMainWindow*>(widget);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00520}00520\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mainWindow)\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00521}00521\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Show\ the\ main\ window\ if\ it\ was\ previously\ hidden}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00522}00522\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!mainWindow-\/>isVisible())\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00523}00523\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mainWindow-\/>show();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00524}00524\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00525}00525\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00526}00526\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00527}00527\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00528}00528\ \ \ \ \ hide();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00529}00529\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00530}00530\ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00531}00531\ \ \ \ \ \textcolor{comment}{/*UI\ DESIGN\ ENDS\ HERE*/}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00532}00532\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00533}00533\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00534}00534\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00535}00535\ \textcolor{comment}{\ *\ showSelectCampusComboBox(QStringListModel\ *model)}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00536}00536\ \textcolor{comment}{\ *\ The\ campus\ combo\ box\ for\ the\ souvenir\ shop\ UI\ will\ display\ the\ information\ held\ in\ a\ QStringListModel\ pointer.}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00537}00537\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00538}\mbox{\hyperlink{classplan_trip_window_a4edeaca08683f49ef9873bde41e79ebe}{00538}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a4edeaca08683f49ef9873bde41e79ebe}{planTripWindow::showSelectCampusComboBox}}(QStringListModel\ *model)}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00539}00539\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00540}00540\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}\ -\/>selectCampus\_comboBox-\/>setModel(model);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00541}00541\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>collegecomboBox-\/>setModel(model);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00542}00542\ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00543}00543\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00544}00544\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00545}00545\ \textcolor{comment}{\ *\ showSouvTableView(QSqlQueryModel\ *model)}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00546}00546\ \textcolor{comment}{\ *\ The\ souvenir\ table\ view\ for\ the\ souvenir\ shop\ UI\ will\ display\ the\ information\ about\ the\ souvenirs\ of\ a\ specified\ campus\ held\ in\ a\ QStringListModel\ pointer.}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00547}00547\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00548}\mbox{\hyperlink{classplan_trip_window_aa2c126c1df2c9bfd82407af4dc39213b}{00548}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_aa2c126c1df2c9bfd82407af4dc39213b}{planTripWindow::showSouvTableView}}(QSqlQueryModel\ *model)}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00549}00549\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00550}00550\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>souv\_tableView-\/>setModel(model);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00551}00551\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>souv\_comboBox-\/>setModel(model);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00552}00552\ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00553}00553\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00554}00554\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00555}00555\ \textcolor{comment}{\ *\ on\_selectCampus\_comboBox\_currentIndexChanged()}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00556}00556\ \textcolor{comment}{\ *\ This\ function\ changes\ the\ souviner\ table\ depening\ on\ what\ campus\ the\ users\ has\ selected\ in\ the\ combo\ box.}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00557}00557\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00558}\mbox{\hyperlink{classplan_trip_window_a488ed48e3c8987d544c09de1be0563e2}{00558}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a488ed48e3c8987d544c09de1be0563e2}{planTripWindow::on\_selectCampus\_comboBox\_currentIndexChanged}}()}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00559}00559\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00560}00560\ \ \ \ \ QString\ campus\ =\ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>selectCampus\_comboBox-\/>currentText();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00561}00561\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aa2c126c1df2c9bfd82407af4dc39213b}{showSouvTableView}}(\mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_aff0e59fb325dba293707ad93a2d99d35}{loadCampusSouvenirs}}(campus));}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00562}00562\ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00563}00563\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00564}00564\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00565}00565\ \textcolor{comment}{\ *\ showSouvCartTableView(QSqlQueryModel\ *model)}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00566}00566\ \textcolor{comment}{\ *\ The\ souvenir\ cart\ table\ view\ for\ the\ souvenir\ shop\ UI\ will\ display\ the\ information\ about\ the\ souvenirs\ selected\ held\ in\ a\ QStringListModel\ pointer.}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00567}00567\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00568}\mbox{\hyperlink{classplan_trip_window_a06e0599e743a304150c9defb6a3c9045}{00568}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a06e0599e743a304150c9defb6a3c9045}{planTripWindow::showSouvCartTableView}}(QSqlQueryModel\ *model)}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00569}00569\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00570}00570\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>souvCart\_tableView-\/>setModel(model);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00571}00571\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>souvenirsListView-\/>setModel(model);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00572}00572\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00573}00573\ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00574}00574\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00575}00575\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00576}00576\ \textcolor{comment}{\ *\ on\_addSouvenir\_button\_clicked()}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00577}00577\ \textcolor{comment}{\ *\ The\ function\ adds\ souvenirs\ to\ the\ souvenir\ cart\ using\ an\ accumulator\ string\ to\ use\ as\ the\ query\ for\ the\ database.}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00578}00578\ \textcolor{comment}{\ *\ It\ also\ adds\ the\ total\ of\ the\ item\ costs\ in\ an\ accumulator\ total.}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00579}00579\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00580}\mbox{\hyperlink{classplan_trip_window_aba130edd506fb7331ec01b7ec94dc695}{00580}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_aba130edd506fb7331ec01b7ec94dc695}{planTripWindow::on\_addSouvenir\_button\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00581}00581\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00582}00582\ \ \ \ \ \textcolor{comment}{//set\ the\ name\ and\ campus}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00583}00583\ \ \ \ \ QString\ name,\ campus;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00584}00584\ \ \ \ \ name\ =\ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>souv\_comboBox-\/>currentText();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00585}00585\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a31ef66e8ef0176e9b849ac3273ad6d8b}{souv}}.\mbox{\hyperlink{structplan_trip_window_1_1_souvenir_adb295bd20d32f374371273cc637c3d64}{souvName}}\ =\ name;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00586}00586\ \ \ \ \ campus\ =\ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>selectCampus\_comboBox-\/>currentText();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00587}00587\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a31ef66e8ef0176e9b849ac3273ad6d8b}{souv}}.\mbox{\hyperlink{structplan_trip_window_1_1_souvenir_a70079aed78d173285d7db572d8474280}{campus}}\ =\ campus;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00588}00588\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00589}00589\ \ \ \ \ \textcolor{comment}{//get\ the\ quantity\ and\ item\ cost}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00590}00590\ \ \ \ \ \textcolor{keywordtype}{int}\ quantity\ =\ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>\ quantity\_spinBox\ -\/>\ cleanText().toInt();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00591}00591\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a31ef66e8ef0176e9b849ac3273ad6d8b}{souv}}.\mbox{\hyperlink{structplan_trip_window_1_1_souvenir_a61809ebf1ba7bfc1bd2f74439e955a16}{quantity}}\ =\ quantity;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00592}00592\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00593}00593\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a51ec8b80adbc2e56c55b3ff387740b41}{souvenirCart}}.push(\mbox{\hyperlink{classplan_trip_window_a31ef66e8ef0176e9b849ac3273ad6d8b}{souv}});}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00594}00594\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00595}00595\ \ \ \ \ \textcolor{comment}{//update\ Cart\ table}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00596}00596\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_a1d7cf5b8b1eacb01059e9b7f026a0ebb}{updateCartQuantity}}(campus,\ name,\ quantity);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00597}00597\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00598}00598\ \ \ \ \ \textcolor{comment}{//displays\ cart\ in\ table}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00599}00599\ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classplan_trip_window_a194cd478020a3a79d89cf1685eec96e9}{sQry}}\ ==\ \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00600}00600\ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00601}00601\ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a194cd478020a3a79d89cf1685eec96e9}{sQry}}\ +=\ \textcolor{stringliteral}{"{}select\ collegeName\ as\ 'College',\ souvenirsName\ as\ 'Souvenirs',\ cost\ as\ 'Cost',\ quantity\ as\ 'Quantity'\ "{}}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00602}00602\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}from\ Cart\ where\ collegeName\ =\ '"{}}\ +campus+\ \textcolor{stringliteral}{"{}'\ and\ souvenirsName\ =\ '"{}}\ +name+\ \textcolor{stringliteral}{"{}'"{}};}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00603}00603\ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00604}00604\ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00605}00605\ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00606}00606\ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a194cd478020a3a79d89cf1685eec96e9}{sQry}}\ +=\ \textcolor{stringliteral}{"{}\ union\ select\ collegeName\ as\ 'College',\ souvenirsName\ as\ 'Souvenirs',\ cost\ as\ 'Cost',\ quantity\ as\ 'Quantity'"{}}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00607}00607\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}from\ Cart\ where\ collegeName\ =\ '"{}}\ +campus+\ \textcolor{stringliteral}{"{}'\ and\ souvenirsName\ =\ '"{}}\ +name+\ \textcolor{stringliteral}{"{}'"{}};}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00608}00608\ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00609}00609\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00610}00610\ \ \ \ \mbox{\hyperlink{classplan_trip_window_a06e0599e743a304150c9defb6a3c9045}{showSouvCartTableView}}(\mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_ac617c650c039bb7b45e60563f572031d}{loadSouvCart}}(\mbox{\hyperlink{classplan_trip_window_a194cd478020a3a79d89cf1685eec96e9}{sQry}}));}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00611}00611\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00612}00612\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00613}00613\ \ \ \ \textcolor{comment}{//\ call\ the\ calculate\ function}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00614}00614\ \ \ \ \mbox{\hyperlink{classplan_trip_window_ad1baf2a897f6922c5c11fecf31ee6482}{calculateTotal}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00615}00615\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00616}00616\ \ \ \ \mbox{\hyperlink{classplan_trip_window_ada0109671578216d8f41134096f987f2}{showTotal}}(\mbox{\hyperlink{classplan_trip_window_aa62e3a466d00b1051efb1dd2aa9b5a85}{total}});}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00617}00617\ \ \ \textcolor{comment}{//\ showSouvCartTableView();}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00618}00618\ \ \ \textcolor{comment}{//\ get\ the\ total\ cost\ here\_\_YC:}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00619}00619\ \}}
 \DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00620}00620\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00621}00621\ \ \ \ \ \textcolor{comment}{//\ initial\ ary}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00622}00622\ \ \ \ \ QSqlQuery\ qry;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00623}00623\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00624}00624\ \ \ \ \ \textcolor{comment}{//if\ the\ statement\ is\ true,\ then\ run\ the\ calculation\ method}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00625}00625\ \ \ \ \ \textcolor{keywordflow}{if}(\textcolor{keyword}{true})}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00626}00626\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00627}00627\ \ \ \ \ \ \ \ \ qry.prepare(\textcolor{stringliteral}{"{}select\ printf(\(\backslash\)"{}\%.2f\(\backslash\)"{},sum(cost\ *\ quantity))\ from\ Cart;"{}});}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00628}00628\ \ \ \ \ \ \ \ \ qry.exec();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00629}00629\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(qry.next())}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00630}00630\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00631}00631\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aa62e3a466d00b1051efb1dd2aa9b5a85}{total}}\ =\ qry.value(0).toDouble();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00632}00632\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00633}00633\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00634}00634\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00635}00635\ \ \ \ \ \textcolor{comment}{//assign\ the\ value\ to\ the\ header}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00636}00636\ \ \ \ \ this-\/>total\ =\ \mbox{\hyperlink{classplan_trip_window_aa62e3a466d00b1051efb1dd2aa9b5a85}{total}};}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00637}00637\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00638}00638\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00639}00639\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00640}00640\ \textcolor{comment}{//calculateDistance\ function\ is\ to\ calculate\ total\ distance\ traveled}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00641}\mbox{\hyperlink{classplan_trip_window_a065e55944714eab5c0eeeda961aee8e4}{00641}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classplan_trip_window_a065e55944714eab5c0eeeda961aee8e4}{planTripWindow::calculateDistance}}(\textcolor{keywordtype}{int}\ selectedCampusCount)}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00642}00642\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00643}00643\ \ \ \ \ \ \textcolor{comment}{//initial\ a\ double\ type\ total}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00644}00644\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}}\ =\ 0.0;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00645}00645\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00646}00646\ \ \ \ \ \ \textcolor{comment}{//\ set\ the\ campises\ to\ a\ string}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00647}00647\ \ \ \ \ QString*\ currentCampus\ =\ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.begin();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00648}00648\ \ \ \ \ QString*\ otherCampus\ =\ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.begin();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00649}00649\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00650}00650\ \ \ \ \ \textcolor{comment}{//\ loop\ through\ for\ each\ campus\ that\ was\ selected}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00651}00651\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ selectedCampusCount;\ i++)}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00652}00652\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00653}00653\ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}}\ +=\ \mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_aa797049558e234dd8b8b7cf542c388d4}{GetDistBtwn}}(*currentCampus,\ *otherCampus);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00654}00654\ \ \ \ \ \ \ \ currentCampus\ =\ otherCampus;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00655}00655\ \ \ \ \ \ \ \ otherCampus++;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00656}00656\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00657}00657\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00658}00658\ \ \ \ \ \textcolor{comment}{//\ return\ the\ final\ distance}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00659}00659\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}};}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00660}00660\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00661}00661\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00662}00662\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00663}00663\ \textcolor{comment}{//showTotal\ function\ is\ to\ display\ the\ total\ purchases\ in\ the\ label}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00664}00664\ \textcolor{comment}{//pass\ the\ variable\ total\ from\ calculateTotal()function}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00665}\mbox{\hyperlink{classplan_trip_window_ada0109671578216d8f41134096f987f2}{00665}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_ada0109671578216d8f41134096f987f2}{planTripWindow::showTotal}}(\textcolor{keywordtype}{double}\ total)}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00666}00666\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00667}00667\ \ \ \ \ \textcolor{comment}{//\ associate\ the\ total\ with\ the\ label\ in\ the\ uo\ page}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00668}00668\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>finalCostLabel-\/>setNum(\mbox{\hyperlink{classplan_trip_window_aa62e3a466d00b1051efb1dd2aa9b5a85}{total}});}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00669}00669\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00670}00670\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00671}00671\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00672}00672\ \textcolor{comment}{//displayReceiptPage\ function\ is\ to\ display\ the\ list\ of\ college\ that}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00673}00673\ \textcolor{comment}{//the\ student\ will\ viste\ in\ order\ and\ the\ souvenirs\ that\ they\ bought}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00674}00674\ \textcolor{comment}{//at\ each\ college,\ as\ well\ as\ the\ total\ distenct\ and\ the\ total\ price.}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00675}\mbox{\hyperlink{classplan_trip_window_aa5ef228faea826879b25f963d8e07ebd}{00675}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_aa5ef228faea826879b25f963d8e07ebd}{planTripWindow::displayReceiptPage}}()\{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00676}00676\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00677}00677\ \ \ \ \ \textcolor{comment}{//Go\ to\ the\ receipt\ widget}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00678}00678\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>stackedWidget-\/>setCurrentWidget(\mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>receiptPage);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00679}00679\ \ \ \ \ \textcolor{comment}{//\ set\ the\ combo\ box\ to\ display\ all\ the\ selected\ college}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00680}00680\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a4edeaca08683f49ef9873bde41e79ebe}{showSelectCampusComboBox}}(\textcolor{keyword}{new}\ QStringListModel(QList<QString>::fromVector(\mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}})));}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00681}00681\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00682}00682\ \ \ \ \ \textcolor{comment}{//\ display\ the\ college\ vistting\ order\ on\ to\ the\ screen}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00683}00683\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=\ 0;\ i<\mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.count();\ i++)\{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00684}00684\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>collegeListView-\/>setModel((\textcolor{keyword}{new}\ QStringListModel(QList<QString>::fromVector(\mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}))));}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00685}00685\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>collegeListView-\/>setColumnWidth(0,\ 460);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00686}00686\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>collegeListView-\/>setColumnWidth(1,\ 280);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00687}00687\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00621}00621\ \textcolor{comment}{//calculate\ function\ is\ to\ calculate\ total\ price\ from\ the\ cart\ table}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00622}00622\ \textcolor{comment}{//assign\ the\ variable\ into\ the\ elements\ in\ header\ file}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00623}\mbox{\hyperlink{classplan_trip_window_ad1baf2a897f6922c5c11fecf31ee6482}{00623}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_ad1baf2a897f6922c5c11fecf31ee6482}{planTripWindow::calculateTotal}}()}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00624}00624\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00625}00625\ \ \ \ \ \textcolor{comment}{//initial\ a\ double\ type\ total}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00626}00626\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classplan_trip_window_aa62e3a466d00b1051efb1dd2aa9b5a85}{total}}\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00627}00627\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00628}00628\ \ \ \ \ \textcolor{comment}{//\ initial\ ary}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00629}00629\ \ \ \ \ QSqlQuery\ qry;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00630}00630\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00631}00631\ \ \ \ \ \textcolor{comment}{//if\ the\ statement\ is\ true,\ then\ run\ the\ calculation\ method}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00632}00632\ \ \ \ \ \textcolor{keywordflow}{if}(\textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00633}00633\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00634}00634\ \ \ \ \ \ \ \ \ qry.prepare(\textcolor{stringliteral}{"{}select\ printf(\(\backslash\)"{}\%.2f\(\backslash\)"{},sum(cost\ *\ quantity))\ from\ Cart;"{}});}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00635}00635\ \ \ \ \ \ \ \ \ qry.exec();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00636}00636\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(qry.next())}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00637}00637\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00638}00638\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aa62e3a466d00b1051efb1dd2aa9b5a85}{total}}\ =\ qry.value(0).toDouble();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00639}00639\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00640}00640\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00641}00641\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00642}00642\ \ \ \ \ \textcolor{comment}{//assign\ the\ value\ to\ the\ header}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00643}00643\ \ \ \ \ this-\/>total\ =\ \mbox{\hyperlink{classplan_trip_window_aa62e3a466d00b1051efb1dd2aa9b5a85}{total}};}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00644}00644\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00645}00645\ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00646}00646\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00647}00647\ \textcolor{comment}{//calculateDistance\ function\ is\ to\ calculate\ total\ distance\ traveled}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00648}\mbox{\hyperlink{classplan_trip_window_a065e55944714eab5c0eeeda961aee8e4}{00648}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classplan_trip_window_a065e55944714eab5c0eeeda961aee8e4}{planTripWindow::calculateDistance}}(\textcolor{keywordtype}{int}\ selectedCampusCount)}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00649}00649\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00650}00650\ \ \ \ \ \ \textcolor{comment}{//initial\ a\ double\ type\ total}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00651}00651\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}}\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00652}00652\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00653}00653\ \ \ \ \ \ \textcolor{comment}{//\ set\ the\ campises\ to\ a\ string}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00654}00654\ \ \ \ \ QString*\ currentCampus\ =\ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.begin();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00655}00655\ \ \ \ \ QString*\ otherCampus\ =\ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.begin();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00656}00656\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00657}00657\ \ \ \ \ \textcolor{comment}{//\ loop\ through\ for\ each\ campus\ that\ was\ selected}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00658}00658\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ selectedCampusCount;\ i++)}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00659}00659\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00660}00660\ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}}\ +=\ \mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}}.\mbox{\hyperlink{classdb_manager_aa797049558e234dd8b8b7cf542c388d4}{GetDistBtwn}}(*otherCampus,*currentCampus);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00661}00661\ \ \ \ \ \ \ \ currentCampus\ =\ otherCampus;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00662}00662\ \ \ \ \ \ \ \ otherCampus++;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00663}00663\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00664}00664\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00665}00665\ \ \ \ \ \textcolor{comment}{//\ return\ the\ final\ distance}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00666}00666\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}};}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00667}00667\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00668}00668\ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00669}00669\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00670}00670\ \textcolor{comment}{//showTotal\ function\ is\ to\ display\ the\ total\ purchases\ in\ the\ label}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00671}00671\ \textcolor{comment}{//pass\ the\ variable\ total\ from\ calculateTotal()function}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00672}\mbox{\hyperlink{classplan_trip_window_ada0109671578216d8f41134096f987f2}{00672}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_ada0109671578216d8f41134096f987f2}{planTripWindow::showTotal}}(\textcolor{keywordtype}{double}\ total)}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00673}00673\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00674}00674\ \ \ \ \ \textcolor{comment}{//\ associate\ the\ total\ with\ the\ label\ in\ the\ uo\ page}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00675}00675\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>finalCostLabel-\/>setNum(\mbox{\hyperlink{classplan_trip_window_aa62e3a466d00b1051efb1dd2aa9b5a85}{total}});}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00676}00676\ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00677}00677\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00678}00678\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00679}00679\ \textcolor{comment}{//displayReceiptPage\ function\ is\ to\ display\ the\ list\ of\ college\ that}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00680}00680\ \textcolor{comment}{//the\ student\ will\ viste\ in\ order\ and\ the\ souvenirs\ that\ they\ bought}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00681}00681\ \textcolor{comment}{//at\ each\ college,\ as\ well\ as\ the\ total\ distenct\ and\ the\ total\ price.}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00682}\mbox{\hyperlink{classplan_trip_window_aa5ef228faea826879b25f963d8e07ebd}{00682}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_aa5ef228faea826879b25f963d8e07ebd}{planTripWindow::displayReceiptPage}}()\{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00683}00683\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00684}00684\ \ \ \ \ \textcolor{comment}{//Go\ to\ the\ receipt\ widget}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00685}00685\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>stackedWidget-\/>setCurrentWidget(\mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>receiptPage);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00686}00686\ \ \ \ \ \textcolor{comment}{//\ set\ the\ combo\ box\ to\ display\ all\ the\ selected\ college}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00687}00687\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a4edeaca08683f49ef9873bde41e79ebe}{showSelectCampusComboBox}}(\textcolor{keyword}{new}\ QStringListModel(QList<QString>::fromVector(\mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}})));}
 \DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00688}00688\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00689}00689\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00690}00690\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00691}\mbox{\hyperlink{classplan_trip_window_ae34303389cfd778dbddf011c1062b0d9}{00691}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_ae34303389cfd778dbddf011c1062b0d9}{planTripWindow::on\_SearchButton\_clicked}}()}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00692}00692\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00693}00693\ \ \ \ \ \textcolor{keywordtype}{double}\ collegeSouvenirsPrice\ =\ 0.0;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00694}00694\ \ \ \ \ QString\ campaseName;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00695}00695\ \ \ \ \ QSqlQuery\ qry;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00696}00696\ \ \ \ \ \textcolor{keywordtype}{double}\ cost\ =\ 0.00;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00689}00689\ \ \ \ \ \textcolor{comment}{//\ display\ the\ college\ vistting\ order\ on\ to\ the\ screen}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00690}00690\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=\ 0;\ i<\mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}.count();\ i++)\{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00691}00691\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>collegeListView-\/>setModel((\textcolor{keyword}{new}\ QStringListModel(QList<QString>::fromVector(\mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}}))));}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00692}00692\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>collegeListView-\/>setColumnWidth(0,\ 460);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00693}00693\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>collegeListView-\/>setColumnWidth(1,\ 280);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00694}00694\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00695}00695\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00696}00696\ \}}
 \DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00697}00697\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00698}00698\ \ \ \ \ campaseName\ =\ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>collegecomboBox-\/>currentText();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00699}00699\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>SelectedCollegeLabel-\/>setText(campaseName);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00700}00700\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00701}00701\ \ \ \ \ \textcolor{comment}{//qry.prepare("{}select\ cost\ from\ Cart\ where\ collegeName='"{}+campaseName+"{}'"{});}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00702}00702\ \ \ \ \ qry.prepare(\textcolor{stringliteral}{"{}select\ printf(\(\backslash\)"{}\%.2f\(\backslash\)"{},sum(cost\ *\ quantity))\ from\ Cart\ where\ collegeName='"{}}+campaseName+\textcolor{stringliteral}{"{}'"{}});}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00703}00703\ \ \ \ \ qry.exec();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00704}00704\ \ \ \ \ \textcolor{keywordflow}{if}(qry.next())\{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00705}00705\ \ \ \ \ \ \ \ \ cost\ =\ (qry.value(0).toDouble());}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00706}00706\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00707}00707\ \ \ \ \ \ \ \ \ QMessageBox::warning(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}ERROR"{}},\ \textcolor{stringliteral}{"{}There\ is\ issue\ with\ the\ displaying"{}},\ QMessageBox::Ok,\ QMessageBox::NoButton);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00708}00708\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00709}00709\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00710}00710\ \ \ \ \ collegeSouvenirsPrice\ =\ \ cost;}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00711}00711\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>collegeCostLabel-\/>setNum(collegeSouvenirsPrice);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00712}00712\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00713}00713\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00714}00714\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00698}\mbox{\hyperlink{classplan_trip_window_ae34303389cfd778dbddf011c1062b0d9}{00698}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_ae34303389cfd778dbddf011c1062b0d9}{planTripWindow::on\_SearchButton\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00699}00699\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00700}00700\ \ \ \ \ \textcolor{keywordtype}{double}\ collegeSouvenirsPrice\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00701}00701\ \ \ \ \ QString\ campaseName;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00702}00702\ \ \ \ \ QSqlQuery\ qry;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00703}00703\ \ \ \ \ \textcolor{keywordtype}{double}\ cost\ =\ 0.00;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00704}00704\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00705}00705\ \ \ \ \ campaseName\ =\ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>collegecomboBox-\/>currentText();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00706}00706\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>SelectedCollegeLabel-\/>setText(campaseName);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00707}00707\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00708}00708\ \ \ \ \ \textcolor{comment}{//qry.prepare("{}select\ cost\ from\ Cart\ where\ collegeName='"{}+campaseName+"{}'"{});}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00709}00709\ \ \ \ \ qry.prepare(\textcolor{stringliteral}{"{}select\ printf(\(\backslash\)"{}\%.2f\(\backslash\)"{},sum(cost\ *\ quantity))\ from\ Cart\ where\ collegeName='"{}}+campaseName+\textcolor{stringliteral}{"{}'"{}});}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00710}00710\ \ \ \ \ qry.exec();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00711}00711\ \ \ \ \ \textcolor{keywordflow}{if}(qry.next())\{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00712}00712\ \ \ \ \ \ \ \ \ cost\ =\ (qry.value(0).toDouble());}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00713}00713\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00714}00714\ \ \ \ \ \ \ \ \ QMessageBox::warning(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}ERROR"{}},\ \textcolor{stringliteral}{"{}There\ is\ issue\ with\ the\ displaying"{}},\ QMessageBox::Ok,\ QMessageBox::NoButton);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00715}00715\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00716}00716\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00717}00717\ \ \ \ \ collegeSouvenirsPrice\ =\ \ cost;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00718}00718\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}}-\/>collegeCostLabel-\/>setNum(collegeSouvenirsPrice);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00719}00719\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00720}00720\ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8cpp_source_l00721}00721\ }
 
 \end{DoxyCode}

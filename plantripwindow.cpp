@@ -118,7 +118,7 @@ void planTripWindow::on_planCustomTrip_clicked()
 {
     /**-----------------------------
     // Test(1):
-    // distance: 3973
+    // distance: 3201
     // cost: 713.97
 
     // Test(2):
@@ -181,6 +181,7 @@ void planTripWindow::showAvaliListCombo(QSqlQueryModel *model)
 
 void planTripWindow::on_enter_button_clicked()
 {
+
     //Students choice is saved into the vector
     QString campus = ui->next_combo->currentText();
 
@@ -212,13 +213,20 @@ void planTripWindow::on_done_button_clicked()
     if((asuNum == 0 || selectNum == asuNum) && selectNum!= 0)
     {
         QMessageBox::information(this, "Loading...", "An custom trip has been selected and you are done selecting all your colleges. Now moving to Souvenir Screen.", QMessageBox::Ok, QMessageBox::NoButton);
-        QList<QString>::fromVector(selectedCampuses);
+        copy(selectedCampuses.begin(), selectedCampuses.end(), back_inserter(campuseList));
+
+        // recursively sort through the list
+        // the start of the list
+        QString shortTrip = *campuseList.begin();
+
+        recursiveCollegeSort(shortTrip);
 
         // calculate the distance and output it
         distance = calculateDistance(selectNum);
         showTotalDistent(distance);
 
         //Go to souvenirShop widget
+        copy(campuseList.begin(), campuseList.end(), back_inserter(selectedCampuses));
         goToSouvenirShop();
     }
     else

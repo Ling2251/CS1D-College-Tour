@@ -1,399 +1,362 @@
-# Doxyfile 1.9.6
-
-#---------------------------------------------------------------------------
-# Project related configuration options
-#---------------------------------------------------------------------------
-DOXYFILE_ENCODING      = UTF-8
-PROJECT_NAME           = CS1D-College-Tour
-PROJECT_NUMBER         =
-PROJECT_BRIEF          =
-PROJECT_LOGO           =
-OUTPUT_DIRECTORY       = "C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/Doxygen"
-CREATE_SUBDIRS         = NO
-CREATE_SUBDIRS_LEVEL   = 8
-ALLOW_UNICODE_NAMES    = NO
-OUTPUT_LANGUAGE        = English
-BRIEF_MEMBER_DESC      = YES
-REPEAT_BRIEF           = YES
-ABBREVIATE_BRIEF       = "The $name class" \
-                         "The $name widget" \
-                         "The $name file" \
-                         is \
-                         provides \
-                         specifies \
-                         contains \
-                         represents \
-                         a \
-                         an \
-                         the
-ALWAYS_DETAILED_SEC    = NO
-INLINE_INHERITED_MEMB  = YES
-FULL_PATH_NAMES        = YES
-STRIP_FROM_PATH        =
-STRIP_FROM_INC_PATH    =
-SHORT_NAMES            = NO
-JAVADOC_AUTOBRIEF      = NO
-JAVADOC_BANNER         = NO
-QT_AUTOBRIEF           = NO
-MULTILINE_CPP_IS_BRIEF = NO
-PYTHON_DOCSTRING       = YES
-INHERIT_DOCS           = YES
-SEPARATE_MEMBER_PAGES  = NO
-TAB_SIZE               = 4
-ALIASES                =
-OPTIMIZE_OUTPUT_FOR_C  = NO
-OPTIMIZE_OUTPUT_JAVA   = NO
-OPTIMIZE_FOR_FORTRAN   = NO
-OPTIMIZE_OUTPUT_VHDL   = NO
-OPTIMIZE_OUTPUT_SLICE  = NO
-EXTENSION_MAPPING      =
-MARKDOWN_SUPPORT       = YES
-TOC_INCLUDE_HEADINGS   = 5
-AUTOLINK_SUPPORT       = YES
-BUILTIN_STL_SUPPORT    = NO
-CPP_CLI_SUPPORT        = NO
-SIP_SUPPORT            = NO
-IDL_PROPERTY_SUPPORT   = YES
-DISTRIBUTE_GROUP_DOC   = NO
-GROUP_NESTED_COMPOUNDS = NO
-SUBGROUPING            = YES
-INLINE_GROUPED_CLASSES = NO
-INLINE_SIMPLE_STRUCTS  = NO
-TYPEDEF_HIDES_STRUCT   = NO
-LOOKUP_CACHE_SIZE      = 0
-NUM_PROC_THREADS       = 1
-#---------------------------------------------------------------------------
-# Build related configuration options
-#---------------------------------------------------------------------------
-EXTRACT_ALL            = YES
-EXTRACT_PRIVATE        = YES
-EXTRACT_PRIV_VIRTUAL   = YES
-EXTRACT_PACKAGE        = YES
-EXTRACT_STATIC         = YES
-EXTRACT_LOCAL_CLASSES  = YES
-EXTRACT_LOCAL_METHODS  = YES
-EXTRACT_ANON_NSPACES   = YES
-RESOLVE_UNNAMED_PARAMS = YES
-HIDE_UNDOC_MEMBERS     = NO
-HIDE_UNDOC_CLASSES     = NO
-HIDE_FRIEND_COMPOUNDS  = NO
-HIDE_IN_BODY_DOCS      = NO
-INTERNAL_DOCS          = NO
-CASE_SENSE_NAMES       = SYSTEM
-HIDE_SCOPE_NAMES       = NO
-HIDE_COMPOUND_REFERENCE= NO
-SHOW_HEADERFILE        = YES
-SHOW_INCLUDE_FILES     = YES
-SHOW_GROUPED_MEMB_INC  = YES
-FORCE_LOCAL_INCLUDES   = NO
-INLINE_INFO            = YES
-SORT_MEMBER_DOCS       = YES
-SORT_BRIEF_DOCS        = NO
-SORT_MEMBERS_CTORS_1ST = NO
-SORT_GROUP_NAMES       = NO
-SORT_BY_SCOPE_NAME     = NO
-STRICT_PROTO_MATCHING  = NO
-GENERATE_TODOLIST      = YES
-GENERATE_TESTLIST      = YES
-GENERATE_BUGLIST       = YES
-GENERATE_DEPRECATEDLIST= YES
-ENABLED_SECTIONS       =
-MAX_INITIALIZER_LINES  = 30
-SHOW_USED_FILES        = YES
-SHOW_FILES             = YES
-SHOW_NAMESPACES        = YES
-FILE_VERSION_FILTER    =
-LAYOUT_FILE            =
-CITE_BIB_FILES         =
-#---------------------------------------------------------------------------
-# Configuration options related to warning and progress messages
-#---------------------------------------------------------------------------
-QUIET                  = NO
-WARNINGS               = YES
-WARN_IF_UNDOCUMENTED   = YES
-WARN_IF_DOC_ERROR      = YES
-WARN_IF_INCOMPLETE_DOC = YES
-WARN_NO_PARAMDOC       = NO
-WARN_IF_UNDOC_ENUM_VAL = NO
-WARN_AS_ERROR          = NO
-WARN_FORMAT            = "$file:$line: $text"
-WARN_LINE_FORMAT       = "at line $line of file $file"
-WARN_LOGFILE           =
-#---------------------------------------------------------------------------
-# Configuration options related to the input files
-#---------------------------------------------------------------------------
-INPUT                  = "C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour"
-INPUT_ENCODING         = UTF-8
-INPUT_FILE_ENCODING    =
-FILE_PATTERNS          = *.c \
-                         *.cc \
-                         *.cxx \
-                         *.cpp \
-                         *.c++ \
-                         *.java \
-                         *.ii \
-                         *.ixx \
-                         *.ipp \
-                         *.i++ \
-                         *.inl \
-                         *.idl \
-                         *.ddl \
-                         *.odl \
-                         *.h \
-                         *.hh \
-                         *.hxx \
-                         *.hpp \
-                         *.h++ \
-                         *.l \
-                         *.cs \
-                         *.d \
-                         *.php \
-                         *.php4 \
-                         *.php5 \
-                         *.phtml \
-                         *.inc \
-                         *.m \
-                         *.markdown \
-                         *.md \
-                         *.mm \
-                         *.dox \
-                         *.py \
-                         *.pyw \
-                         *.f90 \
-                         *.f95 \
-                         *.f03 \
-                         *.f08 \
-                         *.f18 \
-                         *.f \
-                         *.for \
-                         *.vhd \
-                         *.vhdl \
-                         *.ucf \
-                         *.qsf \
-                         *.ice
-RECURSIVE              = YES
-EXCLUDE                =
-EXCLUDE_SYMLINKS       = NO
-EXCLUDE_PATTERNS       =
-EXCLUDE_SYMBOLS        =
-EXAMPLE_PATH           =
-EXAMPLE_PATTERNS       = *
-EXAMPLE_RECURSIVE      = NO
-IMAGE_PATH             =
-INPUT_FILTER           =
-FILTER_PATTERNS        =
-FILTER_SOURCE_FILES    = NO
-FILTER_SOURCE_PATTERNS =
-USE_MDFILE_AS_MAINPAGE =
-FORTRAN_COMMENT_AFTER  = 72
-#---------------------------------------------------------------------------
-# Configuration options related to source browsing
-#---------------------------------------------------------------------------
-SOURCE_BROWSER         = YES
-INLINE_SOURCES         = NO
-STRIP_CODE_COMMENTS    = YES
-REFERENCED_BY_RELATION = NO
-REFERENCES_RELATION    = NO
-REFERENCES_LINK_SOURCE = YES
-SOURCE_TOOLTIPS        = YES
-USE_HTAGS              = NO
-VERBATIM_HEADERS       = YES
-CLANG_ASSISTED_PARSING = NO
-CLANG_ADD_INC_PATHS    = YES
-CLANG_OPTIONS          =
-CLANG_DATABASE_PATH    =
-#---------------------------------------------------------------------------
-# Configuration options related to the alphabetical class index
-#---------------------------------------------------------------------------
-ALPHABETICAL_INDEX     = YES
-IGNORE_PREFIX          =
-#---------------------------------------------------------------------------
-# Configuration options related to the HTML output
-#---------------------------------------------------------------------------
-GENERATE_HTML          = YES
-HTML_OUTPUT            = html
-HTML_FILE_EXTENSION    = .html
-HTML_HEADER            =
-HTML_FOOTER            =
-HTML_STYLESHEET        =
-HTML_EXTRA_STYLESHEET  =
-HTML_EXTRA_FILES       =
-HTML_COLORSTYLE        = AUTO_LIGHT
-HTML_COLORSTYLE_HUE    = 229
-HTML_COLORSTYLE_SAT    = 107
-HTML_COLORSTYLE_GAMMA  = 55
-HTML_TIMESTAMP         = NO
-HTML_DYNAMIC_MENUS     = YES
-HTML_DYNAMIC_SECTIONS  = NO
-HTML_INDEX_NUM_ENTRIES = 100
-GENERATE_DOCSET        = NO
-DOCSET_FEEDNAME        = "Doxygen generated docs"
-DOCSET_FEEDURL         =
-DOCSET_BUNDLE_ID       = org.doxygen.Project
-DOCSET_PUBLISHER_ID    = org.doxygen.Publisher
-DOCSET_PUBLISHER_NAME  = Publisher
-GENERATE_HTMLHELP      = NO
-CHM_FILE               =
-HHC_LOCATION           =
-GENERATE_CHI           = NO
-CHM_INDEX_ENCODING     =
-BINARY_TOC             = NO
-TOC_EXPAND             = NO
-GENERATE_QHP           = NO
-QCH_FILE               =
-QHP_NAMESPACE          = org.doxygen.Project
-QHP_VIRTUAL_FOLDER     = doc
-QHP_CUST_FILTER_NAME   =
-QHP_CUST_FILTER_ATTRS  =
-QHP_SECT_FILTER_ATTRS  =
-QHG_LOCATION           =
-GENERATE_ECLIPSEHELP   = NO
-ECLIPSE_DOC_ID         = org.doxygen.Project
-DISABLE_INDEX          = NO
-GENERATE_TREEVIEW      = YES
-FULL_SIDEBAR           = NO
-ENUM_VALUES_PER_LINE   = 4
-TREEVIEW_WIDTH         = 250
-EXT_LINKS_IN_WINDOW    = NO
-OBFUSCATE_EMAILS       = YES
-HTML_FORMULA_FORMAT    = png
-FORMULA_FONTSIZE       = 10
-FORMULA_MACROFILE      =
-USE_MATHJAX            = NO
-MATHJAX_VERSION        = MathJax_2
-MATHJAX_FORMAT         = HTML-CSS
-MATHJAX_RELPATH        =
-MATHJAX_EXTENSIONS     =
-MATHJAX_CODEFILE       =
-SEARCHENGINE           = YES
-SERVER_BASED_SEARCH    = NO
-EXTERNAL_SEARCH        = NO
-SEARCHENGINE_URL       =
-SEARCHDATA_FILE        = searchdata.xml
-EXTERNAL_SEARCH_ID     =
-EXTRA_SEARCH_MAPPINGS  =
-#---------------------------------------------------------------------------
-# Configuration options related to the LaTeX output
-#---------------------------------------------------------------------------
-GENERATE_LATEX         = YES
-LATEX_OUTPUT           = latex
-LATEX_CMD_NAME         =
-MAKEINDEX_CMD_NAME     = makeindex
-LATEX_MAKEINDEX_CMD    = makeindex
-COMPACT_LATEX          = NO
-PAPER_TYPE             = a4
-EXTRA_PACKAGES         =
-LATEX_HEADER           =
-LATEX_FOOTER           =
-LATEX_EXTRA_STYLESHEET =
-LATEX_EXTRA_FILES      =
-PDF_HYPERLINKS         = YES
-USE_PDFLATEX           = YES
-LATEX_BATCHMODE        = NO
-LATEX_HIDE_INDICES     = NO
-LATEX_BIB_STYLE        = plain
-LATEX_TIMESTAMP        = NO
-LATEX_EMOJI_DIRECTORY  =
-#---------------------------------------------------------------------------
-# Configuration options related to the RTF output
-#---------------------------------------------------------------------------
-GENERATE_RTF           = NO
-RTF_OUTPUT             = rtf
-COMPACT_RTF            = NO
-RTF_HYPERLINKS         = NO
-RTF_STYLESHEET_FILE    =
-RTF_EXTENSIONS_FILE    =
-#---------------------------------------------------------------------------
-# Configuration options related to the man page output
-#---------------------------------------------------------------------------
-GENERATE_MAN           = YES
-MAN_OUTPUT             = man
-MAN_EXTENSION          = .3
-MAN_SUBDIR             =
-MAN_LINKS              = NO
-#---------------------------------------------------------------------------
-# Configuration options related to the XML output
-#---------------------------------------------------------------------------
-GENERATE_XML           = NO
-XML_OUTPUT             = xml
-XML_PROGRAMLISTING     = YES
-XML_NS_MEMB_FILE_SCOPE = NO
-#---------------------------------------------------------------------------
-# Configuration options related to the DOCBOOK output
-#---------------------------------------------------------------------------
-GENERATE_DOCBOOK       = NO
-DOCBOOK_OUTPUT         = docbook
-#---------------------------------------------------------------------------
-# Configuration options for the AutoGen Definitions output
-#---------------------------------------------------------------------------
-GENERATE_AUTOGEN_DEF   = NO
-#---------------------------------------------------------------------------
-# Configuration options related to Sqlite3 output
-#---------------------------------------------------------------------------
-#---------------------------------------------------------------------------
-# Configuration options related to the Perl module output
-#---------------------------------------------------------------------------
-GENERATE_PERLMOD       = NO
-PERLMOD_LATEX          = NO
-PERLMOD_PRETTY         = YES
-PERLMOD_MAKEVAR_PREFIX =
-#---------------------------------------------------------------------------
-# Configuration options related to the preprocessor
-#---------------------------------------------------------------------------
-ENABLE_PREPROCESSING   = YES
-MACRO_EXPANSION        = NO
-EXPAND_ONLY_PREDEF     = NO
-SEARCH_INCLUDES        = YES
-INCLUDE_PATH           =
-INCLUDE_FILE_PATTERNS  =
-PREDEFINED             =
-EXPAND_AS_DEFINED      =
-SKIP_FUNCTION_MACROS   = YES
-#---------------------------------------------------------------------------
-# Configuration options related to external references
-#---------------------------------------------------------------------------
-TAGFILES               =
-GENERATE_TAGFILE       =
-ALLEXTERNALS           = NO
-EXTERNAL_GROUPS        = YES
-EXTERNAL_PAGES         = YES
-#---------------------------------------------------------------------------
-# Configuration options related to the dot tool
-#---------------------------------------------------------------------------
-DIA_PATH               =
-HIDE_UNDOC_RELATIONS   = NO
-HAVE_DOT               = YES
-DOT_NUM_THREADS        = 0
-DOT_COMMON_ATTR        = "fontname=Helvetica,fontsize=10"
-DOT_EDGE_ATTR          = "labelfontname=Helvetica,labelfontsize=10"
-DOT_NODE_ATTR          = "shape=box,height=0.2,width=0.4"
-DOT_FONTPATH           =
-CLASS_GRAPH            = YES
-COLLABORATION_GRAPH    = YES
-GROUP_GRAPHS           = YES
-UML_LOOK               = YES
-UML_LIMIT_NUM_FIELDS   = 10
-DOT_UML_DETAILS        = YES
-DOT_WRAP_THRESHOLD     = 17
-TEMPLATE_RELATIONS     = NO
-INCLUDE_GRAPH          = YES
-INCLUDED_BY_GRAPH      = YES
-CALL_GRAPH             = YES
-CALLER_GRAPH           = YES
-GRAPHICAL_HIERARCHY    = NO
-DIRECTORY_GRAPH        = YES
-DIR_GRAPH_MAX_DEPTH    = 1
-DOT_IMAGE_FORMAT       = png
-INTERACTIVE_SVG        = YES
-DOT_PATH               =
-DOTFILE_DIRS           =
-MSCFILE_DIRS           =
-DIAFILE_DIRS           =
-PLANTUML_JAR_PATH      =
-PLANTUML_CFG_FILE      =
-PLANTUML_INCLUDE_PATH  =
-DOT_GRAPH_MAX_NODES    = 100
-MAX_DOT_GRAPH_DEPTH    = 0
-DOT_MULTI_TARGETS      = NO
-GENERATE_LEGEND        = YES
-DOT_CLEANUP            = YES
+Doxygen version used: 1.9.6
+Searching for include files...
+Searching for example files...
+Searching for images...
+Searching for dot files...
+Searching for msc files...
+Searching for dia files...
+Searching for files to exclude
+Searching INPUT for files to process...
+Searching for files in directory C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour
+Searching for files in directory C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/Doxygen
+Reading and parsing tag files
+Parsing files
+Reading C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/CODE_OF_CONDUCT.md...
+Preprocessing C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/dbmanager.cpp...
+Parsing file C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/dbmanager.cpp...
+Preprocessing C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/dbmanager.h...
+Parsing file C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/dbmanager.h...
+Preprocessing C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/displaycollegewindow.cpp...
+Parsing file C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/displaycollegewindow.cpp...
+Preprocessing C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/displaycollegewindow.h...
+Parsing file C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/displaycollegewindow.h...
+Preprocessing C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/global.h...
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/global.h:34: warning: Reached end of file while still inside a (nested) comment. Nesting level 1 (probable line reference: 15)
+Parsing file C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/global.h...
+Preprocessing C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/inputcollege.cpp...
+Parsing file C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/inputcollege.cpp...
+Preprocessing C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/inputcollege.h...
+Parsing file C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/inputcollege.h...
+Preprocessing C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/loginpage.cpp...
+Parsing file C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/loginpage.cpp...
+Preprocessing C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/loginpage.h...
+Parsing file C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/loginpage.h...
+Preprocessing C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/main.cpp...
+Parsing file C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/main.cpp...
+Preprocessing C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/maintenance.cpp...
+Parsing file C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/maintenance.cpp...
+Preprocessing C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/maintenance.h...
+Parsing file C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/maintenance.h...
+Preprocessing C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/mainwindow.cpp...
+Parsing file C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/mainwindow.cpp...
+Preprocessing C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/mainwindow.h...
+Parsing file C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/mainwindow.h...
+Preprocessing C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.cpp...
+Parsing file C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.cpp...
+Preprocessing C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h...
+Parsing file C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h...
+Reading C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/README.md...
+Preprocessing C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/souveniraddandedit.cpp...
+Parsing file C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/souveniraddandedit.cpp...
+Preprocessing C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/souveniraddandedit.h...
+Parsing file C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/souveniraddandedit.h...
+Preprocessing C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/userinterface.cpp...
+Parsing file C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/userinterface.cpp...
+Preprocessing C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/userinterface.h...
+Parsing file C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/userinterface.h...
+Preprocessing C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/userwindow.cpp...
+Parsing file C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/userwindow.cpp...
+Preprocessing C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/userwindow.h...
+Parsing file C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/userwindow.h...
+Building macro definition list...
+Building group list...
+Building directory list...
+Building namespace list...
+Building file list...
+Building class list...
+Building concept list...
+Computing nesting relations for classes...
+Associating documentation with classes...
+Associating documentation with concepts...
+Building example list...
+Searching for enumerations...
+Searching for documented typedefs...
+Searching for members imported via using declarations...
+Searching for included using directives...
+Searching for documented variables...
+Building interface member list...
+Building member list...
+Searching for friends...
+Searching for documented defines...
+Computing class inheritance relations...
+Computing class usage relations...
+Flushing cached template relations that have become invalid...
+Computing class relations...
+Add enum values to enums...
+Searching for member function documentation...
+Creating members for template instances...
+Building page list...
+Search for main page...
+Computing page relations...
+Determining the scope of groups...
+Sorting lists...
+Determining which enums are documented
+Computing member relations...
+Building full member lists recursively...
+Adding members to member groups.
+Computing member references...
+Inheriting documentation...
+Generating disk names...
+Adding source references...
+Adding xrefitems...
+Sorting member lists...
+Setting anonymous enum type...
+Computing dependencies between directories...
+Generating citations page...
+Counting members...
+Counting data structures...
+Resolving user defined references...
+Finding anchors and sections in the documentation...
+Transferring function references...
+Combining using relations...
+Adding members to index pages...
+Correcting members for VHDL...
+Computing tooltip texts...
+Generating style sheet...
+Generating search indices...
+Generating example documentation...
+Generating file sources...
+Parsing code for file CODE_OF_CONDUCT.md...
+Generating code for file dbmanager.cpp...
+Generating code for file dbmanager.h...
+Generating code for file displaycollegewindow.cpp...
+Generating code for file displaycollegewindow.h...
+Generating code for file global.h...
+Generating code for file inputcollege.cpp...
+Generating code for file inputcollege.h...
+Generating code for file loginpage.cpp...
+Generating code for file loginpage.h...
+Generating code for file main.cpp...
+Generating code for file maintenance.cpp...
+Generating code for file maintenance.h...
+Generating code for file mainwindow.cpp...
+Generating code for file mainwindow.h...
+Generating code for file plantripwindow.cpp...
+Generating code for file plantripwindow.h...
+Parsing code for file README.md...
+Generating code for file souveniraddandedit.cpp...
+Generating code for file souveniraddandedit.h...
+Generating code for file userinterface.cpp...
+Generating code for file userinterface.h...
+Generating code for file userwindow.cpp...
+Generating code for file userwindow.h...
+Generating file documentation...
+Generating docs for file CODE_OF_CONDUCT.md...
+Generating docs for file dbmanager.cpp...
+Generating docs for file dbmanager.h...
+Generating docs for file displaycollegewindow.cpp...
+Generating docs for file displaycollegewindow.h...
+Generating docs for file global.h...
+Generating docs for file inputcollege.cpp...
+Generating docs for file inputcollege.h...
+Generating docs for file loginpage.cpp...
+Generating docs for file loginpage.h...
+Generating docs for file main.cpp...
+Generating docs for file maintenance.cpp...
+Generating docs for file maintenance.h...
+Generating docs for file mainwindow.cpp...
+Generating docs for file mainwindow.h...
+Generating docs for file plantripwindow.cpp...
+Generating docs for file plantripwindow.h...
+Generating docs for file README.md...
+Generating docs for file souveniraddandedit.cpp...
+Generating docs for file souveniraddandedit.h...
+Generating docs for file userinterface.cpp...
+Generating docs for file userinterface.h...
+Generating docs for file userwindow.cpp...
+Generating docs for file userwindow.h...
+Generating page documentation...
+Generating docs for page md_CODE_OF_CONDUCT...
+Generating docs for page md_README...
+Generating group documentation...
+Generating class documentation...
+Generating docs for compound dbManager...
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/dbmanager.h:20: warning: found documented return type for dbManager::dbManager that does not return anything
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/dbmanager.h:57: warning: argument 'string' of command @param is not found in the argument list of dbManager::checkCampusName(QString campus)
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/dbmanager.h:57: warning: The following parameter of dbManager::checkCampusName(QString campus) is not documented:
+  parameter 'campus'
+Generating caller graph for function dbManager::checkCampusName
+Generating caller graph for function dbManager::createCart
+Generating caller graph for function dbManager::deleteCart
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/dbmanager.h:65: warning: argument 'string' of command @param is not found in the argument list of dbManager::GetDistBtwn(QString start, QString end)
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/dbmanager.h:65: warning: The following parameters of dbManager::GetDistBtwn(QString start, QString end) are not documented:
+  parameter 'start'
+  parameter 'end'
+Generating caller graph for function dbManager::GetDistBtwn
+Generating caller graph for function dbManager::loadCampusNamesOnly
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/dbmanager.h:73: warning: argument 'string' of command @param is not found in the argument list of dbManager::loadCampusSouvenirs(QString campus)
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/dbmanager.h:73: warning: The following parameter of dbManager::loadCampusSouvenirs(QString campus) is not documented:
+  parameter 'campus'
+Generating caller graph for function dbManager::loadCampusSouvenirs
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/dbmanager.h:39: warning: argument 'string' of command @param is not found in the argument list of dbManager::loadOtherCampusAndDist(QString campus)
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/dbmanager.h:39: warning: The following parameter of dbManager::loadOtherCampusAndDist(QString campus) is not documented:
+  parameter 'campus'
+Generating caller graph for function dbManager::loadOtherCampusAndDist
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/dbmanager.h:48: warning: argument 'vetctor' of command @param is not found in the argument list of dbManager::loadRemainingCampusNamesOnly(QVector< QString > campuses)
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/dbmanager.h:48: warning: The following parameter of dbManager::loadRemainingCampusNamesOnly(QVector< QString > campuses) is not documented:
+  parameter 'campuses'
+Generating caller graph for function dbManager::loadRemainingCampusNamesOnly
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/dbmanager.h:81: warning: argument 'string' of command @param is not found in the argument list of dbManager::loadSouvCart(QString sQry)
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/dbmanager.h:81: warning: The following parameter of dbManager::loadSouvCart(QString sQry) is not documented:
+  parameter 'sQry'
+Generating caller graph for function dbManager::loadSouvCart
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/dbmanager.h:100: warning: argument 'string' of command @param is not found in the argument list of dbManager::updateCartQuantity(QString campus, QString souv, int quantity)
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/dbmanager.h:100: warning: The following parameters of dbManager::updateCartQuantity(QString campus, QString souv, int quantity) are not documented:
+  parameter 'campus'
+  parameter 'souv'
+  parameter 'quantity'
+Generating caller graph for function dbManager::updateCartQuantity
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/dbmanager.h:100: warning: found documented return type for dbManager::updateCartQuantity that does not return anything
+Generating docs for compound displayCollegeWindow...
+Generating call graph for function displayCollegeWindow::displayCollegeWindow
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/displaycollegewindow.h:24: warning: found documented return type for displayCollegeWindow::displayCollegeWindow that does not return anything
+Generating call graph for function displayCollegeWindow::on_other_button_clicked
+Generating call graph for function displayCollegeWindow::on_souv_button_clicked
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/displaycollegewindow.h:42: warning: argument 'QSqlQueryModel' of command @param is not found in the argument list of displayCollegeWindow::showCampusDBCombo(QSqlQueryModel *model)
+Generating caller graph for function displayCollegeWindow::showCampusDBCombo
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/displaycollegewindow.h:42: warning: found documented return type for displayCollegeWindow::showCampusDBCombo that does not return anything
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/displaycollegewindow.h:35: warning: argument 'QSqlQueryModel' of command @param is not found in the argument list of displayCollegeWindow::showDBView(QSqlQueryModel *model)
+Generating caller graph for function displayCollegeWindow::showDBView
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/displaycollegewindow.h:35: warning: found documented return type for displayCollegeWindow::showDBView that does not return anything
+Generating docs for compound global...
+Generating docs for compound InputCollege...
+Generating call graph for function InputCollege::InputCollege
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/inputcollege.h:33: warning: found documented return type for InputCollege::InputCollege that does not return anything
+Generating caller graph for function InputCollege::pushInputData
+Generating caller graph for function InputCollege::readFile
+Generating docs for compound InputCollegeList...
+Generating docs for compound loginpage...
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/loginpage.h:22: warning: found documented return type for loginpage::loginpage that does not return anything
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/loginpage.h:35: warning: found documented return type for loginpage::on_pushButton_login_clicked that does not return anything
+Generating docs for compound maintenance...
+Generating docs for compound MainWindow...
+Generating docs for compound planTripWindow...
+Generating call graph for function planTripWindow::planTripWindow
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:38: warning: found documented return type for planTripWindow::planTripWindow that does not return anything
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:108: warning: argument 'int' of command @param is not found in the argument list of planTripWindow::calculateDistance(int selectedCampusCount)
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:108: warning: The following parameter of planTripWindow::calculateDistance(int selectedCampusCount) is not documented:
+  parameter 'selectedCampusCount'
+Generating call graph for function planTripWindow::calculateDistance
+Generating caller graph for function planTripWindow::calculateDistance
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:101: warning: planTripWindow::calculateTotal has @param documentation sections but no arguments
+Generating caller graph for function planTripWindow::calculateTotal
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:101: warning: found documented return type for planTripWindow::calculateTotal that does not return anything
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:50: warning: argument 'QVector' of command @param is not found in the argument list of planTripWindow::checkCampusVectorNames(QVector< QString > campuses)
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:50: warning: argument 'QString' of command @param is not found in the argument list of planTripWindow::checkCampusVectorNames(QVector< QString > campuses)
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:50: warning: argument 'the' of command @param is not found in the argument list of planTripWindow::checkCampusVectorNames(QVector< QString > campuses)
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:50: warning: The following parameter of planTripWindow::checkCampusVectorNames(QVector< QString > campuses) is not documented:
+  parameter 'campuses'
+Generating call graph for function planTripWindow::checkCampusVectorNames
+Generating caller graph for function planTripWindow::checkCampusVectorNames
+Generating call graph for function planTripWindow::displayReceiptPage
+Generating caller graph for function planTripWindow::displayReceiptPage
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:66: warning: planTripWindow::goToSouvenirShop has @param documentation sections but no arguments
+Generating call graph for function planTripWindow::goToSouvenirShop
+Generating caller graph for function planTripWindow::goToSouvenirShop
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:66: warning: found documented return type for planTripWindow::goToSouvenirShop that does not return anything
+Generating call graph for function planTripWindow::on_addSouvenir_button_clicked
+Generating call graph for function planTripWindow::on_done_button_clicked
+Generating call graph for function planTripWindow::on_doneBuying_clicked
+Generating call graph for function planTripWindow::on_enter_button_clicked
+Generating call graph for function planTripWindow::on_planCustomTrip_clicked
+Generating call graph for function planTripWindow::on_planShortTrip_clicked
+Generating call graph for function planTripWindow::on_receiptDone_clicked
+Generating call graph for function planTripWindow::on_selectCampus_comboBox_currentIndexChanged
+Generating call graph for function planTripWindow::on_startTrip_clicked
+Generating call graph for function planTripWindow::on_startTripFormUIC_clicked
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:57: warning: argument 'String' of command @param is not found in the argument list of planTripWindow::recursiveCollegeSort(QString currentCamp)
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:57: warning: The following parameter of planTripWindow::recursiveCollegeSort(QString currentCamp) is not documented:
+  parameter 'currentCamp'
+Generating call graph for function planTripWindow::recursiveCollegeSort
+Generating caller graph for function planTripWindow::recursiveCollegeSort
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:122: warning: argument 'QSqlQueryModel' of command @param is not found in the argument list of planTripWindow::showAvaliListCombo(QSqlQueryModel *model)
+Generating caller graph for function planTripWindow::showAvaliListCombo
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:122: warning: found documented return type for planTripWindow::showAvaliListCombo that does not return anything
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:136: warning: argument 'QSqlQueryModel' of command @param is not found in the argument list of planTripWindow::showAvaliListView(QSqlQueryModel *model)
+Generating caller graph for function planTripWindow::showAvaliListView
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:136: warning: found documented return type for planTripWindow::showAvaliListView that does not return anything
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:74: warning: argument 'pointer' of command @param is not found in the argument list of planTripWindow::showSelectCampusComboBox(QStringListModel *model)
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:74: warning: The following parameter of planTripWindow::showSelectCampusComboBox(QStringListModel *model) is not documented:
+  parameter 'model'
+Generating caller graph for function planTripWindow::showSelectCampusComboBox
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:74: warning: found documented return type for planTripWindow::showSelectCampusComboBox that does not return anything
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:129: warning: planTripWindow::showSelectListView has @param documentation sections but no arguments
+Generating caller graph for function planTripWindow::showSelectListView
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:129: warning: found documented return type for planTripWindow::showSelectListView that does not return anything
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:92: warning: argument 'pointer' of command @param is not found in the argument list of planTripWindow::showSouvCartTableView(QSqlQueryModel *model)
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:92: warning: The following parameter of planTripWindow::showSouvCartTableView(QSqlQueryModel *model) is not documented:
+  parameter 'model'
+Generating caller graph for function planTripWindow::showSouvCartTableView
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:92: warning: found documented return type for planTripWindow::showSouvCartTableView that does not return anything
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:83: warning: argument 'pointer' of command @param is not found in the argument list of planTripWindow::showSouvTableView(QSqlQueryModel *model)
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:83: warning: The following parameter of planTripWindow::showSouvTableView(QSqlQueryModel *model) is not documented:
+  parameter 'model'
+Generating caller graph for function planTripWindow::showSouvTableView
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:83: warning: found documented return type for planTripWindow::showSouvTableView that does not return anything
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:115: warning: argument 'double' of command @param is not found in the argument list of planTripWindow::showTotal(double total)
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:115: warning: The following parameter of planTripWindow::showTotal(double total) is not documented:
+  parameter 'total'
+Generating caller graph for function planTripWindow::showTotal
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:115: warning: found documented return type for planTripWindow::showTotal that does not return anything
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:143: warning: argument 'no' of command @param is not found in the argument list of planTripWindow::showTotalDistent(double distance)
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:143: warning: The following parameter of planTripWindow::showTotalDistent(double distance) is not documented:
+  parameter 'distance'
+Generating caller graph for function planTripWindow::showTotalDistent
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/plantripwindow.h:143: warning: found documented return type for planTripWindow::showTotalDistent that does not return anything
+Generating docs for nested compound planTripWindow::Souvenir...
+Generating docs for compound QDialog...
+Generating docs for compound QMainWindow...
+Generating docs for compound QWidget...
+Generating docs for compound souvenirAddandEdit...
+Generating call graph for function souvenirAddandEdit::souvenirAddandEdit
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/souveniraddandedit.h:31: warning: found documented return type for souvenirAddandEdit::souvenirAddandEdit that does not return anything
+Generating caller graph for function souvenirAddandEdit::displayCollegeComboBox
+Generating caller graph for function souvenirAddandEdit::displayItemComBox
+Generating docs for compound userInterface...
+C:/Users/zhao2/OneDrive/Desktop/school file/CS1D/Project one/CS1D-College-Tour/userinterface.h:23: warning: found documented return type for userInterface::userInterface that does not return anything
+Generating docs for compound userWindow...
+Generating concept documentation...
+Generating namespace index...
+Generating docs for namespace Ui
+Generating graph info page...
+Generating directory documentation...
+Generating index page...
+Generating page index...
+Generating module index...
+Generating namespace index...
+Generating namespace member index...
+Generating concept index...
+Generating annotated compound index...
+Generating alphabetical compound index...
+Generating hierarchical class index...
+Generating member index...
+Generating file index...
+Generating file member index...
+Generating example index...
+finalizing index lists...
+writing tag file...
+Running plantuml with JAVA...
+Running dot...
+Generating dot graphs using 17 parallel threads...
+Running dot for graph 1/12
+Running dot for graph 2/12
+Running dot for graph 3/12
+Running dot for graph 4/12
+Running dot for graph 5/12
+Running dot for graph 6/12
+Running dot for graph 7/12
+Running dot for graph 8/12
+Running dot for graph 9/12
+Running dot for graph 10/12
+Running dot for graph 11/12
+Running dot for graph 12/12
+Patching output file 1/6
+Patching output file 2/6
+Patching output file 3/6
+Patching output file 4/6
+Patching output file 5/6
+Patching output file 6/6
+type lookup cache used 418/65536 hits=1796 misses=443
+symbol lookup cache used 445/65536 hits=2052 misses=445
+finished...
+*** Doxygen has finished

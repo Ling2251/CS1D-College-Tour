@@ -1,5 +1,5 @@
 <map id="planTripWindow" name="planTripWindow">
-<area shape="rect" id="node1" title="Most functionality of the planTripWindow class is to give the student options on how they would like ..." alt="" coords="708,608,936,1184"/>
+<area shape="rect" id="node1" title="Most functionality of the planTripWindow class is to give the student options on how they would like ..." alt="" coords="708,623,936,1199"/>
 <area shape="rect" id="node2" href="$class_q_dialog.html" title=" " alt="" coords="5,314,73,391"/>
 <area shape="rect" id="node3" title=" " alt="" coords="98,314,221,391"/>
 <area shape="rect" id="node4" href="$classdb_manager.html" title="Most functionality of the dbManager class is to load the campus names and the the distance between th..." alt="" coords="245,160,476,545"/>

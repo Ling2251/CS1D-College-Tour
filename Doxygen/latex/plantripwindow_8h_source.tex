@@ -8,106 +8,108 @@
 \DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <QMessageBox>}}
 \DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <QAbstractTableModel>}}
 \DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dbmanager_8h}{dbmanager.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00008}00008\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00016}00016\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00017}00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classplan_trip_window}{planTripWindow}};}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00018}00018\ \}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00019}00019\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00020}\mbox{\hyperlink{classplan_trip_window}{00020}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classplan_trip_window}{planTripWindow}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_q_dialog}{QDialog}}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00021}00021\ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00022}00022\ \ \ \ \ Q\_OBJECT}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00024}00024\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00028}\mbox{\hyperlink{structplan_trip_window_1_1_souvenir}{00028}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structplan_trip_window_1_1_souvenir}{Souvenir}}}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00029}00029\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00030}\mbox{\hyperlink{structplan_trip_window_1_1_souvenir_adb295bd20d32f374371273cc637c3d64}{00030}}\ \ \ \ \ \ \ \ \ QString\ \mbox{\hyperlink{structplan_trip_window_1_1_souvenir_adb295bd20d32f374371273cc637c3d64}{souvName}};\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00031}\mbox{\hyperlink{structplan_trip_window_1_1_souvenir_a70079aed78d173285d7db572d8474280}{00031}}\ \ \ \ \ \ \ \ \ QString\ \mbox{\hyperlink{structplan_trip_window_1_1_souvenir_a70079aed78d173285d7db572d8474280}{campus}};\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00032}\mbox{\hyperlink{structplan_trip_window_1_1_souvenir_a6dbc60194e38dbb16337faa0d4727435}{00032}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structplan_trip_window_1_1_souvenir_a6dbc60194e38dbb16337faa0d4727435}{cost}};\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00033}\mbox{\hyperlink{structplan_trip_window_1_1_souvenir_a61809ebf1ba7bfc1bd2f74439e955a16}{00033}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structplan_trip_window_1_1_souvenir_a61809ebf1ba7bfc1bd2f74439e955a16}{quantity}};\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00034}00034\ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00035}00035\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00041}00041\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classplan_trip_window}{planTripWindow}}(\mbox{\hyperlink{class_q_widget}{QWidget}}\ *parent\ =\ \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00042}00042\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00046}00046\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a0860a88101dbc6b5b4a99730aa08388c}{\string~planTripWindow}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00047}00047\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00053}00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classplan_trip_window_ac86371ade6112c1ccb90329d95d1fb17}{checkCampusVectorNames}}(QVector<QString>\ campuses);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00054}00054\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00062}00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_aeb900b032acce3f075be92c86674c1ee}{recursiveCollegeSort}}(QString\ currentCamp);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00063}00063\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00069}00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_af2cb7dffda707e3be62a9e7422797d25}{goToSouvenirShop}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00008}00008\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00017}00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00018}00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classplan_trip_window}{planTripWindow}};}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00019}00019\ \}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00021}\mbox{\hyperlink{classplan_trip_window}{00021}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classplan_trip_window}{planTripWindow}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_q_dialog}{QDialog}}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00022}00022\ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00023}00023\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00025}00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00029}\mbox{\hyperlink{structplan_trip_window_1_1_souvenir}{00029}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structplan_trip_window_1_1_souvenir}{Souvenir}}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00030}00030\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00031}\mbox{\hyperlink{structplan_trip_window_1_1_souvenir_adb295bd20d32f374371273cc637c3d64}{00031}}\ \ \ \ \ \ \ \ \ QString\ \mbox{\hyperlink{structplan_trip_window_1_1_souvenir_adb295bd20d32f374371273cc637c3d64}{souvName}};\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00032}\mbox{\hyperlink{structplan_trip_window_1_1_souvenir_a70079aed78d173285d7db572d8474280}{00032}}\ \ \ \ \ \ \ \ \ QString\ \mbox{\hyperlink{structplan_trip_window_1_1_souvenir_a70079aed78d173285d7db572d8474280}{campus}};\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00033}\mbox{\hyperlink{structplan_trip_window_1_1_souvenir_a6dbc60194e38dbb16337faa0d4727435}{00033}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structplan_trip_window_1_1_souvenir_a6dbc60194e38dbb16337faa0d4727435}{cost}};\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00034}\mbox{\hyperlink{structplan_trip_window_1_1_souvenir_a61809ebf1ba7bfc1bd2f74439e955a16}{00034}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structplan_trip_window_1_1_souvenir_a61809ebf1ba7bfc1bd2f74439e955a16}{quantity}};\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00035}00035\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00042}00042\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classplan_trip_window}{planTripWindow}}(\mbox{\hyperlink{class_q_widget}{QWidget}}\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00047}00047\ \ \ \ \ \mbox{\hyperlink{classplan_trip_window_a0860a88101dbc6b5b4a99730aa08388c}{\string~planTripWindow}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00054}00054\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classplan_trip_window_ac86371ade6112c1ccb90329d95d1fb17}{checkCampusVectorNames}}(QVector<QString>\ campuses);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00063}00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_aeb900b032acce3f075be92c86674c1ee}{recursiveCollegeSort}}(QString\ currentCamp);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00070}00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_af2cb7dffda707e3be62a9e7422797d25}{goToSouvenirShop}}();}
 \DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00071}00071\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00079}00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a4edeaca08683f49ef9873bde41e79ebe}{showSelectCampusComboBox}}(QStringListModel\ *model);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00080}00080\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00088}00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_aa2c126c1df2c9bfd82407af4dc39213b}{showSouvTableView}}(QSqlQueryModel\ *model);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00089}00089\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00097}00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a06e0599e743a304150c9defb6a3c9045}{showSouvCartTableView}}(QSqlQueryModel\ *model);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00098}00098\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00104}00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_ad1baf2a897f6922c5c11fecf31ee6482}{calculateTotal}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00105}00105\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00111}00111\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classplan_trip_window_a065e55944714eab5c0eeeda961aee8e4}{calculateDistance}}(\textcolor{keywordtype}{int}\ selectedCampusCount);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00112}00112\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00118}00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_ada0109671578216d8f41134096f987f2}{showTotal}}(\textcolor{keywordtype}{double}\ \mbox{\hyperlink{classplan_trip_window_aa62e3a466d00b1051efb1dd2aa9b5a85}{total}});}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00119}00119\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00125}00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_af0265e054d4debcef2e42c06813da973}{showAvaliListCombo}}(QSqlQueryModel\ *model);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00126}00126\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00132}00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a9213bb2293f2edae7c0f195ab1772c55}{showSelectListView}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00133}00133\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00139}00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_aeb30c8a217c402014f3ad7c5a073d0d9}{showAvaliListView}}(QSqlQueryModel\ *model);}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00140}00140\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00146}00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_ac72dc1377366cf380e9aa6e2a7d9bad6}{showTotalDistent}}(\textcolor{keywordtype}{double}\ \mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}});}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00147}00147\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00151}00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_aa5ef228faea826879b25f963d8e07ebd}{displayReceiptPage}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00080}00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a4edeaca08683f49ef9873bde41e79ebe}{showSelectCampusComboBox}}(QStringListModel\ *model);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00089}00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_aa2c126c1df2c9bfd82407af4dc39213b}{showSouvTableView}}(QSqlQueryModel\ *model);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00098}00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a06e0599e743a304150c9defb6a3c9045}{showSouvCartTableView}}(QSqlQueryModel\ *model);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00105}00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_ad1baf2a897f6922c5c11fecf31ee6482}{calculateTotal}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00112}00112\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classplan_trip_window_a065e55944714eab5c0eeeda961aee8e4}{calculateDistance}}(\textcolor{keywordtype}{int}\ selectedCampusCount);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00119}00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_ada0109671578216d8f41134096f987f2}{showTotal}}(\textcolor{keywordtype}{double}\ \mbox{\hyperlink{classplan_trip_window_aa62e3a466d00b1051efb1dd2aa9b5a85}{total}});}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00126}00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_af0265e054d4debcef2e42c06813da973}{showAvaliListCombo}}(QSqlQueryModel\ *model);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00133}00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a9213bb2293f2edae7c0f195ab1772c55}{showSelectListView}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00140}00140\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_aeb30c8a217c402014f3ad7c5a073d0d9}{showAvaliListView}}(QSqlQueryModel\ *model);}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00147}00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_ac72dc1377366cf380e9aa6e2a7d9bad6}{showTotalDistent}}(\textcolor{keywordtype}{double}\ \mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}});}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00152}00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_aa5ef228faea826879b25f963d8e07ebd}{displayReceiptPage}}();}
 \DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00153}00153\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00154}00154\ \textcolor{keyword}{private}\ slots:}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00155}00155\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00160}00160\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a7cc96a4b49474fdcc143876c1c1d5f97}{on\_planShortTrip\_clicked}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00161}00161\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00167}00167\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a334343b83897876bc71af18f1da1393d}{on\_planCustomTrip\_clicked}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00168}00168\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00173}00173\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a6e874783a5521ab0a539f841a5af74c7}{on\_startTrip\_clicked}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00174}00174\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00178}00178\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a488ed48e3c8987d544c09de1be0563e2}{on\_selectCampus\_comboBox\_currentIndexChanged}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00179}00179\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00184}00184\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_aba130edd506fb7331ec01b7ec94dc695}{on\_addSouvenir\_button\_clicked}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00185}00185\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00189}00189\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_aa263a2f4cfed1c428554ec6a412d8f40}{on\_goback\_clicked}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00190}00190\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00194}00194\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a367aac3d497c25c08fe3ed3b9f5f6401}{on\_goback2\_clicked}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00195}00195\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00199}00199\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a1f7a7872fb92b112268a61a3eb6ae45f}{on\_mainpage\_clicked}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00200}00200\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00204}00204\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_abacdac0e3506710fa2487364c8ec05e4}{on\_mainpage\_2\_clicked}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00205}00205\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00210}00210\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a6d125665c0a5d5b4290393a6125b6f55}{on\_startTripFormUIC\_clicked}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00211}00211\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00216}00216\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_acf9ff4ff97944ba9658513e69ee7ad65}{on\_enter\_button\_clicked}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00217}00217\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00221}00221\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a2d4c5940592dc33ad9c8783718cd03bb}{on\_done\_button\_clicked}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00222}00222\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00226}00226\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_adcb700475ffdb65963796741522de5ad}{on\_custom\_goback\_clicked}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00227}00227\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00231}00231\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a84c0cd7da643e8824a28ce2ca33517e7}{on\_doneBuying\_clicked}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00232}00232\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00236}00236\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a98d7b921e6d90cdb571b03fa65723727}{on\_receiptDone\_clicked}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00237}00237\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00242}00242\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_ae34303389cfd778dbddf011c1062b0d9}{on\_SearchButton\_clicked}}();}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00243}00243\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00244}00244\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00245}\mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{00245}}\ \ \ \ \ Ui::planTripWindow\ *\mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}};\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00246}\mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{00246}}\ \ \ \ \ \mbox{\hyperlink{classdb_manager}{dbManager}}\ \mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}};\ \ \ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00247}\mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{00247}}\ \ \ \ \ QVector<QString>\ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}};\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00248}\mbox{\hyperlink{classplan_trip_window_a66925bada7135d92869d291f90c43f5f}{00248}}\ \ \ \ \ QQueue<QString>\ \mbox{\hyperlink{classplan_trip_window_a66925bada7135d92869d291f90c43f5f}{sortedCampuses}};\ \ \ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00249}\mbox{\hyperlink{classplan_trip_window_a51ec8b80adbc2e56c55b3ff387740b41}{00249}}\ \ \ \ \ QStack<Souvenir>\ \mbox{\hyperlink{classplan_trip_window_a51ec8b80adbc2e56c55b3ff387740b41}{souvenirCart}};\ \ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00250}\mbox{\hyperlink{classplan_trip_window_aee3a1f37aa19755d93d6c4ce7c595888}{00250}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classplan_trip_window_aee3a1f37aa19755d93d6c4ce7c595888}{asuNum}};\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00251}\mbox{\hyperlink{classplan_trip_window_a9b7184ea541d0dd225be9f8f0204b3f8}{00251}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classplan_trip_window_a9b7184ea541d0dd225be9f8f0204b3f8}{selectNum}};\ \ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00252}\mbox{\hyperlink{classplan_trip_window_a194cd478020a3a79d89cf1685eec96e9}{00252}}\ \ \ \ \ QString\ \mbox{\hyperlink{classplan_trip_window_a194cd478020a3a79d89cf1685eec96e9}{sQry}};\ \ \ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00253}\mbox{\hyperlink{classplan_trip_window_a31ef66e8ef0176e9b849ac3273ad6d8b}{00253}}\ \ \ \ \ \mbox{\hyperlink{structplan_trip_window_1_1_souvenir}{Souvenir}}\ \mbox{\hyperlink{classplan_trip_window_a31ef66e8ef0176e9b849ac3273ad6d8b}{souv}};\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00254}\mbox{\hyperlink{classplan_trip_window_aa62e3a466d00b1051efb1dd2aa9b5a85}{00254}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classplan_trip_window_aa62e3a466d00b1051efb1dd2aa9b5a85}{total}};\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00255}\mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{00255}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}};\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00257}00257\ \};}
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00258}00258\ }
-\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00259}00259\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PLANTRIPWINDOW\_H}}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00155}00155\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00161}00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a7cc96a4b49474fdcc143876c1c1d5f97}{on\_planShortTrip\_clicked}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00168}00168\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a334343b83897876bc71af18f1da1393d}{on\_planCustomTrip\_clicked}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00174}00174\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a6e874783a5521ab0a539f841a5af74c7}{on\_startTrip\_clicked}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00179}00179\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a488ed48e3c8987d544c09de1be0563e2}{on\_selectCampus\_comboBox\_currentIndexChanged}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00180}00180\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00185}00185\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_aba130edd506fb7331ec01b7ec94dc695}{on\_addSouvenir\_button\_clicked}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00186}00186\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00190}00190\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_aa263a2f4cfed1c428554ec6a412d8f40}{on\_goback\_clicked}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00191}00191\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00195}00195\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a367aac3d497c25c08fe3ed3b9f5f6401}{on\_goback2\_clicked}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00196}00196\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00200}00200\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a1f7a7872fb92b112268a61a3eb6ae45f}{on\_mainpage\_clicked}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00201}00201\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00205}00205\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_abacdac0e3506710fa2487364c8ec05e4}{on\_mainpage\_2\_clicked}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00206}00206\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00211}00211\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a6d125665c0a5d5b4290393a6125b6f55}{on\_startTripFormUIC\_clicked}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00212}00212\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00217}00217\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_acf9ff4ff97944ba9658513e69ee7ad65}{on\_enter\_button\_clicked}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00218}00218\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00222}00222\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a2d4c5940592dc33ad9c8783718cd03bb}{on\_done\_button\_clicked}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00223}00223\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00227}00227\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_adcb700475ffdb65963796741522de5ad}{on\_custom\_goback\_clicked}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00228}00228\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00232}00232\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a84c0cd7da643e8824a28ce2ca33517e7}{on\_doneBuying\_clicked}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00233}00233\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00237}00237\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_a98d7b921e6d90cdb571b03fa65723727}{on\_receiptDone\_clicked}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00238}00238\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00243}00243\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplan_trip_window_ae34303389cfd778dbddf011c1062b0d9}{on\_SearchButton\_clicked}}();}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00244}00244\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00245}00245\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00246}\mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{00246}}\ \ \ \ \ Ui::planTripWindow\ *\mbox{\hyperlink{classplan_trip_window_ae4fad3180d0c7b06deb93766bf027b1f}{ui}};\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00247}\mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{00247}}\ \ \ \ \ \mbox{\hyperlink{classdb_manager}{dbManager}}\ \mbox{\hyperlink{classplan_trip_window_aac8230af2b7b1328abc1fcb174f03bb4}{m\_database}};\ \ \ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00248}\mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{00248}}\ \ \ \ \ QVector<QString>\ \mbox{\hyperlink{classplan_trip_window_aff85fc174318970256fdf02820298259}{selectedCampuses}};\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00249}\mbox{\hyperlink{classplan_trip_window_ae1b6e09d500625402751ea17655b6444}{00249}}\ \ \ \ \ QVector<QString>\ \mbox{\hyperlink{classplan_trip_window_ae1b6e09d500625402751ea17655b6444}{campuseList}};\ \ \ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00250}\mbox{\hyperlink{classplan_trip_window_a66925bada7135d92869d291f90c43f5f}{00250}}\ \ \ \ \ QQueue<QString>\ \mbox{\hyperlink{classplan_trip_window_a66925bada7135d92869d291f90c43f5f}{sortedCampuses}};\ \ \ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00251}\mbox{\hyperlink{classplan_trip_window_a51ec8b80adbc2e56c55b3ff387740b41}{00251}}\ \ \ \ \ QStack<Souvenir>\ \mbox{\hyperlink{classplan_trip_window_a51ec8b80adbc2e56c55b3ff387740b41}{souvenirCart}};\ \ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00252}\mbox{\hyperlink{classplan_trip_window_aee3a1f37aa19755d93d6c4ce7c595888}{00252}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classplan_trip_window_aee3a1f37aa19755d93d6c4ce7c595888}{asuNum}};\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00253}\mbox{\hyperlink{classplan_trip_window_a9b7184ea541d0dd225be9f8f0204b3f8}{00253}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classplan_trip_window_a9b7184ea541d0dd225be9f8f0204b3f8}{selectNum}};\ \ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00254}\mbox{\hyperlink{classplan_trip_window_a194cd478020a3a79d89cf1685eec96e9}{00254}}\ \ \ \ \ QString\ \mbox{\hyperlink{classplan_trip_window_a194cd478020a3a79d89cf1685eec96e9}{sQry}};\ \ \ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00255}\mbox{\hyperlink{classplan_trip_window_a31ef66e8ef0176e9b849ac3273ad6d8b}{00255}}\ \ \ \ \ \mbox{\hyperlink{structplan_trip_window_1_1_souvenir}{Souvenir}}\ \mbox{\hyperlink{classplan_trip_window_a31ef66e8ef0176e9b849ac3273ad6d8b}{souv}};\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00256}\mbox{\hyperlink{classplan_trip_window_aa62e3a466d00b1051efb1dd2aa9b5a85}{00256}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classplan_trip_window_aa62e3a466d00b1051efb1dd2aa9b5a85}{total}};\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00257}\mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{00257}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classplan_trip_window_aa7c92c3a7ea607623e449bc4e2e766d6}{distance}};\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00259}00259\ \};}
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00260}00260\ }
+\DoxyCodeLine{\Hypertarget{plantripwindow_8h_source_l00261}00261\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PLANTRIPWINDOW\_H}}
 
 \end{DoxyCode}
