@@ -297,7 +297,7 @@ void planTripWindow::on_startTrip_clicked()
         recursiveCollegeSort(startTrip);
 
         // calculate the distance and output it
-        distance = calculateDistance(11);
+        distance = calculateDistance(initial11.size());
         showTotalDistent(distance);
 
         // hid the current UI and show the sovenirs UI
@@ -317,7 +317,6 @@ void planTripWindow::on_startTripFormUIC_clicked()
     // Test:
     // distance should be: 5847.2
     // cost: 0
-
     */
 
     // putting all initiall college in to a vector starting at UCI
@@ -352,8 +351,8 @@ void planTripWindow::on_startTripFormUIC_clicked()
         // recursively sort through the list
         recursiveCollegeSort(startTrip);
 
-        // calculate the distance and output i
-        distance = calculateDistance(13);
+        // calculate the distance and output it
+        distance = calculateDistance(initial13.size());
         showTotalDistent(distance);
 
         // hid the current UI and show the sovenirs UI
@@ -657,7 +656,7 @@ double planTripWindow::calculateDistance(int selectedCampusCount)
     // loop through for each campus that was selected
     for (int i = 0; i < selectedCampusCount; i++)
     {
-       distance += m_database.GetDistBtwn(*otherCampus,*currentCampus);
+       distance += m_database.GetDistBtwn(*otherCampus, *currentCampus);
        currentCampus = otherCampus;
        otherCampus++;
     }
