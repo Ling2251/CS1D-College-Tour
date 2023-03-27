@@ -272,15 +272,15 @@ void planTripWindow::on_startTrip_clicked()
     // putting all initiall college in to a vector starting at saddleback college
     QVector<QString> initial11{"Saddleback College",
                                "University of California, Irvine (UCI)",
-                               "Arizona State University",
-                               "Massachusetts Institute of Technology (MIT)",
-                               "Northwestern",
-                               "Ohio State University",
-                               "University of  Michigan",
                                "University of California, Los Angeles (UCLA)",
-                               "University of Oregon",
-                               "University of Wisconsin",
                                "University of the Pacific",
+                               "University of Oregon",
+                               "Arizona State University",
+                               "University of Wisconsin",
+                               "Northwestern",
+                               "University of  Michigan",
+                               "Ohio State University",
+                               "Massachusetts Institute of Technology (MIT)",
                                };
 
     // check if all the college is in the database befor the recursive function
@@ -322,17 +322,17 @@ void planTripWindow::on_startTripFormUIC_clicked()
     // putting all initiall college in to a vector starting at UCI
     QVector<QString> initial13{"University of California, Irvine (UCI)",
                                "Saddleback College",
-                               "Arizona State University",
-                               "Massachusetts Institute of Technology (MIT)",
-                               "Northwestern",
-                               "Ohio State University",
-                               "University of  Michigan",
-                               "University of California, Los Angeles (UCLA)",
-                               "University of Oregon",
-                               "University of Wisconsin",
-                               "University of the Pacific",
                                "California State University, Fullerton",
-                               "University of Texas"
+                               "University of California, Los Angeles (UCLA)",
+                               "University of the Pacific",
+                               "University of Oregon",
+                               "Arizona State University",
+                               "University of Texas",
+                               "University of Wisconsin",
+                               "Northwestern",
+                               "University of  Michigan",
+                               "Ohio State University",
+                               "Massachusetts Institute of Technology (MIT)",
                                };
 
     // check if all the college is in the database befor the recursive function
