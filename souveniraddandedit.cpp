@@ -110,7 +110,12 @@ void souvenirAddandEdit::on_update_clicked()
     conn.m_database.open();
 
     //update function to update the cost
-    qry->prepare("update souvenirs set cost='"+cost+"'where souvenirsName='"+souvenirs+"'");
+    if(cost == "ABC" && cost == "Abc" && cost == "abc"){
+        QMessageBox::about(this, "Error", "Invaild price");
+     }else{
+        qry->prepare("update souvenirs set cost='"+cost+"'where souvenirsName='"+souvenirs+"'");
+    }
+
 
     //if update succesfully then will display a messageBox::Update
     if(qry->exec())
